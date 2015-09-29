@@ -19,6 +19,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D42358471BBA3A0A00B5A08D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D42358281BBA3A0A00B5A08D;
+			remoteInfo = CommonCode;
+		};
+		D42358491BBA3A0A00B5A08D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D42358321BBA3A0A00B5A08D;
+			remoteInfo = CommonCodeTests;
+		};
 		D4D6AB771BBA2FE200CE241D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
@@ -39,6 +53,7 @@
 		4CBCBE02954639DF7E50BFBA /* Pods-findmybusnj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.release.xcconfig"; sourceTree = "<group>"; };
 		C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
+		D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommonCode.xcodeproj; path = CommonCode/CommonCode.xcodeproj; sourceTree = "<group>"; };
 		D4D6AB601BBA2FE200CE241D /* findmybusnj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findmybusnj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimeTableController.swift; sourceTree = "<group>"; };
@@ -84,6 +99,7 @@
 		516CB71DBABA7F1FCD524014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */,
 				C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */,
 			);
 			name = Frameworks;
@@ -105,6 +121,15 @@
 				D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */,
 			);
 			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D42358431BBA3A0A00B5A08D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D42358481BBA3A0A00B5A08D /* CommonCode.framework */,
+				D423584A1BBA3A0A00B5A08D /* CommonCodeTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		D4D6AB571BBA2FE200CE241D = {
@@ -252,6 +277,12 @@
 			mainGroup = D4D6AB571BBA2FE200CE241D;
 			productRefGroup = D4D6AB611BBA2FE200CE241D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D42358431BBA3A0A00B5A08D /* Products */;
+					ProjectRef = D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D4D6AB5F1BBA2FE200CE241D /* findmybusnj */,
@@ -260,6 +291,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D42358481BBA3A0A00B5A08D /* CommonCode.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CommonCode.framework;
+			remoteRef = D42358471BBA3A0A00B5A08D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D423584A1BBA3A0A00B5A08D /* CommonCodeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CommonCodeTests.xctest;
+			remoteRef = D42358491BBA3A0A00B5A08D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D4D6AB5E1BBA2FE200CE241D /* Resources */ = {
