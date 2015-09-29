@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "852DF9D6C2EC25B09ABD6D20EB8DC0DD09FED6F7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "6E71A580DF522EBC0AC586BDF1969B26587E09AB" : 0,
+    "852DF9D6C2EC25B09ABD6D20EB8DC0DD09FED6F7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C8C27E4F-92A0-4851-A801-26FBDF794DE9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "6E71A580DF522EBC0AC586BDF1969B26587E09AB" : "..",
+    "852DF9D6C2EC25B09ABD6D20EB8DC0DD09FED6F7" : "findmybusnj\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "findmybusnj",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "findmybusnj.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Aghassi\/findmybusnj.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6E71A580DF522EBC0AC586BDF1969B26587E09AB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Aghassi\/findmybusnj.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "852DF9D6C2EC25B09ABD6D20EB8DC0DD09FED6F7"
+    }
+  ]
+}

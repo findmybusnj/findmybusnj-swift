@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */; };
-		D4D6AB661BBA2FE200CE241D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB651BBA2FE200CE241D /* FirstViewController.swift */; };
-		D4D6AB681BBA2FE200CE241D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB671BBA2FE200CE241D /* SecondViewController.swift */; };
+		D4D6AB661BBA2FE200CE241D /* BusTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */; };
+		D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */; };
 		D4D6AB6B1BBA2FE200CE241D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB691BBA2FE200CE241D /* Main.storyboard */; };
 		D4D6AB6D1BBA2FE200CE241D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6C1BBA2FE200CE241D /* Assets.xcassets */; };
 		D4D6AB701BBA2FE200CE241D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6E1BBA2FE200CE241D /* LaunchScreen.storyboard */; };
@@ -41,8 +41,8 @@
 		CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
 		D4D6AB601BBA2FE200CE241D /* findmybusnj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findmybusnj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4D6AB651BBA2FE200CE241D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D4D6AB671BBA2FE200CE241D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimeTableController.swift; sourceTree = "<group>"; };
+		D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindByBusNumberController.swift; sourceTree = "<group>"; };
 		D4D6AB6A1BBA2FE200CE241D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4D6AB6C1BBA2FE200CE241D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4D6AB6F1BBA2FE200CE241D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +98,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D42357F91BBA35A900B5A08D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */,
+				D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		D4D6AB571BBA2FE200CE241D = {
 			isa = PBXGroup;
 			children = (
@@ -123,9 +132,8 @@
 		D4D6AB621BBA2FE200CE241D /* findmybusnj */ = {
 			isa = PBXGroup;
 			children = (
+				D42357F91BBA35A900B5A08D /* View Controllers */,
 				D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */,
-				D4D6AB651BBA2FE200CE241D /* FirstViewController.swift */,
-				D4D6AB671BBA2FE200CE241D /* SecondViewController.swift */,
 				D4D6AB691BBA2FE200CE241D /* Main.storyboard */,
 				D4D6AB6C1BBA2FE200CE241D /* Assets.xcassets */,
 				D4D6AB6E1BBA2FE200CE241D /* LaunchScreen.storyboard */,
@@ -333,9 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4D6AB681BBA2FE200CE241D /* SecondViewController.swift in Sources */,
+				D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */,
 				D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */,
-				D4D6AB661BBA2FE200CE241D /* FirstViewController.swift in Sources */,
+				D4D6AB661BBA2FE200CE241D /* BusTimeTableController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
