@@ -1,0 +1,6 @@
+framework module SDevFlatColors {
+  umbrella header "SDevFlatColors-umbrella.h"
+
+  export *
+  module * { export * }
+}

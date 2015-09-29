@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */; };
 		D4D6AB661BBA2FE200CE241D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB651BBA2FE200CE241D /* FirstViewController.swift */; };
 		D4D6AB681BBA2FE200CE241D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB671BBA2FE200CE241D /* SecondViewController.swift */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4CBCBE02954639DF7E50BFBA /* Pods-findmybusnj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.release.xcconfig"; sourceTree = "<group>"; };
+		C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
 		D4D6AB601BBA2FE200CE241D /* findmybusnj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findmybusnj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4D6AB651BBA2FE200CE241D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		516CB71DBABA7F1FCD524014 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF87078E50546E553E842561 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */,
+				4CBCBE02954639DF7E50BFBA /* Pods-findmybusnj.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D4D6AB571BBA2FE200CE241D = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +105,8 @@
 				D4D6AB791BBA2FE200CE241D /* findmybusnjTests */,
 				D4D6AB841BBA2FE200CE241D /* findmybusnjUITests */,
 				D4D6AB611BBA2FE200CE241D /* Products */,
+				CF87078E50546E553E842561 /* Pods */,
+				516CB71DBABA7F1FCD524014 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4D6AB8A1BBA2FE200CE241D /* Build configuration list for PBXNativeTarget "findmybusnj" */;
 			buildPhases = (
+				D527E84A91904ED972A5A18D /* Check Pods Manifest.lock */,
 				D4D6AB5C1BBA2FE200CE241D /* Sources */,
 				D4D6AB5D1BBA2FE200CE241D /* Frameworks */,
 				D4D6AB5E1BBA2FE200CE241D /* Resources */,
+				74A9C29BC882D0903BFA50A2 /* Embed Pods Frameworks */,
+				65D337A5AA59A9C108C847BE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +279,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65D337A5AA59A9C108C847BE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74A9C29BC882D0903BFA50A2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D527E84A91904ED972A5A18D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4D6AB5C1BBA2FE200CE241D /* Sources */ = {
@@ -398,6 +473,7 @@
 		};
 		D4D6AB8B1BBA2FE200CE241D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = findmybusnj/Info.plist;
@@ -410,6 +486,7 @@
 		};
 		D4D6AB8C1BBA2FE200CE241D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CBCBE02954639DF7E50BFBA /* Pods-findmybusnj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = findmybusnj/Info.plist;
@@ -487,6 +564,7 @@
 				D4D6AB8C1BBA2FE200CE241D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4D6AB8D1BBA2FE200CE241D /* Build configuration list for PBXNativeTarget "findmybusnjTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +573,7 @@
 				D4D6AB8F1BBA2FE200CE241D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4D6AB901BBA2FE200CE241D /* Build configuration list for PBXNativeTarget "findmybusnjUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +582,7 @@
 				D4D6AB921BBA2FE200CE241D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
