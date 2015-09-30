@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		402E7174B200041D5F9A4D7ED9DFA3B1 /* PBXContainerItemProxy */ = {
+		143A38B5B44DD8E8F1ACEA0F61A57109 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -29,27 +29,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		050F3E4C4810A155849FB9927C5E315E /* SDevFlatColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDevFlatColors-prefix.pch"; sourceTree = "<group>"; };
+		04FC363AF663C68CABC834E9B9B07B44 /* SDevFlatColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDevFlatColors-prefix.pch"; sourceTree = "<group>"; };
 		0661BFEC454B7C6BC281367A77A42F98 /* SDevFlatColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDevFlatColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		067B96CF2B880696BB863B2EDE52EE32 /* Pods-findmybusnj.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-findmybusnj.modulemap"; sourceTree = "<group>"; };
 		0C6568E35C791F09613BEC6608832155 /* UIColor+Flat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Flat.h"; path = "Classes/UIColor+Flat.h"; sourceTree = "<group>"; };
 		15D6DAD1A5E649FC470831F8AC58C8E9 /* SDevFlatColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDevFlatColors-umbrella.h"; sourceTree = "<group>"; };
 		2129D92CE895BB76E99387EB082362AA /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		415F8D8768E2EA36F9D251D152D7209D /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		42AB1414861B0DA76987456302230D3B /* SDevFlatColors-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SDevFlatColors-Private.xcconfig"; sourceTree = "<group>"; };
 		62CA1BB432D8C1CF60A93B7E432DC880 /* FlatColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlatColors.h; path = Classes/FlatColors.h; sourceTree = "<group>"; };
-		6C920A59E975D4D913B44DCC09498C8D /* SDevFlatColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SDevFlatColors.modulemap; sourceTree = "<group>"; };
-		8005BB039F406D04C0AE6E59AFF41EDA /* SDevFlatColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDevFlatColors.xcconfig; sourceTree = "<group>"; };
 		8C904C25A42905D5DB4330ED80A87E31 /* Pods-findmybusnj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-findmybusnj.release.xcconfig"; sourceTree = "<group>"; };
 		8E429F3CB8B0BF849B33CB75E8CF9636 /* Pods-findmybusnj-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-findmybusnj-acknowledgements.markdown"; sourceTree = "<group>"; };
+		901416218F4D223B285CD1259177DC5D /* SDevFlatColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SDevFlatColors.modulemap; sourceTree = "<group>"; };
 		A3BC2690C5951709FFF1692549945F4C /* Pods-findmybusnj-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-findmybusnj-dummy.m"; sourceTree = "<group>"; };
+		A9A580029B9F6FF7F15B9B1309715713 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 		B2EEF03F4869EE361F57430459260BEE /* Pods-findmybusnj-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-findmybusnj-frameworks.sh"; sourceTree = "<group>"; };
 		B43313090BC7FE2A429531E6C6C8B850 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C10AEE634A331BAFD60544B814A88A8E /* SDevFlatColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDevFlatColors-dummy.m"; sourceTree = "<group>"; };
 		C641896759811E1B846C15FBE094165E /* UIColor+Flat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Flat.m"; path = "Classes/UIColor+Flat.m"; sourceTree = "<group>"; };
 		C8F7F94BF11B5A44781B146C0C2FC481 /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
+		CE6F86C71E4FE819BF81AAFB9519E11E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7D379CA561058A9FD96EB1468E98C4D /* Pods-findmybusnj-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-findmybusnj-acknowledgements.plist"; sourceTree = "<group>"; };
-		E694B42EEBCC313D2E22D2CE47727DE3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1F0099E88978B4925DE6FF4555FAB7D /* SDevFlatColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDevFlatColors.xcconfig; sourceTree = "<group>"; };
 		E9010EE872A9E4367C76016248C577E8 /* Pods-findmybusnj-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-findmybusnj-umbrella.h"; sourceTree = "<group>"; };
 		EE47CF380AC224EC1BCE42AECA3446D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		FECD736E429653A2851E6EA7130B2CA7 /* Pods-findmybusnj-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-findmybusnj-resources.sh"; sourceTree = "<group>"; };
@@ -75,15 +77,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		44737CFAD2CD308875D4B1C629A99E84 /* SDevFlatColors */ = {
+		091ED13DF18B1D0653DC7915F80CE482 /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				62CA1BB432D8C1CF60A93B7E432DC880 /* FlatColors.h */,
-				0C6568E35C791F09613BEC6608832155 /* UIColor+Flat.h */,
-				C641896759811E1B846C15FBE094165E /* UIColor+Flat.m */,
-				88C562B49BB990489476B849DE986C6D /* Support Files */,
+				3A5526338FA10A3DB72CC321ED93D4FD /* Frameworks */,
+				89D89683026665CEA69062C5EECDECA9 /* Resources */,
 			);
-			path = SDevFlatColors;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		2EB2C27C8B5B87A416082BC06E6E872C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE6F86C71E4FE819BF81AAFB9519E11E /* Info.plist */,
+				901416218F4D223B285CD1259177DC5D /* SDevFlatColors.modulemap */,
+				E1F0099E88978B4925DE6FF4555FAB7D /* SDevFlatColors.xcconfig */,
+				42AB1414861B0DA76987456302230D3B /* SDevFlatColors-Private.xcconfig */,
+				C10AEE634A331BAFD60544B814A88A8E /* SDevFlatColors-dummy.m */,
+				04FC363AF663C68CABC834E9B9B07B44 /* SDevFlatColors-prefix.pch */,
+				15D6DAD1A5E649FC470831F8AC58C8E9 /* SDevFlatColors-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SDevFlatColors";
+			sourceTree = "<group>";
+		};
+		3A5526338FA10A3DB72CC321ED93D4FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9A580029B9F6FF7F15B9B1309715713 /* GoogleMaps.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
@@ -117,33 +140,18 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				923471C779E8F4BB6D4B730EF4D9070B /* Pods */,
+				A508FD6E6E592F2AAAD3D12CCED58AF0 /* Pods */,
 				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
 				988E92C89CAB1D181B1CD2E75508BD93 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		88C562B49BB990489476B849DE986C6D /* Support Files */ = {
+		89D89683026665CEA69062C5EECDECA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E694B42EEBCC313D2E22D2CE47727DE3 /* Info.plist */,
-				6C920A59E975D4D913B44DCC09498C8D /* SDevFlatColors.modulemap */,
-				8005BB039F406D04C0AE6E59AFF41EDA /* SDevFlatColors.xcconfig */,
-				42AB1414861B0DA76987456302230D3B /* SDevFlatColors-Private.xcconfig */,
-				C10AEE634A331BAFD60544B814A88A8E /* SDevFlatColors-dummy.m */,
-				050F3E4C4810A155849FB9927C5E315E /* SDevFlatColors-prefix.pch */,
-				15D6DAD1A5E649FC470831F8AC58C8E9 /* SDevFlatColors-umbrella.h */,
+				415F8D8768E2EA36F9D251D152D7209D /* GoogleMaps.bundle */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SDevFlatColors";
-			sourceTree = "<group>";
-		};
-		923471C779E8F4BB6D4B730EF4D9070B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				44737CFAD2CD308875D4B1C629A99E84 /* SDevFlatColors */,
-			);
-			name = Pods;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		988E92C89CAB1D181B1CD2E75508BD93 /* Targets Support Files */ = {
@@ -152,6 +160,15 @@
 				72895AF336A97D8C7EF087FBC1D536CE /* Pods-findmybusnj */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A508FD6E6E592F2AAAD3D12CCED58AF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				091ED13DF18B1D0653DC7915F80CE482 /* GoogleMaps */,
+				EE87F5CAB2FB4967E3A2137AB454388C /* SDevFlatColors */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -169,6 +186,17 @@
 				0661BFEC454B7C6BC281367A77A42F98 /* SDevFlatColors.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EE87F5CAB2FB4967E3A2137AB454388C /* SDevFlatColors */ = {
+			isa = PBXGroup;
+			children = (
+				62CA1BB432D8C1CF60A93B7E432DC880 /* FlatColors.h */,
+				0C6568E35C791F09613BEC6608832155 /* UIColor+Flat.h */,
+				C641896759811E1B846C15FBE094165E /* UIColor+Flat.m */,
+				2EB2C27C8B5B87A416082BC06E6E872C /* Support Files */,
+			);
+			path = SDevFlatColors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +234,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				BE628FDCD1F8659B25C9C6C73AD9F71D /* PBXTargetDependency */,
+				6B3488C3C525C1EFD3D993B91D6D6727 /* PBXTargetDependency */,
 			);
 			name = "Pods-findmybusnj";
 			productName = "Pods-findmybusnj";
@@ -278,11 +306,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BE628FDCD1F8659B25C9C6C73AD9F71D /* PBXTargetDependency */ = {
+		6B3488C3C525C1EFD3D993B91D6D6727 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SDevFlatColors;
 			target = 55A8433623BA87C45544EF35DA84AB6E /* SDevFlatColors */;
-			targetProxy = 402E7174B200041D5F9A4D7ED9DFA3B1 /* PBXContainerItemProxy */;
+			targetProxy = 143A38B5B44DD8E8F1ACEA0F61A57109 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

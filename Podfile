@@ -5,6 +5,7 @@ use_frameworks!
 target 'findmybusnj' do
 
 pod 'SDevFlatColors'
+pod 'GoogleMaps'
 # pod 'SwiftOverlays'
 # pod "MBProgressHUD"
 # pod "hpple"

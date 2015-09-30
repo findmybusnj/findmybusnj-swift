@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */; settings = {ASSET_TAGS = (); }; };
 		D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */; };
 		D4D6AB661BBA2FE200CE241D /* BusTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */; };
 		D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */; };
@@ -54,6 +55,7 @@
 		C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
 		D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommonCode.xcodeproj; path = CommonCode/CommonCode.xcodeproj; sourceTree = "<group>"; };
+		D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindNearByStopsController.swift; sourceTree = "<group>"; };
 		D4D6AB601BBA2FE200CE241D /* findmybusnj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findmybusnj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimeTableController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */,
 				D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */,
+				D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */,
+				D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */,
 				D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */,
 				D4D6AB661BBA2FE200CE241D /* BusTimeTableController.swift in Sources */,
 			);

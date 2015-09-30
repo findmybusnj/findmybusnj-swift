@@ -1,10 +1,13 @@
 PODS:
+  - GoogleMaps (1.10.3)
   - SDevFlatColors (1.0.0)
 
 DEPENDENCIES:
+  - GoogleMaps
   - SDevFlatColors
 
 SPEC CHECKSUMS:
+  GoogleMaps: 945e4ac3b74bcca3ddada51df256eb7beddb474d
   SDevFlatColors: fc791f7e9d3e7bbf25c76e42ce30ed2dc53f998d
 
 COCOAPODS: 0.38.2

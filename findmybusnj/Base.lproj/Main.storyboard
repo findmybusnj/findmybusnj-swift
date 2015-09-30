@@ -59,6 +59,7 @@
                     <connections>
                         <segue destination="GWM-jN-zNP" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="qL2-kj-9kg" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="8Nf-6j-zRW" kind="relationship" relationship="viewControllers" id="xtg-F5-3gO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -104,6 +105,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLj-bU-pEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Near By-->
+        <scene sceneID="9qc-J6-fK5">
+            <objects>
+                <viewController id="8Nf-6j-zRW" customClass="FindNearByStopsController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eMz-oY-8oF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zd7-Qi-ZUq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jAH-hc-tcn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hZQ-43-Gaz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hZQ-43-Gaz" secondAttribute="bottom" id="0aQ-Bv-7pl"/>
+                            <constraint firstAttribute="trailing" secondItem="hZQ-43-Gaz" secondAttribute="trailing" id="Nh6-Vl-v3M"/>
+                            <constraint firstItem="hZQ-43-Gaz" firstAttribute="leading" secondItem="jAH-hc-tcn" secondAttribute="leading" id="cA0-G9-nMf"/>
+                            <constraint firstItem="hZQ-43-Gaz" firstAttribute="top" secondItem="jAH-hc-tcn" secondAttribute="top" id="l8f-r9-Z1c"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Near By" id="Qkj-nM-0IT"/>
+                    <connections>
+                        <outlet property="mapView" destination="hZQ-43-Gaz" id="0Rk-3r-AWm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PBI-HH-C0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="1131"/>
         </scene>
     </scenes>
     <resources>
