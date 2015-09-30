@@ -5,7 +5,7 @@ use_frameworks!
 target 'findmybusnj' do
 
 pod 'SDevFlatColors'
-pod 'GoogleMaps'
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 # pod 'SwiftOverlays'
 # pod "MBProgressHUD"
 # pod "hpple"
@@ -19,4 +19,3 @@ end
 target 'findmybusnjUITests' do
 
 end
-

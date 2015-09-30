@@ -1,13 +1,22 @@
 PODS:
-  - GoogleMaps (1.10.3)
   - SDevFlatColors (1.0.0)
+  - SwiftyJSON (2.3.0)
 
 DEPENDENCIES:
-  - GoogleMaps
   - SDevFlatColors
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 3b5d0d4e0c19173b1bf0dc823bde25ad870f70c0
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  GoogleMaps: 945e4ac3b74bcca3ddada51df256eb7beddb474d
   SDevFlatColors: fc791f7e9d3e7bbf25c76e42ce30ed2dc53f998d
+  SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
 
 COCOAPODS: 0.38.2
