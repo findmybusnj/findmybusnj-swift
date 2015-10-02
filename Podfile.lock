@@ -1,8 +1,10 @@
 PODS:
+  - Alamofire (2.0.2)
   - SDevFlatColors (1.0.0)
   - SwiftyJSON (2.3.0)
 
 DEPENDENCIES:
+  - Alamofire
   - SDevFlatColors
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
@@ -16,6 +18,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
+  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
   SDevFlatColors: fc791f7e9d3e7bbf25c76e42ce30ed2dc53f998d
   SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
 
