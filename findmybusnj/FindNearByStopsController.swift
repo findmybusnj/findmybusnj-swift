@@ -18,7 +18,6 @@ class FindNearByStopsController: UIViewController {
     // How much to show outside of the center
     private let regionRadius: CLLocationDistance = 1000
     private let kgPlaceKey = "AIzaSyB5pvxDYulLut0SLlHUep33ufjJ7OxUQ5M"
-    private let kBgQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
     // MARK: - location manager to authorize user location for Maps app
     var locationManager = CLLocationManager()
     
@@ -28,7 +27,7 @@ class FindNearByStopsController: UIViewController {
         queryPlaces("bus_station")
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
         checkLocationAuthorizationStatus()
     }
@@ -43,13 +42,21 @@ class FindNearByStopsController: UIViewController {
     private func queryPlaces(googleType: String) {
         let coordinate = locationManager.location!.coordinate
         let queryRegion = regionRadius * 3
-        print("Latitude:", coordinate.latitude)
-        print("Longitude:", coordinate.longitude)
-        let url = String.init(format: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=%i&key=%@", coordinate.latitude, coordinate.longitude, queryRegion, kgPlaceKey)
+        
+        let latitude = coordinate.latitude
+        let longitude = coordinate.longitude
+        let url = String("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(latitude),\(longitude)&radius=\(queryRegion)&types=\(googleType)&key=\(kgPlaceKey)")
         
         Alamofire.request(.GET, url).responseJSON {
-            response in response
-            print(response)
+            (req, res, result) in
+            if (result.isFailure) {
+                NSLog("Error: \(result.error)")
+            }
+            else {
+                if let json = result.value {
+                    print("JSON: ", json["results"])
+                }
+            }
         }
     }
     
