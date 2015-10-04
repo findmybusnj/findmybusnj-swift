@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */; };
+		D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */; };
 		D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */; settings = {ASSET_TAGS = (); }; };
 		D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */; };
 		D4D6AB661BBA2FE200CE241D /* BusTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */; };
@@ -56,6 +58,8 @@
 		CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
 		D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommonCode.xcodeproj; path = CommonCode/CommonCode.xcodeproj; sourceTree = "<group>"; };
 		D42358561BBCE01800032949 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindNearByStopsController.swift; sourceTree = "<group>"; };
 		D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		D4D6AB601BBA2FE200CE241D /* findmybusnj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findmybusnj.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */,
+				D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */,
 				6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +109,8 @@
 		516CB71DBABA7F1FCD524014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */,
+				D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */,
 				D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */,
 				D42358561BBCE01800032949 /* SwiftyJSON.framework */,
 				D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */,

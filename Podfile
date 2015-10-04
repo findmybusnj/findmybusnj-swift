@@ -5,9 +5,8 @@ use_frameworks!
 target 'findmybusnj' do
 
 pod 'SDevFlatColors'
-#pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
-#pod 'Alamofire'
-pod 'Alamofire-SwiftyJSON'
+pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+pod 'Alamofire'
 # pod 'SwiftOverlays'
 # pod "MBProgressHUD"
 # pod "hpple"
