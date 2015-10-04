@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		D42358571BBCE01800032949 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42358561BBCE01800032949 /* SwiftyJSON.framework */; };
 		D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */; settings = {ASSET_TAGS = (); }; };
-		D479FAAF1BBEAAA800ABB864 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */; };
 		D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */; };
 		D4D6AB661BBA2FE200CE241D /* BusTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */; };
 		D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */; };
@@ -81,8 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D479FAAF1BBEAAA800ABB864 /* Alamofire.framework in Frameworks */,
-				D42358571BBCE01800032949 /* SwiftyJSON.framework in Frameworks */,
 				6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
