@@ -1,0 +1,423 @@
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=41.5128139532752,-81.6044537524949&radius=3000.0&types=bus_station&key=AIzaSyB5pvxDYulLut0SLlHUep33ufjJ7OxUQ5M
+JSON:  Optional((
+        {
+        geometry =         {
+            location =             {
+                lat = "41.501201";
+                lng = "-81.58698";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = 99399d751589038c7d5efeead074912b9dac88db;
+        name = "12600 Cedar Rd";
+        "place_id" = "ChIJo_psdWb8MIgRlv9mGAsvQR8";
+        reference = "CnRhAAAAe86wXdQrUHLpJJZcmAMzwy3ZLInhUcUiG6COtzvoCSmbG9hqH2-VDwLHv30pzSdLaz4UXlcxov5vnSCoilSRZq-kPYb99Ge_yS2rPSTg5lphfjMHHku4ouR6PEVxIIZdqOxV9aKoqcKR7_URMNo-GRIQebbk-ktCSqcrL-JJvt0wsRoUn6vLQUvpAF5GcVd_yolH7QyuRy0";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.503588";
+                lng = "-81.62130500000001";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = a8373ea73ad3e35304c52f6696a9924888a6b264;
+        name = "Euclid Av & E 93RD St";
+        "place_id" = ChIJ8cuSlZn7MIgR3P7wU1Gx3Ss;
+        reference = "CnRoAAAAhcJ1r-0j_jWuyeoWyxXH6ghseaWqHh65XH1SYKtRmnf-zlt8vikX2q1i-k7KXnw-qf324Be0eU7jlk4tiw5CiPfnboEq2vOA-EQ5V8XJQMubNYm637CqpPzJ1YcIqYJPu298fAXyRM9uvUpbH2dQHhIQxUtF0Y7TJUFS_Cn6seVg2hoUKIZZr2NtBo3PippXWgQRQEIijto";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.519706";
+                lng = "-81.63372699999999";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = 25f6c38de8eb2c3ee17fdec70ab7030cf9b6be73;
+        name = "Superior Av & E 79th St";
+        "place_id" = "ChIJF5g_YMb7MIgRgv5zAejo9Sk";
+        reference = "CnRqAAAAIBDFYEKsDGgZWw5JEwb-ygaCp8u0sCxd4E35NmFN5w28IWrmSPnnGTdqvkZ4dH9BZoik9SGZQVkSeVFsZBPCI3d7jyoERzfO4X9Zq2DvpC9FePs8cs0ZcUzv90imvJMMRRosnXTKj_mMJ-7cqkNkrxIQsDsCU9_qBEeL4XJwl1LEQRoUQaef0TM20SNEFsoRGQUe0F-c6Uo";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.5231";
+                lng = "-81.595758";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = a66bdac869b2aa453fa3b1ad678ed2bb32b3ba15;
+        name = "(Dnu) Superior Av & Melbourne Rd";
+        "place_id" = ChIJE8VxhwX8MIgRGv62BOBGYSk;
+        reference = "CoQBcwAAAOIEgpiGtMqZ6yUZ-nY7uIj--r2rJ8Bt_4F-Dj8PaF7G5VEk70kwNEOXbFjQhG0zKng2O8D0VNrO-CiDSNm_UZsKrrePk82ERkrB9uS0MoNhFqbaNUbMn4CoAzfuiFhn0ZOwFXFDYDsXV8LMsTBYvkWMEsvbUlSPpCKE3uDhRtOEEhA55BZ2ZwcVcTFJLKrhiwkyGhTuytCzYgWUb0qSKaSEHd3M17x6QA";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.50279";
+                lng = "-81.609887";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = f214fdee5f4f822b0801960f92141a0f5d3a571a;
+        name = "Stearns Rd & E 109th St";
+        "place_id" = ChIJjVKlw4X7MIgRDv2JmDOMv9c;
+        reference = "CnRrAAAAb-LWdNp2A8YosksWdcoWJ46Iid1W0QD9NxAm_yvooWhzWi_7RmQtCHjLVIl78sJfQYz8PPIWeQgjDUoP7xJXPcYC1Bitq3CNFMFp6stmOgKrg7JmEYPWDfB6eEh7HZBWzzbcVDnSbEnLJPyKvu14KBIQ1eJ_6XXGEyDZusveQgEvzRoUObC-N1WdjbwjuXMeNG0MzIR7gqo";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.531377";
+                lng = "-81.601699";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = bc61d85ab3ca3ae520043a605352230689c801d0;
+        name = "E 123RD St & Fairport Av";
+        "place_id" = "ChIJz4ihWwD8MIgRn_vuCuvoduw";
+        reference = "CnRsAAAAemQi2WxQc8Hde1ac5FhUkOFBeVZb9fKxO8ByvUoFtLSL0ALsC6NO8707b0nt7LQfDJlt11U7IGu8uvjllq5dZnW4rC34qVnEOqCtuqg9r_bJMtZ1DVcVv1wYnlTCb-DKUlWBIVE3yIpb9kF3o4NO2RIQd3NruSgUtGlrWNnzO8VdvRoUsDGcsjWcpYWWdm9RpsZ5wXIRnMQ";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.521";
+                lng = "-81.62360099999999";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = 663c6688accb8f476bf1686aacb135328dea3cef;
+        name = "Superior Av & E 92ND St";
+        "place_id" = "ChIJc-s7ken7MIgRJvuE-s_FI0M";
+        reference = "CnRqAAAAikmSKdYMGt65kNGgh4ijjJentYpKjcYkQI6wZw0RA0hIbgfinnhrZnSU7OYD0FzFUv-AE5zKMrs2WVPZWFSrXcYGYp9VGrg5ZmQTg9chQpMLnHOc2wfn7gPThmpRBkuX40YxZaILjFhSRzHC7ziQCBIQkXNgB7KjfppT5hUGsRBaGhoUebdthUy8fgi7oWii4uFJfFq5vJc";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.537865";
+                lng = "-81.586217";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = e286f19a46ea4d2eaa3990ab79ca05893e0dd009;
+        name = "Hayden Av & Orinoco Av";
+        "place_id" = "ChIJzwpY5aP-MIgRGPu6YiVDQug";
+        reference = "CnRqAAAAFndutB2LocRTMC5O0Z220Trv5umakYbuqaC-lzNy1DucYWIQQvB2UxJ1egL4viHpdYcUuY9r1tfLDTETyYDyUqvm3iOrmk59-KV1EolspLqN4lm8ZIixa5liJOWbECC7bvlFPqQvv5prLmoMKqzFExIQHnTpiubUAiaERv3YvMBkUBoU-TAEujvoXPgROSlpXd6sz3FtNSQ";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.493406";
+                lng = "-81.636056";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = 1ca5a48fc1dc8b9d77c1d37b4eeeed38459abfd2;
+        name = "Quincy Av & E 75th St";
+        "place_id" = "ChIJDwD_gwj7MIgRV_m8TwPTHH8";
+        reference = "CnRoAAAAhg5x9eS40JJgAApK6JG4FxN65PORXozCGxlIpGWu7WCg3YGR_1uoGTqJdqzJAaXjUMaJrRQtiLxNrgUgH21e7KW4tcHB5IO2FK8uTTvEvuYfXD0E9G6w9HXxaJGegqtDsppkm1sIUjpJDyJJKA0CkxIQugbRxnp-ujhADEf4fG623xoUW7oZczVLA9UQtypZvmRoSD42g40";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.485027";
+                lng = "-81.616727";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = ecddfafa2255781c023dc42bb62c994fb65a515e;
+        name = "Woodhill Rd & Steinway Av";
+        "place_id" = "ChIJHbMHKXD7MIgR_vgvNtwiL6Y";
+        reference = "CnRtAAAAdXJTRwYULViOtAsxdwfWeoE1AXmYDx2XqWruO6ctfcy5_wMB9KFG3xvOuT6tRiIJbh2Wwlb1En4GrhOVqy907hizGuqGOdm7pb3SrCYMba1r0iBPpTIUjozdApLjVJy7BwweZDK95V1sPGFMcOaVVRIQfVJtERRPh-8EYPzwNXMmkRoUyposidt3sDxLyKDyca03ZgRvHL0";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.485839";
+                lng = "-81.633031";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = 450e77ced10810f691a6914746a69a65dc6caf2b;
+        name = "E 79th St Red Line Station";
+        "place_id" = ChIJyYlr1xH7MIgRPvjfsP03XEM;
+        reference = "CnRtAAAAmkKwCoYeeijxnW5bJIbUtO8xtrnVIGbmWy3QBwJc1oFS3PD9JekLygBGmTPoEyP1EqoT58j_fYH8vMCvdwuCF2zjhXnP4_OPhhK7BCXG2w1yESYZPYMFBJT3TkPJrRTvG4kOry2iavRFJwlri5z-vRIQNL3FDALYpVHh329aONPL8RoUHZ-lr6eMLZHcM_MUysEcuaRxcI0";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.505257";
+                lng = "-81.61524199999999";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = 231c117a5a07acf6e8ed40c7ce57813ed1bbc6f6;
+        name = "E 105th St & Chester Av";
+        "place_id" = ChIJ2fAhEJD7MIgRJfiHksfQSxE;
+        reference = "CnRqAAAA8allyrpr0G8INJCLkYAz3Ze5ES0MHC7tuI-eFaWEdCXHXwVNz22TmHfA3D7BLghugMZEJ4JuyNNJAHfjvvw0mVx8eO8BIQ3vihFdA1keDYagDr6r5-RoNudP4VR2qtNfcTJBmosA-ruJJ23q0yiPZxIQpLRlMPeUS-q9QiPHpZtMYBoUFpMv0gay5yi-Rr4SAijG1rp3XdE";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.508705";
+                lng = "-81.587982";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = 14cf109b00da90762379e97dc008e946bf57d063;
+        name = "Mayfield Rd & Kenilworth Rd";
+        "place_id" = ChIJ394NE2z8MIgRAfZmvwqiNh8;
+        reference = "CnRuAAAA5INR088Z-yCbG9mkxFCeR7UyGVWtR7Cg4d-PiFlqRsZPhlDnJrvt4C639lZwGtEAAfiEU8VVWAHwDN2ZRHC9D81tn3Ba0r-M1AMGdCwZJYNxRQkfIHoC2gn0h8XVQUDFOH3NU8GCDVSu86PK6Qt-TBIQdFVpfLxtcAQLs2UB_zjwMhoUyNHD3BCCEtsElMZLq9q3_eA-g3Y";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.507004";
+                lng = "-81.607963";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = ad2a4dd093b12d69a7c240616aed6a0f95d90e0f;
+        name = "Euclid Av & Adelbert Rd Station";
+        "place_id" = ChIJOWt4JIn7MIgR7vSDABciIws;
+        reference = "CoQBcgAAAFJU7o4B2TVNoLngJJEucfpGV2RgcQK8raJWw-CP4ckR0CNRcns1SgRnwjaQ3nDevb7UbdpQnFBwFa5ZIS1yhT59enV87zuwLBQeTZsqiujNO13gd2l-l-96l2EFvAQr1yKgzQZYUC3cW3yuGWX9KajxW6nsMBEdPDbSchFp9iyPEhBpdaU3cDzF7KyXIHLUJKC9GhQUHKItXAh3K_CSOvWfm6kTuykCqA";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.522744";
+                lng = "-81.605039";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = 8f6c0acbee0184a1eadf60a2ea1a2981a9fe4327;
+        name = "Superior Av & E 115th St";
+        "place_id" = ChIJkZKJlPf7MIgR8vKyuEvX36o;
+        reference = "CnRsAAAAYK-S1od5_rXWKOHTOPJcqen7TIqyBjManWUjiGCLKd0wjoeckt9MHFQdldf7uICDJ5atu8gv2KGKlK785NUF4gx3RuY-Y1q7c0ySNYWC2Sre__T9tCihg3LNfWLgUix7kQ397NIKTqtxPJqSZZcSKhIQhUPl649_C9kP2lRT7xM1zBoUVuuSxV8_SMEuI1qfezA53E8UtCI";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.533571";
+                lng = "-81.607148";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = 10806c8530dc5166e94539df6aa6e72a23bebf90;
+        name = "Lakeview Rd & Temblett Av";
+        "place_id" = "ChIJDYOSJv77MIgR_vF0dBKURkE";
+        reference = "CnRsAAAArnhh3QG8ji_t2T5UykpAz-7UQkseH6xFsCyuu8vFkoKnfzFWrWRFWZ87BePVLPiDfD-Jh19Sqpo3oP7DBboD40e4ZVYt4GzQ9gff-x-reumvGUIypfd_KqC2gpD-3U3kEGQ6gJN5hinTYOkkJMEmOxIQyFfjB5dH_9MnuSoYrzvyoBoUM3qhYjGvZPQ0T2V5q0onVqdDfw0";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.532637";
+                lng = "-81.601704";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = bbbc43724aa7986f824377c08047c11ae4165d00;
+        name = "E 123RD St & Arlington Av";
+        "place_id" = "ChIJebMKOwD8MIgRxvGXd1_P3IU";
+        reference = "CnRtAAAAeqJBxUCdy57Q7BwhINo3fT_qmn7uOjjHWaMt9b6VXQjL3mWVikF95zQyQUC4H4qVIW1sLG8UtGWTST7Z6cEkiobwi1EI-JZshUswv03Izg57ksA9YJBH8gjwMJSbe4R8Jf5hfWwWOrQcJY9tulbQzxIQINDvrCvimV_ljVIreQ2rlxoUdbevkHivkB9d1Vg5X8njk6Bcsg8";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.523917";
+                lng = "-81.58837699999999";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = 34a35ce886ca1cdb68d75495ad05364814c7cd41;
+        name = "Euclid Av & Superior Av";
+        "place_id" = "ChIJJ0J6Pxr8MIgRf_Bkjt7_j4o";
+        reference = "CnRrAAAAI1y1rnv2NpLxDL_AVi8L9rIvEhEQ4Cuoq8JLrZnZfurXjGNvGAzIaZHhCS5cNewBRYaCHfHkDTHL58IlDKBW-AnbfVvUQw63kYzgwBbEPebDdi8DoF5W88thB6Py6Xh5A9eBmzYybPxVpVk0nJb3BhIQy9MsLSBapqDrGncgu61HExoUDqsu1TTJEqp7VLuXWGSKNzdHJk8";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.508408";
+                lng = "-81.63798";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = 9fbc60b13b308ab889621da850c05140b6ddf3bc;
+        name = "Hough Av & E 73RD St";
+        "place_id" = ChIJY8I6XLD7MIgRQfAyexK5rx8;
+        reference = "CnRnAAAA0A_Jyuqr4sp8FKHX5SRcU92gwWSgV4bsJEc6IwKNWUrkGRhPtTMKADa0yVAQCHFr8nQZ8kthrZjQJT_g0oR560PkBbpIbD8dkTRgLDxooAA6bHTvezXL8AK8WlznP9oKG650Vmt9g9Osj-xDMs2x6xIQhHoTRgFVhWA3_FqWk6EifRoUR36IIpX4bSLV3t9MMdm6kChbafk";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    },
+        {
+        geometry =         {
+            location =             {
+                lat = "41.528118";
+                lng = "-81.60155399999999";
+            };
+        };
+        icon = "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png";
+        id = 4705d9d7670ab551cdce1b6ad867fc4011cc6400;
+        name = "E 123RD St & Castlewood Av";
+        "place_id" = ChIJCzKKMQf8MIgRCfBY9OdzIg0;
+        reference = "CnRtAAAA9phXHqbLcGFc4AFdks-8rYil0olgA2G0Q8m5Hi3O0UcV8hv2gaYmNM-QCuYW0-1v6WdMceiuGsmQjdAwKUTHpwrrvBb8K-_qH3YgDho_WqfZKiK_C4_BSIPIfW9AqvoIV4ONVcGXpqqkijDFj1dO4hIQWykOjYYXn4GFhtLn7kIY2hoUYGg_h4fEEAZFeBHLMnNIe0g-ldA";
+        scope = GOOGLE;
+        types =         (
+            "bus_station",
+            "transit_station",
+            "point_of_interest",
+            establishment
+        );
+        vicinity = "United States";
+    }
+))

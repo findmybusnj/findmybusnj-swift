@@ -60,6 +60,10 @@ class FindNearByStopsController: UIViewController {
         }
     }
     
+    private func addMapAttributesForPlaces(json: JSON) {
+        
+    }
+    
     private func checkLocationAuthorizationStatus() {
         if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
             mapView.showsUserLocation = true
