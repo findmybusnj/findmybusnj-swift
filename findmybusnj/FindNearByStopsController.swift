@@ -61,8 +61,20 @@ class FindNearByStopsController: UIViewController {
             }
             else {
                 let json = JSON(json.value!)
+                let results = json["results"]
+                var locName: String
+                var latitude: Double
+                var longitude: Double
+                
                 for (var i = 0; i < 5; i++) {
-                    print(i, "bus is:",  json["results"][i]["name"])
+                    locName = String(results[i]["name"])
+                    latitude = results[i]["geometry"]["location"]["lat"].double!
+                    longitude = results[i]["geometry"]["location"]["lng"].double!
+
+                    print(i, "bus is:",  locName, "with latitude", latitude, "and longitude", longitude)
+                    let busStopAnnotation = PlacesAnnotation(title: locName,
+                        locationName: locName,
+                        coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
                 }
             }
         }
