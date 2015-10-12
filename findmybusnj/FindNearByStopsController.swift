@@ -23,7 +23,9 @@ class FindNearByStopsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        centerMapOnLocation()
+        mapView.delegate = self
+        
+//        centerMapOnLocation()
         queryPlaces("bus_station")
     }
     
@@ -40,21 +42,27 @@ class FindNearByStopsController: UIViewController {
     }
     
     private func queryPlaces(googleType: String) {
-        let coordinate = locationManager.location!.coordinate
+//        let coordinate = locationManager.location!.coordinate
         let queryRegion = regionRadius * 3
         
-        let latitude = coordinate.latitude
-        let longitude = coordinate.longitude
+//        let latitude = coordinate.latitude
+//        let longitude = coordinate.longitude
+        let latitude = 40.9171205
+        let longitude = -74.0441104
+        /**
+        * Pass data to server using headers, not through string
+        **/
         let url = String("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(latitude),\(longitude)&radius=\(queryRegion)&types=\(googleType)&key=\(kgPlaceKey)")
         
         Alamofire.request(.GET, url).responseJSON {
-            (req, res, result) in
-            if (result.isFailure) {
-                NSLog("Error: \(result.error)")
+            (req, res, json) in
+            if (json.isFailure) {
+                NSLog("Error: \(json.error)")
             }
             else {
-                if let json = result.value {
-                    print("JSON: ", json["results"])
+                let json = JSON(json.value!)
+                for (var i = 0; i < 5; i++) {
+                    print(i, "bus is:",  json["results"][i]["name"])
                 }
             }
         }

@@ -19,6 +19,8 @@
 		D4D6AB701BBA2FE200CE241D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6E1BBA2FE200CE241D /* LaunchScreen.storyboard */; };
 		D4D6AB7B1BBA2FE200CE241D /* findmybusnjTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB7A1BBA2FE200CE241D /* findmybusnjTests.swift */; };
 		D4D6AB861BBA2FE200CE241D /* findmybusnjUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB851BBA2FE200CE241D /* findmybusnjUITests.swift */; };
+		D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */; settings = {ASSET_TAGS = (); }; };
+		D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		D4D6AB811BBA2FE200CE241D /* findmybusnjUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = findmybusnjUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB851BBA2FE200CE241D /* findmybusnjUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findmybusnjUITests.swift; sourceTree = "<group>"; };
 		D4D6AB871BBA2FE200CE241D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesAnnotation.swift; sourceTree = "<group>"; };
+		D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FNBSMapView.swift; path = Extensions/FNBSMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,8 @@
 		D4D6AB621BBA2FE200CE241D /* findmybusnj */ = {
 			isa = PBXGroup;
 			children = (
+				D4E4B1271BCC1CDF00D06419 /* Extensions */,
+				D4E4B1221BCBF9F500D06419 /* Model */,
 				D42357F91BBA35A900B5A08D /* View Controllers */,
 				D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */,
 				D4D6AB691BBA2FE200CE241D /* Main.storyboard */,
@@ -198,6 +204,22 @@
 				D4D6AB871BBA2FE200CE241D /* Info.plist */,
 			);
 			path = findmybusnjUITests;
+			sourceTree = "<group>";
+		};
+		D4E4B1221BCBF9F500D06419 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D4E4B1271BCC1CDF00D06419 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +427,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */,
+				D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */,
 				D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */,
 				D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */,
 				D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */,
