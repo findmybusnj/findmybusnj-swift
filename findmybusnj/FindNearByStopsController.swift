@@ -75,6 +75,7 @@ class FindNearByStopsController: UIViewController {
                     let busStopAnnotation = PlacesAnnotation(title: locName,
                         locationName: locName,
                         coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+                    self.mapView.addAnnotation(busStopAnnotation)
                 }
             }
         }
