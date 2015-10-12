@@ -45,10 +45,14 @@ class FindNearByStopsController: UIViewController {
 //        let coordinate = locationManager.location!.coordinate
         let queryRegion = regionRadius * 3
         
+        // Prod code (variable based on GPS)
 //        let latitude = coordinate.latitude
 //        let longitude = coordinate.longitude
+        
+        // Test data (home)
         let latitude = 40.9171205
         let longitude = -74.0441104
+        
         /**
         * Pass data to server using headers, not through string
         **/
@@ -62,18 +66,17 @@ class FindNearByStopsController: UIViewController {
             else {
                 let json = JSON(json.value!)
                 let results = json["results"]
-                var locName: String
+                var locName: String         // location name
                 var latitude: Double
                 var longitude: Double
                 
-                for (var i = 0; i < 5; i++) {
+                for (var i = 0; i < 15; i++) {
                     locName = String(results[i]["name"])
                     latitude = results[i]["geometry"]["location"]["lat"].double!
                     longitude = results[i]["geometry"]["location"]["lng"].double!
 
                     print(i, "bus is:",  locName, "with latitude", latitude, "and longitude", longitude)
                     let busStopAnnotation = PlacesAnnotation(title: locName,
-                        locationName: locName,
                         coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
                     self.mapView.addAnnotation(busStopAnnotation)
                 }

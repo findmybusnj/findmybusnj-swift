@@ -23,6 +23,7 @@ extension FindNearByStopsController: MKMapViewDelegate {
                 view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
+//                view.rightCalloutAccessoryView = some custom icon we will use for navigating
                 
                 return view
             }
