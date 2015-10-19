@@ -9,6 +9,7 @@
 
 import Foundation
 import MapKit
+import AddressBook
 
 class PlacesAnnotation: NSObject, MKAnnotation {
     let title: String?
@@ -23,5 +24,15 @@ class PlacesAnnotation: NSObject, MKAnnotation {
     
     var subtitle: String? {
         return nil
+    }
+    
+    func mapItem() -> MKMapItem {
+        let addressDictionary = [String(kABPersonAddressStreetKey): String(title)]      // MKPlacemark only takes a String, not an optional string
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDictionary)
+        
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = title
+        
+        return mapItem
     }
 }

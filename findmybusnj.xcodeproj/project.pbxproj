@@ -135,9 +135,9 @@
 		D42357F91BBA35A900B5A08D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D4FE2D6E1BD53E8C00930C24 /* Map */,
 				D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */,
 				D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */,
-				D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -176,7 +176,6 @@
 		D4D6AB621BBA2FE200CE241D /* findmybusnj */ = {
 			isa = PBXGroup;
 			children = (
-				D4E4B1271BCC1CDF00D06419 /* Extensions */,
 				D4E4B1221BCBF9F500D06419 /* Model */,
 				D42357F91BBA35A900B5A08D /* View Controllers */,
 				D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */,
@@ -214,12 +213,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		D4E4B1271BCC1CDF00D06419 /* Extensions */ = {
+		D4FE2D6E1BD53E8C00930C24 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */,
 				D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */,
 			);
-			name = Extensions;
+			name = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

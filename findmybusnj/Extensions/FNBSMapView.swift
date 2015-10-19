@@ -23,12 +23,17 @@ extension FindNearByStopsController: MKMapViewDelegate {
                 view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
-//                view.rightCalloutAccessoryView = some custom icon we will use for navigating
-                
+                view.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure) as! UIView
                 return view
             }
         }
         
         return nil
+    }
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let location = view.annotation as! PlacesAnnotation
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        location.mapItem().openInMapsWithLaunchOptions(launchOptions)
     }
 }

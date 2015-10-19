@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import MapKit
+
+// Dependencies
 import SwiftyJSON
 import Alamofire
 
@@ -25,7 +27,7 @@ class FindNearByStopsController: UIViewController {
         super.viewDidLoad()
         mapView.delegate = self
         
-//        centerMapOnLocation()
+        centerMapOnLocation()
         queryPlaces("bus_station")
     }
     
@@ -42,16 +44,16 @@ class FindNearByStopsController: UIViewController {
     }
     
     private func queryPlaces(googleType: String) {
-//        let coordinate = locationManager.location!.coordinate
+        let coordinate = locationManager.location!.coordinate
         let queryRegion = regionRadius * 3
         
         // Prod code (variable based on GPS)
-//        let latitude = coordinate.latitude
-//        let longitude = coordinate.longitude
+        let latitude = coordinate.latitude
+        let longitude = coordinate.longitude
         
         // Test data (home)
-        let latitude = 40.9171205
-        let longitude = -74.0441104
+//        let latitude = 40.9171205
+//        let longitude = -74.0441104
         
         /**
         * Pass data to server using headers, not through string
@@ -82,10 +84,6 @@ class FindNearByStopsController: UIViewController {
                 }
             }
         }
-    }
-    
-    private func addMapAttributesForPlaces(json: JSON) {
-        
     }
     
     private func checkLocationAuthorizationStatus() {
