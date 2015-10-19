@@ -89,7 +89,8 @@ class FindNearByStopsController: UIViewController {
     private func checkLocationAuthorizationStatus() {
         if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
             mapView.showsUserLocation = true
-        } else {
+        }
+        else {
             locationManager.requestWhenInUseAuthorization()
         }
     }
