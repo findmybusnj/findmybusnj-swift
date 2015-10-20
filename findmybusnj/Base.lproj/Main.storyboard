@@ -3,17 +3,48 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Bus Time Table Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="BusTimeTableController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5e8-a6-Kmc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="5e8-a6-Kmc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="eta" rowHeight="180" id="JJG-lH-ZKR" customClass="ETACard" customModule="findmybusnj" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JJG-lH-ZKR" id="hfP-jd-jud">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="179.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM0-Nz-2Je">
+                                            <rect key="frame" x="23" y="12" width="554" height="156"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="aM0-Nz-2Je" firstAttribute="leading" secondItem="hfP-jd-jud" secondAttribute="leadingMargin" constant="15" id="1RW-gG-Ox5"/>
+                                        <constraint firstItem="aM0-Nz-2Je" firstAttribute="trailing" secondItem="hfP-jd-jud" secondAttribute="trailingMargin" constant="-15" id="23B-OJ-4Jb"/>
+                                        <constraint firstItem="aM0-Nz-2Je" firstAttribute="centerY" secondItem="hfP-jd-jud" secondAttribute="centerY" constant="0.25" id="TTE-Tt-OFE"/>
+                                        <constraint firstItem="aM0-Nz-2Je" firstAttribute="top" secondItem="hfP-jd-jud" secondAttribute="topMargin" constant="4" id="gJL-b1-TNB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="card" destination="hfP-jd-jud" id="K7l-zB-154"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="9pv-A4-QxB" id="ipb-e4-oTt"/>
                             <outlet property="delegate" destination="9pv-A4-QxB" id="wWW-yp-DxI"/>

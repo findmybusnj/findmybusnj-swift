@@ -21,6 +21,7 @@
 		D4D6AB861BBA2FE200CE241D /* findmybusnjUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB851BBA2FE200CE241D /* findmybusnjUITests.swift */; };
 		D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */; settings = {ASSET_TAGS = (); }; };
 		D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */; settings = {ASSET_TAGS = (); }; };
+		D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		D4D6AB871BBA2FE200CE241D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesAnnotation.swift; sourceTree = "<group>"; };
 		D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FNBSMapView.swift; path = Extensions/FNBSMapView.swift; sourceTree = "<group>"; };
+		D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACard.swift; path = Model/ETACard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +137,8 @@
 		D42357F91BBA35A900B5A08D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D4EC73FD1BD69B8200FF2E88 /* ETAView */,
 				D4FE2D6E1BD53E8C00930C24 /* Map */,
-				D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */,
 				D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */,
 			);
 			name = "View Controllers";
@@ -209,8 +211,17 @@
 			isa = PBXGroup;
 			children = (
 				D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */,
+				D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D4EC73FD1BD69B8200FF2E88 /* ETAView */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */,
+			);
+			name = ETAView;
 			sourceTree = "<group>";
 		};
 		D4FE2D6E1BD53E8C00930C24 /* Map */ = {
@@ -427,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */,
 				D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */,
 				D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */,
 				D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */,
