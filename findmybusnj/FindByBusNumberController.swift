@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FindByBusNumberController: UITableViewController {
+class FindByBusNumberController: CardTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,6 @@ class FindByBusNumberController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 

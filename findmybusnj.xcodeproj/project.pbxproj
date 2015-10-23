@@ -10,7 +10,7 @@
 		6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */; };
 		D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */; };
-		D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */; settings = {ASSET_TAGS = (); }; };
+		D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */; };
 		D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */; };
 		D4D6AB661BBA2FE200CE241D /* BusTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */; };
 		D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */; };
@@ -19,9 +19,10 @@
 		D4D6AB701BBA2FE200CE241D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6E1BBA2FE200CE241D /* LaunchScreen.storyboard */; };
 		D4D6AB7B1BBA2FE200CE241D /* findmybusnjTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB7A1BBA2FE200CE241D /* findmybusnjTests.swift */; };
 		D4D6AB861BBA2FE200CE241D /* findmybusnjUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB851BBA2FE200CE241D /* findmybusnjUITests.swift */; };
-		D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */; settings = {ASSET_TAGS = (); }; };
-		D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */; settings = {ASSET_TAGS = (); }; };
-		D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */; settings = {ASSET_TAGS = (); }; };
+		D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */; };
+		D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */; };
+		D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */; };
+		D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		D4D6AB811BBA2FE200CE241D /* findmybusnjUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = findmybusnjUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB851BBA2FE200CE241D /* findmybusnjUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findmybusnjUITests.swift; sourceTree = "<group>"; };
 		D4D6AB871BBA2FE200CE241D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTableViewController.swift; path = Controllers/CardTableViewController.swift; sourceTree = "<group>"; };
 		D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesAnnotation.swift; sourceTree = "<group>"; };
 		D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FNBSMapView.swift; path = Extensions/FNBSMapView.swift; sourceTree = "<group>"; };
 		D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACard.swift; path = Model/ETACard.swift; sourceTree = "<group>"; };
@@ -137,9 +139,10 @@
 		D42357F91BBA35A900B5A08D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */,
 				D4EC73FD1BD69B8200FF2E88 /* ETAView */,
+				D4DE49FA1BDAA0A10037D211 /* Find By Bus View */,
 				D4FE2D6E1BD53E8C00930C24 /* Map */,
-				D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -205,6 +208,14 @@
 				D4D6AB871BBA2FE200CE241D /* Info.plist */,
 			);
 			path = findmybusnjUITests;
+			sourceTree = "<group>";
+		};
+		D4DE49FA1BDAA0A10037D211 /* Find By Bus View */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */,
+			);
+			name = "Find By Bus View";
 			sourceTree = "<group>";
 		};
 		D4E4B1221BCBF9F500D06419 /* Model */ = {
@@ -439,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */,
+				D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */,
 				D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */,
 				D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */,
 				D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */,
