@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JJG-lH-ZKR" id="hfP-jd-jud">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="179.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="179"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM0-Nz-2Je">
@@ -50,7 +50,19 @@
                             <outlet property="delegate" destination="9pv-A4-QxB" id="wWW-yp-DxI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="BUl-Fr-y7j"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="BUl-Fr-y7j">
+                        <barButtonItem key="leftBarButtonItem" id="uTz-rz-G5B">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="HBW-h7-NFN">
+                                <rect key="frame" x="20" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" image="Heart"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="6Bx-gk-rPi"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +82,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R64-nQ-y88" id="hn7-DL-wyz">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="179.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="179"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z20-sZ-k9N">
@@ -205,6 +217,7 @@
     </scenes>
     <resources>
         <image name="Bus" width="32" height="32"/>
+        <image name="Heart" width="48" height="48"/>
         <image name="Location" width="32" height="32"/>
     </resources>
 </document>
