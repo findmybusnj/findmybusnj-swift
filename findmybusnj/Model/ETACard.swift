@@ -11,10 +11,12 @@ import UIKit
 
 class ETACard: UITableViewCell {
     @IBOutlet weak var card: UIView!
+    @IBOutlet weak var busField: UILabel!   // Contains 'Bus:'
     
     override func layoutSubviews() {
         cardSetup()
         self.addSubview(card)
+        boldFieldTitles()
     }
     
     func cardSetup() {
@@ -28,5 +30,10 @@ class ETACard: UITableViewCell {
         self.card.layer.shadowPath = path.CGPath
         
         self.card.layer.shadowOpacity = 0.2
+    }
+    
+    func boldFieldTitles() {
+        let labelSize = CGFloat(23)
+        busField.font = UIFont(name: "HelveticaNeue-Bold", size: labelSize)
     }
 }
