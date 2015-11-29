@@ -8,14 +8,17 @@
 
 import Foundation
 import UIKit
+import AnimationsFramework
 
 class ETACard: UITableViewCell {
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var busField: UILabel!   // Contains 'Bus:'
     @IBOutlet weak var routeLabel: UILabel! // Contains 'Via:'
+    @IBOutlet weak var circleView: UIView!  // Contains the timing circle
     
     override func layoutSubviews() {
         cardSetup()
+        renderCircle()
         self.addSubview(card)
         boldFieldTitles()
     }
@@ -31,6 +34,10 @@ class ETACard: UITableViewCell {
         self.card.layer.shadowPath = path.CGPath
         
         self.card.layer.shadowOpacity = 0.2
+    }
+    
+    func renderCircle() {
+        ShapeRenderer.renderCircle(circleView)
     }
     
     func boldFieldTitles() {

@@ -11,6 +11,13 @@
 		D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */; };
 		D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */; };
 		D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */; };
+		D4D1AF1A1C0BA99C00FA6C91 /* AnimationsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4D1AF211C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */; };
+		D4D1AF281C0BA99C00FA6C91 /* AnimationsFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1AF271C0BA99C00FA6C91 /* AnimationsFrameworkTests.swift */; };
+		D4D1AF2C1C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */; };
+		D4D1AF2D1C0BA99C00FA6C91 /* AnimationsFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4D1AF381C0BA9D000FA6C91 /* ShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1AF371C0BA9D000FA6C91 /* ShapeRenderer.swift */; };
+		D4D1AF3B1C0BA9E700FA6C91 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1AF3A1C0BA9E700FA6C91 /* Circle.swift */; };
 		D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */; };
 		D4D6AB661BBA2FE200CE241D /* BusTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */; };
 		D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */; };
@@ -40,6 +47,27 @@
 			remoteGlobalIDString = D42358321BBA3A0A00B5A08D;
 			remoteInfo = CommonCodeTests;
 		};
+		D4D1AF221C0BA99C00FA6C91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4D1AF161C0BA99C00FA6C91;
+			remoteInfo = AnimationsFramework;
+		};
+		D4D1AF241C0BA99C00FA6C91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4D6AB5F1BBA2FE200CE241D;
+			remoteInfo = findmybusnj;
+		};
+		D4D1AF2A1C0BA99C00FA6C91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4D1AF161C0BA99C00FA6C91;
+			remoteInfo = AnimationsFramework;
+		};
 		D4D6AB771BBA2FE200CE241D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
@@ -56,6 +84,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D4D1AF351C0BA99C00FA6C91 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D4D1AF2D1C0BA99C00FA6C91 /* AnimationsFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4CBCBE02954639DF7E50BFBA /* Pods-findmybusnj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.release.xcconfig"; sourceTree = "<group>"; };
 		C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +108,14 @@
 		D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindNearByStopsController.swift; sourceTree = "<group>"; };
 		D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimationsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationsFramework.h; sourceTree = "<group>"; };
+		D4D1AF1B1C0BA99C00FA6C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D1AF201C0BA99C00FA6C91 /* AnimationsFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationsFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D1AF271C0BA99C00FA6C91 /* AnimationsFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsFrameworkTests.swift; sourceTree = "<group>"; };
+		D4D1AF291C0BA99C00FA6C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D1AF371C0BA9D000FA6C91 /* ShapeRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeRenderer.swift; sourceTree = "<group>"; };
+		D4D1AF3A1C0BA9E700FA6C91 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Circle.swift; path = Shapes/Circle.swift; sourceTree = "<group>"; };
 		D4D6AB601BBA2FE200CE241D /* findmybusnj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findmybusnj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimeTableController.swift; sourceTree = "<group>"; };
@@ -87,12 +137,28 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D4D1AF131C0BA99C00FA6C91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4D1AF1D1C0BA99C00FA6C91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D1AF211C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4D6AB5D1BBA2FE200CE241D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */,
 				D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */,
+				D4D1AF2C1C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */,
 				6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,12 +222,42 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D4D1AF181C0BA99C00FA6C91 /* AnimationsFramework */ = {
+			isa = PBXGroup;
+			children = (
+				D4D1AF391C0BA9DA00FA6C91 /* Circle */,
+				D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */,
+				D4D1AF1B1C0BA99C00FA6C91 /* Info.plist */,
+				D4D1AF371C0BA9D000FA6C91 /* ShapeRenderer.swift */,
+			);
+			path = AnimationsFramework;
+			sourceTree = "<group>";
+		};
+		D4D1AF261C0BA99C00FA6C91 /* AnimationsFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4D1AF271C0BA99C00FA6C91 /* AnimationsFrameworkTests.swift */,
+				D4D1AF291C0BA99C00FA6C91 /* Info.plist */,
+			);
+			path = AnimationsFrameworkTests;
+			sourceTree = "<group>";
+		};
+		D4D1AF391C0BA9DA00FA6C91 /* Circle */ = {
+			isa = PBXGroup;
+			children = (
+				D4D1AF3A1C0BA9E700FA6C91 /* Circle.swift */,
+			);
+			name = Circle;
+			sourceTree = "<group>";
+		};
 		D4D6AB571BBA2FE200CE241D = {
 			isa = PBXGroup;
 			children = (
 				D4D6AB621BBA2FE200CE241D /* findmybusnj */,
 				D4D6AB791BBA2FE200CE241D /* findmybusnjTests */,
 				D4D6AB841BBA2FE200CE241D /* findmybusnjUITests */,
+				D4D1AF181C0BA99C00FA6C91 /* AnimationsFramework */,
+				D4D1AF261C0BA99C00FA6C91 /* AnimationsFrameworkTests */,
 				D4D6AB611BBA2FE200CE241D /* Products */,
 				CF87078E50546E553E842561 /* Pods */,
 				516CB71DBABA7F1FCD524014 /* Frameworks */,
@@ -174,6 +270,8 @@
 				D4D6AB601BBA2FE200CE241D /* findmybusnj.app */,
 				D4D6AB761BBA2FE200CE241D /* findmybusnjTests.xctest */,
 				D4D6AB811BBA2FE200CE241D /* findmybusnjUITests.xctest */,
+				D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */,
+				D4D1AF201C0BA99C00FA6C91 /* AnimationsFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,7 +344,55 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		D4D1AF141C0BA99C00FA6C91 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D1AF1A1C0BA99C00FA6C91 /* AnimationsFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		D4D1AF161C0BA99C00FA6C91 /* AnimationsFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4D1AF341C0BA99C00FA6C91 /* Build configuration list for PBXNativeTarget "AnimationsFramework" */;
+			buildPhases = (
+				D4D1AF121C0BA99C00FA6C91 /* Sources */,
+				D4D1AF131C0BA99C00FA6C91 /* Frameworks */,
+				D4D1AF141C0BA99C00FA6C91 /* Headers */,
+				D4D1AF151C0BA99C00FA6C91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimationsFramework;
+			productName = AnimationsFramework;
+			productReference = D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D4D1AF1F1C0BA99C00FA6C91 /* AnimationsFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4D1AF361C0BA99C00FA6C91 /* Build configuration list for PBXNativeTarget "AnimationsFrameworkTests" */;
+			buildPhases = (
+				D4D1AF1C1C0BA99C00FA6C91 /* Sources */,
+				D4D1AF1D1C0BA99C00FA6C91 /* Frameworks */,
+				D4D1AF1E1C0BA99C00FA6C91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4D1AF231C0BA99C00FA6C91 /* PBXTargetDependency */,
+				D4D1AF251C0BA99C00FA6C91 /* PBXTargetDependency */,
+			);
+			name = AnimationsFrameworkTests;
+			productName = AnimationsFrameworkTests;
+			productReference = D4D1AF201C0BA99C00FA6C91 /* AnimationsFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D4D6AB5F1BBA2FE200CE241D /* findmybusnj */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4D6AB8A1BBA2FE200CE241D /* Build configuration list for PBXNativeTarget "findmybusnj" */;
@@ -257,10 +403,12 @@
 				D4D6AB5E1BBA2FE200CE241D /* Resources */,
 				74A9C29BC882D0903BFA50A2 /* Embed Pods Frameworks */,
 				65D337A5AA59A9C108C847BE /* Copy Pods Resources */,
+				D4D1AF351C0BA99C00FA6C91 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D4D1AF2B1C0BA99C00FA6C91 /* PBXTargetDependency */,
 			);
 			name = findmybusnj;
 			productName = findmybusnj;
@@ -309,9 +457,18 @@
 		D4D6AB581BBA2FE200CE241D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "David Aghassi";
 				TargetAttributes = {
+					D4D1AF161C0BA99C00FA6C91 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 23254ZGZ6N;
+					};
+					D4D1AF1F1C0BA99C00FA6C91 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
+					};
 					D4D6AB5F1BBA2FE200CE241D = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 23254ZGZ6N;
@@ -348,6 +505,8 @@
 				D4D6AB5F1BBA2FE200CE241D /* findmybusnj */,
 				D4D6AB751BBA2FE200CE241D /* findmybusnjTests */,
 				D4D6AB801BBA2FE200CE241D /* findmybusnjUITests */,
+				D4D1AF161C0BA99C00FA6C91 /* AnimationsFramework */,
+				D4D1AF1F1C0BA99C00FA6C91 /* AnimationsFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -370,6 +529,20 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D4D1AF151C0BA99C00FA6C91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4D1AF1E1C0BA99C00FA6C91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4D6AB5E1BBA2FE200CE241D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +618,23 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D4D1AF121C0BA99C00FA6C91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D1AF381C0BA9D000FA6C91 /* ShapeRenderer.swift in Sources */,
+				D4D1AF3B1C0BA9E700FA6C91 /* Circle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4D1AF1C1C0BA99C00FA6C91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D1AF281C0BA99C00FA6C91 /* AnimationsFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4D6AB5C1BBA2FE200CE241D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,6 +669,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D4D1AF231C0BA99C00FA6C91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4D1AF161C0BA99C00FA6C91 /* AnimationsFramework */;
+			targetProxy = D4D1AF221C0BA99C00FA6C91 /* PBXContainerItemProxy */;
+		};
+		D4D1AF251C0BA99C00FA6C91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4D6AB5F1BBA2FE200CE241D /* findmybusnj */;
+			targetProxy = D4D1AF241C0BA99C00FA6C91 /* PBXContainerItemProxy */;
+		};
+		D4D1AF2B1C0BA99C00FA6C91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4D1AF161C0BA99C00FA6C91 /* AnimationsFramework */;
+			targetProxy = D4D1AF2A1C0BA99C00FA6C91 /* PBXContainerItemProxy */;
+		};
 		D4D6AB781BBA2FE200CE241D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4D6AB5F1BBA2FE200CE241D /* findmybusnj */;
@@ -511,6 +716,81 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D4D1AF2E1C0BA99C00FA6C91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AnimationsFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4D1AF2F1C0BA99C00FA6C91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AnimationsFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D4D1AF301C0BA99C00FA6C91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AnimationsFrameworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
+			};
+			name = Debug;
+		};
+		D4D1AF311C0BA99C00FA6C91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = AnimationsFrameworkTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
+			};
+			name = Release;
+		};
 		D4D6AB881BBA2FE200CE241D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -599,6 +879,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -619,6 +900,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
@@ -683,6 +965,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D4D1AF341C0BA99C00FA6C91 /* Build configuration list for PBXNativeTarget "AnimationsFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4D1AF2E1C0BA99C00FA6C91 /* Debug */,
+				D4D1AF2F1C0BA99C00FA6C91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D4D1AF361C0BA99C00FA6C91 /* Build configuration list for PBXNativeTarget "AnimationsFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4D1AF301C0BA99C00FA6C91 /* Debug */,
+				D4D1AF311C0BA99C00FA6C91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D4D6AB5B1BBA2FE200CE241D /* Build configuration list for PBXProject "findmybusnj" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

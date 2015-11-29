@@ -47,13 +47,22 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5un-R4-eAS">
+                                                    <rect key="frame" x="8" y="8" width="130" height="140"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
                                             </subviews>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="5un-R4-eAS" firstAttribute="bottom" secondItem="aM0-Nz-2Je" secondAttribute="bottomMargin" id="3Et-s8-K9U"/>
+                                                <constraint firstItem="5un-R4-eAS" firstAttribute="leading" secondItem="aM0-Nz-2Je" secondAttribute="leadingMargin" id="Awk-N7-bgR"/>
+                                                <constraint firstItem="zd8-Zb-2bS" firstAttribute="leading" secondItem="5un-R4-eAS" secondAttribute="trailing" constant="8" symbolic="YES" id="G6D-sC-qZK"/>
                                                 <constraint firstItem="pcm-jJ-zDY" firstAttribute="leading" secondItem="aM0-Nz-2Je" secondAttribute="leading" multiplier="1.5" constant="145" id="JWK-Um-5Gq"/>
                                                 <constraint firstAttribute="bottom" secondItem="pcm-jJ-zDY" secondAttribute="bottom" constant="98" id="SyW-OJ-06n"/>
                                                 <constraint firstItem="pcm-jJ-zDY" firstAttribute="top" secondItem="aM0-Nz-2Je" secondAttribute="top" constant="37" id="YQu-iw-PU0"/>
+                                                <constraint firstItem="5un-R4-eAS" firstAttribute="top" secondItem="aM0-Nz-2Je" secondAttribute="topMargin" id="hr3-10-C41"/>
                                                 <constraint firstItem="zd8-Zb-2bS" firstAttribute="leading" secondItem="pcm-jJ-zDY" secondAttribute="leading" constant="1" id="rlZ-Cl-gEx"/>
                                                 <constraint firstAttribute="bottom" secondItem="zd8-Zb-2bS" secondAttribute="bottom" constant="60" id="slQ-fa-JKy"/>
                                                 <constraint firstItem="zd8-Zb-2bS" firstAttribute="top" secondItem="pcm-jJ-zDY" secondAttribute="bottom" constant="8" symbolic="YES" id="zXp-Gv-b34"/>
@@ -74,6 +83,7 @@
                                 <connections>
                                     <outlet property="busField" destination="pcm-jJ-zDY" id="Uei-Q4-09I"/>
                                     <outlet property="card" destination="hfP-jd-jud" id="K7l-zB-154"/>
+                                    <outlet property="circleView" destination="5un-R4-eAS" id="Ugw-fc-FEz"/>
                                     <outlet property="routeLabel" destination="zd8-Zb-2bS" id="oF5-Wx-k8r"/>
                                 </connections>
                             </tableViewCell>

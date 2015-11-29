@@ -48,6 +48,16 @@
                ReferencedContainer = "container:findmybusnj.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D4D1AF1F1C0BA99C00FA6C91"
+               BuildableName = "AnimationsFrameworkTests.xctest"
+               BlueprintName = "AnimationsFrameworkTests"
+               ReferencedContainer = "container:findmybusnj.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AnimationsFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>findmybusnj.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>D4D1AF161C0BA99C00FA6C91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D4D1AF1F1C0BA99C00FA6C91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D4D6AB5F1BBA2FE200CE241D</key>
 		<dict>
 			<key>primary</key>
