@@ -12,6 +12,7 @@ import UIKit
 class ETACard: UITableViewCell {
     @IBOutlet weak var card: UIView!
     @IBOutlet weak var busField: UILabel!   // Contains 'Bus:'
+    @IBOutlet weak var routeLabel: UILabel! // Contains 'Via:'
     
     override func layoutSubviews() {
         cardSetup()
@@ -33,7 +34,7 @@ class ETACard: UITableViewCell {
     }
     
     func boldFieldTitles() {
-        let labelSize = CGFloat(23)
-        busField.font = UIFont(name: "HelveticaNeue-Bold", size: labelSize)
+        busField.font = UIFont(name: "HelveticaNeue-Bold", size: (busField.font?.pointSize)!)
+        routeLabel.font = UIFont(name: "HelveticaNeue-Bold", size: (routeLabel.font?.pointSize)!)
     }
 }
