@@ -21,14 +21,14 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JJG-lH-ZKR" id="hfP-jd-jud">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="179.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM0-Nz-2Je">
                                             <rect key="frame" x="23" y="12" width="554" height="156"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pcm-jJ-zDY">
-                                                    <rect key="frame" x="145" y="37" width="42" height="21"/>
+                                                    <rect key="frame" x="160" y="37" width="42" height="21"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="42" id="nej-uX-cLM"/>
@@ -38,7 +38,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Via:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zd8-Zb-2bS">
-                                                    <rect key="frame" x="146" y="66" width="60" height="30"/>
+                                                    <rect key="frame" x="161" y="66" width="60" height="30"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="6wZ-9h-cia"/>
@@ -49,6 +49,15 @@
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5un-R4-eAS">
                                                     <rect key="frame" x="8" y="8" width="130" height="140"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPc-Ge-Ihm">
+                                                            <rect key="frame" x="18" y="47" width="94" height="45"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <animations/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
@@ -58,8 +67,8 @@
                                             <constraints>
                                                 <constraint firstItem="5un-R4-eAS" firstAttribute="bottom" secondItem="aM0-Nz-2Je" secondAttribute="bottomMargin" id="3Et-s8-K9U"/>
                                                 <constraint firstItem="5un-R4-eAS" firstAttribute="leading" secondItem="aM0-Nz-2Je" secondAttribute="leadingMargin" id="Awk-N7-bgR"/>
-                                                <constraint firstItem="zd8-Zb-2bS" firstAttribute="leading" secondItem="5un-R4-eAS" secondAttribute="trailing" constant="8" symbolic="YES" id="G6D-sC-qZK"/>
-                                                <constraint firstItem="pcm-jJ-zDY" firstAttribute="leading" secondItem="aM0-Nz-2Je" secondAttribute="leading" multiplier="1.5" constant="145" id="JWK-Um-5Gq"/>
+                                                <constraint firstItem="zd8-Zb-2bS" firstAttribute="leading" secondItem="5un-R4-eAS" secondAttribute="trailing" constant="23" id="G6D-sC-qZK"/>
+                                                <constraint firstItem="pcm-jJ-zDY" firstAttribute="leading" secondItem="aM0-Nz-2Je" secondAttribute="leading" multiplier="1.5" constant="160" id="JWK-Um-5Gq"/>
                                                 <constraint firstAttribute="bottom" secondItem="pcm-jJ-zDY" secondAttribute="bottom" constant="98" id="SyW-OJ-06n"/>
                                                 <constraint firstItem="pcm-jJ-zDY" firstAttribute="top" secondItem="aM0-Nz-2Je" secondAttribute="top" constant="37" id="YQu-iw-PU0"/>
                                                 <constraint firstItem="5un-R4-eAS" firstAttribute="top" secondItem="aM0-Nz-2Je" secondAttribute="topMargin" id="hr3-10-C41"/>
@@ -85,6 +94,7 @@
                                     <outlet property="card" destination="hfP-jd-jud" id="K7l-zB-154"/>
                                     <outlet property="circleView" destination="5un-R4-eAS" id="Ugw-fc-FEz"/>
                                     <outlet property="routeLabel" destination="zd8-Zb-2bS" id="oF5-Wx-k8r"/>
+                                    <outlet property="timeLabel" destination="NPc-Ge-Ihm" id="aOs-CF-21K"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
