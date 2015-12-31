@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>NetworkManager.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>findmybusnj.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>D479C18F1C34DAA200C434ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D479C1981C34DAA200C434ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D4D1AF161C0BA99C00FA6C91</key>
 		<dict>
 			<key>primary</key>
