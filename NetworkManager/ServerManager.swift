@@ -13,9 +13,9 @@ import Alamofire
 import SwiftyJSON
 
 public class ServerManager {
-    let baseURL = "https://localhost:8443/rest"
+    private static let baseURL = "https://localhost:8443/rest"
     
-    func getJSONForStop(stop: String) {
+    public static func getJSONForStop(stop: String, completion: (item: JSON, error: ErrorType?) -> Void) {
         let endpoint = baseURL + "/stop"
         
         let headers = [ "stop" : stop ]
@@ -26,7 +26,8 @@ public class ServerManager {
                 }
                 else {
                     let json = JSON(json.value!)
-                    let results = json
+                    // call closure for what is past in (kind of like an anonymous function)
+                    completion(item: json, error: nil);
                 }
         }
     }
