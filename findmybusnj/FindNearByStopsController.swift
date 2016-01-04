@@ -27,7 +27,9 @@ class FindNearByStopsController: UIViewController {
         super.viewDidLoad()
         mapView.delegate = self
         
-//        centerMapOnLocation()
+        #if RELEASE
+        centerMapOnLocation()
+        #endif
         queryPlaces("bus_station")
     }
     
@@ -44,16 +46,22 @@ class FindNearByStopsController: UIViewController {
     }
     
     private func queryPlaces(googleType: String) {
-//        let coordinate = locationManager.location!.coordinate
+        #if RELEASE
+        let coordinate = locationManager.location!.coordinate
+        #endif
+        
         let queryRegion = regionRadius * 3
         
-//        // Prod code (variable based on GPS)
-//        let latitude = coordinate.latitude
-//        let longitude = coordinate.longitude
-        
         // Test data (home)
+        #if DEBUG
         let latitude = 40.9171205
         let longitude = -74.0441104
+        #else
+        // Prod code (variable based on GPS)
+        let latitude = coordinate.latitude
+        let longitude = coordinate.longitude
+        #endif
+            
         
         /**
         * Pass data to server using headers, not through string

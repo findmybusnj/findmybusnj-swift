@@ -8,8 +8,10 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 class CardTableViewController: UITableViewController {
+    var items: JSON = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +30,14 @@ class CardTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return items.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let identifier = "eta"
         
         let etaCard: ETACard = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! ETACard
-        
+
         return etaCard
     }
     
