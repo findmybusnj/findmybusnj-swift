@@ -13,13 +13,13 @@ import Alamofire
 import SwiftyJSON
 
 public class ServerManager {
-    private static let baseURL = "https://localhost:8443/rest"
+    private static let baseURL = "https://findmybusnj.com/rest"
     
     public static func getJSONForStop(stop: String, completion: (item: JSON, error: ErrorType?) -> Void) {
         let endpoint = baseURL + "/stop"
         
-        let headers = [ "stop" : stop ]
-        Alamofire.request(.POST, endpoint, headers: headers)
+        let parameters = [ "stop" : stop ]
+        Alamofire.request(.POST, endpoint, parameters: parameters)
             .responseJSON {(req, res, json) in
                 if (json.isFailure) {
                     NSLog("Error: \(json.error)")
