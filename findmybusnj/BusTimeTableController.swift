@@ -17,7 +17,6 @@ class BusTimeTableController: CardTableViewController {
             items, error in
             
             if error == nil {
-                print(items)
                 self.items = items
                 self.tableView.reloadData()
             }

@@ -30,15 +30,28 @@ class CardTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return self.items.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let identifier = "eta"
-        
-        let etaCard: ETACard = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! ETACard
 
+        let etaCard: ETACard = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! ETACard
+        
+        print(self.items.arrayValue[indexPath.row]["pt"].description)
+        etaCard.timeLabel?.text = self.items.arrayValue[indexPath.row]["pt"].description
+        
         return etaCard
+    }
+    
+    // Helper functions for assigning JSON Data
+    
+    private func formatCard() {
+        
+    }
+    
+    private func assignArrivalTime {
+        
     }
     
 }
