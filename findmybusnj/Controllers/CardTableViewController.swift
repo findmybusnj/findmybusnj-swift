@@ -38,20 +38,35 @@ class CardTableViewController: UITableViewController {
 
         let etaCard: ETACard = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! ETACard
         
-        print(self.items.arrayValue[indexPath.row]["pt"].description)
-        etaCard.timeLabel?.text = self.items.arrayValue[indexPath.row]["pt"].description
+        formatCardForIndex(etaCard, index: indexPath)
         
         return etaCard
     }
     
     // Helper functions for assigning JSON Data
     
-    private func formatCard() {
-        
+    private func formatCardForIndex(card: ETACard, index: NSIndexPath) {
+        assignArrivalTimeForIndex(card, index: index.row)
     }
     
-    private func assignArrivalTime {
-        
+    private func assignArrivalTimeForIndex(card: ETACard, index: Int) {
+        let arrivalString = self.items.arrayValue[index]["pu"].description
+        if arrivalString == "MINUTES" {
+            let time = self.items.arrayValue[index]["pt"].description
+            card.timeLabel.text = time + " min."
+        }
+        else {
+            print(self.items.arrayValue[index]["pu"].description)
+            
+            switch arrivalString {
+                case "ARRIVING":
+                    card.timeLabel.text = "Arriving"
+                case "DELAYED":
+                    card.timeLabel.text = "Delayed"
+            default:
+                card.timeLabel.text = "0"
+            }
+        }
     }
     
 }
