@@ -20,14 +20,14 @@ class Circle: UIView {
         
         // Use UIBezierPath as an easy way to create the CGPath for the layer.
         // The path should be the entire circle.
-        let circlePath = UIBezierPath(arcCenter: CGPoint(x: (frame.size.width - 10) / 2.0, y: (frame.size.height + 10) / 2.0), radius: (frame.size.width)/2, startAngle: -1.57, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: (frame.size.width - 10)/2, startAngle: -1.57, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
 
         // Set the properties on the circle
         circle = CAShapeLayer()
         circle.path = circlePath.CGPath
         circle.fillColor = UIColor.clearColor().CGColor
         circle.strokeColor = UIColor.redColor().CGColor     //NOTE: This will change when we have times
-        circle.lineWidth = 8.0
+        circle.lineWidth = 5.0
         
         // Wait to draw the circle
         circle.strokeEnd = 0.0
@@ -82,6 +82,6 @@ class Circle: UIView {
         view.addSubview(circleView)
         
         // Animate the drawing of the circle over the course of 1 second
-        circleView.animateCircle(1.0, borderLength: 1)       // Border length should change when we have a time in the future
+        circleView.animateCircle(1.0, borderLength: 0.5)       // Border length should change when we have a time in the future
     }
 }

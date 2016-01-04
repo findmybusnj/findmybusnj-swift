@@ -1236,7 +1236,6 @@
 				D4D1AF2F1C0BA99C00FA6C91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		D4D1AF361C0BA99C00FA6C91 /* Build configuration list for PBXNativeTarget "AnimationsFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -1245,7 +1244,6 @@
 				D4D1AF311C0BA99C00FA6C91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		D4D6AB5B1BBA2FE200CE241D /* Build configuration list for PBXProject "findmybusnj" */ = {
 			isa = XCConfigurationList;

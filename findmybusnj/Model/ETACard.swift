@@ -15,7 +15,6 @@ class ETACard: UITableViewCell {
     @IBOutlet weak var busField: UILabel!   // Contains 'Bus:'
     @IBOutlet weak var routeLabel: UILabel! // Contains 'Via:'
     @IBOutlet weak var circleView: UIView!  // Contains the timing circle
-    @IBOutlet weak var timeLabel: UILabel!  // Contains the arrival time
     
     override func layoutSubviews() {
         cardSetup()
@@ -42,8 +41,7 @@ class ETACard: UITableViewCell {
     }
     
     func boldFieldTitles() {
-        let font = "HelveticaNeue-Bold";
-        busField.font = UIFont(name: font, size: (busField.font?.pointSize)!)
-        routeLabel.font = UIFont(name: font, size: (routeLabel.font?.pointSize)!)
+        busField.font = UIFont(name: "HelveticaNeue-Bold", size: (busField.font?.pointSize)!)
+        routeLabel.font = UIFont(name: "HelveticaNeue-Bold", size: (routeLabel.font?.pointSize)!)
     }
 }
