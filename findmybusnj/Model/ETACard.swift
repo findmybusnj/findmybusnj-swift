@@ -19,7 +19,6 @@ class ETACard: UITableViewCell {
     
     override func layoutSubviews() {
         cardSetup()
-        renderCircle()
         self.addSubview(card)
         boldFieldTitles()
     }
@@ -37,8 +36,8 @@ class ETACard: UITableViewCell {
         self.card.layer.shadowOpacity = 0.2
     }
     
-    func renderCircle() {
-        ShapeRenderer.renderCircle(circleView)
+    func renderCircleForBusTime(busTime: Int) {
+        ShapeRenderer.renderCircleForBusTime(circleView, busTime: busTime)
     }
     
     func boldFieldTitles() {

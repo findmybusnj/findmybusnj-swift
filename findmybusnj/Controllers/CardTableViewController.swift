@@ -38,6 +38,8 @@ class CardTableViewController: UITableViewController {
 
         let etaCard: ETACard = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! ETACard
         
+        
+        etaCard.viewWithTag(4)?.removeFromSuperview()  // Remove the prior circle if it exists
         formatCardForIndex(etaCard, index: indexPath)
         
         return etaCard
@@ -51,18 +53,28 @@ class CardTableViewController: UITableViewController {
     
     private func assignArrivalTimeForIndex(card: ETACard, index: Int) {
         let arrivalString = self.items.arrayValue[index]["pu"].description
+        
+        // Reset to black everytime just in case
+        card.timeLabel.textColor = UIColor.blackColor()
+        
         if arrivalString == "MINUTES" {
             let time = self.items.arrayValue[index]["pt"].description
             card.timeLabel.text = time + " min."
+            
+            // We also render the circle here
+            print(time)
+            card.renderCircleForBusTime(Int(time)!)
         }
         else {
             print(self.items.arrayValue[index]["pu"].description)
             
             switch arrivalString {
-                case "ARRIVING":
-                    card.timeLabel.text = "Arriving"
+                case "APPROACHING":
+                    card.timeLabel.text = "Approach"
+                    card.timeLabel.textColor = UIColor.blueColor()
                 case "DELAYED":
-                    card.timeLabel.text = "Delayed"
+                    card.timeLabel.text = "Delay"
+                    card.timeLabel.textColor = UIColor.redColor()
             default:
                 card.timeLabel.text = "0"
             }
