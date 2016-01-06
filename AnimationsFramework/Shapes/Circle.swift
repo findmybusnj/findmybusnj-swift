@@ -26,7 +26,7 @@ class Circle: UIView {
         circle = CAShapeLayer()
         circle.path = circlePath.CGPath
         circle.fillColor = UIColor.clearColor().CGColor
-        circle.strokeColor = UIColor.redColor().CGColor     //NOTE: This will change when we have times
+        circle.strokeColor = UIColor.redColor().CGColor
         circle.lineWidth = 8.0
         
         // Wait to draw the circle
@@ -72,16 +72,38 @@ class Circle: UIView {
         circle.addAnimation(animation, forKey: "animateCircle")
     }
     
-    func addCircleToView(view: UIView, xCoordinate: CGFloat) {
+    /**
+    * Adds a circle to the given view controller, will draw based on time passed in
+    *
+    * @param view   The view to be added to
+    * @param xCoordinates   Where in the view to the top left of the circle should be placed
+    * @param busTimeForBorderLength   Denotes the bus time that will determine how far the circle goes
+    **/
+    func addCircleToView(view: UIView, xCoordinate: CGFloat, busTimeForBorderLength: Int) {
         let circleWidth = CGFloat(view.frame.width)
         let circleHeight = circleWidth
         
         // Create a new CircleView
         let circleView = Circle(frame: CGRectMake(xCoordinate, 0, circleWidth, circleHeight))
         
+        circleView.tag = 4    //  4 Stands for the item it should be (which in this case is the last) so we can remove it
         view.addSubview(circleView)
         
         // Animate the drawing of the circle over the course of 1 second
-        circleView.animateCircle(1.0, borderLength: 1)       // Border length should change when we have a time in the future
+        let borderLength = calculateBorderLengthForBusTime(busTimeForBorderLength)
+        circleView.animateCircle(1.0, borderLength: borderLength)       // Border length should change when we have a time in the future
+    }
+    
+    /**
+    * Given a bus time, this will decide how long the border length should be
+    * 
+    * @param busTime    The time, as an int, that will determine the border lenght
+    * @return   A CGFloat between 0 and 1 that reperesents the border length
+    **/
+    private func calculateBorderLengthForBusTime(busTime: Int) -> CGFloat {
+        let time = (Float(busTime))/35.0    // 35 is a magic number that allows 
+                                            // the circle to be broken up into sections of 8ths
+                                            // so long as we never get higher than 35 minutes
+        return CGFloat(time)
     }
 }
