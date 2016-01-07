@@ -25,6 +25,7 @@ public class ShapeRenderer {
         
         let circleWidth = CGFloat(view.frame.width)
         let circleHeight = circleWidth
+        // view.frame.origin.x is where the circle will be rendered from
         let circle = Circle(frame: CGRectMake(view.frame.origin.x, 0, circleWidth, circleHeight), color: strokeColor)
         
         // Draw the circle in the view at the top left origin

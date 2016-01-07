@@ -61,7 +61,6 @@ class CardTableViewController: UITableViewController {
             card.timeLabel.text = time + " min."
             
             // We also render the circle here
-            print(time)
             card.renderCircleForBusTime(Int(time)!)
         }
         else {
