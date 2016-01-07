@@ -44,13 +44,16 @@ public class ShapeRenderer {
      **/
     private static func determineStrokeColorForBusTime(busTime: Int) {
         if (busTime <= 7) {
-            self.strokeColor = UIColor.greenColor().CGColor
+            // Green
+            self.strokeColor = UIColor(colorLiteralRed: Float(29/255.0), green: Float(156/255.0), blue: Float(48/255.0), alpha: Float(1.0)).CGColor
         }
         else if ( busTime <= 14) {
-            self.strokeColor = UIColor.yellowColor().CGColor
+            // Orange
+            self.strokeColor = UIColor(colorLiteralRed: Float(237/255.0), green: Float(145/255.0), blue: Float(50/255.0), alpha: Float(1.0)).CGColor
         }
         else {
-            self.strokeColor = UIColor.redColor().CGColor
+            // Red
+            self.strokeColor = UIColor(colorLiteralRed: Float(204/255.0), green: Float(25/255.0), blue: Float(36/255.0), alpha: Float(1.0)).CGColor
         }
     }
 }
