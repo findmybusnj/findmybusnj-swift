@@ -22,7 +22,10 @@ public class ShapeRenderer {
     **/
     public static func renderCircleForBusTime(view: UIView, busTime: Int) {
         determineStrokeColorForBusTime(busTime)
-        let circle = Circle(frame: view.layer.frame, color: strokeColor)
+        
+        let circleWidth = CGFloat(view.frame.width)
+        let circleHeight = circleWidth
+        let circle = Circle(frame: CGRectMake(view.frame.origin.x, 0, circleWidth, circleHeight), color: strokeColor)
         
         // Draw the circle in the view at the top left origin
         circle.addCircleToView(view, xCoordinate: view.frame.origin.x, busTimeForBorderLength: busTime)
