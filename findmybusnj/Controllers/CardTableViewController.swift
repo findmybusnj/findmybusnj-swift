@@ -38,8 +38,7 @@ class CardTableViewController: UITableViewController {
 
         let etaCard: ETACard = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! ETACard
         
-        
-        etaCard.viewWithTag(4)?.removeFromSuperview()  // Remove the prior circle if it exists
+        etaCard.removeCircleFromCard(etaCard)
         formatCardForIndex(etaCard, index: indexPath)
         
         return etaCard
@@ -70,7 +69,7 @@ class CardTableViewController: UITableViewController {
             
             switch arrivalString {
                 case "APPROACHING":
-                    card.timeLabel.text = "Approach"
+                    card.timeLabel.text = "Arrive"
                     card.timeLabel.textColor = UIColor.blueColor()
                 case "DELAYED":
                     card.timeLabel.text = "Delay"

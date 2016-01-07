@@ -40,6 +40,10 @@ class ETACard: UITableViewCell {
         ShapeRenderer.renderCircleForBusTime(circleView, busTime: busTime)
     }
     
+    func removeCircleFromCard(view: UIView) {
+        ShapeRenderer.removeRenderedCircle(view);
+    }
+    
     func boldFieldTitles() {
         let font = "HelveticaNeue-Bold";
         busField.font = UIFont(name: font, size: (busField.font?.pointSize)!)

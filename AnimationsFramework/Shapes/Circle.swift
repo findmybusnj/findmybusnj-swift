@@ -14,7 +14,7 @@ import UIKit
 class Circle: UIView {
     var circle: CAShapeLayer!
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, color: CGColor) {
         super.init(frame: frame);
         self.backgroundColor = UIColor.clearColor()
         
@@ -26,7 +26,7 @@ class Circle: UIView {
         circle = CAShapeLayer()
         circle.path = circlePath.CGPath
         circle.fillColor = UIColor.clearColor().CGColor
-        circle.strokeColor = UIColor.redColor().CGColor
+        circle.strokeColor = color
         circle.lineWidth = 8.0
         
         // Wait to draw the circle
@@ -80,18 +80,12 @@ class Circle: UIView {
     * @param busTimeForBorderLength   Denotes the bus time that will determine how far the circle goes
     **/
     func addCircleToView(view: UIView, xCoordinate: CGFloat, busTimeForBorderLength: Int) {
-        let circleWidth = CGFloat(view.frame.width)
-        let circleHeight = circleWidth
-        
-        // Create a new CircleView
-        let circleView = Circle(frame: CGRectMake(xCoordinate, 0, circleWidth, circleHeight))
-        
-        circleView.tag = 4    //  4 Stands for the item it should be (which in this case is the last) so we can remove it
-        view.addSubview(circleView)
+        self.tag = 4    //  4 Stands for the item it should be (which in this case is the last) so we can remove it
+        view.addSubview(self)
         
         // Animate the drawing of the circle over the course of 1 second
         let borderLength = calculateBorderLengthForBusTime(busTimeForBorderLength)
-        circleView.animateCircle(1.0, borderLength: borderLength)       // Border length should change when we have a time in the future
+        self.animateCircle(1.0, borderLength: borderLength)       // Border length should change when we have a time in the future
     }
     
     /**
