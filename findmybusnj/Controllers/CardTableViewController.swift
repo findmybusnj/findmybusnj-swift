@@ -30,6 +30,7 @@ class CardTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("There are: \(self.items.count) items in the json array")
         return self.items.count
     }
     
@@ -48,8 +49,16 @@ class CardTableViewController: UITableViewController {
     
     private func formatCardForIndex(card: ETACard, index: NSIndexPath) {
         assignArrivalTimeForIndex(card, index: index.row)
+        assignBusAndRouteTextForIndex(card, index: index.row)
     }
     
+    /**
+    * Assigns the arrival time to the given card given the index
+    * If the time is not a number, we assign it Arriving/Delayed/No Current Prediction
+    *
+    * @param card   The card in the tableview being edited
+    * @param index  The current index in the tableview
+    **/
     private func assignArrivalTimeForIndex(card: ETACard, index: Int) {
         let arrivalString = self.items.arrayValue[index]["pu"].description
         
@@ -73,10 +82,20 @@ class CardTableViewController: UITableViewController {
                 case "DELAYED":
                     card.timeLabel.text = "Delay"
                     card.timeLabel.textColor = UIColor.redColor()
+                    card.renderCircleForBusTime(35)
             default:
                 card.timeLabel.text = "0"
+                card.timeLabel.textColor = UIColor.blueColor()
             }
         }
     }
     
+    private func assignBusAndRouteTextForIndex(card: ETACard, index: Int) {
+        card.busField.text = jsonValueForIndexAndSubscript(index, string: "rd")
+        card.routeLabel.text = jsonValueForIndexAndSubscript(index, string: "fd")
+    }
+    
+    private func jsonValueForIndexAndSubscript(index: Int, string: String) -> String {
+        return self.items.arrayValue[index][string].description;
+    }
 }
