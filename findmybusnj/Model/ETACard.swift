@@ -12,7 +12,7 @@ import AnimationsFramework
 
 class ETACard: UITableViewCell {
     @IBOutlet weak var card: UIView!
-    @IBOutlet weak var busField: UILabel!   // Contains 'Bus:'
+    @IBOutlet weak var busNumberLabel: UILabel!   // Contains 'Bus:'
     @IBOutlet weak var routeLabel: UILabel! // Contains 'Via:'
     @IBOutlet weak var circleView: UIView!  // Contains the timing circle
     @IBOutlet weak var timeLabel: UILabel!  // Contains the arrival time
@@ -20,7 +20,6 @@ class ETACard: UITableViewCell {
     override func layoutSubviews() {
         cardSetup()
         self.addSubview(card)
-        boldFieldTitles()
     }
     
     func cardSetup() {
@@ -42,11 +41,5 @@ class ETACard: UITableViewCell {
     
     func removeCircleFromCard(view: UIView) {
         ShapeRenderer.removeRenderedCircle(view);
-    }
-    
-    func boldFieldTitles() {
-        let font = "HelveticaNeue-Bold";
-        busField.font = UIFont(name: font, size: (busField.font?.pointSize)!)
-        routeLabel.font = UIFont(name: font, size: (routeLabel.font?.pointSize)!)
     }
 }
