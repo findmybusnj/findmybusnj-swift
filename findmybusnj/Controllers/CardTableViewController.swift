@@ -94,7 +94,9 @@ class CardTableViewController: UITableViewController {
     private func assignBusAndRouteTextForIndex(card: ETACard, index: Int) {
         card.busNumberLabel.text = jsonValueForIndexAndSubscript(index, string: "rd")
         card.routeLabel.text = jsonValueForIndexAndSubscript(index, string: "fd")
+        card.routeLabel.adjustsFontSizeToFitWidth = true
         card.routeLabel.sizeToFit()
+        card.setNeedsLayout()
     }
     
     private func jsonValueForIndexAndSubscript(index: Int, string: String) -> String {

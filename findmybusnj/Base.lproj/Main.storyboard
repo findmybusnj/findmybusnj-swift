@@ -23,19 +23,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="179.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <userGuides>
-                                        <userLayoutGuide location="100" affinity="minY"/>
+                                        <userLayoutGuide location="103" affinity="minY"/>
                                     </userGuides>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM0-Nz-2Je">
                                             <rect key="frame" x="23" y="12" width="554" height="156"/>
                                             <userGuides>
-                                                <userLayoutGuide location="55" affinity="minY"/>
+                                                <userLayoutGuide location="48" affinity="minY"/>
                                                 <userLayoutGuide location="138" affinity="minX"/>
                                                 <userLayoutGuide location="8" affinity="minX"/>
                                             </userGuides>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pcm-jJ-zDY">
-                                                    <rect key="frame" x="160" y="37" width="42" height="21"/>
+                                                    <rect key="frame" x="160" y="27" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="42" id="nej-uX-cLM"/>
                                                     </constraints>
@@ -44,12 +44,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Via:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zd8-Zb-2bS">
-                                                    <rect key="frame" x="161" y="66" width="383" height="30"/>
+                                                    <rect key="frame" x="161" y="61" width="385" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="385" id="6wZ-9h-cia"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="RAm-Hm-89d"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
@@ -77,13 +77,13 @@
                                                 <constraint firstItem="5un-R4-eAS" firstAttribute="leading" secondItem="aM0-Nz-2Je" secondAttribute="leadingMargin" id="Awk-N7-bgR"/>
                                                 <constraint firstItem="zd8-Zb-2bS" firstAttribute="leading" secondItem="5un-R4-eAS" secondAttribute="trailing" constant="23" id="G6D-sC-qZK"/>
                                                 <constraint firstItem="pcm-jJ-zDY" firstAttribute="leading" secondItem="aM0-Nz-2Je" secondAttribute="leading" multiplier="1.5" constant="160" id="JWK-Um-5Gq"/>
-                                                <constraint firstAttribute="bottom" secondItem="pcm-jJ-zDY" secondAttribute="bottom" constant="98" id="SyW-OJ-06n"/>
-                                                <constraint firstAttribute="trailing" secondItem="zd8-Zb-2bS" secondAttribute="trailing" constant="10" id="XQZ-CU-Agl"/>
-                                                <constraint firstItem="pcm-jJ-zDY" firstAttribute="top" secondItem="aM0-Nz-2Je" secondAttribute="top" constant="37" id="YQu-iw-PU0"/>
+                                                <constraint firstAttribute="bottom" secondItem="pcm-jJ-zDY" secondAttribute="bottom" constant="108" id="SyW-OJ-06n"/>
+                                                <constraint firstAttribute="trailing" secondItem="zd8-Zb-2bS" secondAttribute="trailing" constant="8" id="XQZ-CU-Agl"/>
+                                                <constraint firstItem="pcm-jJ-zDY" firstAttribute="top" secondItem="aM0-Nz-2Je" secondAttribute="top" constant="27" id="YQu-iw-PU0"/>
                                                 <constraint firstItem="5un-R4-eAS" firstAttribute="top" secondItem="aM0-Nz-2Je" secondAttribute="topMargin" id="hr3-10-C41"/>
                                                 <constraint firstItem="zd8-Zb-2bS" firstAttribute="leading" secondItem="pcm-jJ-zDY" secondAttribute="leading" constant="1" id="rlZ-Cl-gEx"/>
-                                                <constraint firstAttribute="bottom" secondItem="zd8-Zb-2bS" secondAttribute="bottom" constant="60" id="slQ-fa-JKy"/>
-                                                <constraint firstItem="zd8-Zb-2bS" firstAttribute="top" secondItem="pcm-jJ-zDY" secondAttribute="bottom" constant="8" symbolic="YES" id="zXp-Gv-b34"/>
+                                                <constraint firstAttribute="bottom" secondItem="zd8-Zb-2bS" secondAttribute="bottom" constant="65" id="slQ-fa-JKy"/>
+                                                <constraint firstItem="zd8-Zb-2bS" firstAttribute="top" secondItem="pcm-jJ-zDY" secondAttribute="bottom" constant="13" id="zXp-Gv-b34"/>
                                             </constraints>
                                         </view>
                                     </subviews>

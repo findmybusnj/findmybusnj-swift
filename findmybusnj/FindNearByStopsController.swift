@@ -66,22 +66,25 @@ class FindNearByStopsController: UIViewController {
         /**
         * Pass data to server using headers, not through string
         **/
-        let url = String("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(latitude),\(longitude)&radius=\(queryRegion)&types=\(googleType)&key=\(kgPlaceKey)")
-//        let url = String("https://localhost:8443/rest/getPlaces")
-//        let parameters = [
-//            "latitutde" : String(latitude),
-//            "longitude" : String(longitude),
-//            "radius" : String(queryRegion),
-//            "types" : googleType
-//        ]
         
-        Alamofire.request(.GET, url).responseJSON {
+//        let url = String("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(latitude),\(longitude)&radius=\(queryRegion)&types=\(googleType)&key=\(kgPlaceKey)")
+        let url = String("https://findmybusnj.com/rest/getPlaces")
+        let parameters = [
+            "latitude" : String(latitude),
+            "longitude" : String(longitude),
+            "radius" : String(queryRegion),
+            "types" : googleType
+        ]
+        print(parameters)
+        
+        Alamofire.request(.POST, url, parameters: parameters).responseJSON {
             (req, res, json) in
             if (json.isFailure) {
                 NSLog("Error: \(json.error)")
             }
             else {
                 let json = JSON(json.value!)
+                print(json)
                 let results = json["results"]
                 var locName: String         // location name
                 var latitude: Double
