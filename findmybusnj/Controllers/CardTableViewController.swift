@@ -41,7 +41,6 @@ class CardTableViewController: UITableViewController {
         
         etaCard.removeCircleFromCard(etaCard)
         formatCardForIndex(etaCard, index: indexPath)
-        etaCard.layoutIfNeeded()
         
         return etaCard
     }
@@ -93,10 +92,12 @@ class CardTableViewController: UITableViewController {
     
     private func assignBusAndRouteTextForIndex(card: ETACard, index: Int) {
         card.busNumberLabel.text = jsonValueForIndexAndSubscript(index, string: "rd")
-        card.routeLabel.text = jsonValueForIndexAndSubscript(index, string: "fd")
+        
+        var route = jsonValueForIndexAndSubscript(index, string: "fd")
+        route = route.stringByReplacingOccurrencesOfString("&amp;", withString: "&")
+        
+        card.routeLabel.text = route
         card.routeLabel.adjustsFontSizeToFitWidth = true
-        card.routeLabel.sizeToFit()
-        card.setNeedsLayout()
     }
     
     private func jsonValueForIndexAndSubscript(index: Int, string: String) -> String {

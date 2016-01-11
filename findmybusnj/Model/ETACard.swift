@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+
+//Dependancies
 import AnimationsFramework
 
 class ETACard: UITableViewCell {

@@ -82,7 +82,7 @@
                                                 <constraint firstItem="pcm-jJ-zDY" firstAttribute="top" secondItem="aM0-Nz-2Je" secondAttribute="top" constant="27" id="YQu-iw-PU0"/>
                                                 <constraint firstItem="5un-R4-eAS" firstAttribute="top" secondItem="aM0-Nz-2Je" secondAttribute="topMargin" id="hr3-10-C41"/>
                                                 <constraint firstItem="zd8-Zb-2bS" firstAttribute="leading" secondItem="pcm-jJ-zDY" secondAttribute="leading" constant="1" id="rlZ-Cl-gEx"/>
-                                                <constraint firstAttribute="bottom" secondItem="zd8-Zb-2bS" secondAttribute="bottom" constant="65" id="slQ-fa-JKy"/>
+                                                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="zd8-Zb-2bS" secondAttribute="bottom" constant="65" id="slQ-fa-JKy"/>
                                                 <constraint firstItem="zd8-Zb-2bS" firstAttribute="top" secondItem="pcm-jJ-zDY" secondAttribute="bottom" constant="13" id="zXp-Gv-b34"/>
                                             </constraints>
                                         </view>
