@@ -30,7 +30,6 @@ class CardTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("There are: \(self.items.count) items in the json array")
         return self.items.count
     }
     
@@ -95,6 +94,7 @@ class CardTableViewController: UITableViewController {
         
         var route = jsonValueForIndexAndSubscript(index, string: "fd")
         route = route.stringByReplacingOccurrencesOfString("&amp;", withString: "&")
+        route = route.lowercaseString.capitalizedString
         
         card.routeLabel.text = route
         card.routeLabel.adjustsFontSizeToFitWidth = true
