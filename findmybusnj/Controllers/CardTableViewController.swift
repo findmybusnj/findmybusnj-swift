@@ -52,12 +52,13 @@ class CardTableViewController: UITableViewController {
     }
     
     /**
-    * Assigns the arrival time to the given card given the index
-    * If the time is not a number, we assign it Arriving/Delayed/No Current Prediction
-    *
-    * @param card   The card in the tableview being edited
-    * @param index  The current index in the tableview
-    **/
+     Assigns the arrival time to the given card given the index
+     If the time is not a number, we assign it Arriving/Delayed/No Current Prediction
+    
+     - Parameters: 
+        - card:   The card in the tableview being edited
+        - index:  The current index in the tableview
+    */
     private func assignArrivalTimeForIndex(card: ETACard, index: Int) {
         let arrivalString = self.items.arrayValue[index]["pu"].description
         
@@ -100,6 +101,15 @@ class CardTableViewController: UITableViewController {
         card.routeLabel.adjustsFontSizeToFitWidth = true
     }
     
+    /**
+     Gets the JSON value at the given index for the given subscript
+
+     - Parameters:
+        - index: The index in the array that the value exists at
+        - string: The name of the substring for the value we want
+     
+     - Returns: String value stored at the index for the given subscript
+    */
     private func jsonValueForIndexAndSubscript(index: Int, string: String) -> String {
         return self.items.arrayValue[index][string].description;
     }

@@ -64,10 +64,9 @@ class FindNearByStopsController: UIViewController {
             
         
         /**
-        * Pass data to server using headers, not through string
-        **/
+         Pass data to server using headers, not through string
+        */
         
-//        let url = String("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(latitude),\(longitude)&radius=\(queryRegion)&types=\(googleType)&key=\(kgPlaceKey)")
         let url = String("https://findmybusnj.com/rest/getPlaces")
         let parameters = [
             "latitude" : String(latitude),
