@@ -38,10 +38,10 @@ class ETACard: UITableViewCell {
     }
     
     func renderCircleForBusTime(busTime: Int) {
-        ShapeRenderer.renderCircleForBusTime(circleView, busTime: busTime)
+        AFShapeRenderer.renderCircleForBusTime(circleView, busTime: busTime)
     }
     
     func removeCircleFromCard(view: UIView) {
-        ShapeRenderer.removeRenderedCircle(view);
+        AFShapeRenderer.removeRenderedCircle(view);
     }
 }

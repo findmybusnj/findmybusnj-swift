@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class ShapeRenderer {
+public class AFShapeRenderer {
     // Stroke color of the circle to be rendered
     private static var strokeColor: CGColor!
     

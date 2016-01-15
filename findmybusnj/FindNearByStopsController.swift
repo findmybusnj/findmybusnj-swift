@@ -38,13 +38,22 @@ class FindNearByStopsController: UIViewController {
         checkLocationAuthorizationStatus()
     }
 
-    
+    /**
+    Sets the location of the user on the map
+    */
     private func centerMapOnLocation() {
         let userlocation = locationManager
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(userlocation.location!.coordinate, regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
+    /**
+    Takes in a string that denotes the type of place to query google for,
+    Sends a `.POST` request to the endpoint, which hits google, and returns JSON
+
+    - Parameter googleType: A string that represents the google types. You can find more
+    info on the type at the [Google Places API](https://developers.google.com/places/supported_types)
+    */
     private func queryPlaces(googleType: String) {
         #if RELEASE
         let coordinate = locationManager.location!.coordinate

@@ -16,13 +16,13 @@
 		D479C1A11C34DAA200C434ED /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C1A01C34DAA200C434ED /* NetworkManagerTests.swift */; };
 		D479C1A51C34DAA200C434ED /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; };
 		D479C1A61C34DAA200C434ED /* NetworkManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D479C1B01C34DE7400C434ED /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C1AF1C34DE7400C434ED /* ServerManager.swift */; };
+		D479C1B01C34DE7400C434ED /* NMServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C1AF1C34DE7400C434ED /* NMServerManager.swift */; };
 		D4D1AF1A1C0BA99C00FA6C91 /* AnimationsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D1AF211C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */; };
 		D4D1AF281C0BA99C00FA6C91 /* AnimationsFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1AF271C0BA99C00FA6C91 /* AnimationsFrameworkTests.swift */; };
 		D4D1AF2C1C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */; };
 		D4D1AF2D1C0BA99C00FA6C91 /* AnimationsFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D4D1AF381C0BA9D000FA6C91 /* ShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1AF371C0BA9D000FA6C91 /* ShapeRenderer.swift */; };
+		D4D1AF381C0BA9D000FA6C91 /* AFShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1AF371C0BA9D000FA6C91 /* AFShapeRenderer.swift */; };
 		D4D1AF3B1C0BA9E700FA6C91 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1AF3A1C0BA9E700FA6C91 /* Circle.swift */; };
 		D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */; };
 		D4D6AB661BBA2FE200CE241D /* BusTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */; };
@@ -143,7 +143,7 @@
 		D479C1991C34DAA200C434ED /* NetworkManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D479C1A01C34DAA200C434ED /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		D479C1A21C34DAA200C434ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D479C1AF1C34DE7400C434ED /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		D479C1AF1C34DE7400C434ED /* NMServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMServerManager.swift; sourceTree = "<group>"; };
 		D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimationsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationsFramework.h; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		D4D1AF201C0BA99C00FA6C91 /* AnimationsFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationsFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D1AF271C0BA99C00FA6C91 /* AnimationsFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsFrameworkTests.swift; sourceTree = "<group>"; };
 		D4D1AF291C0BA99C00FA6C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4D1AF371C0BA9D000FA6C91 /* ShapeRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeRenderer.swift; sourceTree = "<group>"; };
+		D4D1AF371C0BA9D000FA6C91 /* AFShapeRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFShapeRenderer.swift; sourceTree = "<group>"; };
 		D4D1AF3A1C0BA9E700FA6C91 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Circle.swift; path = Shapes/Circle.swift; sourceTree = "<group>"; };
 		D4D6AB601BBA2FE200CE241D /* findmybusnj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findmybusnj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 			children = (
 				D479C1921C34DAA200C434ED /* NetworkManager.h */,
 				D479C1941C34DAA200C434ED /* Info.plist */,
-				D479C1AF1C34DE7400C434ED /* ServerManager.swift */,
+				D479C1AF1C34DE7400C434ED /* NMServerManager.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -306,7 +306,7 @@
 				D4D1AF391C0BA9DA00FA6C91 /* Circle */,
 				D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */,
 				D4D1AF1B1C0BA99C00FA6C91 /* Info.plist */,
-				D4D1AF371C0BA9D000FA6C91 /* ShapeRenderer.swift */,
+				D4D1AF371C0BA9D000FA6C91 /* AFShapeRenderer.swift */,
 			);
 			path = AnimationsFramework;
 			sourceTree = "<group>";
@@ -774,7 +774,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D479C1B01C34DE7400C434ED /* ServerManager.swift in Sources */,
+				D479C1B01C34DE7400C434ED /* NMServerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,7 +790,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4D1AF381C0BA9D000FA6C91 /* ShapeRenderer.swift in Sources */,
+				D4D1AF381C0BA9D000FA6C91 /* AFShapeRenderer.swift in Sources */,
 				D4D1AF3B1C0BA9E700FA6C91 /* Circle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

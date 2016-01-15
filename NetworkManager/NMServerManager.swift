@@ -12,7 +12,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-public class ServerManager {
+public class NMServerManager {
     private static let baseURL = "https://findmybusnj.com/rest"
     
     public static func getJSONForStop(stop: String, completion: (item: JSON, error: ErrorType?) -> Void) {

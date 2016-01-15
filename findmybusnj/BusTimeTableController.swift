@@ -13,7 +13,7 @@ class BusTimeTableController: CardTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        ServerManager.getJSONForStop("26229") {
+        NMServerManager.getJSONForStop("26229") {
             items, error in
             
             if error == nil {
