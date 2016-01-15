@@ -9,3 +9,10 @@ TODO:
 
 Future Updates:
 - Add watch app (native)
+
+## Documentation
+To generate documentation, simply use [Jazzy](https://github.com/realm/jazzy)
+
+`sudo gem install jazzy`
+
+Then run `jazzy` in the base folder. Documentation will be put out to the `docs` folder.
