@@ -24,6 +24,11 @@ class ETACard: UITableViewCell {
         self.addSubview(card)
     }
     
+    /**
+     This will setup the custom card that will be used for the `tableView`
+     
+     This card was taken from [iOS - A Card Based Newsfeed](https://medium.com/@cwRichardKim/ios-xcode-tutorial-a-card-based-newsfeed-8bedeb7b8df7#.orv4whtyi)
+    */
     func cardSetup() {
         self.card.alpha = 1
         self.card.layer.masksToBounds = false
@@ -37,10 +42,21 @@ class ETACard: UITableViewCell {
         self.card.layer.shadowOpacity = 0.2
     }
     
+    /**
+     Renders a circle in the `circleView` given a bus time that we get from our `.POST` request
+     in the `BustimeTableController`. See `AFShapeRenderer.swift` for more info
+     
+     - Parameter busTime: The integer time that will be used to denote the fill of the circle
+    */
     func renderCircleForBusTime(busTime: Int) {
         AFShapeRenderer.renderCircleForBusTime(circleView, busTime: busTime)
     }
     
+    /**
+     Removes circle from the given view
+     
+     - Parameter view: The view to remove the circle from
+    */
     func removeCircleFromCard(view: UIView) {
         AFShapeRenderer.removeRenderedCircle(view);
     }

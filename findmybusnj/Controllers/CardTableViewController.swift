@@ -11,6 +11,7 @@ import UIKit
 import SwiftyJSON
 
 class CardTableViewController: UITableViewController {
+    //: List of items we will populate the table with
     var items: JSON = [];
     
     override func viewDidLoad() {
@@ -44,8 +45,13 @@ class CardTableViewController: UITableViewController {
         return etaCard
     }
     
-    // Helper functions for assigning JSON Data
-    
+    /**
+     Formats table cell card with data from the JSON recieved from the `.POST` request
+     
+     - Parameters:
+        - card: The card cell that we will be modifying
+        - index: The index in the table that we are dealing with
+    */
     private func formatCardForIndex(card: ETACard, index: NSIndexPath) {
         assignArrivalTimeForIndex(card, index: index.row)
         assignBusAndRouteTextForIndex(card, index: index.row)
@@ -90,6 +96,14 @@ class CardTableViewController: UITableViewController {
         }
     }
     
+    /**
+     Assigns the bus number (e.g. `165`) to `busNumberLabel`, and assigns the
+     route (e.g. `165 via NJ Turnpike`) to `route`.
+     
+     - Parameters:
+        - card: The custom table view card we are modifying the values of
+        - index: The index of the table view cell we are handling
+    */
     private func assignBusAndRouteTextForIndex(card: ETACard, index: Int) {
         card.busNumberLabel.text = jsonValueForIndexAndSubscript(index, string: "rd")
         
