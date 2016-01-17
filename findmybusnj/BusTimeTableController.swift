@@ -21,7 +21,6 @@ class BusTimeTableController: CardTableViewController {
                 self.tableView.reloadData()
             }
         }
-        
     }
     
     override func didReceiveMemoryWarning() {

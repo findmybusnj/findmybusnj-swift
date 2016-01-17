@@ -45,8 +45,11 @@ class CardTableViewController: UITableViewController {
         return etaCard
     }
     
+    /**
+     Used to dismiss a popover view back to the root parent
+    */
     @IBAction func unwindToMain(sender: UIStoryboardSegue) {
-        let sourceController = sender.sourceViewController
+        _ = sender.sourceViewController
     }
     
     /**
