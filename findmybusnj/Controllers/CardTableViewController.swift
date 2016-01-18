@@ -27,7 +27,8 @@ class CardTableViewController: UITableViewController {
     }
     
     func refresh(sender: AnyObject) {
-        // : Overridden in sub0classes 
+        //: Overridden in sub-classes
+        //: This model was taken from http://stackoverflow.com/questions/24475792/how-to-use-pull-to-refresh-in-swift/24476087#24476087
     }
     
     override func didReceiveMemoryWarning() {
