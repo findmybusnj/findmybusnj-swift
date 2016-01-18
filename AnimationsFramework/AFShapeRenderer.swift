@@ -14,12 +14,13 @@ public class AFShapeRenderer {
     private static var strokeColor: CGColor!
     
     /**
-    * Creates a circle and renders it given the current bus time
-    * The circle is added to the subview afterward
-    *
-    * @param view   The view the circle will be added to
-    * @param busTime    Time of the next arriving bus as an int
-    **/
+     Creates a circle and renders it given the current bus time
+     The circle is added to the subview afterward
+    
+     - Parameters:
+        - view:   The view the circle will be added to
+        - busTime:    Time of the next arriving bus as an int
+    */
     public static func renderCircleForBusTime(view: UIView, busTime: Int) {
         determineStrokeColorForBusTime(busTime)
         
@@ -33,19 +34,38 @@ public class AFShapeRenderer {
     }
     
     /**
-    * Removes the object with tag 4, which is assumed to be the circle, from the given view
-    *
-    * @param view   The view to remove the circle from
-    **/
+     Renders a filled cricle instead of a hollow circle
+     
+     - Parameters:
+        - view:   The view the circle will be added to
+        - busTime:    Time of the next arriving bus as an int
+    */
+    public static func renderFilledCircleForBusTime(view: UIView, busTime: Int) {
+        determineStrokeColorForBusTime(busTime)
+        
+        let circleWidth = CGFloat(view.frame.width)
+        let circleHeight = circleWidth
+        // view.frame.origin.x is where the circle will be rendered from
+        let circle = FilledCircle(frame: CGRectMake(view.frame.origin.x, 0, circleWidth, circleHeight), color: strokeColor)
+        
+        // Draw the circle in the view at the top left origin
+        circle.addCircleToView(view, xCoordinate: view.frame.origin.x, busTimeForBorderLength: busTime)
+    }
+    
+    /**
+     Removes the object with tag 4, which is assumed to be the circle, from the given view
+     
+      - parameter view:   The view to remove the circle from
+    */
     public static func removeRenderedCircle(view: UIView) {
         view.viewWithTag(4)?.removeFromSuperview()  // Remove the prior circle if it exists
     }
     
     /**
-     * Sets the stroke color of the circle based on the bus time being passed in
-     *
-     * @param busTime    The time the bus will be arriving as an int
-     **/
+      Sets the stroke color of the circle based on the bus time being passed in
+     
+      - parameter busTime:    The time the bus will be arriving as an int
+     */
     private static func determineStrokeColorForBusTime(busTime: Int) {
         if (busTime <= 7) {
             // Green

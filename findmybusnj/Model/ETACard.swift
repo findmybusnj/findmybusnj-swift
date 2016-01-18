@@ -46,10 +46,20 @@ class ETACard: UITableViewCell {
      Renders a circle in the `circleView` given a bus time that we get from our `.POST` request
      in the `BustimeTableController`. See `AFShapeRenderer.swift` for more info
      
-     - Parameter busTime: The integer time that will be used to denote the fill of the circle
+     - Parameter busTime: The integer time that will be used to denote the circumference of the circle
     */
     func renderCircleForBusTime(busTime: Int) {
         AFShapeRenderer.renderCircleForBusTime(circleView, busTime: busTime)
+    }
+    
+    /**
+     Renders a filled circle to the `circleView` given a bus time that we get from `.POST` request
+     
+     - Parameter: bustime: The integer time that will be used to render the circumference of the circle
+     */
+     
+    func renderFilledCircleForBusTime(busTime: Int){
+        AFShapeRenderer.renderFilledCircleForBusTime(circleView, busTime: busTime)
     }
     
     /**
@@ -60,4 +70,5 @@ class ETACard: UITableViewCell {
     func removeCircleFromCard(view: UIView) {
         AFShapeRenderer.removeRenderedCircle(view);
     }
+    
 }

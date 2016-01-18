@@ -503,7 +503,7 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Near By-->
+        <!--Nearby-->
         <scene sceneID="9qc-J6-fK5">
             <objects>
                 <viewController id="8Nf-6j-zRW" customClass="FindNearByStopsController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
@@ -527,7 +527,7 @@
                             <constraint firstItem="hZQ-43-Gaz" firstAttribute="top" secondItem="jAH-hc-tcn" secondAttribute="top" id="l8f-r9-Z1c"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Near By" id="Qkj-nM-0IT"/>
+                    <tabBarItem key="tabBarItem" title="Nearby" image="Near Me" id="Qkj-nM-0IT"/>
                     <connections>
                         <outlet property="mapView" destination="hZQ-43-Gaz" id="0Rk-3r-AWm"/>
                     </connections>
@@ -541,5 +541,6 @@
         <image name="Bus" width="32" height="32"/>
         <image name="Heart" width="48" height="48"/>
         <image name="Location" width="32" height="32"/>
+        <image name="Near Me" width="32" height="32"/>
     </resources>
 </document>

@@ -73,17 +73,25 @@ class CardTableViewController: UITableViewController {
         - index:  The current index in the tableview
     */
     private func assignArrivalTimeForIndex(card: ETACard, index: Int) {
-        let arrivalString = self.items.arrayValue[index]["pu"].description
+        let arrivalString = jsonValueForIndexAndSubscript(index, string: "pu")
         
         // Reset to black everytime just in case
         card.timeLabel.textColor = UIColor.blackColor()
         
-        if arrivalString == "MINUTES" {
-            let time = self.items.arrayValue[index]["pt"].description
-            card.timeLabel.text = time + " min."
-            
-            // We also render the circle here
-            card.renderCircleForBusTime(Int(time)!)
+        // We get the time from the JSON object
+        if let time = Int(jsonValueForIndexAndSubscript(index, string: "pt")) {
+            // special case where some JSON can be 0 minutes, hence is arriving
+            if time == 0 {
+                card.timeLabel.text = "Arrive"
+                card.timeLabel.textColor = UIColor.whiteColor()
+                card.renderFilledCircleForBusTime(35)
+            }
+            else {
+                card.timeLabel.text = time.description + " min."
+                
+                // We also render the circle here
+                card.renderCircleForBusTime(time)
+            }
         }
         else {
             print(self.items.arrayValue[index]["pu"].description)
@@ -92,6 +100,7 @@ class CardTableViewController: UITableViewController {
                 case "APPROACHING":
                     card.timeLabel.text = "Arrive"
                     card.timeLabel.textColor = UIColor.blueColor()
+                    card.renderCircleForBusTime(35)
                 case "DELAYED":
                     card.timeLabel.text = "Delay"
                     card.timeLabel.textColor = UIColor.redColor()
