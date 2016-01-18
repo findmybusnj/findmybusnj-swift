@@ -41,6 +41,7 @@ class CardTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(self.items.count)
         return self.items.count
     }
     

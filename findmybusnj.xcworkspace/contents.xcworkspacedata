@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:findmybusnj/Locations/River_Edge-NJ.gpx">
+   </FileRef>
+   <FileRef
       location = "group:findmybusnj.xcodeproj">
    </FileRef>
    <FileRef

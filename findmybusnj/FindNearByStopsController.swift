@@ -19,7 +19,7 @@ class FindNearByStopsController: UIViewController {
     
     // How much to show outside of the center
     private let regionRadius: CLLocationDistance = 1000
-    private let kgPlaceKey = "AIzaSyB5pvxDYulLut0SLlHUep33ufjJ7OxUQ5M"
+    
     // MARK: - location manager to authorize user location for Maps app
     var locationManager = CLLocationManager()
     

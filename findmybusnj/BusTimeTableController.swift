@@ -17,7 +17,12 @@ class BusTimeTableController: CardTableViewController {
             items, error in
             
             if error == nil {
-                self.items = items
+                if items.rawString() == "No arrival times" {
+                    self.items[0] = items
+                }
+                else {
+                    self.items = items
+                }
                 self.tableView.reloadData()
             }
         }
