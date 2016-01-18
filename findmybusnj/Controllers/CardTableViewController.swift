@@ -12,7 +12,8 @@ import SwiftyJSON
 
 class CardTableViewController: UITableViewController {
     //: List of items we will populate the table with
-    var items: JSON = [];
+    var items: JSON = []
+    var noPrediction = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +42,9 @@ class CardTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(self.items.count)
+        if (noPrediction) {
+            return 1;
+        }
         return self.items.count
     }
     
@@ -51,7 +54,15 @@ class CardTableViewController: UITableViewController {
         let etaCard: ETACard = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! ETACard
         
         etaCard.removeCircleFromCard(etaCard)
-        formatCardForIndex(etaCard, index: indexPath)
+        etaCard.clearText()
+        
+        if (noPrediction) {
+            etaCard.noPrediction.hidden = false;
+        }
+        else {
+            formatCardForIndex(etaCard, index: indexPath)
+        }
+        
         
         return etaCard
     }

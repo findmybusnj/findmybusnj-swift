@@ -18,7 +18,7 @@ class BusTimeTableController: CardTableViewController {
             
             if error == nil {
                 if items.rawString() == "No arrival times" {
-                    self.items[0] = items
+                    self.noPrediction = true
                 }
                 else {
                     self.items = items
@@ -40,8 +40,6 @@ class BusTimeTableController: CardTableViewController {
                 self.refreshControl?.endRefreshing()
             }
         }
-        self.tableView.endUpdates()
-        self.refreshControl?.endRefreshing()
     }
     
     override func didReceiveMemoryWarning() {

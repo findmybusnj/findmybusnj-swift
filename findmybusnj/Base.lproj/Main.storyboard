@@ -24,6 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <userGuides>
                                         <userLayoutGuide location="103" affinity="minY"/>
+                                        <userLayoutGuide location="369" affinity="minX"/>
                                     </userGuides>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aM0-Nz-2Je">
@@ -31,7 +32,7 @@
                                             <userGuides>
                                                 <userLayoutGuide location="48" affinity="minY"/>
                                                 <userLayoutGuide location="138" affinity="minX"/>
-                                                <userLayoutGuide location="8" affinity="minX"/>
+                                                <userLayoutGuide location="7" affinity="minX"/>
                                             </userGuides>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bus:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pcm-jJ-zDY">
@@ -70,6 +71,15 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Current Predictions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUh-vp-KyD">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="48" width="338" height="43"/>
+                                                    </variation>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -85,6 +95,16 @@
                                                 <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="zd8-Zb-2bS" secondAttribute="bottom" constant="65" id="slQ-fa-JKy"/>
                                                 <constraint firstItem="zd8-Zb-2bS" firstAttribute="top" secondItem="pcm-jJ-zDY" secondAttribute="bottom" constant="13" id="zXp-Gv-b34"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="uUh-vp-KyD"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="uUh-vp-KyD"/>
+                                                </mask>
+                                            </variation>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
@@ -100,6 +120,7 @@
                                     <outlet property="busNumberLabel" destination="pcm-jJ-zDY" id="yVb-ML-SPA"/>
                                     <outlet property="card" destination="hfP-jd-jud" id="K7l-zB-154"/>
                                     <outlet property="circleView" destination="5un-R4-eAS" id="Ugw-fc-FEz"/>
+                                    <outlet property="noPrediction" destination="uUh-vp-KyD" id="bRg-CF-0yI"/>
                                     <outlet property="routeLabel" destination="zd8-Zb-2bS" id="oF5-Wx-k8r"/>
                                     <outlet property="timeLabel" destination="NPc-Ge-Ihm" id="aOs-CF-21K"/>
                                 </connections>
@@ -131,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="-320"/>
+            <point key="canvasLocation" x="1561.5" y="-320.25"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="erw-kO-yzC">

@@ -18,6 +18,7 @@ class ETACard: UITableViewCell {
     @IBOutlet weak var routeLabel: UILabel! // Contains `Via:` label
     @IBOutlet weak var circleView: UIView!  // Contains the timing circle
     @IBOutlet weak var timeLabel: UILabel!  // Contains the arrival time
+    @IBOutlet weak var noPrediction: UILabel!
     
     override func layoutSubviews() {
         cardSetup()
@@ -69,6 +70,16 @@ class ETACard: UITableViewCell {
     */
     func removeCircleFromCard(view: UIView) {
         AFShapeRenderer.removeRenderedCircle(view);
+    }
+    
+    /**
+     Clears all the texts in the subviews and hides the "No Prediction" label
+    */
+    func clearText() {
+        busNumberLabel.text = ""
+        routeLabel.text = ""
+        timeLabel.text = ""
+        noPrediction.hidden = true
     }
     
 }
