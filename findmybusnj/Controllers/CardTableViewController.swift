@@ -84,7 +84,7 @@ class CardTableViewController: UITableViewController {
             if time == 0 {
                 card.timeLabel.text = "Arrive"
                 card.timeLabel.textColor = UIColor.whiteColor()
-                card.renderFilledCircleForBusTime(35)
+                card.renderFilledCircleForBusTime(time)
             }
             else {
                 card.timeLabel.text = time.description + " min."
@@ -95,16 +95,17 @@ class CardTableViewController: UITableViewController {
         }
         else {
             print(self.items.arrayValue[index]["pu"].description)
+            print(self.items.arrayValue[index])
             
             switch arrivalString {
                 case "APPROACHING":
                     card.timeLabel.text = "Arrive"
-                    card.timeLabel.textColor = UIColor.blueColor()
-                    card.renderCircleForBusTime(35)
+                    card.timeLabel.textColor = UIColor.whiteColor()
+                    card.renderFilledCircleForBusTime(0)
                 case "DELAYED":
                     card.timeLabel.text = "Delay"
-                    card.timeLabel.textColor = UIColor.redColor()
-                    card.renderCircleForBusTime(35)
+                    card.timeLabel.textColor = UIColor.whiteColor()
+                    card.renderFilledCircleForBusTime(35)
             default:
                 card.timeLabel.text = "0"
                 card.timeLabel.textColor = UIColor.blueColor()

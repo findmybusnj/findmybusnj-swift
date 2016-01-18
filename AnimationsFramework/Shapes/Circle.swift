@@ -31,8 +31,6 @@ class Circle: UIView {
         
         // Wait to draw the circle
         circle.strokeEnd = 0.0
-        
-        layer.addSublayer(circle)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -82,6 +80,7 @@ class Circle: UIView {
     func addCircleToView(view: UIView, xCoordinate: CGFloat, busTimeForBorderLength: Int) {
         self.tag = 4    //  4 Stands for the item it should be (which in this case is the last) so we can remove it
         view.addSubview(self)
+        view.sendSubviewToBack(self)
         
         // Animate the drawing of the circle over the course of 1 second
         let borderLength = calculateBorderLengthForBusTime(busTimeForBorderLength)

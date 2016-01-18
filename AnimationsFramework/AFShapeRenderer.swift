@@ -28,6 +28,7 @@ public class AFShapeRenderer {
         let circleHeight = circleWidth
         // view.frame.origin.x is where the circle will be rendered from
         let circle = Circle(frame: CGRectMake(view.frame.origin.x, 0, circleWidth, circleHeight), color: strokeColor)
+        circle.layer.addSublayer(circle.circle)
         
         // Draw the circle in the view at the top left origin
         circle.addCircleToView(view, xCoordinate: view.frame.origin.x, busTimeForBorderLength: busTime)
@@ -47,6 +48,7 @@ public class AFShapeRenderer {
         let circleHeight = circleWidth
         // view.frame.origin.x is where the circle will be rendered from
         let circle = FilledCircle(frame: CGRectMake(view.frame.origin.x, 0, circleWidth, circleHeight), color: strokeColor)
+        circle.layer.addSublayer(circle.circle)
         
         // Draw the circle in the view at the top left origin
         circle.addCircleToView(view, xCoordinate: view.frame.origin.x, busTimeForBorderLength: busTime)
@@ -67,7 +69,11 @@ public class AFShapeRenderer {
       - parameter busTime:    The time the bus will be arriving as an int
      */
     private static func determineStrokeColorForBusTime(busTime: Int) {
-        if (busTime <= 7) {
+        if (busTime == 0) {
+            // Blue
+            self.strokeColor = UIColor(colorLiteralRed: Float(67/255.0), green: Float(174/255.0), blue: Float(249/255.0), alpha: Float(1.0)).CGColor
+        }
+        else if (busTime <= 7) {
             // Green
             self.strokeColor = UIColor(colorLiteralRed: Float(29/255.0), green: Float(156/255.0), blue: Float(48/255.0), alpha: Float(1.0)).CGColor
         }
