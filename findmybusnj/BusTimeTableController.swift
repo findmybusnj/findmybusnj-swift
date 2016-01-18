@@ -23,6 +23,22 @@ class BusTimeTableController: CardTableViewController {
         }
     }
     
+    override func refresh(sender: AnyObject) {
+        self.tableView.beginUpdates()
+        NMServerManager.getJSONForStop("26229") {
+            items, error in
+            
+            if error == nil {
+                self.items = items
+                self.tableView.reloadData()
+                self.tableView.endUpdates()
+                self.refreshControl?.endRefreshing()
+            }
+        }
+        self.tableView.endUpdates()
+        self.refreshControl?.endRefreshing()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

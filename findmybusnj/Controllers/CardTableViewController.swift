@@ -16,9 +16,18 @@ class CardTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh stops")
+        self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
+        
         self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.separatorStyle = .None
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func refresh(sender: AnyObject) {
+        // : Overridden in sub0classes 
     }
     
     override func didReceiveMemoryWarning() {
