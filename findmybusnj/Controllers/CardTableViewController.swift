@@ -45,6 +45,7 @@ class CardTableViewController: UITableViewController {
         if (noPrediction) {
             return 1;
         }
+        noPrediction = false
         return self.items.count
     }
     

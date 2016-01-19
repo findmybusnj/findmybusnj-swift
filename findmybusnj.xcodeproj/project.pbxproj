@@ -12,6 +12,7 @@
 		D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */; };
 		D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */; };
 		D4598D2A1C4C729700A15B08 /* FilledCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4598D291C4C729700A15B08 /* FilledCircle.swift */; };
+		D4640DD51C4DE50600D184E3 /* ETAPopOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4640DD41C4DE50600D184E3 /* ETAPopOverController.swift */; };
 		D479C1931C34DAA200C434ED /* NetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D479C1921C34DAA200C434ED /* NetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D479C19A1C34DAA200C434ED /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; };
 		D479C1A11C34DAA200C434ED /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C1A01C34DAA200C434ED /* NetworkManagerTests.swift */; };
@@ -139,6 +140,7 @@
 		D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindNearByStopsController.swift; sourceTree = "<group>"; };
 		D4598D291C4C729700A15B08 /* FilledCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilledCircle.swift; path = Shapes/FilledCircle.swift; sourceTree = "<group>"; };
+		D4640DD41C4DE50600D184E3 /* ETAPopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPopOverController.swift; path = Controllers/ETAView/ETAPopOverController.swift; sourceTree = "<group>"; };
 		D479C1901C34DAA200C434ED /* NetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D479C1921C34DAA200C434ED /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		D479C1941C34DAA200C434ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -414,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */,
+				D4640DD41C4DE50600D184E3 /* ETAPopOverController.swift */,
 			);
 			name = ETAView;
 			sourceTree = "<group>";
@@ -815,6 +818,7 @@
 				D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */,
 				D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */,
 				D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */,
+				D4640DD51C4DE50600D184E3 /* ETAPopOverController.swift in Sources */,
 				D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */,
 				D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */,
 				D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */,

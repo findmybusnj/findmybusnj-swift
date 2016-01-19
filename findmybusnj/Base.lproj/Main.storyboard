@@ -278,6 +278,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Search"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BqR-pS-8aj">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="438" y="91" width="22" height="22"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -340,6 +346,9 @@
                             <constraint firstItem="hZv-vE-Pbv" firstAttribute="baseline" secondItem="pTG-oI-ItD" secondAttribute="baseline" id="ye1-2e-YVd"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="BqR-pS-8aj"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="YY1-dJ-nsZ"/>
                                 <exclude reference="n23-8M-XLa"/>
@@ -366,6 +375,9 @@
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="BqR-pS-8aj"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="1VZ-Zg-DZY"/>
                                 <exclude reference="5PZ-Sb-LEr"/>
