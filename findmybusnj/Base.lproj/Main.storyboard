@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="1561.5" y="-320.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Pop Over Controller-->
         <scene sceneID="erw-kO-yzC">
             <objects>
-                <viewController id="Tj0-Q0-7wY" sceneMemberID="viewController">
+                <viewController id="Tj0-Q0-7wY" customClass="ETAPopOverController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nRu-bh-L3T"/>
                         <viewControllerLayoutGuide type="bottom" id="uVH-jX-aar"/>
@@ -277,12 +277,12 @@
                                 <rect key="frame" x="276" y="168" width="48" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchButton:" destination="Tj0-Q0-7wY" eventType="touchUpInside" id="NLC-5s-Zce"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BqR-pS-8aj">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="438" y="91" width="22" height="22"/>
-                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -342,7 +342,9 @@
                             <constraint firstItem="DYw-dN-N95" firstAttribute="top" secondItem="pTG-oI-ItD" secondAttribute="bottom" constant="75" id="rmg-2C-b5p">
                                 <variation key="heightClass=regular-widthClass=compact" constant="74"/>
                             </constraint>
+                            <constraint firstItem="Vw2-bt-EoC" firstAttribute="leading" secondItem="BqR-pS-8aj" secondAttribute="trailing" constant="20" id="tBb-I6-2Vb"/>
                             <constraint firstItem="pTG-oI-ItD" firstAttribute="leading" secondItem="Njb-dL-2z9" secondAttribute="leading" id="tKW-xp-pir"/>
+                            <constraint firstItem="BqR-pS-8aj" firstAttribute="top" secondItem="Njb-dL-2z9" secondAttribute="top" id="x1q-kp-sRj"/>
                             <constraint firstItem="hZv-vE-Pbv" firstAttribute="baseline" secondItem="pTG-oI-ItD" secondAttribute="baseline" id="ye1-2e-YVd"/>
                         </constraints>
                         <variation key="default">
@@ -367,7 +369,9 @@
                                 <exclude reference="NUt-Hh-6rS"/>
                                 <exclude reference="UFB-2A-sxP"/>
                                 <exclude reference="k72-pm-NCJ"/>
+                                <exclude reference="x1q-kp-sRj"/>
                                 <exclude reference="3PJ-rw-TYN"/>
+                                <exclude reference="tBb-I6-2Vb"/>
                                 <exclude reference="0Bl-aq-RL0"/>
                                 <exclude reference="BcL-vJ-CL1"/>
                                 <exclude reference="X5L-s3-R5G"/>
@@ -412,8 +416,10 @@
                                 <include reference="k72-pm-NCJ"/>
                                 <exclude reference="GSp-Ta-5K4"/>
                                 <exclude reference="ors-ZH-Qsp"/>
+                                <include reference="x1q-kp-sRj"/>
                                 <include reference="3PJ-rw-TYN"/>
                                 <exclude reference="lRL-XQ-cW5"/>
+                                <include reference="tBb-I6-2Vb"/>
                                 <include reference="0Bl-aq-RL0"/>
                                 <include reference="BcL-vJ-CL1"/>
                                 <exclude reference="Nsa-5O-SOW"/>
@@ -426,6 +432,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="favoritesTableView" destination="ytY-8e-1AK" id="A0l-BN-TZ2"/>
+                        <outlet property="filterBusNumberInput" destination="hZv-vE-Pbv" id="Q28-sb-uP2"/>
+                        <outlet property="stopNumberInput" destination="Vw2-bt-EoC" id="AR1-h8-Xvi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFK-Xe-SwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5RZ-04-DfF" userLabel="Exit" sceneMemberID="exit"/>
