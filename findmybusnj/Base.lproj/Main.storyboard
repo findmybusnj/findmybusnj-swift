@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -142,7 +142,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Find" id="6Bx-gk-rPi">
                             <connections>
-                                <segue destination="Tj0-Q0-7wY" kind="popoverPresentation" popoverAnchorBarButtonItem="6Bx-gk-rPi" id="L7i-a8-3YT">
+                                <segue destination="Tj0-Q0-7wY" kind="popoverPresentation" identifier="findBuses" popoverAnchorBarButtonItem="6Bx-gk-rPi" id="L7i-a8-3YT">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
@@ -188,7 +188,7 @@
                                     <navigationItem id="Zsz-s0-nPP">
                                         <barButtonItem key="leftBarButtonItem" title="Close" id="QZm-dB-wll">
                                             <connections>
-                                                <segue destination="5RZ-04-DfF" kind="unwind" unwindAction="unwindToMain:" id="pNt-Jf-jW7"/>
+                                                <segue destination="5RZ-04-DfF" kind="unwind" identifier="exit" unwindAction="unwindToMain:" id="pNt-Jf-jW7"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -278,7 +278,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
-                                    <action selector="searchButton:" destination="Tj0-Q0-7wY" eventType="touchUpInside" id="NLC-5s-Zce"/>
+                                    <segue destination="5RZ-04-DfF" kind="unwind" identifier="search" unwindAction="unwindToMain:" id="deE-UX-LZo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BqR-pS-8aj">
@@ -352,6 +352,7 @@
                                 <exclude reference="BqR-pS-8aj"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="x1q-kp-sRj"/>
                                 <exclude reference="YY1-dJ-nsZ"/>
                                 <exclude reference="n23-8M-XLa"/>
                                 <exclude reference="5Qz-xb-13F"/>
@@ -369,7 +370,6 @@
                                 <exclude reference="NUt-Hh-6rS"/>
                                 <exclude reference="UFB-2A-sxP"/>
                                 <exclude reference="k72-pm-NCJ"/>
-                                <exclude reference="x1q-kp-sRj"/>
                                 <exclude reference="3PJ-rw-TYN"/>
                                 <exclude reference="tBb-I6-2Vb"/>
                                 <exclude reference="0Bl-aq-RL0"/>
@@ -383,6 +383,7 @@
                                 <include reference="BqR-pS-8aj"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="x1q-kp-sRj"/>
                                 <exclude reference="1VZ-Zg-DZY"/>
                                 <exclude reference="5PZ-Sb-LEr"/>
                                 <exclude reference="JhR-3K-xON"/>
@@ -416,7 +417,6 @@
                                 <include reference="k72-pm-NCJ"/>
                                 <exclude reference="GSp-Ta-5K4"/>
                                 <exclude reference="ors-ZH-Qsp"/>
-                                <include reference="x1q-kp-sRj"/>
                                 <include reference="3PJ-rw-TYN"/>
                                 <exclude reference="lRL-XQ-cW5"/>
                                 <include reference="tBb-I6-2Vb"/>
@@ -441,7 +441,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFK-Xe-SwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5RZ-04-DfF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2409" y="-320.25"/>
+            <point key="canvasLocation" x="2790" y="-320.25"/>
         </scene>
         <!--Find By Bus Number Controller-->
         <scene sceneID="wg7-f3-ORb">
