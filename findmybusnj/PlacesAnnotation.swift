@@ -12,6 +12,7 @@ import MapKit
 import AddressBook
 
 class PlacesAnnotation: NSObject, MKAnnotation {
+    // MARK: Properties
     let title: String?
     let coordinate: CLLocationCoordinate2D
     

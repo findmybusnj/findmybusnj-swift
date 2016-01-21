@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 
-// Dependencies
+// MARK: Dependancies
 import SwiftyJSON
 import Alamofire
 
@@ -20,7 +20,7 @@ class FindNearByStopsController: UIViewController {
     // How much to show outside of the center
     private let regionRadius: CLLocationDistance = 1000
     
-    // MARK: - location manager to authorize user location for Maps app
+    // location manager to authorize user location for Maps app
     var locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -39,7 +39,7 @@ class FindNearByStopsController: UIViewController {
     }
 
     /**
-    Sets the location of the user on the map
+     Sets the location of the user on the map
     */
     private func centerMapOnLocation() {
         let userlocation = locationManager
@@ -48,11 +48,11 @@ class FindNearByStopsController: UIViewController {
     }
     
     /**
-    Takes in a string that denotes the type of place to query google for,
-    Sends a `.POST` request to the endpoint, which hits google, and returns JSON
+     Takes in a string that denotes the type of place to query google for,
+     Sends a `.POST` request to the endpoint, which hits google, and returns JSON
 
-    - Parameter googleType: A string that represents the google types. You can find more
-    info on the type at the [Google Places API](https://developers.google.com/places/supported_types)
+     - Parameter googleType: A string that represents the google types. You can find more
+     info on the type at the [Google Places API](https://developers.google.com/places/supported_types)
     */
     private func queryPlaces(googleType: String) {
         #if RELEASE

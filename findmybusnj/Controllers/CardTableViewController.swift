@@ -8,9 +8,12 @@
 
 import Foundation
 import UIKit
+
+// MARK: Dependancies
 import SwiftyJSON
 
 class CardTableViewController: UITableViewController {
+    // MARK: Properties
     //: List of items we will populate the table with
     var items: JSON = []
     var noPrediction = false
@@ -27,9 +30,21 @@ class CardTableViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    /**
+     function called when tableview is pulled down to refresh data
+     
+     - Parameter sender: The object calling the refresh
+    */
     func refresh(sender: AnyObject) {
         //: Overridden in sub-classes
         //: This model was taken from http://stackoverflow.com/questions/24475792/how-to-use-pull-to-refresh-in-swift/24476087#24476087
+    }
+    
+    /**
+     Used to dismiss a popover view back to the root parent
+     */
+    @IBAction func unwindToMain(sender: UIStoryboardSegue) {
+        _ = sender.sourceViewController
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,6 +52,7 @@ class CardTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: TableView Methods
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -68,12 +84,8 @@ class CardTableViewController: UITableViewController {
         return etaCard
     }
     
-    /**
-     Used to dismiss a popover view back to the root parent
-    */
-    @IBAction func unwindToMain(sender: UIStoryboardSegue) {
-        _ = sender.sourceViewController
-    }
+    
+    // MARK: Private functions
     
     /**
      Formats table cell card with data from the JSON recieved from the `.POST` request

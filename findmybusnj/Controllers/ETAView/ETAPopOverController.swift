@@ -9,13 +9,11 @@
 import Foundation
 import UIKit
 
-// MARK: Frameworks
+// MARK: Dependancies
 import NetworkManager
 
 class ETAPopOverController: UIViewController {
     @IBOutlet weak var stopNumberInput: UITextField!
     @IBOutlet weak var filterBusNumberInput: UITextField!
     @IBOutlet weak var favoritesTableView: UITableView!
-    
-    
 }

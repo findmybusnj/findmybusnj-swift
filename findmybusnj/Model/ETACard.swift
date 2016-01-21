@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-// Dependancies
+// MARK: Dependancies
 import AnimationsFramework
 
 class ETACard: UITableViewCell {
