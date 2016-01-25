@@ -53,16 +53,8 @@ class BusTimeTableController: CardTableViewController {
         // Make sure that we transfer data from the popover controller if user is searching
         if sender.identifier == "search" {
             let sourceController = sender.sourceViewController as! ETAPopOverController
-            let warn = UIAlertView(title: "No stop entered", message: "Please enter a stop before hitting search", delegate: nil, cancelButtonTitle: "Ok")
-            
-            guard let stop = sourceController.stopNumberInput.text else {
-                warn.show()
-                return
-            }
-            if stop.isEmpty {
-                warn.show()
-            }
-            else {
+
+            if let stop = sourceController.stopNumberInput.text {
                 currentStop = stop
                 self.makeStopRequest(stop)
             }
