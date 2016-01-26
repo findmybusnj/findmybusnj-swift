@@ -12,13 +12,16 @@ import UIKit
 // MARK: Dependancies
 import NetworkManager
 
-class ETAPopOverController: UIViewController, UITextFieldDelegate {
+class ETASearchPopOverController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var stopNumberInput: UITextField!
     @IBOutlet weak var filterBusNumberInput: UITextField!
     @IBOutlet weak var favoritesTableView: UITableView!
 
     // MARK: UITextFieldDelegate Methods
     // Source of idea: http://stackoverflow.com/questions/433337/set-the-maximum-character-length-of-a-uitextfield?rq=1
+    /**
+     Regulates the `textField` to a certain range. `1` is the `filterBusNumberInput` field tag, and `0` is the `stopNumberInput` tag.
+    */
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         // If the current character count is nil, we set it to zero using nil coelescing
         let currentCharCount = textField.text?.characters.count ?? 0;
@@ -40,9 +43,12 @@ class ETAPopOverController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
-    }
-    
+    /**
+     On hitting return, the current `textField` will resign the keyboard
+     
+     - parameter textField: The current `textField` that has triggered a return
+     - return A boolean value if the `textField` should return or not.
+    */
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -50,6 +56,14 @@ class ETAPopOverController: UIViewController, UITextFieldDelegate {
 
     // MARK: Segue
     // Source of idea: http://jamesleist.com/ios-swift-tutorial-stop-segue-show-alert-text-box-empty/
+    /**
+     Overrides the `shouldPerformSegueWithIdentifier` method. Called before a segue is performed. Checks that if the segue identifier is `search`, and then checks whether or not the `stopNumberInput` is empty or not.
+    
+     - Parameters:
+        - identifier: String identifier of the current segue trigger
+        - sender: The object initiating the segue
+     - return: A boolean that defines whether or not the segue should transition
+    */
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if (identifier == "search") {
             let warn = UIAlertView(title: "No stop entered", message: "Please enter a stop before searching", delegate: nil, cancelButtonTitle: "Ok")

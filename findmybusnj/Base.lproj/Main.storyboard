@@ -10,7 +10,7 @@
         <!--Bus Time Table Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="BusTimeTableController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="ETABusTimeTableController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="5e8-a6-Kmc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="1561.5" y="-320.25"/>
         </scene>
-        <!--Pop Over Controller-->
+        <!--Search Pop Over Controller-->
         <scene sceneID="erw-kO-yzC">
             <objects>
-                <viewController id="Tj0-Q0-7wY" customClass="ETAPopOverController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tj0-Q0-7wY" customClass="ETASearchPopOverController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nRu-bh-L3T"/>
                         <viewControllerLayoutGuide type="bottom" id="uVH-jX-aar"/>

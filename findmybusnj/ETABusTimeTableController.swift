@@ -11,7 +11,7 @@ import UIKit
 // MARK: Dependancies
 import NetworkManager
 
-class BusTimeTableController: CardTableViewController {
+class ETABusTimeTableController: CardTableViewController {
     // MARK: Properties
     var currentStop: String = ""
 
@@ -52,7 +52,7 @@ class BusTimeTableController: CardTableViewController {
     override func unwindToMain(sender: UIStoryboardSegue) {
         // Make sure that we transfer data from the popover controller if user is searching
         if sender.identifier == "search" {
-            let sourceController = sender.sourceViewController as! ETAPopOverController
+            let sourceController = sender.sourceViewController as! ETASearchPopOverController
 
             if let stop = sourceController.stopNumberInput.text {
                 currentStop = stop
@@ -63,7 +63,6 @@ class BusTimeTableController: CardTableViewController {
     }
     
     // MARK: Networking
-    
     /**
      Called during the segue transition that will cause the table to make a request
      to the server for the given stop
@@ -86,4 +85,3 @@ class BusTimeTableController: CardTableViewController {
         }
     }
 }
-

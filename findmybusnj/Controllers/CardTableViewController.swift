@@ -21,17 +21,17 @@ class CardTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // setup the refresh controller for the table
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh stops")
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
         
         self.tableView.separatorColor = UIColor.clearColor()
         self.tableView.separatorStyle = .None
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     /**
-     function called when tableview is pulled down to refresh data
+     Function called when `tableview` is pulled down to refresh data. Overridden in sub-class if need be
      
      - Parameter sender: The object calling the refresh
     */
@@ -42,6 +42,8 @@ class CardTableViewController: UITableViewController {
     
     /**
      Used to dismiss a popover view back to the root parent
+     
+     - parameter sender: The sender calling the function. Used to set the view to `sourceViewConroller`
      */
     @IBAction func unwindToMain(sender: UIStoryboardSegue) {
         _ = sender.sourceViewController
@@ -129,8 +131,10 @@ class CardTableViewController: UITableViewController {
             }
         }
         else {
+            #if DEBUG
             print(self.items.arrayValue[index]["pu"].description)
             print(self.items.arrayValue[index])
+            #endif
             
             switch arrivalString {
                 case "APPROACHING":

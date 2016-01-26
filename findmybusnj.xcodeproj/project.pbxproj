@@ -12,13 +12,14 @@
 		D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */; };
 		D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */; };
 		D4598D2A1C4C729700A15B08 /* FilledCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4598D291C4C729700A15B08 /* FilledCircle.swift */; };
-		D4640DD51C4DE50600D184E3 /* ETAPopOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4640DD41C4DE50600D184E3 /* ETAPopOverController.swift */; };
+		D4640DD51C4DE50600D184E3 /* ETASearchPopOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */; };
 		D479C1931C34DAA200C434ED /* NetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D479C1921C34DAA200C434ED /* NetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D479C19A1C34DAA200C434ED /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; };
 		D479C1A11C34DAA200C434ED /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C1A01C34DAA200C434ED /* NetworkManagerTests.swift */; };
 		D479C1A51C34DAA200C434ED /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; };
 		D479C1A61C34DAA200C434ED /* NetworkManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D479C1B01C34DE7400C434ED /* NMServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C1AF1C34DE7400C434ED /* NMServerManager.swift */; };
+		D4C0C7BA1C57C97100D15450 /* PlacesAnnotationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */; };
 		D4D1AF1A1C0BA99C00FA6C91 /* AnimationsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D1AF211C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */; };
 		D4D1AF281C0BA99C00FA6C91 /* AnimationsFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1AF271C0BA99C00FA6C91 /* AnimationsFrameworkTests.swift */; };
@@ -27,12 +28,11 @@
 		D4D1AF381C0BA9D000FA6C91 /* AFShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1AF371C0BA9D000FA6C91 /* AFShapeRenderer.swift */; };
 		D4D1AF3B1C0BA9E700FA6C91 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1AF3A1C0BA9E700FA6C91 /* Circle.swift */; };
 		D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */; };
-		D4D6AB661BBA2FE200CE241D /* BusTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */; };
+		D4D6AB661BBA2FE200CE241D /* ETABusTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB651BBA2FE200CE241D /* ETABusTimeTableController.swift */; };
 		D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */; };
 		D4D6AB6B1BBA2FE200CE241D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB691BBA2FE200CE241D /* Main.storyboard */; };
 		D4D6AB6D1BBA2FE200CE241D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6C1BBA2FE200CE241D /* Assets.xcassets */; };
 		D4D6AB701BBA2FE200CE241D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6E1BBA2FE200CE241D /* LaunchScreen.storyboard */; };
-		D4D6AB7B1BBA2FE200CE241D /* findmybusnjTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB7A1BBA2FE200CE241D /* findmybusnjTests.swift */; };
 		D4D6AB861BBA2FE200CE241D /* findmybusnjUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB851BBA2FE200CE241D /* findmybusnjUITests.swift */; };
 		D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */; };
 		D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */; };
@@ -140,7 +140,7 @@
 		D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindNearByStopsController.swift; sourceTree = "<group>"; };
 		D4598D291C4C729700A15B08 /* FilledCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilledCircle.swift; path = Shapes/FilledCircle.swift; sourceTree = "<group>"; };
-		D4640DD41C4DE50600D184E3 /* ETAPopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPopOverController.swift; path = Controllers/ETAView/ETAPopOverController.swift; sourceTree = "<group>"; };
+		D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETASearchPopOverController.swift; path = Controllers/ETAView/ETASearchPopOverController.swift; sourceTree = "<group>"; };
 		D479C1901C34DAA200C434ED /* NetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D479C1921C34DAA200C434ED /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		D479C1941C34DAA200C434ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,6 +149,7 @@
 		D479C1A21C34DAA200C434ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D479C1AF1C34DE7400C434ED /* NMServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMServerManager.swift; sourceTree = "<group>"; };
 		D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesAnnotationTest.swift; path = Models/PlacesAnnotationTest.swift; sourceTree = "<group>"; };
 		D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimationsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationsFramework.h; sourceTree = "<group>"; };
 		D4D1AF1B1C0BA99C00FA6C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -159,14 +160,13 @@
 		D4D1AF3A1C0BA9E700FA6C91 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Circle.swift; path = Shapes/Circle.swift; sourceTree = "<group>"; };
 		D4D6AB601BBA2FE200CE241D /* findmybusnj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findmybusnj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusTimeTableController.swift; sourceTree = "<group>"; };
+		D4D6AB651BBA2FE200CE241D /* ETABusTimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETABusTimeTableController.swift; sourceTree = "<group>"; };
 		D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindByBusNumberController.swift; sourceTree = "<group>"; };
 		D4D6AB6A1BBA2FE200CE241D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4D6AB6C1BBA2FE200CE241D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4D6AB6F1BBA2FE200CE241D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4D6AB711BBA2FE200CE241D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4D6AB761BBA2FE200CE241D /* findmybusnjTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = findmybusnjTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4D6AB7A1BBA2FE200CE241D /* findmybusnjTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findmybusnjTests.swift; sourceTree = "<group>"; };
 		D4D6AB7C1BBA2FE200CE241D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4D6AB811BBA2FE200CE241D /* findmybusnjUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = findmybusnjUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB851BBA2FE200CE241D /* findmybusnjUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findmybusnjUITests.swift; sourceTree = "<group>"; };
@@ -380,7 +380,7 @@
 		D4D6AB791BBA2FE200CE241D /* findmybusnjTests */ = {
 			isa = PBXGroup;
 			children = (
-				D4D6AB7A1BBA2FE200CE241D /* findmybusnjTests.swift */,
+				D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */,
 				D4D6AB7C1BBA2FE200CE241D /* Info.plist */,
 			);
 			path = findmybusnjTests;
@@ -415,8 +415,8 @@
 		D4EC73FD1BD69B8200FF2E88 /* ETAView */ = {
 			isa = PBXGroup;
 			children = (
-				D4D6AB651BBA2FE200CE241D /* BusTimeTableController.swift */,
-				D4640DD41C4DE50600D184E3 /* ETAPopOverController.swift */,
+				D4D6AB651BBA2FE200CE241D /* ETABusTimeTableController.swift */,
+				D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */,
 			);
 			name = ETAView;
 			sourceTree = "<group>";
@@ -818,11 +818,11 @@
 				D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */,
 				D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */,
 				D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */,
-				D4640DD51C4DE50600D184E3 /* ETAPopOverController.swift in Sources */,
+				D4640DD51C4DE50600D184E3 /* ETASearchPopOverController.swift in Sources */,
 				D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */,
 				D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */,
 				D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */,
-				D4D6AB661BBA2FE200CE241D /* BusTimeTableController.swift in Sources */,
+				D4D6AB661BBA2FE200CE241D /* ETABusTimeTableController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,7 +830,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4D6AB7B1BBA2FE200CE241D /* findmybusnjTests.swift in Sources */,
+				D4C0C7BA1C57C97100D15450 /* PlacesAnnotationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
