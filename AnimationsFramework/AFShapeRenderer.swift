@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+/**
+ A class from the `AnimationsFramework` that will render shapes
+*/
 public class AFShapeRenderer {
     // Stroke color of the circle to be rendered
     private static var strokeColor: CGColor!
@@ -65,6 +68,8 @@ public class AFShapeRenderer {
     
     /**
       Sets the stroke color of the circle based on the bus time being passed in
+     
+      - TODO: Figure out how to make `Delay` not stroke red on the circumference
      
       - parameter busTime:    The time the bus will be arriving as an int
      */

@@ -28,7 +28,7 @@ public class NMServerManager {
     */
     public static func getJSONForStop(stop: String, completion: (item: JSON, error: ErrorType?) -> Void) {
         let parameters = [ "stop" : stop ]
-        makePost("/stop", parameters: parameters, completion: completion)
+        makePOST("/stop", parameters: parameters, completion: completion)
     }
     
     /**
@@ -37,19 +37,24 @@ public class NMServerManager {
      - Parameters:
         - stop: The six digit string provided by the myBus stop sign that the user types in
         - bus: The three digit string that defines the bus number to filter on
-        - completion: A callback function to handle the JSON data upon a successful request.
+        - completion: A callback function to handle the JSON data upon a successful request
     */
     public static func getJSONForStopFilteredByBus(stop: String, bus: String, completion: (item: JSON, error: ErrorType?) -> Void) {
         let parameters = [ "stop" : stop, "bus" : bus]
-        makePost("/stopFilteredByBus", parameters: parameters, completion: completion);
+        makePOST("/stopFilteredByBus", parameters: parameters, completion: completion);
     }
     
     /**
      Wrapper function around common `.POST` request call. Used for making post requests that take a string of parameters to go to an endpoint. This function requires a completion handler to handle the JSON once it responds successfully.
      
+     - TODO: Better handle failure if JSON is not properly returned
+     
      - Parameters:
+        - endpoint: String that denotes the endpoint to hit when pinned to the `baseURL`
+        - parameters: `[String : String]` of parameters that will be handled when the enpoint is hit
+        - completion: The completion function that will be called when the data is succesfully returned
     */
-    private static func makePost(endpoint: String, parameters: [String: String], completion: (item: JSON, error: ErrorType?) -> Void) {
+    private static func makePOST(endpoint: String, parameters: [String : String], completion: (item: JSON, error: ErrorType?) -> Void) {
         let url = baseURL + endpoint
         
         Alamofire.request(.POST, url, parameters: parameters)

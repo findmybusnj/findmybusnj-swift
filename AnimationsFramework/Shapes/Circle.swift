@@ -11,9 +11,19 @@
 import Foundation
 import UIKit
 
+/**
+ A class that represents a circle that has a colored stroke and no fill
+*/
 class Circle: UIView {
     var circle: CAShapeLayer!
     
+    /**
+     Creates a circle at a given position on the frame passed in and colors the stroke
+     
+     - Parameters:
+        - frame: The frame the circle will be drawn on given a view
+        - color: The color of the stroke of the circle
+    */
     init(frame: CGRect, color: CGColor) {
         super.init(frame: frame);
         self.backgroundColor = UIColor.clearColor()
@@ -38,13 +48,12 @@ class Circle: UIView {
     }
     
     /**
-    * Used to animate the drawing of the circle
-    *
-    * @param duration: Takes an NSTimeInterval to denote how long it should take
-    * to draw the circle
-    * @param borderLength: how far around the circle should travel. If more than
-    * 1 it will be set to one (hence it is variable and not let)
-    **/
+     Used to animate the drawing of the circle
+     
+     - Parameters:
+        - duration: Takes an NSTimeInterval to denote how long it should take to draw the circle
+        - borderLength: how far around the circle should travel. If more than 1 it will be set to one (hence it is variable and not let)
+    */
     func animateCircle(duration: NSTimeInterval, var borderLength: CGFloat) {
         if (borderLength > 1) {
             borderLength = 1
@@ -71,12 +80,13 @@ class Circle: UIView {
     }
     
     /**
-    * Adds a circle to the given view controller, will draw based on time passed in
-    *
-    * @param view   The view to be added to
-    * @param xCoordinates   Where in the view to the top left of the circle should be placed
-    * @param busTimeForBorderLength   Denotes the bus time that will determine how far the circle goes
-    **/
+     Adds a circle to the given view controller, will draw based on time passed in
+     
+     - Parameters:
+        - view: The view to be added to
+        - xCoordinates: Where in the view to the top left of the circle should be placed
+        - busTimeForBorderLength: Denotes the bus time that will determine how far the circle goes
+    */
     func addCircleToView(view: UIView, xCoordinate: CGFloat, busTimeForBorderLength: Int) {
         self.tag = 4    //  4 Stands for the item it should be (which in this case is the last) so we can remove it
         view.addSubview(self)
@@ -88,11 +98,11 @@ class Circle: UIView {
     }
     
     /**
-    * Given a bus time, this will decide how long the border length should be
-    * 
-    * @param busTime    The time, as an int, that will determine the border lenght
-    * @return   A CGFloat between 0 and 1 that reperesents the border length
-    **/
+     Given a bus time, this will decide how long the border length should be
+     
+     - parameter busTime: The time, as an int, that will determine the border lenght
+     - returns: A `CGFloat` between 0 and 1 that reperesents the border length
+    */
     private func calculateBorderLengthForBusTime(busTime: Int) -> CGFloat {
         let time = (Float(busTime))/35.0    // 35 is a magic number that allows 
                                             // the circle to be broken up into sections of 8ths

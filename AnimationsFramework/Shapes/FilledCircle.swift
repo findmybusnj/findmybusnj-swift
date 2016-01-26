@@ -9,8 +9,14 @@
 import Foundation
 import UIKit
 
+/**
+ A class that will render a circle that has a filled color
+*/
 class FilledCircle: Circle {
     
+    /**
+     Creates a `Circle` object and then sets the `fillColor` to the color of the stroke color
+    */
     override init(frame: CGRect, color: CGColor) {
         super.init(frame: frame, color: color)
         
