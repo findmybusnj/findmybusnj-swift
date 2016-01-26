@@ -16,15 +16,23 @@ class PlacesAnnotation: NSObject, MKAnnotation {
     let title: String?
     let coordinate: CLLocationCoordinate2D
     
+    // inititalize the subtitle variable to nil so we don't have one
+    var subtitle: String? {
+        return nil
+    }
+    
+    /**
+     Initializer method to create a new annotation with a name and coordinates
+     
+     - Parameters:
+        - title: Title of the place marker
+        - coordinate: The `CLLocationCoordinate2D` that defines the x,y coordinates for the annotation
+    */
     init(title: String, coordinate: CLLocationCoordinate2D) {
         self.title = title
         self.coordinate = coordinate
         
         super.init()
-    }
-    
-    var subtitle: String? {
-        return nil
     }
     
     func mapItem() -> MKMapItem {
