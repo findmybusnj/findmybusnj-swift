@@ -11,7 +11,7 @@ import Foundation
 import MapKit
 import AddressBook
 
-class PlacesAnnotation: NSObject, MKAnnotation {
+class PlacesAnnotation: NSObject {
   // MARK: Properties
   let title: String?
   let coordinate: CLLocationCoordinate2D
@@ -35,6 +35,15 @@ class PlacesAnnotation: NSObject, MKAnnotation {
     super.init()
   }
   
+}
+
+// MARK: MKAnnotation
+extension PlacesAnnotation: MKAnnotation {
+  /**
+   Creates an `MKMapItem` based on the `MKPlacemark` created out of this current object coordinates and title
+   
+   - returns: An MKMapItem containing the title and coordinates of the annotation
+   */
   func mapItem() -> MKMapItem {
     let addressDictionary = [String(kABPersonAddressStreetKey): String(title)]      // MKPlacemark only takes a String, not an optional string
     let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDictionary)

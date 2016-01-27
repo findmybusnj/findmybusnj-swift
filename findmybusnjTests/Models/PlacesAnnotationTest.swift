@@ -15,22 +15,25 @@ import MapKit
  */
 class PlacesAnnotationTest: XCTestCase {
   var annotation: PlacesAnnotation?
+  let title = "Test annotation"
   
+  // test coordinates
+  let latitude = 40.9171205
+  let longitude = -74.0441104
+  
+  // MARK: Setup
   override func setUp() {
     super.setUp()
     
-    // test coordinates
-    let latitude = 40.9171205
-    let longitude = -74.0441104
-    
     let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-    annotation = PlacesAnnotation(title: "Test annotation", coordinate: coordinates)
+    annotation = PlacesAnnotation(title: self.title, coordinate: coordinates)
   }
   
   override func tearDown() {
     super.tearDown()
   }
   
+  // MARK: PlacesAnnotation
   /**
    Verifies that the `subtitle` property is nil after initialization.
    */
@@ -38,6 +41,43 @@ class PlacesAnnotationTest: XCTestCase {
     guard let marker = annotation else {
       return
     }
+    
     XCTAssertNil(marker.subtitle, "After initialization, subtitle should be nil")
+  }
+  
+  /**
+   Verifies the name is the same as we initialized
+   */
+  func testTitleIsSameTitle() {
+    guard let marker = annotation else {
+      return
+    }
+    
+    XCTAssertEqual(marker.title, self.title, "Titles should be the same")
+  }
+  
+  /**
+   Verifies the coordinates we passed in are the same
+   */
+  func testCoordinatesAreTheSame() {
+    guard let marker = annotation else {
+      return
+    }
+    
+    XCTAssertEqual(marker.coordinate.latitude, self.latitude, "Latitudes should match")
+    XCTAssertEqual(marker.coordinate.longitude, self.longitude, "Longitudes should match")
+  }
+  
+  // MARK: MKAnnotation extention
+  /**
+   Verifies the method `mapItem` returns a `MKMapItem`
+   */
+  func testMapItemIsMKMapItem() {
+    guard let marker = annotation else {
+      return
+    }
+    
+    let mapItem = marker.mapItem()
+    XCTAssertTrue(mapItem.isKindOfClass(MKMapItem), "Function .mapItem() should return a MKMapItem")
   }
 }
