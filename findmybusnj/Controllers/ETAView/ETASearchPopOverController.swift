@@ -55,7 +55,10 @@ extension ETASearchPopOverController: UITextFieldDelegate {
   */
   func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
     // If the current character count is nil, we set it to zero using nil coelescing
-    let currentCharCount = textField.text?.characters.count ?? 0;
+    guard let textFieldText = textField.text else {
+      return false
+    }
+    let currentCharCount = textFieldText.characters.count ?? 0;
     if (range.length + range.location > currentCharCount) {
       return false
     }

@@ -136,6 +136,7 @@ class CardTableViewController: UITableViewController {
         print(self.items.arrayValue[index])
       #endif
       
+      // TODO - Make these into an Enum
       switch arrivalString {
       case "APPROACHING":
         card.timeLabel.text = "Arrive"
