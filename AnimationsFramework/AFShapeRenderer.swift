@@ -76,19 +76,19 @@ public class AFShapeRenderer {
   private static func determineStrokeColorForBusTime(busTime: Int) {
     if (busTime == 0) {
       // Blue
-      self.strokeColor = UIColor(colorLiteralRed: Float(67/255.0), green: Float(174/255.0), blue: Float(249/255.0), alpha: Float(1.0)).CGColor
+      self.strokeColor = UIColor(red: 67.0/255.0, green: 174.0/255.0, blue: 249.0/255.0, alpha: 1.0).CGColor
     }
     else if (busTime <= 7) {
       // Green
-      self.strokeColor = UIColor(colorLiteralRed: Float(29/255.0), green: Float(156/255.0), blue: Float(48/255.0), alpha: Float(1.0)).CGColor
+      self.strokeColor = UIColor(red: 29.0/255.0, green: 156.0/255.0, blue: 48.0/255.0, alpha: 1.0).CGColor
     }
     else if ( busTime <= 14) {
       // Orange
-      self.strokeColor = UIColor(colorLiteralRed: Float(237/255.0), green: Float(145/255.0), blue: Float(50/255.0), alpha: Float(1.0)).CGColor
+      self.strokeColor = UIColor(red: 237.0/255.0, green: 145.0/255.0, blue: 50.0/255.0, alpha: 1.0).CGColor
     }
     else {
       // Red
-      self.strokeColor = UIColor(colorLiteralRed: Float(204/255.0), green: Float(25/255.0), blue: Float(36/255.0), alpha: Float(1.0)).CGColor
+      self.strokeColor = UIColor(red: 204.0/255.0, green: 25.0/255.0, blue: 36.0/255.0, alpha: 1.0).CGColor
     }
   }
 }
