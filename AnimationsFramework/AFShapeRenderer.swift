@@ -58,12 +58,16 @@ public class AFShapeRenderer {
   }
   
   /**
-   Removes the object with tag 4, which is assumed to be the circle, from the given view
+   Removes the object with tag 4, which is assumed to be the circle, from the given view. If the tag is nil we return out of the function.
    
    - parameter view:   The view to remove the circle from
    */
   public static func removeRenderedCircle(view: UIView) {
-    view.viewWithTag(4)?.removeFromSuperview()  // Remove the prior circle if it exists
+    guard let tag = view.viewWithTag(4) else {
+      return
+    }
+    
+    tag.removeFromSuperview()  // Remove the prior circle if it exists
   }
   
   /**
