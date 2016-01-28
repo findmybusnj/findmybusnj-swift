@@ -1,0 +1,13 @@
+language: objective-c
+branches:
+  only:
+    - 2.0
+git:
+  submodules: false
+before_install: git submodule update --init --recursive
+notifications:
+  email: true
+matrix:
+  include:
+    - osx_image: xcode7.2
+      env: TRAVIS_SWIFT_VERSION=2.1.1
