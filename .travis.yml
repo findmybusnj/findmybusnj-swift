@@ -1,10 +1,9 @@
 language: objective-c
 branches:
   only:
-    - 2.0
+    - master
 git:
   submodules: false
-before_install: git submodule update --init --recursive
 notifications:
   email: true
 matrix:
