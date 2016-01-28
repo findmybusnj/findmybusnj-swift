@@ -18,6 +18,10 @@ import SwiftyJSON
  */
 public class NMServerManager {
   private static let baseURL = "https://findmybusnj.com/rest"
+  static var lastEndpoint = ""
+  static var url : String {
+    return "\(baseURL)\(lastEndpoint)"
+  }
   
   /**
    Get all the buses coming to a given stop. When using this, you need to pass a completion function in to handle the json returned by the server call.
@@ -28,7 +32,8 @@ public class NMServerManager {
    */
   public static func getJSONForStop(stop: String, completion: (item: JSON, error: ErrorType?) -> Void) {
     let parameters = [ "stop" : stop ]
-    makePOST("/stop", parameters: parameters, completion: completion)
+    let endpoint = "/stop"
+    makePOST(endpoint, parameters: parameters, completion: completion)
   }
   
   /**
@@ -41,7 +46,8 @@ public class NMServerManager {
    */
   public static func getJSONForStopFilteredByBus(stop: String, bus: String, completion: (item: JSON, error: ErrorType?) -> Void) {
     let parameters = [ "stop" : stop, "bus" : bus]
-    makePOST("/stopFilteredByBus", parameters: parameters, completion: completion);
+    let endpoint = "/stopFilteredByBus"
+    makePOST(endpoint, parameters: parameters, completion: completion);
   }
   
   /**
@@ -56,6 +62,7 @@ public class NMServerManager {
    */
   private static func makePOST(endpoint: String, parameters: [String : String], completion: (item: JSON, error: ErrorType?) -> Void) {
     let url = baseURL + endpoint
+    lastEndpoint = endpoint
     
     Alamofire.request(.POST, url, parameters: parameters)
       .responseJSON {(req, res, json) in
