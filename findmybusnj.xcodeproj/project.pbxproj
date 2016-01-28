@@ -33,7 +33,7 @@
 		D4D6AB6B1BBA2FE200CE241D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB691BBA2FE200CE241D /* Main.storyboard */; };
 		D4D6AB6D1BBA2FE200CE241D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6C1BBA2FE200CE241D /* Assets.xcassets */; };
 		D4D6AB701BBA2FE200CE241D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6E1BBA2FE200CE241D /* LaunchScreen.storyboard */; };
-		D4D6AB861BBA2FE200CE241D /* findmybusnjUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB851BBA2FE200CE241D /* findmybusnjUITests.swift */; };
+		D4D6AB861BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB851BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift */; };
 		D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */; };
 		D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */; };
 		D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */; };
@@ -169,7 +169,7 @@
 		D4D6AB761BBA2FE200CE241D /* findmybusnjTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = findmybusnjTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB7C1BBA2FE200CE241D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4D6AB811BBA2FE200CE241D /* findmybusnjUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = findmybusnjUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4D6AB851BBA2FE200CE241D /* findmybusnjUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findmybusnjUITests.swift; sourceTree = "<group>"; };
+		D4D6AB851BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETABusTimeTableControllerUITests.swift; sourceTree = "<group>"; };
 		D4D6AB871BBA2FE200CE241D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTableViewController.swift; path = Controllers/CardTableViewController.swift; sourceTree = "<group>"; };
 		D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesAnnotation.swift; sourceTree = "<group>"; };
@@ -389,7 +389,7 @@
 		D4D6AB841BBA2FE200CE241D /* findmybusnjUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D4D6AB851BBA2FE200CE241D /* findmybusnjUITests.swift */,
+				D4D6AB851BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift */,
 				D4D6AB871BBA2FE200CE241D /* Info.plist */,
 			);
 			path = findmybusnjUITests;
@@ -838,7 +838,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4D6AB861BBA2FE200CE241D /* findmybusnjUITests.swift in Sources */,
+				D4D6AB861BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
