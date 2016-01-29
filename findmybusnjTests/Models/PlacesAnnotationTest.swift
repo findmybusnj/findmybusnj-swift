@@ -80,4 +80,26 @@ class PlacesAnnotationTest: XCTestCase {
     let mapItem = marker.mapItem()
     XCTAssertTrue(mapItem.isKindOfClass(MKMapItem), "Function .mapItem() should return a MKMapItem")
   }
+  
+  func testMapItemTitleMatches() {
+    guard let marker = annotation else {
+      return
+    }
+    
+    let mapItem = marker.mapItem()
+    XCTAssertEqual(mapItem.placemark.title, self.title, "mapItem title should match given title")
+  }
+  
+  func testMapItemLocationMatches() {
+    guard let marker = annotation else {
+      return
+    }
+    
+    let mapItem = marker.mapItem()
+    guard let mapLocation = mapItem.placemark.location else {
+      return
+    }
+    XCTAssertEqual(mapLocation.coordinate.longitude, self.longitude, "mapItem longitude should match given longitude")
+    XCTAssertEqual(mapLocation.coordinate.latitude, self.latitude, "mapItem latitude should match given latitude")
+  }
 }
