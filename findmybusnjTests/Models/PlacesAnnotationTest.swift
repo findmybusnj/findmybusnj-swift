@@ -81,15 +81,22 @@ class PlacesAnnotationTest: XCTestCase {
     XCTAssertTrue(mapItem.isKindOfClass(MKMapItem), "Function .mapItem() should return a MKMapItem")
   }
   
-  func testMapItemTitleMatches() {
+  /**
+   Checks to see that the title was properly set on `mapItem`. By default, "United States" is appended to all titles, so we have to check that we contain the string, and not that they match exactly
+   */
+  func testMapItemTitleContainsTitle() {
     guard let marker = annotation else {
       return
     }
     
     let mapItem = marker.mapItem()
-    XCTAssertEqual(mapItem.placemark.title, self.title, "mapItem title should match given title")
+    let containsString = mapItem.placemark.title?.rangeOfString(self.title) != nil
+    XCTAssertTrue( containsString, "mapItem should match title")
   }
   
+  /**
+   Checks to see that the location was properly set on `mapItem`
+   */
   func testMapItemLocationMatches() {
     guard let marker = annotation else {
       return
