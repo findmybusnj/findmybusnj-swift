@@ -14,7 +14,7 @@
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>findmybusnj-build.xcscheme_^#shared#^_</key>
+		<key>findmybusnj-build-and-test.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>6</integer>

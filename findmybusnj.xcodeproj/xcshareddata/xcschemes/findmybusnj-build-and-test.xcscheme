@@ -29,6 +29,46 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D4D1AF1F1C0BA99C00FA6C91"
+               BuildableName = "AnimationsFrameworkTests.xctest"
+               BlueprintName = "AnimationsFrameworkTests"
+               ReferencedContainer = "container:findmybusnj.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D479C1981C34DAA200C434ED"
+               BuildableName = "NetworkManagerTests.xctest"
+               BlueprintName = "NetworkManagerTests"
+               ReferencedContainer = "container:findmybusnj.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D4D6AB751BBA2FE200CE241D"
+               BuildableName = "findmybusnjTests.xctest"
+               BlueprintName = "findmybusnjTests"
+               ReferencedContainer = "container:findmybusnj.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D4D6AB801BBA2FE200CE241D"
+               BuildableName = "findmybusnjUITests.xctest"
+               BlueprintName = "findmybusnjUITests"
+               ReferencedContainer = "container:findmybusnj.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
