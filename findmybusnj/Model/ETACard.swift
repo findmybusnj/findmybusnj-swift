@@ -17,8 +17,8 @@ class ETACard: UITableViewCell {
   @IBOutlet weak var busNumberLabel: UILabel!   // Contains `Bus:` label
   @IBOutlet weak var routeLabel: UILabel! // Contains `Via:` label
   @IBOutlet weak var circleView: UIView!  // Contains the timing circle
-  @IBOutlet weak var timeLabel: UILabel!  // Contains the arrival time
-  @IBOutlet weak var noPrediction: UILabel!
+  @IBOutlet weak var timeLabel: UILabel!  // Contains the arrival time in the cirlce
+  @IBOutlet weak var noPrediction: UILabel! // Hidden label that shows when there is no prediction
   
   override func layoutSubviews() {
     cardSetup()

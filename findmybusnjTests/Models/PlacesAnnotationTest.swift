@@ -22,6 +22,9 @@ class PlacesAnnotationTest: XCTestCase {
   let longitude = -74.0441104
   
   // MARK: Setup
+  /**
+   Creates a new annotation based on the given coordinates and title
+   */
   override func setUp() {
     super.setUp()
     
@@ -29,11 +32,7 @@ class PlacesAnnotationTest: XCTestCase {
     annotation = PlacesAnnotation(title: self.title, coordinate: coordinates)
   }
   
-  override func tearDown() {
-    super.tearDown()
-  }
-  
-  // MARK: PlacesAnnotation
+  // MARK: Tests
   /**
    Verifies that the `subtitle` property is nil after initialization.
    */
@@ -90,8 +89,14 @@ class PlacesAnnotationTest: XCTestCase {
     }
     
     let mapItem = marker.mapItem()
-    let containsString = mapItem.placemark.title?.rangeOfString(self.title) != nil
-    XCTAssertTrue( containsString, "mapItem should match title")
+    if let placemarkTitle = mapItem.placemark.title {
+      let containsString = placemarkTitle.rangeOfString(self.title) != nil
+      XCTAssertTrue( containsString, "mapItem should match title")
+    }
+    else {
+      XCTAssertFalse(false, "placemarkTitle was not unwrapped properly")
+    }
+    
   }
   
   /**

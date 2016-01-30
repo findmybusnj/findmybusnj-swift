@@ -32,7 +32,17 @@ class ETABusTimeTableControllerUITests: XCTestCase {
   /**
    Checks that reload will not crash when there is no data
    */
-  func testEmptyListRefreshesWithoutCrashing() {
-    XCUIApplication().tables["Empty list"].tap()
+  func testEmptyListRefreshes() {
+    let app = XCUIApplication()
+    app.tabBars.buttons["Times"].tap()
+    
+    let table = app.navigationBars["findmybusnj.ETABusTimeTable"]
+    XCTAssertTrue(table.tableRows.count == 0)
+    
+    let start = table.coordinateWithNormalizedOffset(CGVectorMake(10, 10))
+    let end = table.coordinateWithNormalizedOffset(CGVectorMake(10, 16))
+    
+    start.pressForDuration(0, thenDragToCoordinate: end)
+    XCTAssertTrue(table.tableRows.count == 0)
   }
 }

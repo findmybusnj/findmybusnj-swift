@@ -380,7 +380,7 @@
 		D4D6AB791BBA2FE200CE241D /* findmybusnjTests */ = {
 			isa = PBXGroup;
 			children = (
-				D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */,
+				D4EFCFCB1C5D05A8003806A7 /* Models */,
 				D4D6AB7C1BBA2FE200CE241D /* Info.plist */,
 			);
 			path = findmybusnjTests;
@@ -419,6 +419,14 @@
 				D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */,
 			);
 			name = ETAView;
+			sourceTree = "<group>";
+		};
+		D4EFCFCB1C5D05A8003806A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		D4FE2D6E1BD53E8C00930C24 /* Map */ = {
