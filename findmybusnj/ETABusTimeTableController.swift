@@ -27,14 +27,29 @@ class ETABusTimeTableController: CardTableViewController {
    */
   override func refresh(sender: AnyObject) {
     self.tableView.beginUpdates()
-    NMServerManager.getJSONForStop(currentStop) {
-      items, error in
-      
-      if error == nil {
-        self.items = items
-        self.tableView.reloadData()
-        self.tableView.endUpdates()
-        self.refreshControl?.endRefreshing()
+    
+    if !filterRoute.isEmpty {
+      NMServerManager.getJSONForStopFilteredByRoute(currentStop, route: filterRoute) {
+        items, error in
+        
+        if error == nil {
+          self.items = items
+          self.tableView.reloadData()
+          self.tableView.endUpdates()
+          self.refreshControl?.endRefreshing()
+        }
+      }
+    }
+    else {
+      NMServerManager.getJSONForStop(currentStop) {
+        items, error in
+        
+        if error == nil {
+          self.items = items
+          self.tableView.reloadData()
+          self.tableView.endUpdates()
+          self.refreshControl?.endRefreshing()
+        }
       }
     }
   }
