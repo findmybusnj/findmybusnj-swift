@@ -27,8 +27,8 @@ public class NMServerManager {
    Get all the buses coming to a given stop. When using this, you need to pass a completion function in to handle the json returned by the server call.
    
    - Parameters:
-   - stop: The six digit stop number that the user gets from myBus sign at stop
-   - completion: A function to be called back upon success that takes a JSON array and any errors
+     - stop: The six digit stop number that the user gets from myBus sign at stop
+     - completion: A function to be called back upon success that takes a JSON array and any errors
    */
   public static func getJSONForStop(stop: String, completion: (item: JSON, error: ErrorType?) -> Void) {
     let parameters = [ "stop" : stop ]
@@ -40,13 +40,13 @@ public class NMServerManager {
    Get all the buses coming to a given stop, filtered by the bus number. So if the user passes in `165`, the buses returned will only be those that have `165` in the number scheme. This function requires a completion handler so that the json can be handled when called.
    
    - Parameters:
-   - stop: The six digit string provided by the myBus stop sign that the user types in
-   - bus: The three digit string that defines the bus number to filter on
-   - completion: A callback function to handle the JSON data upon a successful request
+     - stop: The six digit string provided by the myBus stop sign that the user types in
+     - route: The three digit string that defines the bus number/route to filter on
+     - completion: A callback function to handle the JSON data upon a successful request
    */
-  public static func getJSONForStopFilteredByBus(stop: String, bus: String, completion: (item: JSON, error: ErrorType?) -> Void) {
-    let parameters = [ "stop" : stop, "bus" : bus]
-    let endpoint = "/stopFilteredByBus"
+  public static func getJSONForStopFilteredByRoute(stop: String, route: String, completion: (item: JSON, error: ErrorType?) -> Void) {
+    let parameters = [ "stop" : stop, "route" : route]
+    let endpoint = "/stop/byRoute"
     makePOST(endpoint, parameters: parameters, completion: completion);
   }
   
@@ -56,9 +56,9 @@ public class NMServerManager {
    - TODO: Better handle failure if JSON is not properly returned
    
    - Parameters:
-   - endpoint: String that denotes the endpoint to hit when pinned to the `baseURL`
-   - parameters: `[String : String]` of parameters that will be handled when the enpoint is hit
-   - completion: The completion function that will be called when the data is succesfully returned
+     - endpoint: String that denotes the endpoint to hit when pinned to the `baseURL`
+     - parameters: `[String : String]` of parameters that will be handled when the enpoint is hit
+     - completion: The completion function that will be called when the data is succesfully returned
    */
   private static func makePOST(endpoint: String, parameters: [String : String], completion: (item: JSON, error: ErrorType?) -> Void) {
     let url = baseURL + endpoint
