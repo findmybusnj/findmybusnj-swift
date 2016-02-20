@@ -425,8 +425,8 @@
                     </view>
                     <connections>
                         <outlet property="favoritesTableView" destination="ytY-8e-1AK" id="A0l-BN-TZ2"/>
-                        <outlet property="filterBusNumberInput" destination="hZv-vE-Pbv" id="Q28-sb-uP2"/>
-                        <outlet property="stopNumberInput" destination="Vw2-bt-EoC" id="AR1-h8-Xvi"/>
+                        <outlet property="filterRouteNumberTextField" destination="hZv-vE-Pbv" id="m21-F8-iNC"/>
+                        <outlet property="stopNumberTextField" destination="Vw2-bt-EoC" id="BrH-XP-Scd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFK-Xe-SwN" userLabel="First Responder" sceneMemberID="firstResponder"/>

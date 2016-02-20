@@ -14,6 +14,7 @@ import NetworkManager
 class ETABusTimeTableController: CardTableViewController {
   // MARK: Properties
   var currentStop: String = ""
+  var filterRoute: String = ""
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -54,23 +55,64 @@ class ETABusTimeTableController: CardTableViewController {
     if sender.identifier == "search" {
       let sourceController = sender.sourceViewController as! ETASearchPopOverController
       
-      if let stop = sourceController.stopNumberInput.text {
+      guard let stop = sourceController.stopNumberTextField.text else {
+        return
+      }
+      guard let route = sourceController.filterRouteNumberTextField.text else {
+        return
+      }
+      
+      if (route.isEmpty) {
         currentStop = stop
         self.makeStopRequest(stop)
       }
+      else {
+        currentStop = stop
+        filterRoute = route
+        self.makeFilteredStopRequest(stop, route: route)
+      }
+      
     }
     super.unwindToMain(sender)
   }
   
   // MARK: Networking
   /**
-  Called during the segue transition that will cause the table to make a request
-  to the server for the given stop
+    Called during the segue transition that will cause the table to make a request
+    to the server for the given stop
   
-  - Parameters stop: The stop number we request from the server
-  */
+    - TODO: abstract call backs, handle errors
+    
+    - Parameter stop: The stop number being requested from the server
+   */
   private func makeStopRequest(stop: String) {
     NMServerManager.getJSONForStop(stop) {
+      items, error in
+      
+      if error == nil {
+        if items.rawString() == "No arrival times" {
+          self.noPrediction = true
+        }
+        else {
+          self.items = items
+        }
+        self.tableView.reloadData()
+      }
+    }
+  }
+  
+  /**
+   Called during the segue transition that will cause the table to make a request to the server
+   for a given stop and route. The stops returned will be filtered by the 3 digit route provided.
+   
+   - TODO: abstract the callback to a function, handle error if not nil
+   
+   - Parameters:
+      - stop: The stop number being requested from the server
+      - route: The route to filter the buses by
+   */
+  private func makeFilteredStopRequest(stop: String, route: String) {
+    NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
       items, error in
       
       if error == nil {
