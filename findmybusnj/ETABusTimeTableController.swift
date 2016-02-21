@@ -22,6 +22,7 @@ class ETABusTimeTableController: CardTableViewController {
   
   /**
    Refreshes the table given the `currentStop`
+   -TODO: Handle error, refactor logic since it is the same callback for both
    
    - Parameter sender: Object calling the refresh
    */

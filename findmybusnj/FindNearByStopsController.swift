@@ -30,7 +30,7 @@ class FindNearByStopsController: UIViewController {
     #if RELEASE
       centerMapOnLocation()
     #endif
-    queryPlaces("bus_station")
+      queryPlaces("bus_station")
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -75,7 +75,6 @@ class FindNearByStopsController: UIViewController {
     /**
      Pass data to server using headers, not through string
      */
-    
     let url = String("https://findmybusnj.com/rest/getPlaces")
     let parameters = [
       "latitude" : String(latitude),
