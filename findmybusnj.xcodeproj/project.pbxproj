@@ -29,7 +29,6 @@
 		D4D1AF3B1C0BA9E700FA6C91 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1AF3A1C0BA9E700FA6C91 /* Circle.swift */; };
 		D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */; };
 		D4D6AB661BBA2FE200CE241D /* ETABusTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB651BBA2FE200CE241D /* ETABusTimeTableController.swift */; };
-		D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */; };
 		D4D6AB6B1BBA2FE200CE241D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB691BBA2FE200CE241D /* Main.storyboard */; };
 		D4D6AB6D1BBA2FE200CE241D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6C1BBA2FE200CE241D /* Assets.xcassets */; };
 		D4D6AB701BBA2FE200CE241D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6E1BBA2FE200CE241D /* LaunchScreen.storyboard */; };
@@ -161,7 +160,6 @@
 		D4D6AB601BBA2FE200CE241D /* findmybusnj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findmybusnj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4D6AB651BBA2FE200CE241D /* ETABusTimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETABusTimeTableController.swift; sourceTree = "<group>"; };
-		D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindByBusNumberController.swift; sourceTree = "<group>"; };
 		D4D6AB6A1BBA2FE200CE241D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4D6AB6C1BBA2FE200CE241D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4D6AB6F1BBA2FE200CE241D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -270,7 +268,6 @@
 			children = (
 				D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */,
 				D4EC73FD1BD69B8200FF2E88 /* ETAView */,
-				D4DE49FA1BDAA0A10037D211 /* Find By Bus View */,
 				D4FE2D6E1BD53E8C00930C24 /* Map */,
 			);
 			name = "View Controllers";
@@ -393,14 +390,6 @@
 				D4D6AB871BBA2FE200CE241D /* Info.plist */,
 			);
 			path = findmybusnjUITests;
-			sourceTree = "<group>";
-		};
-		D4DE49FA1BDAA0A10037D211 /* Find By Bus View */ = {
-			isa = PBXGroup;
-			children = (
-				D4D6AB671BBA2FE200CE241D /* FindByBusNumberController.swift */,
-			);
-			name = "Find By Bus View";
 			sourceTree = "<group>";
 		};
 		D4E4B1221BCBF9F500D06419 /* Model */ = {
@@ -827,7 +816,6 @@
 				D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */,
 				D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */,
 				D4640DD51C4DE50600D184E3 /* ETASearchPopOverController.swift in Sources */,
-				D4D6AB681BBA2FE200CE241D /* FindByBusNumberController.swift in Sources */,
 				D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */,
 				D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */,
 				D4D6AB661BBA2FE200CE241D /* ETABusTimeTableController.swift in Sources */,
