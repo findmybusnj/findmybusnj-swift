@@ -25,8 +25,8 @@ class PlacesAnnotation: NSObject {
    Initializer method to create a new annotation with a name and coordinates
    
    - Parameters:
-   - title: Title of the place marker
-   - coordinate: The `CLLocationCoordinate2D` that defines the x,y coordinates for the annotation
+     - title: Title of the place marker
+     - coordinate: The `CLLocationCoordinate2D` that defines the x,y coordinates for the annotation
    */
   init(title: String, coordinate: CLLocationCoordinate2D) {
     self.title = title
