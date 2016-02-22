@@ -109,10 +109,11 @@ class ETABusTimeTableController: CardTableViewController {
       items, error in
       
       if error == nil {
-        if items.rawString() == "No arrival times" {
+        if items.rawString() == "No arrival times" || items.isEmpty {
           self.noPrediction = true
         }
         else {
+          self.noPrediction = false
           self.items = items
         }
         self.tableView.reloadData()
@@ -135,10 +136,11 @@ class ETABusTimeTableController: CardTableViewController {
       items, error in
       
       if error == nil {
-        if items.rawString() == "No arrival times" {
+        if items.rawString() == "No arrival times" || items.isEmpty {
           self.noPrediction = true
         }
         else {
+          self.noPrediction = false
           self.items = items
         }
         self.tableView.reloadData()

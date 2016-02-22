@@ -61,7 +61,7 @@ class CardTableViewController: UITableViewController {
   
   // MARK: UITableViewController
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    if (items.count > 0) {
+    if (!items.isEmpty) {
       tableView.backgroundView = nil
       return 1
     }
