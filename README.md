@@ -1,4 +1,4 @@
-# FIND MY BUS NJ [![Build Status](https://www.bitrise.io/app/5c8adfc7a3ee8755.svg?token=LiaTatcc2s4PIYhhSC-G6A&branch=master)](https://www.bitrise.io/app/5c8adfc7a3ee8755)
+# FIND MY BUS NJ 2[![Build Status](https://www.bitrise.io/app/5c8adfc7a3ee8755.svg?token=LiaTatcc2s4PIYhhSC-G6A&branch=master)](https://www.bitrise.io/app/5c8adfc7a3ee8755)
 An app for tracking NJ Transit bus times.
 
 ## Version: 2.0
@@ -20,3 +20,8 @@ To generate documentation, simply use [Jazzy](https://github.com/realm/jazzy)
 `sudo gem install jazzy`
 
 Then run `jazzy` in the base folder. Documentation will be put out to the `docs` folder.
+
+
+## Credits
+
+* Thanks to [Icons8](https://icons8.com) for providing free icons.
