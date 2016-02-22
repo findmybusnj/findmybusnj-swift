@@ -35,6 +35,11 @@ class CardTableViewController: UITableViewController {
     self.tableView.contentOffset = CGPointMake(0, 0 - top)
   }
   
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+  
   /**
    Function called when `tableview` is pulled down to refresh data. Overridden in sub-class if need be
    
@@ -46,17 +51,31 @@ class CardTableViewController: UITableViewController {
   }
   
   /**
+   Updates the `tableView` given an array of JSON objects by calling `reloadData()`.
+   Decidedes whether or not to show "No Current Predictions" label.
+   
+   - parameter json: The json returned from a network call to be added to the table
+   */
+  func updateTable(json: JSON) {
+    if json.rawString() == "No arrival times" || json.isEmpty {
+      self.noPrediction = true
+    }
+    else {
+      self.noPrediction = false
+      self.items = json
+    }
+    self.tableView.reloadData()
+    self.refreshControl?.endRefreshing()
+  }
+  
+  
+  /**
    Used to dismiss a popover view back to the root parent
    
    - parameter sender: The sender calling the function. Used to set the view to `sourceViewConroller`
    */
   @IBAction func unwindToMain(sender: UIStoryboardSegue) {
     _ = sender.sourceViewController
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
   
   // MARK: UITableViewController

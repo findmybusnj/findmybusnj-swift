@@ -22,34 +22,25 @@ class ETABusTimeTableController: CardTableViewController {
   
   /**
    Refreshes the table given the `currentStop`
-   -TODO: Handle error, refactor logic since it is the same callback for both
    
-   - Parameter sender: Object calling the refresh
+   - parameter sender: Object calling the refresh
    */
   override func refresh(sender: AnyObject) {
     if !filterRoute.isEmpty {
-      self.tableView.beginUpdates()
       NMServerManager.getJSONForStopFilteredByRoute(currentStop, route: filterRoute) {
         items, error in
         
         if error == nil {
-          self.items = items
-          self.tableView.reloadData()
-          self.tableView.endUpdates()
-          self.refreshControl?.endRefreshing()
+          self.updateTable(items)
         }
       }
     }
     else if !currentStop.isEmpty {
-      self.tableView.beginUpdates()
       NMServerManager.getJSONForStop(currentStop) {
         items, error in
         
         if error == nil {
-          self.items = items
-          self.tableView.reloadData()
-          self.tableView.endUpdates()
-          self.refreshControl?.endRefreshing()
+          self.updateTable(items)
         }
       }
     }
@@ -83,68 +74,28 @@ class ETABusTimeTableController: CardTableViewController {
       
       if (route.isEmpty) {
         currentStop = stop
-        self.makeStopRequest(stop)
+        
+        NMServerManager.getJSONForStop(stop) {
+          items, error in
+          
+          if error == nil {
+            self.updateTable(items)
+          }
+        }
       }
       else {
         currentStop = stop
         filterRoute = route
-        self.makeFilteredStopRequest(stop, route: route)
+        
+        NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
+          items, error in
+          
+          if error == nil {
+            self.updateTable(items)
+          }
+        }
       }
-      
     }
     super.unwindToMain(sender)
-  }
-  
-  // MARK: Networking
-  /**
-    Called during the segue transition that will cause the table to make a request
-    to the server for the given stop
-  
-    - TODO: abstract call backs, handle errors
-    
-    - Parameter stop: The stop number being requested from the server
-   */
-  private func makeStopRequest(stop: String) {
-    NMServerManager.getJSONForStop(stop) {
-      items, error in
-      
-      if error == nil {
-        if items.rawString() == "No arrival times" || items.isEmpty {
-          self.noPrediction = true
-        }
-        else {
-          self.noPrediction = false
-          self.items = items
-        }
-        self.tableView.reloadData()
-      }
-    }
-  }
-  
-  /**
-   Called during the segue transition that will cause the table to make a request to the server
-   for a given stop and route. The stops returned will be filtered by the 3 digit route provided.
-   
-   - TODO: abstract the callback to a function, handle error if not nil
-   
-   - Parameters:
-      - stop: The stop number being requested from the server
-      - route: The route to filter the buses by
-   */
-  private func makeFilteredStopRequest(stop: String, route: String) {
-    NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
-      items, error in
-      
-      if error == nil {
-        if items.rawString() == "No arrival times" || items.isEmpty {
-          self.noPrediction = true
-        }
-        else {
-          self.noPrediction = false
-          self.items = items
-        }
-        self.tableView.reloadData()
-      }
-    }
   }
 }
