@@ -14,7 +14,7 @@ import SwiftyJSON
 
 class CardTableViewController: UITableViewController {
   // MARK: Properties
-  //: List of items we will populate the table with
+  // List of items we will populate the table with
   var items: JSON = []
   var noPrediction = false
   
@@ -36,8 +36,8 @@ class CardTableViewController: UITableViewController {
    - Parameter sender: The object calling the refresh
    */
   func refresh(sender: AnyObject) {
-    //: Overridden in sub-classes
-    //: This model was taken from http://stackoverflow.com/questions/24475792/how-to-use-pull-to-refresh-in-swift/24476087#24476087
+    // Overridden in sub-classes
+    // This model was taken from http://stackoverflow.com/questions/24475792/how-to-use-pull-to-refresh-in-swift/24476087#24476087
   }
   
   /**
@@ -54,7 +54,7 @@ class CardTableViewController: UITableViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  // MARK: TableView Methods
+  // MARK: UITableViewController
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
   }
@@ -93,8 +93,8 @@ class CardTableViewController: UITableViewController {
   Formats table cell card with data from the JSON recieved from the `.POST` request
   
   - Parameters:
-  - card: The card cell that we will be modifying
-  - index: The index in the table that we are dealing with
+    - card: The card cell that we will be modifying
+    - index: The index in the table that we are dealing with
   */
   private func formatCardForIndex(card: ETACard, index: NSIndexPath) {
     assignArrivalTimeForIndex(card, index: index.row)
@@ -106,8 +106,8 @@ class CardTableViewController: UITableViewController {
    If the time is not a number, we assign it Arriving/Delayed/No Current Prediction
    
    - Parameters:
-   - card:   The card in the tableview being edited
-   - index:  The current index in the tableview
+     - card:   The card in the tableview being edited
+     - index:  The current index in the tableview
    */
   private func assignArrivalTimeForIndex(card: ETACard, index: Int) {
     let arrivalString = jsonValueForIndexAndSubscript(index, string: "pu")
@@ -158,8 +158,8 @@ class CardTableViewController: UITableViewController {
    route (e.g. `165 via NJ Turnpike`) to `route`.
    
    - Parameters:
-   - card: The custom table view card we are modifying the values of
-   - index: The index of the table view cell we are handling
+     - card: The custom table view card we are modifying the values of
+     - index: The index of the table view cell we are handling
    */
   private func assignBusAndRouteTextForIndex(card: ETACard, index: Int) {
     card.busNumberLabel.text = jsonValueForIndexAndSubscript(index, string: "rd")
@@ -176,8 +176,8 @@ class CardTableViewController: UITableViewController {
    Gets the JSON value at the given index for the given subscript
    
    - Parameters:
-   - index: The index in the array that the value exists at
-   - string: The name of the substring for the value we want
+     - index: The index in the array that the value exists at
+     - string: The name of the substring for the value we want
    
    - Returns: String value stored at the index for the given subscript
    */
