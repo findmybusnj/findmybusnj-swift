@@ -29,20 +29,29 @@ class ETASearchPopOverController: UIViewController {
    */
   override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
     if (identifier == "search") {
-      let warn = UIAlertView(title: "No stop entered", message: "Please enter a stop before searching", delegate: nil, cancelButtonTitle: "Ok")
       
       // Check to see if user entered a stop number
       guard let stop = stopNumberTextField.text else {
-        warn.show()
+        showEmptyWarning()
         return false
       }
       if (stop.isEmpty) {
-        warn.show()
+        showEmptyWarning()
         return false
       }
     }
     
     return true
+  }
+  
+  /**
+   Creates a UIAlertController to notify the user they have not entered the proper stop information
+   */
+  private func showEmptyWarning() {
+    let warning = UIAlertController(title: "No stop entered", message: "Please enter a stop before searching", preferredStyle: UIAlertControllerStyle.Alert)
+    let doneButton = UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: nil)
+    warning.addAction(doneButton)
+    presentViewController(warning, animated: true, completion: nil)
   }
 }
 

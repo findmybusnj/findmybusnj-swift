@@ -27,9 +27,8 @@ class ETABusTimeTableController: CardTableViewController {
    - Parameter sender: Object calling the refresh
    */
   override func refresh(sender: AnyObject) {
-    self.tableView.beginUpdates()
-    
     if !filterRoute.isEmpty {
+      self.tableView.beginUpdates()
       NMServerManager.getJSONForStopFilteredByRoute(currentStop, route: filterRoute) {
         items, error in
         
@@ -41,7 +40,8 @@ class ETABusTimeTableController: CardTableViewController {
         }
       }
     }
-    else {
+    else if !currentStop.isEmpty {
+      self.tableView.beginUpdates()
       NMServerManager.getJSONForStop(currentStop) {
         items, error in
         
@@ -52,6 +52,9 @@ class ETABusTimeTableController: CardTableViewController {
           self.refreshControl?.endRefreshing()
         }
       }
+    }
+    else {
+      self.refreshControl?.endRefreshing()
     }
   }
   

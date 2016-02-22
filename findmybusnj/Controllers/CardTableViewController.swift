@@ -28,6 +28,11 @@ class CardTableViewController: UITableViewController {
     
     self.tableView.separatorColor = UIColor.clearColor()
     self.tableView.separatorStyle = .None
+    
+    // Prevents refresh controller from showing on emtpy list
+    // Idea came from http://stackoverflow.com/questions/19243177/how-to-scroll-to-top-in-ios7-uitableview
+    let top = tableView.contentInset.top
+    self.tableView.contentOffset = CGPointMake(0, 0 - top)
   }
   
   /**
@@ -56,7 +61,22 @@ class CardTableViewController: UITableViewController {
   
   // MARK: TableView Methods
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 1
+    if (items.count > 0) {
+      tableView.backgroundView = nil
+      return 1
+    }
+    else {
+      // Idea taken from http://www.ryanwright.me/cookbook/ios/objc/uitableview/empy-table-message
+      let emptyMessage = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+      
+      emptyMessage.text = "Please tap on \"Find\" to get started"
+      emptyMessage.textAlignment = .Center
+      emptyMessage.textColor = UIColor.grayColor()
+      emptyMessage.sizeToFit()
+      
+      tableView.backgroundView = emptyMessage
+      return 0
+    }
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,7 +101,6 @@ class CardTableViewController: UITableViewController {
     else {
       formatCardForIndex(etaCard, index: indexPath)
     }
-    
     
     return etaCard
   }
