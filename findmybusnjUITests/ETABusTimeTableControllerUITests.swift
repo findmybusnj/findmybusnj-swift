@@ -10,18 +10,14 @@
 import XCTest
 
 class ETABusTimeTableControllerUITests: XCTestCase {
+  let app = XCUIApplication()
   
   override func setUp() {
     super.setUp()
     
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-    
-    // In UI tests it is usually best to stop immediately when a failure occurs.
     continueAfterFailure = false
-    // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-    XCUIApplication().launch()
-    
-    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    app.launch()
+    XCTAssertTrue(app.tables["ETABusTimeTable"].tableRows.count == 0, "Table should initialize with with no rows")
   }
   
   override func tearDown() {
@@ -29,11 +25,18 @@ class ETABusTimeTableControllerUITests: XCTestCase {
     super.tearDown()
   }
   
+  func testAssertSaveFavoriteExists() {
+    XCTAssert(app.buttons["saveFavorite"].exists, "Save button should exist")
+  }
+  
+  func testAssertFindButtonExists() {
+    XCTAssert(app.buttons["Find"].exists, "Find button should exist")
+  }
+    
   /**
    Checks that reload will not crash when there is no data
    */
   func testEmptyListRefreshes() {
-    let app = XCUIApplication()
     app.tabBars.buttons["Times"].tap()
     
     let table = app.navigationBars["findmybusnj.ETABusTimeTable"]

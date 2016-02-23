@@ -7,14 +7,15 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Bus Time Table Controller-->
+        <!--ETABusTimeTable-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="ETABusTimeTableController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ETABusTimeTable" id="9pv-A4-QxB" customClass="ETABusTimeTableController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="5e8-a6-Kmc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="eta" rowHeight="180" id="JJG-lH-ZKR" customClass="ETACard" customModule="findmybusnj" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="180"/>
@@ -115,7 +116,7 @@
                                         <constraint firstItem="aM0-Nz-2Je" firstAttribute="top" secondItem="hfP-jd-jud" secondAttribute="topMargin" constant="4" id="gJL-b1-TNB"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="busNumberLabel" destination="pcm-jJ-zDY" id="yVb-ML-SPA"/>
                                     <outlet property="card" destination="hfP-jd-jud" id="K7l-zB-154"/>
@@ -133,12 +134,15 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="BUl-Fr-y7j">
-                        <barButtonItem key="leftBarButtonItem" id="uTz-rz-G5B">
+                        <barButtonItem key="leftBarButtonItem" title="saveFavorite" id="uTz-rz-G5B">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="HBW-h7-NFN">
                                 <rect key="frame" x="20" y="7" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Heart"/>
                             </button>
+                            <connections>
+                                <action selector="saveAsFavorite:" destination="9pv-A4-QxB" id="gYm-Rv-Cwb"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Find" id="6Bx-gk-rPi">
                             <connections>
@@ -149,15 +153,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="favoriteButton" destination="uTz-rz-G5B" id="BpB-5O-Wgf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1204" y="606"/>
         </scene>
-        <!--Search Pop Over Controller-->
+        <!--ETABusTimeTableSearchPopOver-->
         <scene sceneID="erw-kO-yzC">
             <objects>
-                <viewController id="Tj0-Q0-7wY" customClass="ETASearchPopOverController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ETABusTimeTableSearchPopOver" id="Tj0-Q0-7wY" customClass="ETASearchPopOverController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nRu-bh-L3T"/>
                         <viewControllerLayoutGuide type="bottom" id="uVH-jX-aar"/>

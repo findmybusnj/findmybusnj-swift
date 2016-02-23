@@ -16,6 +16,13 @@ class ETABusTimeTableController: CardTableViewController {
   var currentStop: String = ""
   var filterRoute: String = ""
   
+  // MARK: Outlets
+  @IBOutlet weak var favoriteButton: UIBarButtonItem!
+  
+  // MARK: Actions
+  @IBAction func saveAsFavorite(sender: UIBarButtonItem) {
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
