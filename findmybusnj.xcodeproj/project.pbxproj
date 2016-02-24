@@ -19,6 +19,8 @@
 		D479C1A51C34DAA200C434ED /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; };
 		D479C1A61C34DAA200C434ED /* NetworkManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D479C1B01C34DE7400C434ED /* NMServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C1AF1C34DE7400C434ED /* NMServerManager.swift */; };
+		D485AD6E1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */; };
+		D485AD701C7E585900B505CD /* CardTimeTableControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */; };
 		D4C0C7BA1C57C97100D15450 /* PlacesAnnotationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */; };
 		D4D1AF1A1C0BA99C00FA6C91 /* AnimationsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D1AF211C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */; };
@@ -148,6 +150,8 @@
 		D479C1A21C34DAA200C434ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D479C1AF1C34DE7400C434ED /* NMServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMServerManager.swift; sourceTree = "<group>"; };
 		D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETABusTimeTableUnitTests.swift; path = Controllers/ETABusTimeTableUnitTests.swift; sourceTree = "<group>"; };
+		D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTimeTableControllerUnitTests.swift; path = Controllers/CardTimeTableControllerUnitTests.swift; sourceTree = "<group>"; };
 		D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesAnnotationTest.swift; path = Models/PlacesAnnotationTest.swift; sourceTree = "<group>"; };
 		D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimationsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationsFramework.h; sourceTree = "<group>"; };
@@ -301,6 +305,15 @@
 			path = NetworkManagerTests;
 			sourceTree = "<group>";
 		};
+		D485AD711C7E58F700B505CD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */,
+				D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		D4D1AF181C0BA99C00FA6C91 /* AnimationsFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +390,7 @@
 		D4D6AB791BBA2FE200CE241D /* findmybusnjTests */ = {
 			isa = PBXGroup;
 			children = (
+				D485AD711C7E58F700B505CD /* Controllers */,
 				D4EFCFCB1C5D05A8003806A7 /* Models */,
 				D4D6AB7C1BBA2FE200CE241D /* Info.plist */,
 			);
@@ -826,7 +840,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D485AD701C7E585900B505CD /* CardTimeTableControllerUnitTests.swift in Sources */,
 				D4C0C7BA1C57C97100D15450 /* PlacesAnnotationTest.swift in Sources */,
+				D485AD6E1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
