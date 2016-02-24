@@ -7,16 +7,21 @@
 //
 
 import XCTest
+import SwiftyJSON
 @testable import findmybusnj
 
 class CardTimeTableControllerUnitTests: XCTestCase {
-  var controller: CardTableViewController!
+  var cardTableViewControllerUnderTest: CardTableViewController!
   
   override func setUp() {
     super.setUp()
     
-    controller = CardTableViewController()
-    XCTAssertNotNil(controller.view)
+    cardTableViewControllerUnderTest = CardTableViewController()
+    
+    // Initialize view
+    XCTAssertNotNil(cardTableViewControllerUnderTest.view)
+    cardTableViewControllerUnderTest.loadView()
+    cardTableViewControllerUnderTest.viewDidLoad()
     // Put setup code here. This method is called before the invocation of each test method in the class.
   }
   
@@ -26,10 +31,27 @@ class CardTimeTableControllerUnitTests: XCTestCase {
   }
   
   func testNoPredictionInitializesToFalse() {
-    XCTAssertFalse(controller.noPrediction, "No prediction should be false after initialization")
+    let prediction = cardTableViewControllerUnderTest.noPrediction
+    XCTAssertFalse(prediction, "No prediction should be false after initialization. Value was \(prediction)")
   }
   
   func testJsonArrayIsEmptyOnInitilialize() {
-    XCTAssertTrue(controller.items.isEmpty, "Items array should be empty.")
+    let itemsIsEmpty = cardTableViewControllerUnderTest.items.isEmpty
+    XCTAssertTrue(itemsIsEmpty, " Items array should be empty. Value was \(itemsIsEmpty)")
+  }
+  
+  func testRefreshControllerAttributedText() {
+    guard let refreshController = cardTableViewControllerUnderTest.refreshControl else {
+      XCTFail("Refresh controller was nil")
+      return
+    }
+    
+    guard let attributedTitle = refreshController.attributedTitle else {
+      XCTFail("Attributed title was nil")
+      return
+    }
+    
+    // Xcode adds {\n} to the string
+    XCTAssertTrue(attributedTitle.description == "Pull to refresh stops{\n}", "Refresh controller attributed title set incorrectly. Value was \(attributedTitle.description)")
   }
 }
