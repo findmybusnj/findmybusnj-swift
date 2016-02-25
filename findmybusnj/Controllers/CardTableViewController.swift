@@ -28,11 +28,12 @@ class CardTableViewController: UITableViewController {
     
     self.tableView.separatorColor = UIColor.clearColor()
     self.tableView.separatorStyle = .None
+    self.tableView.backgroundColor = UIColor.lightGrayColor()
     
     // Prevents refresh controller from showing on emtpy list
     // Idea came from http://stackoverflow.com/questions/19243177/how-to-scroll-to-top-in-ios7-uitableview
     let top = tableView.contentInset.top
-    self.tableView.contentOffset = CGPointMake(0, 0 - top)
+    self.tableView.contentOffset = CGPointMake(0, 0-top)
   }
   
   override func didReceiveMemoryWarning() {
@@ -90,7 +91,7 @@ class CardTableViewController: UITableViewController {
       
       emptyMessage.text = "Please tap on \"Find\" to get started"
       emptyMessage.textAlignment = .Center
-      emptyMessage.textColor = UIColor.grayColor()
+      emptyMessage.textColor = UIColor.lightTextColor()
       emptyMessage.sizeToFit()
       
       tableView.backgroundView = emptyMessage
