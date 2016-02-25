@@ -10,6 +10,9 @@ import XCTest
 import SwiftyJSON
 @testable import findmybusnj
 
+/**
+ Class focused on testing CardTableViewController in a unit test format
+ */
 class CardTimeTableControllerUnitTests: XCTestCase {
   var cardTableViewControllerUnderTest: CardTableViewController!
   
@@ -30,26 +33,28 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     super.tearDown()
   }
   
+  /**
+   Test property `noPrediction` is false on initialization.
+   */
   func testNoPredictionInitializesToFalse() {
     let prediction = cardTableViewControllerUnderTest.noPrediction
     XCTAssertFalse(prediction, "No prediction should be false after initialization. Value was \(prediction)")
   }
   
+  /**
+   Test propert `items` is an empty array on initialization.
+   */
   func testJsonArrayIsEmptyOnInitilialize() {
     let itemsIsEmpty = cardTableViewControllerUnderTest.items.isEmpty
     XCTAssertTrue(itemsIsEmpty, " Items array should be empty. Value was \(itemsIsEmpty)")
   }
   
   func testRefreshControllerAttributedText() {
-    guard let refreshController = cardTableViewControllerUnderTest.refreshControl else {
-      XCTFail("Refresh controller was nil")
-      return
-    }
+    XCTAssertNotNil(cardTableViewControllerUnderTest.refreshControl, "Refresh controller was nil")
+    let refreshController = cardTableViewControllerUnderTest.refreshControl!
     
-    guard let attributedTitle = refreshController.attributedTitle else {
-      XCTFail("Attributed title was nil")
-      return
-    }
+    XCTAssertNotNil(refreshController.attributedTitle, "Attributed title was nil")
+    let attributedTitle = refreshController.attributedTitle!
     
     // Xcode adds {\n} to the string
     XCTAssertTrue(attributedTitle.description == "Pull to refresh stops{\n}", "Refresh controller attributed title set incorrectly. Value was \(attributedTitle.description)")
