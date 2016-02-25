@@ -13,6 +13,7 @@ import UIKit
 import NetworkManager
 
 class ETASearchPopOverController: UIViewController {
+  // MARK: Outlets
   @IBOutlet weak var stopNumberTextField: UITextField!
   @IBOutlet weak var filterRouteNumberTextField: UITextField!
   @IBOutlet weak var favoritesTableView: UITableView!
@@ -20,13 +21,13 @@ class ETASearchPopOverController: UIViewController {
   // MARK: Segue
   // Source of idea: http://jamesleist.com/ios-swift-tutorial-stop-segue-show-alert-text-box-empty/
   /**
-    Overrides the `shouldPerformSegueWithIdentifier` method. Called before a segue is performed. Checks that if the segue identifier is `search`, and then checks whether or not the `stopNumberInput` is empty or not.
-    
-    - Parameters:
+  Overrides the `shouldPerformSegueWithIdentifier` method. Called before a segue is performed. Checks that if the segue identifier is `search`, and then checks whether or not the `stopNumberInput` is empty or not.
+  
+  - Parameters:
     - identifier: String identifier of the current segue trigger
     - sender: The object initiating the segue
-    - return: A boolean that defines whether or not the segue should transition
-   */
+  - return: A boolean that defines whether or not the segue should transition
+  */
   override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
     if (identifier == "search") {
       
@@ -46,6 +47,7 @@ class ETASearchPopOverController: UIViewController {
   
   /**
    Creates a UIAlertController to notify the user they have not entered the proper stop information
+   - TODO: Move this into a `AlertManager` class
    */
   private func showEmptyWarning() {
     let warning = UIAlertController(title: "No stop entered", message: "Please enter a stop before searching", preferredStyle: UIAlertControllerStyle.Alert)
@@ -57,28 +59,27 @@ class ETASearchPopOverController: UIViewController {
 
 // MARK: UITextFieldDelegate
 extension ETASearchPopOverController: UITextFieldDelegate {
-
+  
   // Source of idea: http://stackoverflow.com/questions/433337/set-the-maximum-character-length-of-a-uitextfield?rq=1
   /**
-    Regulates the `textField` to a certain range. `1` is the `filterBusNumberInput` field tag, and `0` is the `stopNumberInput` tag.
-   */
+  Regulates the `textField` to a certain range. `1` is the `filterBusNumberInput` field tag, and `0` is the `stopNumberInput` tag.
+  */
   func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
     // If the current character count is nil, we set it to zero using nil coelescing
     guard let textFieldText = textField.text else {
       return false
     }
+    
     let currentCharCount = textFieldText.characters.count ?? 0;
     if (range.length + range.location > currentCharCount) {
       return false
     }
     let newLength = currentCharCount + string.characters.count - range.length
     
-    // Stop textField
-    if (textField.tag == 0) {
+    if (textField.tag == 0) { // Stop textField
       return newLength <= 5
     }
-      //Bus textField
-    else if (textField.tag == 1) {
+    else if (textField.tag == 1) { // Route textField
       return newLength <= 3
     }
     else {

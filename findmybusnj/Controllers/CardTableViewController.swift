@@ -119,6 +119,7 @@ class CardTableViewController: UITableViewController {
       etaCard.noPrediction.hidden = false;
     }
     else {
+      // TODO: Move this logic to a UITableViewCellFormatter class
       formatCardForIndex(etaCard, index: indexPath)
     }
     
@@ -127,7 +128,6 @@ class CardTableViewController: UITableViewController {
   
   
   // MARK: Private functions
-  
   /**
   Formats table cell card with data from the JSON recieved from the `.POST` request
   

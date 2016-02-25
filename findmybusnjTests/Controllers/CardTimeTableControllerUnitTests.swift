@@ -15,6 +15,7 @@ import SwiftyJSON
  */
 class CardTimeTableControllerUnitTests: XCTestCase {
   var cardTableViewControllerUnderTest: CardTableViewController!
+  var tableViewBackgroundView: UILabel!
   
   override func setUp() {
     super.setUp()
@@ -25,7 +26,13 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     XCTAssertNotNil(cardTableViewControllerUnderTest.view)
     cardTableViewControllerUnderTest.loadView()
     cardTableViewControllerUnderTest.viewDidLoad()
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    
+    let tableView = cardTableViewControllerUnderTest.tableView
+    XCTAssertNotNil(tableView.backgroundView, "Background view should not be nil if empty list")
+    XCTAssertTrue(tableView.backgroundView is UILabel, "tableView.background should contain a UILabel")
+    
+    tableViewBackgroundView = tableView.backgroundView as! UILabel
   }
   
   override func tearDown() {
@@ -94,18 +101,21 @@ class CardTimeTableControllerUnitTests: XCTestCase {
   /**
    Asserts the message in the empty table displays "Please tap on \"Find\" to get started"
    */
-  func testEmptyTableDisplaysMessageProperMessage() {
-    let tableView = cardTableViewControllerUnderTest.tableView
-    
+  func testEmptyTableDisplaysProperMessageText() {
+    XCTAssertTrue(cardTableViewControllerUnderTest.items.isEmpty, "items should be empty when running this test")
+    cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
+
+    let message = "Please tap on \"Find\" to get started"
+    XCTAssertTrue(tableViewBackgroundView.text == message, "background.text didn't match intended message. The actual text was: \(tableViewBackgroundView.text)")
+  }
+  
+  /**
+   Asserts that the backgroundView is visible on an empty list
+   */
+  func testEmptyTableDisplaysMessageView() {
     XCTAssertTrue(cardTableViewControllerUnderTest.items.isEmpty, "items should be empty when running this test")
     cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
     
-    XCTAssertNotNil(tableView.backgroundView, "Background view should not be nil if empty list")
-    XCTAssertTrue(tableView.backgroundView is UILabel, "tableView.background should contain a UILabel")
-    
-    let background = tableView.backgroundView as! UILabel
-    let message = "Please tap on \"Find\" to get started"
-    XCTAssertTrue(background.text == message, "background.text didn't match intended message. The actual text was: \(background.text)")
-    
+    XCTAssertTrue(tableViewBackgroundView.hidden == false, "Background view should not be hidden")
   }
 }

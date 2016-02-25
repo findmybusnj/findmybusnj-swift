@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  ETABusTimeTableController.swift
 //  findmybusnj
 //
 //  Created by David Aghassi on 9/28/15.
