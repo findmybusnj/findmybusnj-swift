@@ -38,6 +38,9 @@ extension XCTestCase {
       print(error.localizedDescription)
     }
     
-    return JSON(data: jsonData)
+    let responseJSON = JSON(data: jsonData)
+    XCTAssertTrue(!responseJSON.isEmpty, "JSON should not be empty when loading JSON from file")
+    
+    return responseJSON
   }
 }

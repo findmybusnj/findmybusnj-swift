@@ -15,6 +15,8 @@ import SwiftyJSON
  */
 class CardTimeTableControllerUnitTests: XCTestCase {
   var cardTableViewControllerUnderTest: CardTableViewController!
+  
+  // MARK: Table View Property Variables
   var tableViewBackgroundView: UILabel? {
     return cardTableViewControllerUnderTest.tableView.backgroundView as? UILabel
   }
@@ -22,6 +24,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     return cardTableViewControllerUnderTest.tableView.numberOfSections
   }
   
+  // MARK: Setup and Teardown
   override func setUp() {
     super.setUp()
     
@@ -146,28 +149,30 @@ class CardTimeTableControllerUnitTests: XCTestCase {
   /**
    Asserts that an empty `JSON` array will set `noPrediction` to true
    */
-  func testUpdateTableForEmptyJSONOrNoArrivals() {
+  func testUpdateTableForEmptyJSON() {
     assertTableIsEmpty()
     
     let emptyJSON: JSON = []
     cardTableViewControllerUnderTest.updateTable(emptyJSON)
-    XCTAssertTrue(cardTableViewControllerUnderTest.noPrediction, "noPrediction should be set to true. Actual value was: \(cardTableViewControllerUnderTest.noPrediction)")
-    
-    cardTableViewControllerUnderTest.noPrediction = false
-    
-    let noArrivals: JSON = "No arrival times"
-    cardTableViewControllerUnderTest.updateTable(noArrivals)
     XCTAssertTrue(cardTableViewControllerUnderTest.noPrediction, "noPrediction should be set to true. Actual value was: \(cardTableViewControllerUnderTest.noPrediction)")
   }
   
   
   // MARK: UITableView - One Item in Tables
   /**
+   Asserts noPrediction is set to `true` when there is no prediction
+   */
+  func testUpdateTableForNoPrediction() {
+    let noArrivals: JSON = "No arrival times"
+    cardTableViewControllerUnderTest.updateTable(noArrivals)
+    XCTAssertTrue(cardTableViewControllerUnderTest.noPrediction, "noPrediction should be set to true. Actual value was: \(cardTableViewControllerUnderTest.noPrediction)")
+  }
+  
+  /**
    Asserts that `noPrediction` is false upon having more than one json item or an emtpy array. Also asserts that the json assigned to the view controller is the same as the on being passed to the update function.
    */
   func testUpdateTableForOneJSONObject() {
     let json = loadJSONFromFile("singleStop")
-    XCTAssertTrue(!json.isEmpty, "JSON is empty when it should be greater than zero")
     
     cardTableViewControllerUnderTest.updateTable(json)
     
@@ -180,7 +185,6 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    */
   func testNumberOfSectionsGreaterThanOneForNoneEmptyItems() {
     let json = loadJSONFromFile("singleStop")
-    XCTAssertTrue(!json.isEmpty, "JSON is empty when it should be greater than zero")
     
     cardTableViewControllerUnderTest.updateTable(json)
     cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
@@ -188,13 +192,30 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     XCTAssertTrue(numberOfSections == 1, "Number of sections is not 1 when it should be. Actual result was \(numberOfSections)")
   }
   
+  /**
+   Assert that `backgroundView` on the `tableView` is nil when there is results
+   */
   func testBackgroundViewIsNilForNonEmptyItems() {
     let json = loadJSONFromFile("singleStop")
-    XCTAssertTrue(!json.isEmpty, "JSON is empty when it should be greater than zero")
     
     cardTableViewControllerUnderTest.updateTable(json)
     cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
     
     XCTAssertNil(tableViewBackgroundView, "Table view backgroundView should be nil when there are items backing the table. The actual value was \(tableViewBackgroundView)")
+  }
+  
+  /**
+   Asserts number of rows in table equals the length of the json array backing the table
+   */
+  func testNumberOfRowsEqualsJsonLength() {
+    let json = loadJSONFromFile("singleStop")
+    
+    let tableView = cardTableViewControllerUnderTest.tableView
+    cardTableViewControllerUnderTest.updateTable(json)
+    cardTableViewControllerUnderTest.numberOfSectionsInTableView(tableView)
+    XCTAssertTrue(numberOfSections == 1, "Number of sections is not one when it should be. The actual value was: \(numberOfSections)")
+    let numberOfRows = cardTableViewControllerUnderTest.tableView(tableView, numberOfRowsInSection: numberOfSections)
+    
+    XCTAssertTrue(numberOfRows == json.count, "Number of rows did not equal the size of the json array. The value for the row was: \(numberOfRows) \n The count of the json array was: \(json.count)")
   }
 }
