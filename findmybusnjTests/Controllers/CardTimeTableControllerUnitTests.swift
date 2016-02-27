@@ -16,6 +16,7 @@ import SwiftyJSON
 class CardTimeTableControllerUnitTests: XCTestCase {
   var cardTableViewControllerUnderTest: CardTableViewController!
   var tableViewBackgroundView: UILabel!
+  var jsonData: NSData!
   
   override func setUp() {
     super.setUp()
@@ -41,12 +42,37 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     super.tearDown()
   }
   
+  // MARK: Helper Functions
   /**
    Asserts the table is empty and calls numberOfSectionsInTableView
    */
   func assertTableIsEmpty() {
     XCTAssertTrue(cardTableViewControllerUnderTest.items.isEmpty, "items should be empty when running this test")
     cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
+  }
+  
+  /**
+   Loads json from the json file in the test bundle and returns a `JSON` object from it
+   
+   - parameter fileName: The name of the file being searched for
+   
+   - returns: `JSON` object if the file is found, `nil` otherwise.
+   */
+  func loadJSONFromFile(fileName: String) -> JSON {
+    print(NSBundle(forClass: CardTimeTableControllerUnitTests.self).description)
+    print(NSBundle(forClass: CardTimeTableControllerUnitTests.self).pathForResource(fileName, ofType: "json"))
+    guard let path = NSBundle(forClass: self.dynamicType).pathForResource(fileName, ofType: "json") else {
+      XCTFail("Failed to get path to json file. Double check that the file is added to the test bundle.")
+      return nil
+    }
+    do {
+      try jsonData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
+    }
+    catch let error as NSError {
+      print(error.localizedDescription)
+    }
+    
+    return JSON(data: jsonData)
   }
   
   // Mark: Properties
@@ -154,6 +180,17 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     XCTAssertTrue(cardTableViewControllerUnderTest.noPrediction, "noPrediction should be set to true. Actual value was: \(cardTableViewControllerUnderTest.noPrediction)")
   }
   
+  
   // MARK: UITableView - One Item in Tables
   
+  /**
+   Asserts that `noPrediction` is false upon having more than one json item or an emtpy array. Also asserts that the json assigned to the view controller is the same as the on being passed to the update function.
+   */
+  func testUpdateTableForOneJSONObject() {
+    let json = loadJSONFromFile("singleStop")
+    cardTableViewControllerUnderTest.updateTable(json)
+    
+    XCTAssertFalse(cardTableViewControllerUnderTest.noPrediction, "noPrediction should be set to false if there is one item and it isn't \"No arrival times\" ")
+    XCTAssertTrue(cardTableViewControllerUnderTest.items == json, "JSON results should match. Actual data was \(cardTableViewControllerUnderTest.items)")
+  }
 }
