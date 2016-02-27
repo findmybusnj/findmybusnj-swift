@@ -27,12 +27,12 @@ extension XCTestCase {
     print(NSBundle(forClass: CardTimeTableControllerUnitTests.self).pathForResource(fileName, ofType: "json"))
     #endif
     
-    guard let path = NSBundle(forClass: self.dynamicType).pathForResource(fileName, ofType: "json") else {
-      XCTFail("Failed to get path to json file. Double check that the file is added to the test bundle.")
-      return nil
-    }
+    let path = NSBundle(forClass: self.dynamicType).pathForResource(fileName, ofType: "json")
+    XCTAssertNotNil(path, "Failed to get path to json file. Double check that the file is added to the test bundle.")
+    
     do {
-      try jsonData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
+      // At this ponit we know it is safe to unwrap the path because we asserted prior
+      try jsonData = NSData(contentsOfFile: path!, options: .DataReadingMappedIfSafe)
     }
     catch let error as NSError {
       print(error.localizedDescription)

@@ -15,7 +15,12 @@ import SwiftyJSON
  */
 class CardTimeTableControllerUnitTests: XCTestCase {
   var cardTableViewControllerUnderTest: CardTableViewController!
-  var tableViewBackgroundView: UILabel!
+  var tableViewBackgroundView: UILabel? {
+    return cardTableViewControllerUnderTest.tableView.backgroundView as? UILabel
+  }
+  var numberOfSections: Int {
+    return cardTableViewControllerUnderTest.tableView.numberOfSections
+  }
   
   override func setUp() {
     super.setUp()
@@ -32,7 +37,6 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     assertTableIsEmpty()
     XCTAssertNotNil(tableView.backgroundView, "Background view should not be nil if empty list")
     XCTAssertTrue(tableView.backgroundView is UILabel, "tableView.background should contain a UILabel")
-    tableViewBackgroundView = tableView.backgroundView as! UILabel
     
   }
   
@@ -115,7 +119,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    */
   func testNumberOfSectionsInEmptyTable() {
     XCTAssertTrue(cardTableViewControllerUnderTest.items.isEmpty, "Items should not be empty when testing if numberOfSections is 0 for empty table")
-    XCTAssertTrue(cardTableViewControllerUnderTest.tableView.numberOfSections == 0, "The number of sections should be 0 on an empty item set. The value was: \(cardTableViewControllerUnderTest.tableView.numberOfSections)")
+    XCTAssertTrue(numberOfSections == 0, "The number of sections should be 0 on an empty item set. The value was: \(numberOfSections)")
   }
   
   /**
@@ -125,7 +129,8 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     assertTableIsEmpty()
     
     let message = "Please tap on \"Find\" to get started"
-    XCTAssertTrue(tableViewBackgroundView.text == message, "background.text didn't match intended message. The actual text was: \(tableViewBackgroundView.text)")
+    XCTAssertNotNil(tableViewBackgroundView, "tableViewBackgroundView should not be nil")
+    XCTAssertTrue(tableViewBackgroundView!.text == message, "background.text didn't match intended message. The actual text was: \(tableViewBackgroundView!.text)")
   }
   
   /**
@@ -134,7 +139,8 @@ class CardTimeTableControllerUnitTests: XCTestCase {
   func testEmptyTableDisplaysMessageView() {
     assertTableIsEmpty()
     
-    XCTAssertTrue(tableViewBackgroundView.hidden == false, "Background view should not be hidden")
+    XCTAssertNotNil(tableViewBackgroundView, "tableViewBackgroundView should not be nil")
+    XCTAssertTrue(tableViewBackgroundView!.hidden == false, "Background view should not be hidden")
   }
   
   /**
@@ -161,9 +167,34 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    */
   func testUpdateTableForOneJSONObject() {
     let json = loadJSONFromFile("singleStop")
+    XCTAssertTrue(!json.isEmpty, "JSON is empty when it should be greater than zero")
+    
     cardTableViewControllerUnderTest.updateTable(json)
     
     XCTAssertFalse(cardTableViewControllerUnderTest.noPrediction, "noPrediction should be set to false if there is one item and it isn't \"No arrival times\" ")
     XCTAssertTrue(cardTableViewControllerUnderTest.items == json, "JSON results should match. Actual data was \(cardTableViewControllerUnderTest.items)")
+  }
+  
+  /**
+   Asserts the number of sections in the table is one when the `json` array is greater than 0 items
+   */
+  func testNumberOfSectionsGreaterThanOneForNoneEmptyItems() {
+    let json = loadJSONFromFile("singleStop")
+    XCTAssertTrue(!json.isEmpty, "JSON is empty when it should be greater than zero")
+    
+    cardTableViewControllerUnderTest.updateTable(json)
+    cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
+    
+    XCTAssertTrue(numberOfSections == 1, "Number of sections is not 1 when it should be. Actual result was \(numberOfSections)")
+  }
+  
+  func testBackgroundViewIsNilForNonEmptyItems() {
+    let json = loadJSONFromFile("singleStop")
+    XCTAssertTrue(!json.isEmpty, "JSON is empty when it should be greater than zero")
+    
+    cardTableViewControllerUnderTest.updateTable(json)
+    cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
+    
+    XCTAssertNil(tableViewBackgroundView, "Table view backgroundView should be nil when there are items backing the table. The actual value was \(tableViewBackgroundView)")
   }
 }

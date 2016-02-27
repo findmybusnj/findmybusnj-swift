@@ -323,7 +323,6 @@
 			children = (
 				D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */,
 				D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */,
-				D44E330B1C8159220036D478 /* JsonTestHelper.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -404,6 +403,7 @@
 		D4D6AB791BBA2FE200CE241D /* findmybusnjTests */ = {
 			isa = PBXGroup;
 			children = (
+				D44E330B1C8159220036D478 /* JsonTestHelper.swift */,
 				D44E33081C814C970036D478 /* Test */,
 				D485AD711C7E58F700B505CD /* Controllers */,
 				D4EFCFCB1C5D05A8003806A7 /* Models */,
