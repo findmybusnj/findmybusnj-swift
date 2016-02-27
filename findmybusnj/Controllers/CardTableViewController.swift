@@ -12,6 +12,8 @@ import UIKit
 // MARK: Dependancies
 import SwiftyJSON
 
+/// Base class of a `UITableViewController` that displays cards
+// TODO - Make this into a protocol and extend it
 class CardTableViewController: UITableViewController {
   // MARK: Properties
   // List of items we will populate the table with

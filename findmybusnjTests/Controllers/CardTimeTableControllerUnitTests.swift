@@ -27,12 +27,13 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     cardTableViewControllerUnderTest.loadView()
     cardTableViewControllerUnderTest.viewDidLoad()
     
-    
+    // Initialize the tableview sections
     let tableView = cardTableViewControllerUnderTest.tableView
+    assertTableIsEmpty()
     XCTAssertNotNil(tableView.backgroundView, "Background view should not be nil if empty list")
     XCTAssertTrue(tableView.backgroundView is UILabel, "tableView.background should contain a UILabel")
-    
     tableViewBackgroundView = tableView.backgroundView as! UILabel
+    
   }
   
   override func tearDown() {
@@ -40,10 +41,18 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     super.tearDown()
   }
   
+  /**
+   Asserts the table is empty and calls numberOfSectionsInTableView
+   */
+  func assertTableIsEmpty() {
+    XCTAssertTrue(cardTableViewControllerUnderTest.items.isEmpty, "items should be empty when running this test")
+    cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
+  }
+  
   // Mark: Properties
   /**
-   Test property `noPrediction` is false on initialization.
-   */
+  Test property `noPrediction` is false on initialization.
+  */
   func testNoPredictionInitializesToFalse() {
     let prediction = cardTableViewControllerUnderTest.noPrediction
     XCTAssertFalse(prediction, "No prediction should be false after initialization. Value was \(prediction)")
@@ -58,9 +67,9 @@ class CardTimeTableControllerUnitTests: XCTestCase {
   }
   
   
-  // MARK: UITableView
+  // MARK: UITableView - Properties
   /**
-   Asser that the `attributedText` on `refreshController` for the `tableView` is set correctly
+   Assert that the `attributedText` on `refreshController` for the `tableView` is set correctly
    */
   func testRefreshControllerAttributedText() {
     XCTAssertNotNil(cardTableViewControllerUnderTest.refreshControl, "Refresh controller was nil")
@@ -90,7 +99,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
   }
   
   /**
-   Tests to make sure the initial offset y is `0-top`, which should be a negative value
+   Asserts the initial offset y is `0-top`, which should be a negative value
    */
   func testInitialTableViewOffsetYIsNegative() {
     let offset = cardTableViewControllerUnderTest.tableView.contentOffset
@@ -98,13 +107,23 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     XCTAssertTrue(offset.y <= offsetPoint.y, "Offset is incorrectly set. Incorrect offset can cause refreshController's attributed title to show in empty list. The y coordinate should be negative. The value of the offset point was: (x: \(offset.x), y: \(offset.y))")
   }
   
+  
+  // UITableView - Empty Tables
+  
+  /**
+   Asserts that the `numberOfSections` in the `tableView` is 0 when there is no data
+   */
+  func testNumberOfSectionsInEmptyTable() {
+    XCTAssertTrue(cardTableViewControllerUnderTest.items.isEmpty, "Items should not be empty when testing if numberOfSections is 0 for empty table")
+    XCTAssertTrue(cardTableViewControllerUnderTest.tableView.numberOfSections == 0, "The number of sections should be 0 on an empty item set. The value was: \(cardTableViewControllerUnderTest.tableView.numberOfSections)")
+  }
+  
   /**
    Asserts the message in the empty table displays "Please tap on \"Find\" to get started"
    */
   func testEmptyTableDisplaysProperMessageText() {
-    XCTAssertTrue(cardTableViewControllerUnderTest.items.isEmpty, "items should be empty when running this test")
-    cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
-
+    assertTableIsEmpty()
+    
     let message = "Please tap on \"Find\" to get started"
     XCTAssertTrue(tableViewBackgroundView.text == message, "background.text didn't match intended message. The actual text was: \(tableViewBackgroundView.text)")
   }
@@ -113,9 +132,28 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    Asserts that the backgroundView is visible on an empty list
    */
   func testEmptyTableDisplaysMessageView() {
-    XCTAssertTrue(cardTableViewControllerUnderTest.items.isEmpty, "items should be empty when running this test")
-    cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
+    assertTableIsEmpty()
     
     XCTAssertTrue(tableViewBackgroundView.hidden == false, "Background view should not be hidden")
   }
+  
+  /**
+   Asserts that an empty `JSON` array will set `noPrediction` to true
+   */
+  func testUpdateTableForEmptyJSONOrNoArrivals() {
+    assertTableIsEmpty()
+    
+    let emptyJSON: JSON = []
+    cardTableViewControllerUnderTest.updateTable(emptyJSON)
+    XCTAssertTrue(cardTableViewControllerUnderTest.noPrediction, "noPrediction should be set to true. Actual value was: \(cardTableViewControllerUnderTest.noPrediction)")
+    
+    cardTableViewControllerUnderTest.noPrediction = false
+    
+    let noArrivals: JSON = "No arrival times"
+    cardTableViewControllerUnderTest.updateTable(noArrivals)
+    XCTAssertTrue(cardTableViewControllerUnderTest.noPrediction, "noPrediction should be set to true. Actual value was: \(cardTableViewControllerUnderTest.noPrediction)")
+  }
+  
+  // MARK: UITableView - One Item in Tables
+  
 }
