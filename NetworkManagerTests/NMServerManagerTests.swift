@@ -41,16 +41,4 @@ class NMServerManagerTests: XCTestCase {
   func testLastEndpointIsEmptyBeforeUse() {
     XCTAssertEqual(NMServerManager.lastEndpoint, "", "`lastEndpoint` should be empty on first use")
   }
-  
-  /**
-   Tests the `lastEndpoint` is set correctly when we make a request
-   */
-  func testStopRequestHitsProperEndpoint() {
-    NMServerManager.getJSONForStop(testStop) {
-      items, error in
-      return
-    } // no need to handle the callback here
-    
-    XCTAssertEqual(NMServerManager.lastEndpoint, "/stop", "`lastEndpoint` should have been /stop")
-  }
 }
