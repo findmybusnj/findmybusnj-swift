@@ -36,7 +36,7 @@ class PlacesAnnotationTest: XCTestCase {
   /**
    Verifies that the `subtitle` property is nil after initialization.
    */
-  func testSubtitleIsNil() {
+  func test_Subtitle_IsNil() {
     guard let marker = annotation else {
       return
     }
@@ -47,7 +47,7 @@ class PlacesAnnotationTest: XCTestCase {
   /**
    Verifies the name is the same as we initialized
    */
-  func testTitleIsSameTitle() {
+  func test_Title_IsSameTitle() {
     guard let marker = annotation else {
       return
     }
@@ -58,7 +58,7 @@ class PlacesAnnotationTest: XCTestCase {
   /**
    Verifies the coordinates we passed in are the same
    */
-  func testCoordinatesAreTheSame() {
+  func test_Annotation_Coordinates_AreTheSame() {
     guard let marker = annotation else {
       return
     }
@@ -71,7 +71,7 @@ class PlacesAnnotationTest: XCTestCase {
   /**
    Verifies the method `mapItem` returns a `MKMapItem`
    */
-  func testMapItemIsMKMapItem() {
+  func test_MapItem_IsMKMapItem() {
     guard let marker = annotation else {
       return
     }
@@ -83,7 +83,7 @@ class PlacesAnnotationTest: XCTestCase {
   /**
    Checks to see that the title was properly set on `mapItem`. By default, "United States" is appended to all titles, so we have to check that we contain the string, and not that they match exactly
    */
-  func testMapItemTitleContainsTitle() {
+  func test_MapItemTitle_ContainsTitle() {
     guard let marker = annotation else {
       return
     }
@@ -102,7 +102,7 @@ class PlacesAnnotationTest: XCTestCase {
   /**
    Checks to see that the location was properly set on `mapItem`
    */
-  func testMapItemLocationMatches() {
+  func test_MapItemLocation_Matches() {
     guard let marker = annotation else {
       return
     }

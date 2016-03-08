@@ -13,6 +13,8 @@ import UIKit
 import AnimationsFramework
 
 class ETACard: UITableViewCell {
+  
+  // MARK: Outlets
   @IBOutlet weak var card: UIView!
   @IBOutlet weak var busNumberLabel: UILabel!   // Contains `Bus:` label
   @IBOutlet weak var routeLabel: UILabel! // Contains `Via:` label
