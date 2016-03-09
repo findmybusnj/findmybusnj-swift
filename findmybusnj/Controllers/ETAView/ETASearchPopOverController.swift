@@ -13,6 +13,9 @@ import UIKit
 import NetworkManager
 
 class ETASearchPopOverController: UIViewController {
+  // MARK: Formatters
+  private let alertPresenter = UIAlertPresenter()
+  
   // MARK: Outlets
   @IBOutlet weak var stopNumberTextField: UITextField!
   @IBOutlet weak var filterRouteNumberTextField: UITextField!
@@ -47,12 +50,9 @@ class ETASearchPopOverController: UIViewController {
   
   /**
    Creates a UIAlertController to notify the user they have not entered the proper stop information
-   - TODO: Move this into a `AlertManager` class
    */
   private func showEmptyWarning() {
-    let warning = UIAlertController(title: "No stop entered", message: "Please enter a stop before searching", preferredStyle: UIAlertControllerStyle.Alert)
-    let doneButton = UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: nil)
-    warning.addAction(doneButton)
+    let warning = alertPresenter.presentAlertWarning(AlertWarning.Empty_Search)
     presentViewController(warning, animated: true, completion: nil)
   }
 }

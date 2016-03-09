@@ -21,7 +21,7 @@ class CardTableViewController: UITableViewController {
   var noPrediction = false
   
   // MARK: Formatters
-  private var etaCardPresenter: ETACardPresenter = ETACardPresenter()
+  private let etaCardPresenter = ETACardPresenter()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -125,8 +125,6 @@ class CardTableViewController: UITableViewController {
       etaCard.noPrediction.hidden = false;
     }
     else {
-      // TODO: Move this logic to a UITableViewCellFormatter class
-//      formatCardForIndex(etaCard, index: indexPath)
       let json = items[index]
       etaCardPresenter.formatCardForPresentation(etaCard, json: json)
     }

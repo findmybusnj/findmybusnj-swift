@@ -15,6 +15,7 @@
 		D44E330C1C8159220036D478 /* JsonTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44E330B1C8159220036D478 /* JsonTestHelper.swift */; };
 		D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */; };
 		D4598D2A1C4C729700A15B08 /* FilledCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4598D291C4C729700A15B08 /* FilledCircle.swift */; };
+		D45C93501C8FC32D002AC008 /* UIAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C934F1C8FC32D002AC008 /* UIAlertPresenter.swift */; };
 		D4640DD51C4DE50600D184E3 /* ETASearchPopOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */; };
 		D479C1931C34DAA200C434ED /* NetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D479C1921C34DAA200C434ED /* NetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D479C19A1C34DAA200C434ED /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; };
@@ -148,6 +149,7 @@
 		D44E330B1C8159220036D478 /* JsonTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonTestHelper.swift; path = Helpers/JsonTestHelper.swift; sourceTree = "<group>"; };
 		D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindNearByStopsController.swift; sourceTree = "<group>"; };
 		D4598D291C4C729700A15B08 /* FilledCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilledCircle.swift; path = Shapes/FilledCircle.swift; sourceTree = "<group>"; };
+		D45C934F1C8FC32D002AC008 /* UIAlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertPresenter.swift; path = Presenter/Alert/UIAlertPresenter.swift; sourceTree = "<group>"; };
 		D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETASearchPopOverController.swift; path = Controllers/ETAView/ETASearchPopOverController.swift; sourceTree = "<group>"; };
 		D479C1901C34DAA200C434ED /* NetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D479C1921C34DAA200C434ED /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
@@ -304,6 +306,14 @@
 			path = ../findmybusnj;
 			sourceTree = "<group>";
 		};
+		D45C934E1C8FC300002AC008 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				D45C934F1C8FC32D002AC008 /* UIAlertPresenter.swift */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
 		D479C1911C34DAA200C434ED /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +413,7 @@
 		D4D6AB621BBA2FE200CE241D /* findmybusnj */ = {
 			isa = PBXGroup;
 			children = (
+				D45C934E1C8FC300002AC008 /* Presenters */,
 				D4E4B1221BCBF9F500D06419 /* Model */,
 				D42357F91BBA35A900B5A08D /* View Controllers */,
 				D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */,
@@ -895,6 +906,7 @@
 				D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */,
 				D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */,
 				D4D6AB661BBA2FE200CE241D /* ETABusTimeTableController.swift in Sources */,
+				D45C93501C8FC32D002AC008 /* UIAlertPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
