@@ -11,21 +11,28 @@ import UIKit
 // MARK: Dependencies
 import SwiftyJSON
 
-/**
- Enum representing states of incoming buses that are less than 1 minute
- 
- - APPROACHING: The `description` of the incoming bus is "APPROACHING"
- - ARRIVED:     The `description` of the incoming bus is "0" but isn't reporting as "APPROACHING" yet from NJT
- - DELAYED:     The `description` of the incoming bus is "DELAYED"
- */
-enum NonNumericaArrivals: String {
-  case APPROACHING = "APPROACHING"
-  case ARRIVED = "0"
-  case DELAYED = "DELAYED"
-}
-
 // Handles laying out an `ETACard` for a `ETACardTableView`
 class ETACardPresenter {
+  
+  /**
+   Enum representing states of incoming buses that are less than 1 minute
+   
+   - APPROACHING: The `description` of the incoming bus is "APPROACHING"
+   - DELAYED:     The `description` of the incoming bus is "DELAYED"
+   */
+  enum NonNumericaArrivals: String {
+    case APPROACHING = "APPROACHING"
+    case DELAYED = "DELAYED"
+  }
+  
+  /**
+   Checks the cases that are special for numeric arrivals
+   
+   - ARRIVED: When the `description` of the incoming bus is `0`
+   */
+  enum NumericArrivals: Int {
+    case ARRIVED = 0
+  }
   
   /**
    Formats the given `ETACard` for the `json` at the provided row
@@ -36,60 +43,54 @@ class ETACardPresenter {
    - returns: A formatted `ETACard` for the given data
    */
   func formatCardForJson(card: ETACard, json: JSON) -> ETACard {
-    
+    assignArrivalTimeForJson(card, json: json)
+    assignBusAndRouteTextForJson(card, json: json)
     
     return card
   }
   
   // MARK: Private functions
   /**
-   Assigns the arrival time to the given card given the index
+   Assigns the arrival time to the given card given the json at that index
    If the time is not a number, we assign it Arriving/Delayed/No Current Prediction
+  
+  - TODO: Refactor the render method to make it loosely coupled.
    
    - Parameters:
    - card:   The card in the tableview being edited
-   - index:  The current index in the tableview
+   - json:   The json at the current index.
    */
   private func assignArrivalTimeForJson(card: ETACard, json: JSON) {
-//    let arrivalString = jsonValueForIndexAndSubscript(index, string: "pu")
     let arrivalString = json["pu"].description
-    let time = json["pt"].description
-    
-    if time == NonNumericaArrivals.ARRIVED.rawValue {
-      
-    }
     
     // Reset to black everytime just in case
     card.timeLabel.textColor = UIColor.blackColor()
+
     
-    // We get the time from the JSON object
-    if let time = Int(jsonValueForIndexAndSubscript(index, string: "pt")) {
-      // special case where some JSON can be 0 minutes, hence is arriving
-      if time == 0 {
+    if let arrivalTime = Int(json["pt"].description) {
+      if arrivalTime ==  NumericArrivals.ARRIVED.rawValue {
         card.timeLabel.text = "Arrive"
         card.timeLabel.textColor = UIColor.whiteColor()
-        card.renderFilledCircleForBusTime(time)
+        card.renderFilledCircleForBusTime(arrivalTime) // We know this will be 0 at this point
       }
       else {
-        card.timeLabel.text = time.description + " min."
-        
+        card.timeLabel.text = arrivalTime.description + " min."
         // We also render the circle here
-        card.renderCircleForBusTime(time)
+        card.renderCircleForBusTime(arrivalTime)
       }
     }
     else {
       #if DEBUG
-        print(self.items.arrayValue[index]["pu"].description)
-        print(self.items.arrayValue[index])
+        print(json["pu"].description)
+        print(json)
       #endif
       
-      // TODO - Make these into an Enum
       switch arrivalString {
-      case "APPROACHING":
+      case NonNumericaArrivals.APPROACHING.rawValue:
         card.timeLabel.text = "Arrive"
         card.timeLabel.textColor = UIColor.whiteColor()
         card.renderFilledCircleForBusTime(0)
-      case "DELAYED":
+      case NonNumericaArrivals.DELAYED.rawValue:
         card.timeLabel.text = "Delay"
         card.timeLabel.textColor = UIColor.whiteColor()
         card.renderFilledCircleForBusTime(35)
@@ -106,30 +107,16 @@ class ETACardPresenter {
    
    - Parameters:
    - card: The custom table view card we are modifying the values of
-   - index: The index of the table view cell we are handling
+   - json: The json at the current index
    */
-  private func assignBusAndRouteTextForIndex(card: ETACard, index: Int) {
-    card.busNumberLabel.text = jsonValueForIndexAndSubscript(index, string: "rd")
+  private func assignBusAndRouteTextForJson(card: ETACard, json: JSON) {
+    card.busNumberLabel.text = json["rd"].description
     
-    var route = jsonValueForIndexAndSubscript(index, string: "fd")
+    var route = json["fd"].description
     route = route.stringByReplacingOccurrencesOfString("&amp;", withString: "&")
     route = route.lowercaseString.capitalizedString
     
     card.routeLabel.text = route
     card.routeLabel.adjustsFontSizeToFitWidth = true
   }
-  
-  /**
-   Gets the JSON value at the given index for the given subscript
-   
-   - Parameters:
-   - index: The index in the array that the value exists at
-   - string: The name of the substring for the value we want
-   
-   - Returns: String value stored at the index for the given subscript
-   */
-  private func jsonValueForIndexAndSubscript(index: Int, string: String) -> String {
-    return self.items.arrayValue[index][string].description;
-  }
-
 }
