@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JJG-lH-ZKR" id="hfP-jd-jud">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="179"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="179.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <userGuides>
                                         <userLayoutGuide location="103" affinity="minY"/>

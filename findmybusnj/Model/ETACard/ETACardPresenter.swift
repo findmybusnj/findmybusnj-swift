@@ -39,14 +39,10 @@ class ETACardPresenter {
    
    - parameter card:  ETACard for the given reusable cell
    - parameter json:  json for the given row in the table
-   
-   - returns: A formatted `ETACard` for the given data
    */
-  func formatCardForJson(card: ETACard, json: JSON) -> ETACard {
+  func formatCardForPresentation(card: ETACard, json: JSON) {
     assignArrivalTimeForJson(card, json: json)
     assignBusAndRouteTextForJson(card, json: json)
-    
-    return card
   }
   
   // MARK: Private functions
