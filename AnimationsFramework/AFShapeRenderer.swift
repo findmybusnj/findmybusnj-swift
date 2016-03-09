@@ -54,7 +54,7 @@ public class AFShapeRenderer {
     circle.layer.addSublayer(circle.circle)
     
     // Draw the circle in the view at the top left origin
-    circle.addCircleToView(view, xCoordinate: view.frame.origin.x, busTimeForBorderLength: busTime)
+    circle.addFilledCircleToView(view, xCoordinate: view.frame.origin.x)
   }
   
   /**
@@ -72,8 +72,6 @@ public class AFShapeRenderer {
   
   /**
    Sets the stroke color of the circle based on the bus time being passed in
-   
-   - TODO: Figure out how to make `Delay` not stroke red on the circumference
    
    - parameter busTime:    The time the bus will be arriving as an int
    */
