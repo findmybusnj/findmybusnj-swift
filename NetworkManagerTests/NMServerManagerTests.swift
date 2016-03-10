@@ -31,14 +31,14 @@ class NMServerManagerTests: XCTestCase {
   /**
    Tests to make sure the `url` matches what it should be before use
    */
-  func testBaseURLisCorrect() {
+  func test_BaseURL_isCorrect() {
     XCTAssertEqual(NMServerManager.url, "https://findmybusnj.com/rest", "Base url should be https://findmybusnj.com/rest")
   }
   
   /**
    Tests to make sure `lastEndpoint` is an empty string before first use
    */
-  func testLastEndpointIsEmptyBeforeUse() {
+  func test_LastEndpoint_IsEmpty_BeforeUse() {
     XCTAssertEqual(NMServerManager.lastEndpoint, "", "`lastEndpoint` should be empty on first use")
   }
 }

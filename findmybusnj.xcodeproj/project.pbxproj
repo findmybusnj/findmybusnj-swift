@@ -296,13 +296,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D44E33081C814C970036D478 /* Test */ = {
+		D44E33081C814C970036D478 /* Test Files */ = {
 			isa = PBXGroup;
 			children = (
 				D44E33061C814BBE0036D478 /* singleStop.json */,
 				D429904A1C8E916300FCADFF /* noPrediction.json */,
 			);
-			name = Test;
+			name = "Test Files";
 			path = ../findmybusnj;
 			sourceTree = "<group>";
 		};
@@ -429,7 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				D44E330B1C8159220036D478 /* JsonTestHelper.swift */,
-				D44E33081C814C970036D478 /* Test */,
+				D44E33081C814C970036D478 /* Test Files */,
 				D485AD711C7E58F700B505CD /* Controllers */,
 				D4EFCFCB1C5D05A8003806A7 /* Models */,
 				D4D6AB7C1BBA2FE200CE241D /* Info.plist */,
