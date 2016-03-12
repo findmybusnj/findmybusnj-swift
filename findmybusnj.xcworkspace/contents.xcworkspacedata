@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:findmybusnj/Locations/River_Edge-NJ.gpx">
+      location = "group:/Users/davidaghassi/git/findmybusnj-swift/findmybusnj/Locations/Paramus-NJ.gpx">
    </FileRef>
    <FileRef
       location = "group:findmybusnj.xcodeproj">
