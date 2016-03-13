@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import CoreData
 
 // MARK: Dependancies
 import NetworkManager
 
 class ETABusTimeTableController: CardTableViewController {
-  let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+  private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+  private let alertPresenter = ETAAlertPresenter()
   
   // MARK: Properties
   var currentStop: String = ""
@@ -22,8 +24,34 @@ class ETABusTimeTableController: CardTableViewController {
   @IBOutlet weak var favoriteButton: UIBarButtonItem!
   
   // MARK: Actions
-  @IBAction func saveAsFavorite(sender: UIBarButtonItem) {
+  /**
+   Saves the `currentStop` to Core Data. If `filterRoute` is not empty, it is also saved.
+   Items saved are done so in a `Favorite` class, which is a subclass of `NSManagedObject`.
+   
+   If there is no stop to save, the user is presented with a warning.
     
+   - parameter sender: The bar button being pressed
+   */
+  @IBAction func saveAsFavorite(sender: UIBarButtonItem) {
+    if !currentStop.isEmpty {
+      let managedObjectContext = appDelegate.managedObjectContext
+      let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
+      favorite.stop = currentStop
+      
+      if !filterRoute.isEmpty {
+        favorite.route = filterRoute
+      }
+      
+      do {
+        try managedObjectContext.save()
+      } catch {
+        fatalError("Unable to save stop: \(error)")
+      }
+    }
+    else {
+      let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Empty_Stop)
+      presentViewController(warning, animated: true, completion: nil)
+    }
   }
   
   override func viewDidLoad() {

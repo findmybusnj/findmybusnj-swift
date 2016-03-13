@@ -27,6 +27,8 @@
 		D485AD701C7E585900B505CD /* CardTimeTableControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */; };
 		D496BCE01C95AFA90024FCFB /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496BCDE1C95AFA90024FCFB /* Favorite+CoreDataProperties.swift */; };
 		D496BCE11C95AFA90024FCFB /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496BCDF1C95AFA90024FCFB /* Favorite.swift */; };
+		D496BCE31C95D2630024FCFB /* ETAAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496BCE21C95D2630024FCFB /* ETAAlertPresenter.swift */; };
+		D496BCE61C95D3FD0024FCFB /* ETAAlertEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496BCE51C95D3FD0024FCFB /* ETAAlertEnum.swift */; };
 		D4A9E84A1C94E1FB003841DF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A9E8491C94E1FB003841DF /* CoreData.framework */; };
 		D4A9E84D1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4A9E84B1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodeld */; };
 		D4BD9C0C1C8F815B0083FA55 /* ETACardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD9C0B1C8F815B0083FA55 /* ETACardPresenter.swift */; };
@@ -167,6 +169,8 @@
 		D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTimeTableControllerUnitTests.swift; path = Controllers/CardTimeTableControllerUnitTests.swift; sourceTree = "<group>"; };
 		D496BCDE1C95AFA90024FCFB /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Favorite+CoreDataProperties.swift"; path = "Model/Favorites/Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D496BCDF1C95AFA90024FCFB /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorite.swift; path = Model/Favorites/Favorite.swift; sourceTree = "<group>"; };
+		D496BCE21C95D2630024FCFB /* ETAAlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAAlertPresenter.swift; path = Presenter/Alert/ETAAlertPresenter.swift; sourceTree = "<group>"; };
+		D496BCE51C95D3FD0024FCFB /* ETAAlertEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAAlertEnum.swift; path = Presenter/Alert/ETAPresenter/ETAAlertEnum.swift; sourceTree = "<group>"; };
 		D4A9E8491C94E1FB003841DF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D4A9E84C1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindMyBusCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		D4BD9C0B1C8F815B0083FA55 /* ETACardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACardPresenter.swift; path = Model/ETACard/ETACardPresenter.swift; sourceTree = "<group>"; };
@@ -361,6 +365,15 @@
 			name = Favorites;
 			sourceTree = "<group>";
 		};
+		D496BCE41C95D3C30024FCFB /* ETAPresenters */ = {
+			isa = PBXGroup;
+			children = (
+				D496BCE51C95D3FD0024FCFB /* ETAAlertEnum.swift */,
+				D496BCE21C95D2630024FCFB /* ETAAlertPresenter.swift */,
+			);
+			name = ETAPresenters;
+			sourceTree = "<group>";
+		};
 		D4BD9C0A1C8F810E0083FA55 /* ETACard */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +492,7 @@
 		D4EC73FD1BD69B8200FF2E88 /* ETAView */ = {
 			isa = PBXGroup;
 			children = (
+				D496BCE41C95D3C30024FCFB /* ETAPresenters */,
 				D4D6AB651BBA2FE200CE241D /* ETABusTimeTableController.swift */,
 				D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */,
 			);
@@ -926,8 +940,10 @@
 				D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */,
 				D496BCE01C95AFA90024FCFB /* Favorite+CoreDataProperties.swift in Sources */,
 				D4640DD51C4DE50600D184E3 /* ETASearchPopOverController.swift in Sources */,
+				D496BCE31C95D2630024FCFB /* ETAAlertPresenter.swift in Sources */,
 				D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */,
 				D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */,
+				D496BCE61C95D3FD0024FCFB /* ETAAlertEnum.swift in Sources */,
 				D4D6AB661BBA2FE200CE241D /* ETABusTimeTableController.swift in Sources */,
 				D45C93501C8FC32D002AC008 /* UIAlertPresenter.swift in Sources */,
 				D4A9E84D1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodeld in Sources */,

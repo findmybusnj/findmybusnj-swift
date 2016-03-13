@@ -14,7 +14,7 @@ import NetworkManager
 
 class ETASearchPopOverController: UIViewController {
   // MARK: Formatters
-  private let alertPresenter = UIAlertPresenter()
+  private let alertPresenter = ETAAlertPresenter()
   
   // MARK: Outlets
   @IBOutlet weak var stopNumberTextField: UITextField!
@@ -52,7 +52,7 @@ class ETASearchPopOverController: UIViewController {
    Creates a UIAlertController to notify the user they have not entered the proper stop information
    */
   private func showEmptyWarning() {
-    let warning = alertPresenter.presentAlertWarning(AlertWarning.Empty_Search)
+    let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Empty_Search)
     presentViewController(warning, animated: true, completion: nil)
   }
 }
