@@ -12,6 +12,8 @@ import UIKit
 import NetworkManager
 
 class ETABusTimeTableController: CardTableViewController {
+  let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+  
   // MARK: Properties
   var currentStop: String = ""
   var filterRoute: String = ""
@@ -21,6 +23,7 @@ class ETABusTimeTableController: CardTableViewController {
   
   // MARK: Actions
   @IBAction func saveAsFavorite(sender: UIBarButtonItem) {
+    
   }
   
   override func viewDidLoad() {

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
-    <entity name="Favorite" syncable="YES">
+    <entity name="Favorite" representedClassName=".Favorite" syncable="YES">
+        <attribute name="frequency" optional="YES" attributeType="Integer 32" defaultValueString="1" syncable="YES"/>
         <attribute name="route" optional="YES" attributeType="String" maxValueString="3" syncable="YES"/>
         <attribute name="stop" attributeType="String" maxValueString="5" syncable="YES"/>
     </entity>
+    <fetchRequest name="fetchFavorites" entity="Favorite" predicateString="frequency &gt;= 1"/>
     <elements>
-        <element name="Favorite" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Favorite" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>
 </model>
