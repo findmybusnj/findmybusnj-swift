@@ -8,18 +8,38 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 // MARK: Dependancies
 import NetworkManager
 
 class ETASearchPopOverController: UIViewController {
+  private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
   // MARK: Formatters
   private let alertPresenter = ETAAlertPresenter()
+  // MARK: DataSource
+  private var favorites = [NSManagedObject]()
   
   // MARK: Outlets
   @IBOutlet weak var stopNumberTextField: UITextField!
   @IBOutlet weak var filterRouteNumberTextField: UITextField!
   @IBOutlet weak var favoritesTableView: UITableView!
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    // Get the MoC and create the fetch request
+    let managedObjectContext = appDelegate.managedObjectContext
+    let fetchRequest = NSFetchRequest(entityName: "Favorite")
+    
+    //3
+    do {
+      let results = try managedObjectContext.executeFetchRequest(fetchRequest)
+      favorites = results as! [NSManagedObject]
+    } catch let error as NSError {
+      print("Could not fetch \(error), \(error.userInfo)")
+    }
+  }
   
   // MARK: Segue
   // Source of idea: http://jamesleist.com/ios-swift-tutorial-stop-segue-show-alert-text-box-empty/
@@ -96,5 +116,27 @@ extension ETASearchPopOverController: UITextFieldDelegate {
   func textFieldShouldReturn(textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     return true
+  }
+}
+
+// MARK: UITableViewDataSource
+extension ETASearchPopOverController: UITableViewDataSource {
+  func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    return true
+  }
+  
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return favorites.count
+  }
+  
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier("FavCell")
+    let index = indexPath.row
+    
+    let favItem = favorites[index] as! Favorite
+    
+    cell?.textLabel?.text = favItem.stop
+    
+    return cell!
   }
 }

@@ -20,9 +20,6 @@ class ETABusTimeTableController: CardTableViewController {
   var currentStop: String = ""
   var filterRoute: String = ""
   
-  // MARK: Outlets
-  @IBOutlet weak var favoriteButton: UIBarButtonItem!
-  
   // MARK: Actions
   /**
    Saves the `currentStop` to Core Data. If `filterRoute` is not empty, it is also saved.
@@ -32,7 +29,7 @@ class ETABusTimeTableController: CardTableViewController {
     
    - parameter sender: The bar button being pressed
    */
-  @IBAction func saveAsFavorite(sender: UIBarButtonItem) {
+  @IBAction func saveFavorite(sender: UIButton) {
     if !currentStop.isEmpty {
       let managedObjectContext = appDelegate.managedObjectContext
       let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
