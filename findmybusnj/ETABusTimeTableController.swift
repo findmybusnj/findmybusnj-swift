@@ -32,12 +32,28 @@ class ETABusTimeTableController: CardTableViewController {
   @IBAction func saveFavorite(sender: UIButton) {
     if !currentStop.isEmpty {
       let managedObjectContext = appDelegate.managedObjectContext
+      
+      // Duplicate check
+      let fetchRequest = NSFetchRequest(entityName: "Favorite")
+      let predicate = NSPredicate(format: "stop == %@ AND route == %@", currentStop, filterRoute)
+      fetchRequest.predicate = predicate
+      
+      do {
+        let result = try managedObjectContext.executeFetchRequest(fetchRequest)
+        let duplicate = result as! [NSManagedObject]
+        if (duplicate.count > 0) {
+          let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Stop_Saved)
+          presentViewController(warning, animated: true, completion: nil)
+          return
+        }
+      } catch {
+        fatalError("Unable to check for duplicate stop: \(error)")
+      }
+
+      // Save otherwise
       let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
       favorite.stop = currentStop
-      
-      if !filterRoute.isEmpty {
-        favorite.route = filterRoute
-      }
+      favorite.route = filterRoute
       
       do {
         try managedObjectContext.save()
@@ -53,6 +69,10 @@ class ETABusTimeTableController: CardTableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
   }
   
   /**
@@ -82,10 +102,6 @@ class ETABusTimeTableController: CardTableViewController {
     else {
       self.refreshControl?.endRefreshing()
     }
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
   }
   
   /**

@@ -23,6 +23,8 @@ class ETAAlertPresenter: UIAlertPresenter {
       return empty_search()
     case ETAAlertEnum.Empty_Stop:
       return empty_stop()
+    case ETAAlertEnum.Stop_Saved:
+      return duplicate_stop()
     default:
       return UIAlertController(title: "", message: "", preferredStyle: .Alert)
     }
@@ -49,6 +51,18 @@ class ETAAlertPresenter: UIAlertPresenter {
     let warning = createUIAlertControllerWithDoneButton()
     warning.title = "No stop entered"
     warning.message = "Please enter a stop before searching"
+    return warning
+  }
+  
+  /**
+   Creates a `UIAlertController` for the stop already existing in `Core Data`
+   
+   - returns: `UIAlertController` that contains a "Stop already saved" message and no handlers
+   */
+  private func duplicate_stop() -> UIAlertController {
+    let warning = createUIAlertControllerWithDoneButton()
+    warning.title = "Stop already saved"
+    warning.message = ""
     return warning
   }
 }

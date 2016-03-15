@@ -13,8 +13,10 @@ import Foundation
  
  - Empty_Search: Should be shown if search box is empty
  - Empty_Stop:   Should be shown if there is no stop currently being searched for
+ - Stop_Saved:   Should be shown if there is a stop already existing in Core Data
  */
 enum ETAAlertEnum: AlertEnum {
   case Empty_Search
   case Empty_Stop
+  case Stop_Saved
 }
