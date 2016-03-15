@@ -196,6 +196,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Tj0-Q0-7wY" id="Wod-DQ-5kN"/>
+                                    <outlet property="delegate" destination="Tj0-Q0-7wY" id="Fjs-6k-SEd"/>
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cyr-pk-zwA">

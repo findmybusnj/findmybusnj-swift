@@ -449,10 +449,10 @@
 				D45C934E1C8FC300002AC008 /* Presenters */,
 				D42357F91BBA35A900B5A08D /* View Controllers */,
 				D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */,
-				D4A9E84B1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodeld */,
 				D4D6AB691BBA2FE200CE241D /* Main.storyboard */,
 				D4D6AB6C1BBA2FE200CE241D /* Assets.xcassets */,
 				D4D6AB6E1BBA2FE200CE241D /* LaunchScreen.storyboard */,
+				D4A9E84B1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodeld */,
 				D4D6AB711BBA2FE200CE241D /* Info.plist */,
 			);
 			path = findmybusnj;

@@ -15,6 +15,8 @@ import NetworkManager
 
 class ETASearchPopOverController: UIViewController {
   private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+  private var managedObjectContext: NSManagedObjectContext!
+  
   // MARK: Formatters
   private let alertPresenter = ETAAlertPresenter()
   // MARK: DataSource
@@ -28,11 +30,9 @@ class ETASearchPopOverController: UIViewController {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     
-    // Get the MoC and create the fetch request
-    let managedObjectContext = appDelegate.managedObjectContext
+    managedObjectContext = appDelegate.managedObjectContext
     let fetchRequest = NSFetchRequest(entityName: "Favorite")
     
-    //3
     do {
       let results = try managedObjectContext.executeFetchRequest(fetchRequest)
       favorites = results as! [NSManagedObject]
@@ -119,12 +119,35 @@ extension ETASearchPopOverController: UITextFieldDelegate {
   }
 }
 
-// MARK: UITableViewDataSource
-extension ETASearchPopOverController: UITableViewDataSource {
+// MARK: UITableViewDelegate
+extension ETASearchPopOverController: UITableViewDelegate {
   func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
     return true
   }
   
+  func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?  {
+    let index = indexPath.row
+    
+    let deleteAction = UITableViewRowAction(style: .Default, title: "Delete", handler: { (action , indexPath) -> Void in
+      // Remove from table and core data
+      let favoriteToDelete = self.favorites.removeAtIndex(index)
+      self.managedObjectContext.deleteObject(favoriteToDelete)
+    
+      do {
+        try self.managedObjectContext.save()
+        self.favoritesTableView.reloadData()
+      } catch let error as NSError {
+        print("Could not save: \(error), \(error.userInfo)")
+      }
+    })
+    
+    deleteAction.backgroundColor = UIColor.redColor()
+    return [deleteAction]
+  }
+}
+
+// MARK: UITableViewDataSource
+extension ETASearchPopOverController: UITableViewDataSource {
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return favorites.count
   }
@@ -136,6 +159,7 @@ extension ETASearchPopOverController: UITableViewDataSource {
     let favItem = favorites[index] as! Favorite
     
     cell?.textLabel?.text = favItem.stop
+    cell?.detailTextLabel?.text = favItem.route
     
     return cell!
   }
