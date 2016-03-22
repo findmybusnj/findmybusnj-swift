@@ -97,7 +97,7 @@ class FindNearByStopsController: UIViewController {
         var latitude: Double
         var longitude: Double
         
-        for (var i = 0; i < 15; i++) {
+        for i in 0..<15 {
           locName = String(results[i]["name"])
           latitude = results[i]["geometry"]["location"]["lat"].double!
           longitude = results[i]["geometry"]["location"]["lng"].double!

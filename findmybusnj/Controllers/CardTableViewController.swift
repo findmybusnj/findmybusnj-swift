@@ -29,7 +29,7 @@ class CardTableViewController: UITableViewController {
     // setup the refresh controller for the table
     self.refreshControl = UIRefreshControl()
     self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh stops")
-    self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
+    self.refreshControl?.addTarget(self, action: #selector(CardTableViewController.refresh(_:)), forControlEvents: .ValueChanged)
     
     self.tableView.separatorColor = UIColor.clearColor()
     self.tableView.separatorStyle = .None
