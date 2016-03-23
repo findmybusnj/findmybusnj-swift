@@ -19,8 +19,19 @@ class ETABusTimeTableController: CardTableViewController {
   // MARK: Properties
   var currentStop: String = ""
   var filterRoute: String = ""
+  var selectedFavorite = (stop: "", route: "")
   
+  // MARK: Outlets
   @IBOutlet weak var navigationBar: UINavigationItem!
+  
+  // MARK: View Controller Life Cycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
   
   // MARK: Actions
   /**
@@ -69,12 +80,15 @@ class ETABusTimeTableController: CardTableViewController {
     }
   }
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
+  /**
+   Loads the selected favorite from the `ETASearchPopOverController`
+   
+   - parameter sender: Storyboard segue exiting to unwind back to this controller
+   */
+  @IBAction func loadSelectedFavorite(sender: UIStoryboardSegue) {
+    if sender.identifier == "loadSelectedFavorite" {      
+      performSearch(selectedFavorite.stop, route: selectedFavorite.route)
+    }
   }
   
   /**
@@ -125,31 +139,42 @@ class ETABusTimeTableController: CardTableViewController {
         return
       }
       
-      currentStop = stop
-      navigationBar.title = stop
-      
-      if (route.isEmpty) {
-        NMServerManager.getJSONForStop(stop) {
-          items, error in
-          
-          if error == nil {
-            self.updateTable(items)
-          }
-        }
-      }
-      else {
-        filterRoute = route
-        navigationBar.title = "\(stop) via \(route)"
+      performSearch(stop, route: route)
+    }
+    super.unwindToMain(sender)
+  }
+  
+  // MARK: Methods
+  /**
+   Does the network search based on the search and route pass in. Sets the `navigationBar.title` to the stop (including route if one is passed in).
+   
+   - parameter stop:  Required, sent to endpoint to return next busses
+   - parameter route: Optional, filters buses on the stop
+   */
+  func performSearch(stop: String, route: String) {
+    currentStop = stop
+    navigationBar.title = stop
+    
+    if (route.isEmpty) {
+      NMServerManager.getJSONForStop(stop) {
+        items, error in
         
-        NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
-          items, error in
-          
-          if error == nil {
-            self.updateTable(items)
-          }
+        if error == nil {
+          self.updateTable(items)
         }
       }
     }
-    super.unwindToMain(sender)
+    else {
+      filterRoute = route
+      navigationBar.title = "\(stop) via \(route)"
+      
+      NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
+        items, error in
+        
+        if error == nil {
+          self.updateTable(items)
+        }
+      }
+    }
   }
 }

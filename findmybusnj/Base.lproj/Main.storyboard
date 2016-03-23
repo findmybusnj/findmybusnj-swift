@@ -158,6 +158,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <exit id="W8o-yS-xKl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1204" y="606"/>
         </scene>
@@ -195,6 +196,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="W8o-yS-xKl" kind="unwind" identifier="loadSelectedFavorite" unwindAction="loadSelectedFavorite:" id="Q5Y-Ei-kzr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

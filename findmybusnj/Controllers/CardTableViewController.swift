@@ -23,6 +23,7 @@ class CardTableViewController: UITableViewController {
   // MARK: Formatters
   private let etaCardPresenter = ETACardPresenter()
   
+  // MARK: View Controller Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     

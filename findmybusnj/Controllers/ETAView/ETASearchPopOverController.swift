@@ -16,9 +16,11 @@ import NetworkManager
 class ETASearchPopOverController: UIViewController {
   private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
   private var managedObjectContext: NSManagedObjectContext!
+  private var selectedFavorite = (stop: "",route: "")
   
   // MARK: Formatters
   private let alertPresenter = ETAAlertPresenter()
+
   // MARK: DataSource
   private var favorites = [NSManagedObject]()
   
@@ -27,6 +29,7 @@ class ETASearchPopOverController: UIViewController {
   @IBOutlet weak var filterRouteNumberTextField: UITextField!
   @IBOutlet weak var favoritesTableView: UITableView!
   
+  // MARK: View Controller Life Cycle
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     
@@ -41,7 +44,14 @@ class ETASearchPopOverController: UIViewController {
     }
   }
   
-  // MARK: Segue
+  // MARK: Segues
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "loadSelectedFavorite" {
+      let destinationViewController = segue.destinationViewController as! ETABusTimeTableController
+      destinationViewController.selectedFavorite = self.selectedFavorite
+    }
+  }
+
   // Source of idea: http://jamesleist.com/ios-swift-tutorial-stop-segue-show-alert-text-box-empty/
   /**
   Overrides the `shouldPerformSegueWithIdentifier` method. Called before a segue is performed. Checks that if the segue identifier is `search`, and then checks whether or not the `stopNumberInput` is empty or not.
@@ -162,5 +172,24 @@ extension ETASearchPopOverController: UITableViewDataSource {
     cell?.detailTextLabel?.text = favItem.route
     
     return cell!
+  }
+  
+  func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+    let index = indexPath.row
+    let selectedItem = favorites[index] as! Favorite
+    
+    guard let stop = selectedItem.stop else {
+      return indexPath
+    }
+    
+    guard let route = selectedItem.route else {
+      return indexPath
+    }
+    
+    // If nothing else, these should always be ""
+    selectedFavorite.stop = stop
+    selectedFavorite.route = route
+    
+    return indexPath
   }
 }
