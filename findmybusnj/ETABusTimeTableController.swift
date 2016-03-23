@@ -20,6 +20,8 @@ class ETABusTimeTableController: CardTableViewController {
   var currentStop: String = ""
   var filterRoute: String = ""
   
+  @IBOutlet weak var navigationBar: UINavigationItem!
+  
   // MARK: Actions
   /**
    Saves the `currentStop` to Core Data. If `filterRoute` is not empty, it is also saved.
@@ -123,9 +125,10 @@ class ETABusTimeTableController: CardTableViewController {
         return
       }
       
+      currentStop = stop
+      navigationBar.title = stop
+      
       if (route.isEmpty) {
-        currentStop = stop
-        
         NMServerManager.getJSONForStop(stop) {
           items, error in
           
@@ -135,8 +138,8 @@ class ETABusTimeTableController: CardTableViewController {
         }
       }
       else {
-        currentStop = stop
         filterRoute = route
+        navigationBar.title = "\(stop) via \(route)"
         
         NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
           items, error in
