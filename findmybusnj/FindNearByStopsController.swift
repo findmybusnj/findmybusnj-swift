@@ -63,8 +63,8 @@ class FindNearByStopsController: UIViewController {
     
     // Test data (home)
     #if DEBUG
-      let latitude = 40.9171205
-      let longitude = -74.0441104
+      let latitude = 40.9445783
+      let longitude = -74.1051304
     #else
       // Prod code (variable based on GPS)
       let latitude = coordinate.latitude
