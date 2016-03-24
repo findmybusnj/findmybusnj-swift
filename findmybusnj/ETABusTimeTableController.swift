@@ -39,7 +39,7 @@ class ETABusTimeTableController: CardTableViewController {
    Items saved are done so in a `Favorite` class, which is a subclass of `NSManagedObject`.
    
    If there is no stop to save, the user is presented with a warning.
-    
+   
    - parameter sender: The bar button being pressed
    */
   @IBAction func saveFavorite(sender: UIButton) {
@@ -62,7 +62,7 @@ class ETABusTimeTableController: CardTableViewController {
       } catch {
         fatalError("Unable to check for duplicate stop: \(error)")
       }
-
+      
       // Save otherwise
       let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
       favorite.stop = currentStop
@@ -86,7 +86,7 @@ class ETABusTimeTableController: CardTableViewController {
    - parameter sender: Storyboard segue exiting to unwind back to this controller
    */
   @IBAction func loadSelectedFavorite(sender: UIStoryboardSegue) {
-    if sender.identifier == "loadSelectedFavorite" {      
+    if sender.identifier == "loadSelectedFavorite" {
       performSearch(selectedFavorite.stop, route: selectedFavorite.route)
     }
   }
@@ -97,27 +97,8 @@ class ETABusTimeTableController: CardTableViewController {
    - parameter sender: Object calling the refresh
    */
   override func refresh(sender: AnyObject) {
-    if !filterRoute.isEmpty {
-      NMServerManager.getJSONForStopFilteredByRoute(currentStop, route: filterRoute) {
-        items, error in
-        
-        if error == nil {
-          self.updateTable(items)
-        }
-      }
-    }
-    else if !currentStop.isEmpty {
-      NMServerManager.getJSONForStop(currentStop) {
-        items, error in
-        
-        if error == nil {
-          self.updateTable(items)
-        }
-      }
-    }
-    else {
-      self.refreshControl?.endRefreshing()
-    }
+    performSearch(currentStop, route: filterRoute)
+    self.refreshControl?.endRefreshing()
   }
   
   /**
@@ -153,28 +134,46 @@ class ETABusTimeTableController: CardTableViewController {
    */
   func performSearch(stop: String, route: String) {
     currentStop = stop
+    filterRoute = route
     navigationBar.title = stop
     
-    if (route.isEmpty) {
-      NMServerManager.getJSONForStop(stop) {
-        items, error in
-        
-        if error == nil {
-          self.updateTable(items)
+    let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
+    
+    if currentStop.isEmpty {
+      return
+    }
+    
+    if route.isEmpty {
+      // make call on another thread
+      dispatch_async(dispatch_get_global_queue(qos, 0), {
+        NMServerManager.getJSONForStop(stop) {
+          items, error in
+          
+          if error == nil {
+            // update UI on the main thread
+            dispatch_async(dispatch_get_main_queue(), {
+              [unowned self] in
+              self.updateTable(items)
+            })
+          }
         }
-      }
+      })
     }
     else {
-      filterRoute = route
       navigationBar.title = "\(stop) via \(route)"
       
-      NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
-        items, error in
-        
-        if error == nil {
-          self.updateTable(items)
+      dispatch_async(dispatch_get_global_queue(qos, 0), {
+        NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
+          items, error in
+          
+          if error == nil {
+            dispatch_async(dispatch_get_main_queue(), {
+              [unowned self] in
+              self.updateTable(items)
+            })
+          }
         }
-      }
+      })
     }
   }
 }

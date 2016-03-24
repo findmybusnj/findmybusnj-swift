@@ -9,6 +9,8 @@ TODO:
     * ~~tapping on them should callout to the Maps and show the transit mode that shows the user the way the bus will take, and how long it may take to get there.~~ 
 - ~~Use Google's map API to return all bus stops and overlay them ontop of mapkit based on User's location~~ ✓
 - ~~User should be able to get navigation to a stop via the maps application~~ ✓
+- ~~Put TableView updates on main thread using `dispatch_async`~~ ✓
+- ~~Look into releasing/using `unowned` on self when in a closure~~ ✓
 
 Future Updates:
 - Add Today View Widget
