@@ -137,43 +137,29 @@ class ETABusTimeTableController: CardTableViewController {
     filterRoute = route
     navigationBar.title = stop
     
-    let qos = Int(QOS_CLASS_USER_INITIATED.rawValue)
-    
     if currentStop.isEmpty {
       return
     }
     
     if route.isEmpty {
-      // make call on another thread
-      dispatch_async(dispatch_get_global_queue(qos, 0), {
-        NMServerManager.getJSONForStop(stop) {
-          items, error in
-          
-          if error == nil {
-            // update UI on the main thread
-            dispatch_async(dispatch_get_main_queue(), {
-              [unowned self] in
-              self.updateTable(items)
-            })
-          }
+      NMServerManager.getJSONForStop(stop) {
+        items, error in
+        
+        if error == nil {
+          self.updateTable(items)
         }
-      })
+      }
     }
     else {
       navigationBar.title = "\(stop) via \(route)"
-      
-      dispatch_async(dispatch_get_global_queue(qos, 0), {
-        NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
-          items, error in
-          
-          if error == nil {
-            dispatch_async(dispatch_get_main_queue(), {
-              [unowned self] in
-              self.updateTable(items)
-            })
-          }
+    
+      NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
+        items, error in
+        
+        if error == nil {
+          self.updateTable(items)
         }
-      })
+      }
     }
   }
 }
