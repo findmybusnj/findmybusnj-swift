@@ -6,8 +6,7 @@ target 'findmybusnj' do
 
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'Alamofire'
-# pod 'SwiftOverlays'
-# pod "MBProgressHUD"
+pod 'MRProgress'
 
 end
 

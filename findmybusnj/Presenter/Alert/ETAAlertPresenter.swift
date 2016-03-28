@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ETAAlertPresenter: UIAlertPresenter {
+// MARK: Dependancies
+import MRProgress
+
+struct ETAAlertPresenter: UIAlertPresenter {
   
   /**
    Used to present a UIAlertController for a given alert type. If no alert type matches, a new `UIAlertController` will be returned with empty `title` and `message, along with style of `Alert`
@@ -28,6 +31,19 @@ class ETAAlertPresenter: UIAlertPresenter {
     default:
       return UIAlertController(title: "", message: "", preferredStyle: .Alert)
     }
+  }
+  
+  /**
+   Displays a checkmark in a box to show success of an action
+   
+   - parameter view: View that will have the progress notification overlaying it
+   - parameter title: Title of the view to be presented
+   */
+  func presentCheckmarkInView(view: UIView, title: String) {
+    MRProgressOverlayView.showOverlayAddedTo(view, title: title, mode: MRProgressOverlayViewMode.Checkmark, animated: true)
+    runAfterDelay(1.0, block: {
+      MRProgressOverlayView.dismissOverlayForView(view, animated: true)
+    })
   }
   
   /**
@@ -64,6 +80,17 @@ class ETAAlertPresenter: UIAlertPresenter {
     warning.title = "Stop already saved"
     warning.message = ""
     return warning
+  }
+  
+  /**
+   Creates a timeout function to run a callback after a certain period of time
+   
+   - parameter delay: How long, in seconds, the timeout will be
+   - parameter block: The callback that will be called after the allotted time
+   */
+  private func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
+    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
+    dispatch_after(time, dispatch_get_main_queue(), block)
   }
 }
 

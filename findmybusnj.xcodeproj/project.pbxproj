@@ -55,20 +55,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D42358471BBA3A0A00B5A08D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D42358281BBA3A0A00B5A08D;
-			remoteInfo = CommonCode;
-		};
-		D42358491BBA3A0A00B5A08D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D42358321BBA3A0A00B5A08D;
-			remoteInfo = CommonCodeTests;
-		};
 		D479C19B1C34DAA200C434ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
@@ -146,7 +132,6 @@
 		4CBCBE02954639DF7E50BFBA /* Pods-findmybusnj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.release.xcconfig"; sourceTree = "<group>"; };
 		C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
-		D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CommonCode.xcodeproj; path = CommonCode/CommonCode.xcodeproj; sourceTree = "<group>"; };
 		D42358561BBCE01800032949 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D429904A1C8E916300FCADFF /* noPrediction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = noPrediction.json; path = ModelData/noPrediction.json; sourceTree = SOURCE_ROOT; };
 		D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -276,7 +261,6 @@
 				D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */,
 				D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */,
 				D42358561BBCE01800032949 /* SwiftyJSON.framework */,
-				D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */,
 				C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */,
 			);
 			name = Frameworks;
@@ -299,15 +283,6 @@
 				D4FE2D6E1BD53E8C00930C24 /* Map */,
 			);
 			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		D42358431BBA3A0A00B5A08D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D42358481BBA3A0A00B5A08D /* CommonCode.framework */,
-				D423584A1BBA3A0A00B5A08D /* CommonCodeTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		D44E33081C814C970036D478 /* Test Files */ = {
@@ -724,12 +699,6 @@
 			mainGroup = D4D6AB571BBA2FE200CE241D;
 			productRefGroup = D4D6AB611BBA2FE200CE241D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D42358431BBA3A0A00B5A08D /* Products */;
-					ProjectRef = D42358421BBA3A0A00B5A08D /* CommonCode.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				D4D6AB5F1BBA2FE200CE241D /* findmybusnj */,
@@ -742,23 +711,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		D42358481BBA3A0A00B5A08D /* CommonCode.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = CommonCode.framework;
-			remoteRef = D42358471BBA3A0A00B5A08D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D423584A1BBA3A0A00B5A08D /* CommonCodeTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = CommonCodeTests.xctest;
-			remoteRef = D42358491BBA3A0A00B5A08D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D479C18E1C34DAA200C434ED /* Resources */ = {
@@ -1037,7 +989,7 @@
 		D479C1A71C34DAA300C434ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1064,7 +1016,7 @@
 		D479C1A81C34DAA300C434ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1206,6 +1158,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1222,7 +1175,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
@@ -1251,6 +1204,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1261,7 +1215,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_SWIFT_FLAGS = "-DRELEASE";
 				SDKROOT = iphoneos;
@@ -1276,7 +1230,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = findmybusnj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1294,7 +1248,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = findmybusnj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

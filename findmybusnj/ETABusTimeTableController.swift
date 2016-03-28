@@ -11,6 +11,7 @@ import CoreData
 
 // MARK: Dependancies
 import NetworkManager
+import MRProgress
 
 class ETABusTimeTableController: CardTableViewController {
   private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -70,6 +71,7 @@ class ETABusTimeTableController: CardTableViewController {
       
       do {
         try managedObjectContext.save()
+        alertPresenter.presentCheckmarkInView(self.tableView, title: "Saved Favorite")
       } catch {
         fatalError("Unable to save stop: \(error)")
       }
@@ -80,7 +82,7 @@ class ETABusTimeTableController: CardTableViewController {
     }
   }
   
-  /**
+   /**
    Loads the selected favorite from the `ETASearchPopOverController`
    
    - parameter sender: Storyboard segue exiting to unwind back to this controller
@@ -141,12 +143,14 @@ class ETABusTimeTableController: CardTableViewController {
       return
     }
     
+    MRProgressOverlayView.showOverlayAddedTo(tableView, animated: true)
     if route.isEmpty {
       NMServerManager.getJSONForStop(stop) {
-        items, error in
+        [unowned self] items, error in
         
         if error == nil {
           self.updateTable(items)
+          MRProgressOverlayView.dismissOverlayForView(self.tableView, animated: true)
         }
       }
     }
@@ -154,10 +158,11 @@ class ETABusTimeTableController: CardTableViewController {
       navigationBar.title = "\(stop) via \(route)"
     
       NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
-        items, error in
+        [unowned self] items, error in
         
         if error == nil {
           self.updateTable(items)
+          MRProgressOverlayView.dismissOverlayForView(self.tableView, animated: true)
         }
       }
     }
