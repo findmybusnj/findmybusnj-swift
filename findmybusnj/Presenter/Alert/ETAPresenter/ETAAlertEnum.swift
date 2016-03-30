@@ -18,5 +18,5 @@ import Foundation
 enum ETAAlertEnum: AlertEnum {
   case Empty_Search
   case Empty_Stop
-  case Stop_Saved
+  case Duplicate_Stop_Saved
 }

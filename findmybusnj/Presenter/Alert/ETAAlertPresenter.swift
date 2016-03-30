@@ -26,7 +26,7 @@ struct ETAAlertPresenter: UIAlertPresenter {
       return empty_search()
     case ETAAlertEnum.Empty_Stop:
       return empty_stop()
-    case ETAAlertEnum.Stop_Saved:
+    case ETAAlertEnum.Duplicate_Stop_Saved:
       return duplicate_stop()
     default:
       return UIAlertController(title: "", message: "", preferredStyle: .Alert)

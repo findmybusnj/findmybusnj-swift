@@ -56,7 +56,7 @@ class ETABusTimeTableController: CardTableViewController {
         let result = try managedObjectContext.executeFetchRequest(fetchRequest)
         let duplicate = result as! [NSManagedObject]
         if (duplicate.count > 0) {
-          let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Stop_Saved)
+          let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Duplicate_Stop_Saved)
           presentViewController(warning, animated: true, completion: nil)
           return
         }
