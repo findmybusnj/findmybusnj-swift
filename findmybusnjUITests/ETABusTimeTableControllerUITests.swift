@@ -11,6 +11,9 @@ import XCTest
 
 class ETABusTimeTableControllerUITests: XCTestCase {
   let app = XCUIApplication()
+  var tableUnderTest: XCUIElement {
+    return app.tables["ETABusTimeTable"]
+  }
   
   override func setUp() {
     super.setUp()
@@ -25,12 +28,29 @@ class ETABusTimeTableControllerUITests: XCTestCase {
     super.tearDown()
   }
   
-  func testAssertSaveFavoriteExists() {
+  func test_Assert_Save_Favorite_Exists() {
     XCTAssert(app.buttons["saveFavorite"].exists, "Save button should exist")
   }
   
-  func testAssertFindButtonExists() {
+  /**
+   Asserts that the app has text hinting user to navigate to begin
+   */
+  func test_Assert_Background_Hint_Exists_On_Empty_Table() {
+    XCTAssertTrue(tableUnderTest.tableRows.count == 0, "Table should be empty prior to testing if hint is shown")
+    XCTAssert(app.staticTexts["Please tap on \"Find\" to get started"].exists, "Background hint information is missing.")
+  }
+  
+  func test_Assert_Find_Button_Exists() {
     XCTAssert(app.buttons["Find"].exists, "Find button should exist")
+  }
+  
+  /**
+   Tests that user is notified if trying to save when no search data is present
+   */
+  func test_Assert_Warning_On_Empty_Save() {
+    XCTAssertTrue(tableUnderTest.tableRows.count == 0, "Table should be empty prior to testing if hint is shown")
+    app.buttons["saveFavorite"].tap()
+    app.alerts["No stop to save"].buttons["Done"].tap()
   }
     
   /**
