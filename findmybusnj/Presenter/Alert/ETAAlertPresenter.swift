@@ -84,6 +84,7 @@ struct ETAAlertPresenter: UIAlertPresenter {
   
   /**
    Creates a timeout function to run a callback after a certain period of time
+   Courtesy of [Hacking The Swift](https://www.hackingwithswift.com/example-code/system/how-to-run-code-after-a-delay-using-dispatch_after-and-performselector)
    
    - parameter delay: How long, in seconds, the timeout will be
    - parameter block: The callback that will be called after the allotted time
