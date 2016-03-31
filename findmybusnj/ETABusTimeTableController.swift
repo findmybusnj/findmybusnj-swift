@@ -16,6 +16,7 @@ import MRProgress
 class ETABusTimeTableController: CardTableViewController {
   private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
   private let alertPresenter = ETAAlertPresenter()
+  private let coreDataManager = ETACoreDataManager()
   
   // MARK: Properties
   var currentStop: String = ""
@@ -47,21 +48,14 @@ class ETABusTimeTableController: CardTableViewController {
     if !currentStop.isEmpty {
       let managedObjectContext = appDelegate.managedObjectContext
       
-      // Duplicate check
+      // Check for duplicates
       let fetchRequest = NSFetchRequest(entityName: "Favorite")
       let predicate = NSPredicate(format: "stop == %@ AND route == %@", currentStop, filterRoute)
-      fetchRequest.predicate = predicate
       
-      do {
-        let result = try managedObjectContext.executeFetchRequest(fetchRequest)
-        let duplicate = result as! [NSManagedObject]
-        if (duplicate.count > 0) {
-          let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Duplicate_Stop_Saved)
-          presentViewController(warning, animated: true, completion: nil)
-          return
-        }
-      } catch {
-        fatalError("Unable to check for duplicate stop: \(error)")
+      if coreDataManager.isDuplicate(fetchRequest, predicate: predicate) {
+        let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Duplicate_Stop_Saved)
+        presentViewController(warning, animated: true, completion: nil)
+        return
       }
       
       // Save otherwise
@@ -69,12 +63,10 @@ class ETABusTimeTableController: CardTableViewController {
       favorite.stop = currentStop
       favorite.route = filterRoute
       
-      do {
-        try managedObjectContext.save()
+      if coreDataManager.attemptToSave(favorite) {
         alertPresenter.presentCheckmarkInView(self.tableView, title: "Saved Favorite")
-      } catch {
-        fatalError("Unable to save stop: \(error)")
       }
+      
     }
     else {
       let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Empty_Stop)
