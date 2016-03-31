@@ -19,9 +19,6 @@ public class PKHUD: NSObject {
     private let window = Window()
     private var hideTimer: NSTimer?
     
-    public typealias TimerAction = Bool -> Void
-    private var timerActions = [String: TimerAction]()
-    
     // MARK: Public
     
     public class var sharedHUD: PKHUD {
@@ -83,23 +80,19 @@ public class PKHUD: NSObject {
         startAnimatingContentView()
     }
     
-    public func hide(animated anim: Bool = true, completion: TimerAction? = nil) {
+    public func hide(animated anim: Bool = true, completion: ((Bool) -> Void)? = nil) {
         window.hideFrameView(animated: anim, completion: completion)
         stopAnimatingContentView()
     }
     
-    public func hide(afterDelay delay: NSTimeInterval = 1.0, completion: TimerAction? = nil) {
-        let key = NSUUID().UUIDString
-        let userInfo = ["timerActionKey": key]
-        if let completion = completion {
-            timerActions[key] = completion
-        }
+    public func hide(afterDelay delay: NSTimeInterval = 1.0, completion: ((Bool) -> Void)? = nil) {
+        let userInfo: [String: Any] = ["completionKey": completion]
         
         hideTimer?.invalidate()
         hideTimer = NSTimer.scheduledTimerWithTimeInterval(delay,
                                                            target: self,
                                                            selector: Selector("performDelayedHide:"),
-                                                           userInfo: userInfo,
+                                                           userInfo: userInfo as? AnyObject,
                                                            repeats: false)
     }
     
@@ -110,14 +103,7 @@ public class PKHUD: NSObject {
     }
     
     internal func performDelayedHide(timer: NSTimer? = nil) {
-        let key = timer?.userInfo?["timerActionKey"] as? String
-        var completion: TimerAction?
-        
-        if let key = key, let action = timerActions[key] {
-            completion = action
-        }
-        
-        hide(animated: true, completion: completion);
+        hide(animated: true, completion: timer?.userInfo?["completionKey"] as? ((Bool) -> Void));
     }
     
     internal func startAnimatingContentView() {

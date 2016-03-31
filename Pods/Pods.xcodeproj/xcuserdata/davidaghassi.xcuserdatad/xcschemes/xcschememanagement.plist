@@ -9,11 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MRProgress.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>PKHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +27,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3D6903809306EB283FC2510923B690EF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4BED2269DB2FF508A7F4D58CB4BA0C2B</key>
+		<key>5B10E0211575F8BD88B5626C1728561F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,7 +37,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9CAAB2A1855182D992E2945796B03B4D</key>
+		<key>812D78F09A77333283105C2966CC123A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

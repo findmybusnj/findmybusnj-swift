@@ -40,7 +40,7 @@ struct ETAAlertPresenter: UIAlertPresenter {
    - parameter title: Title of the view to be presented
    */
   func presentCheckmarkInView(view: UIView, title: String) {
-    HUD.flash(.Success, delay: 1.0)
+    HUD.flash(.Success, withDelay: 1.0)
   }
   
   /**
