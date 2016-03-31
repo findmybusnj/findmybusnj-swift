@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: Dependancies
-import MRProgress
+import PKHUD
 
 struct ETAAlertPresenter: UIAlertPresenter {
   
@@ -40,10 +40,7 @@ struct ETAAlertPresenter: UIAlertPresenter {
    - parameter title: Title of the view to be presented
    */
   func presentCheckmarkInView(view: UIView, title: String) {
-    MRProgressOverlayView.showOverlayAddedTo(view, title: title, mode: MRProgressOverlayViewMode.Checkmark, animated: true)
-    runAfterDelay(1.0, block: {
-      MRProgressOverlayView.dismissOverlayForView(view, animated: true)
-    })
+    HUD.flash(.Success, delay: 1.0)
   }
   
   /**
@@ -80,18 +77,6 @@ struct ETAAlertPresenter: UIAlertPresenter {
     warning.title = "Stop already saved"
     warning.message = ""
     return warning
-  }
-  
-  /**
-   Creates a timeout function to run a callback after a certain period of time
-   Courtesy of [Hacking The Swift](https://www.hackingwithswift.com/example-code/system/how-to-run-code-after-a-delay-using-dispatch_after-and-performselector)
-   
-   - parameter delay: How long, in seconds, the timeout will be
-   - parameter block: The callback that will be called after the allotted time
-   */
-  private func runAfterDelay(delay: NSTimeInterval, block: dispatch_block_t) {
-    let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
-    dispatch_after(time, dispatch_get_main_queue(), block)
   }
 }
 

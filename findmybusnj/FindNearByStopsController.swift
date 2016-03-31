@@ -85,7 +85,9 @@ class FindNearByStopsController: UIViewController {
     print(parameters)
     
     Alamofire.request(.POST, url, parameters: parameters).responseJSON {
-      (req, res, json) in
+      response in
+      let json = response.result
+      
       if (json.isFailure) {
         NSLog("Error: \(json.error)")
       }

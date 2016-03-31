@@ -11,7 +11,7 @@ import CoreData
 
 // MARK: Dependancies
 import NetworkManager
-import MRProgress
+import PKHUD
 
 class ETABusTimeTableController: CardTableViewController {
   private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -116,14 +116,14 @@ class ETABusTimeTableController: CardTableViewController {
       return
     }
     
-    MRProgressOverlayView.showOverlayAddedTo(tableView, animated: true)
+    HUD.show(.Progress)
     if route.isEmpty {
       NMServerManager.getJSONForStop(stop) {
         [unowned self] items, error in
         
         if error == nil {
           self.updateTable(items)
-          MRProgressOverlayView.dismissOverlayForView(self.tableView, animated: true)
+          HUD.hide()
         }
       }
     }
@@ -135,7 +135,7 @@ class ETABusTimeTableController: CardTableViewController {
         
         if error == nil {
           self.updateTable(items)
-          MRProgressOverlayView.dismissOverlayForView(self.tableView, animated: true)
+          HUD.hide()
         }
       }
     }

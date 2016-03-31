@@ -65,8 +65,10 @@ public class NMServerManager {
     lastEndpoint = endpoint
     
     Alamofire.request(.POST, url, parameters: parameters)
-      .responseJSON {(req, res, json) in
-        if (json.isFailure) {
+      .responseJSON { response in
+        let json = response.result
+        
+        if (response.result.isFailure) {
           print("Error: \(json.error)")
         }
         else {

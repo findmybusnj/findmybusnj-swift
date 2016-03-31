@@ -4,9 +4,9 @@ use_frameworks!
 
 target 'findmybusnj' do
 
-pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
-pod 'Alamofire'
-pod 'MRProgress'
+pod 'SwiftyJSON', '~> 2.3.1'
+pod 'Alamofire', '~> 3.3.0'
+pod 'PKHUD', '~> 3.0.0'
 
 end
 

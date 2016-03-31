@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (2.0.2)
+  - Alamofire (3.3.0)
   - MRProgress (0.8.3):
     - MRProgress/ActivityIndicator (= 0.8.3)
     - MRProgress/Blur (= 0.8.3)
@@ -28,25 +28,19 @@ PODS:
   - MRProgress/ProgressBaseClass (0.8.3)
   - MRProgress/Stopable (0.8.3):
     - MRProgress/Helper
-  - SwiftyJSON (2.3.0)
+  - PKHUD (3.1.0)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - Alamofire
+  - Alamofire (~> 3.3.0)
   - MRProgress
-  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
-
-EXTERNAL SOURCES:
-  SwiftyJSON:
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
-
-CHECKOUT OPTIONS:
-  SwiftyJSON:
-    :commit: 3b5d0d4e0c19173b1bf0dc823bde25ad870f70c0
-    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+  - PKHUD
+  - SwiftyJSON (~> 2.3.1)
 
 SPEC CHECKSUMS:
-  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
   MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
-  SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
+  PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0
