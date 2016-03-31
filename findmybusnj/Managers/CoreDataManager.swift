@@ -10,6 +10,8 @@ import Foundation
 import CoreData
 
 protocol CoreDataManager {
+  var managedObjectContext: NSManagedObjectContext { get set }
+  
   func isDuplicate(fetchRequest: NSFetchRequest, predicate: NSPredicate) -> Bool
   func attemptToSave(managedObject: NSManagedObject) -> Bool
 }

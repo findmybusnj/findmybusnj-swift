@@ -27,6 +27,8 @@
 		D485AD701C7E585900B505CD /* CardTimeTableControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */; };
 		D49411A41CACBA3A00DC66C3 /* ETACoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411A31CACBA3A00DC66C3 /* ETACoreDataManager.swift */; };
 		D49411A71CACBD8A00DC66C3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411A61CACBD8A00DC66C3 /* CoreDataManager.swift */; };
+		D49411AA1CACBF9900DC66C3 /* ETACoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411A91CACBF9900DC66C3 /* ETACoreDataManagerTests.swift */; };
+		D49411AC1CACC93F00DC66C3 /* CoreDataTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411AB1CACC93F00DC66C3 /* CoreDataTestHelper.swift */; };
 		D496BCE01C95AFA90024FCFB /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496BCDE1C95AFA90024FCFB /* Favorite+CoreDataProperties.swift */; };
 		D496BCE11C95AFA90024FCFB /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496BCDF1C95AFA90024FCFB /* Favorite.swift */; };
 		D496BCE31C95D2630024FCFB /* ETAAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496BCE21C95D2630024FCFB /* ETAAlertPresenter.swift */; };
@@ -156,6 +158,8 @@
 		D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTimeTableControllerUnitTests.swift; path = Controllers/CardTimeTableControllerUnitTests.swift; sourceTree = "<group>"; };
 		D49411A31CACBA3A00DC66C3 /* ETACoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACoreDataManager.swift; path = Managers/ETACoreData/ETACoreDataManager.swift; sourceTree = "<group>"; };
 		D49411A61CACBD8A00DC66C3 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Managers/CoreDataManager.swift; sourceTree = "<group>"; };
+		D49411A91CACBF9900DC66C3 /* ETACoreDataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACoreDataManagerTests.swift; path = Managers/ETACoreDataManagerTests.swift; sourceTree = "<group>"; };
+		D49411AB1CACC93F00DC66C3 /* CoreDataTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataTestHelper.swift; path = Helpers/CoreDataTestHelper.swift; sourceTree = "<group>"; };
 		D496BCDE1C95AFA90024FCFB /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Favorite+CoreDataProperties.swift"; path = "Model/Favorites/Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D496BCDF1C95AFA90024FCFB /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorite.swift; path = Model/Favorites/Favorite.swift; sourceTree = "<group>"; };
 		D496BCE21C95D2630024FCFB /* ETAAlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAAlertPresenter.swift; path = Presenter/Alert/ETAAlertPresenter.swift; sourceTree = "<group>"; };
@@ -351,6 +355,14 @@
 			name = Managers;
 			sourceTree = "<group>";
 		};
+		D49411A81CACBF7B00DC66C3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D49411A91CACBF9900DC66C3 /* ETACoreDataManagerTests.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		D496BCDD1C95AF9D0024FCFB /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,8 +470,10 @@
 			isa = PBXGroup;
 			children = (
 				D44E330B1C8159220036D478 /* JsonTestHelper.swift */,
+				D49411AB1CACC93F00DC66C3 /* CoreDataTestHelper.swift */,
 				D44E33081C814C970036D478 /* Test Files */,
 				D485AD711C7E58F700B505CD /* Controllers */,
+				D49411A81CACBF7B00DC66C3 /* Managers */,
 				D4EFCFCB1C5D05A8003806A7 /* Models */,
 				D4D6AB7C1BBA2FE200CE241D /* Info.plist */,
 			);
@@ -931,8 +945,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D485AD701C7E585900B505CD /* CardTimeTableControllerUnitTests.swift in Sources */,
+				D49411AA1CACBF9900DC66C3 /* ETACoreDataManagerTests.swift in Sources */,
 				D44E330C1C8159220036D478 /* JsonTestHelper.swift in Sources */,
 				D4C0C7BA1C57C97100D15450 /* PlacesAnnotationTest.swift in Sources */,
+				D49411AC1CACC93F00DC66C3 /* CoreDataTestHelper.swift in Sources */,
 				D485AD6E1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

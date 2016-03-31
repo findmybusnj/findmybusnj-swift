@@ -16,7 +16,7 @@ import MRProgress
 class ETABusTimeTableController: CardTableViewController {
   private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
   private let alertPresenter = ETAAlertPresenter()
-  private let coreDataManager = ETACoreDataManager()
+  private var coreDataManager: ETACoreDataManager!
   
   // MARK: Properties
   var currentStop: String = ""
@@ -29,6 +29,7 @@ class ETABusTimeTableController: CardTableViewController {
   // MARK: View Controller Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    coreDataManager = ETACoreDataManager(context: appDelegate.managedObjectContext)
   }
   
   override func didReceiveMemoryWarning() {
@@ -46,27 +47,7 @@ class ETABusTimeTableController: CardTableViewController {
    */
   @IBAction func saveFavorite(sender: UIButton) {
     if !currentStop.isEmpty {
-      let managedObjectContext = appDelegate.managedObjectContext
-      
-      // Check for duplicates
-      let fetchRequest = NSFetchRequest(entityName: "Favorite")
-      let predicate = NSPredicate(format: "stop == %@ AND route == %@", currentStop, filterRoute)
-      
-      if coreDataManager.isDuplicate(fetchRequest, predicate: predicate) {
-        let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Duplicate_Stop_Saved)
-        presentViewController(warning, animated: true, completion: nil)
-        return
-      }
-      
-      // Save otherwise
-      let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
-      favorite.stop = currentStop
-      favorite.route = filterRoute
-      
-      if coreDataManager.attemptToSave(favorite) {
-        alertPresenter.presentCheckmarkInView(self.tableView, title: "Saved Favorite")
-      }
-      
+      saveToFavorite()
     }
     else {
       let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Empty_Stop)
@@ -157,6 +138,32 @@ class ETABusTimeTableController: CardTableViewController {
           MRProgressOverlayView.dismissOverlayForView(self.tableView, animated: true)
         }
       }
+    }
+  }
+  
+  /**
+   Called when a user attempts to save a stop
+   */
+  private func saveToFavorite() {
+    let managedObjectContext = appDelegate.managedObjectContext
+    
+    // Check for duplicates
+    let fetchRequest = NSFetchRequest(entityName: "Favorite")
+    let predicate = NSPredicate(format: "stop == %@ AND route == %@", currentStop, filterRoute)
+    
+    if coreDataManager.isDuplicate(fetchRequest, predicate: predicate) {
+      let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Duplicate_Stop_Saved)
+      presentViewController(warning, animated: true, completion: nil)
+      return
+    }
+    
+    // Save otherwise
+    let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
+    favorite.stop = currentStop
+    favorite.route = filterRoute
+    
+    if coreDataManager.attemptToSave(favorite) {
+      alertPresenter.presentCheckmarkInView(self.tableView, title: "Saved Favorite")
     }
   }
 }

@@ -10,7 +10,18 @@ import UIKit
 import CoreData
 
 struct ETACoreDataManager: CoreDataManager {
-  private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+  var managedObjectContext: NSManagedObjectContext
+  
+  /**
+   Creates a new `ETACoreDataManager` using the given object context
+   
+   - parameter context: The managed object context to be used by the manager
+   
+   - returns: A new `ETACoreDataManager`
+   */
+  init(context: NSManagedObjectContext) {
+    managedObjectContext = context
+  }
   
   /**
    Checks if the fetch request already exists in the `managedObjectContext`
@@ -21,8 +32,6 @@ struct ETACoreDataManager: CoreDataManager {
    - returns: True if the request does exist, false otherwise
    */
   func isDuplicate(fetchRequest: NSFetchRequest, predicate: NSPredicate) -> Bool {
-    let managedObjectContext = appDelegate.managedObjectContext
-    
     // Duplicate check
     fetchRequest.predicate = predicate
     
@@ -42,9 +51,7 @@ struct ETACoreDataManager: CoreDataManager {
    
    - returns: True if the save is successful, `fatalError` otherwise
    */
-  func attemptToSave(managedObject: NSManagedObject) -> Bool {
-    let managedObjectContext = appDelegate.managedObjectContext
-    
+  func attemptToSave(managedObject: NSManagedObject) -> Bool {    
     do {
       try managedObjectContext.save()
       return true
