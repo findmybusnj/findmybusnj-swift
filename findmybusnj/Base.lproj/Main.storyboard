@@ -164,7 +164,7 @@
         <!--ETABusTimeTableSearchPopOver-->
         <scene sceneID="erw-kO-yzC">
             <objects>
-                <viewController title="ETABusTimeTableSearchPopOver" id="Tj0-Q0-7wY" customClass="ETASearchPopOverController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ETASearchPopOverController" title="ETABusTimeTableSearchPopOver" id="Tj0-Q0-7wY" customClass="ETASearchPopOverController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nRu-bh-L3T"/>
                         <viewControllerLayoutGuide type="bottom" id="uVH-jX-aar"/>
