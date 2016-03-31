@@ -36,7 +36,6 @@ class ETABusTimeTableControllerUITests: XCTestCase {
    Asserts that the app has text hinting user to navigate to begin
    */
   func test_Assert_Background_Hint_Exists_On_Empty_Table() {
-    XCTAssertTrue(tableUnderTest.tableRows.count == 0, "Table should be empty prior to testing if hint is shown")
     XCTAssert(app.staticTexts["Please tap on \"Find\" to get started"].exists, "Background hint information is missing.")
   }
   
@@ -48,9 +47,18 @@ class ETABusTimeTableControllerUITests: XCTestCase {
    Tests that user is notified if trying to save when no search data is present
    */
   func test_Assert_Warning_On_Empty_Save() {
-    XCTAssertTrue(tableUnderTest.tableRows.count == 0, "Table should be empty prior to testing if hint is shown")
-    app.buttons["saveFavorite"].tap()
-    app.alerts["No stop to save"].buttons["Done"].tap()
+    let saveButton = app.navigationBars["findmybusnj.ETABusTimeTable"].buttons["saveFavorite"]
+    let saveAlert = app.alerts["No stop to save"]
+    
+    XCTAssertTrue(saveButton.exists)
+    saveButton.doubleTap()  // TODO - Figure out why a doubleTap() is needed over a tap()
+    
+    let exists = NSPredicate(format: "exists == true")
+    expectationForPredicate(exists, evaluatedWithObject: saveAlert, handler: nil)
+    waitForExpectationsWithTimeout(5, handler: nil)
+    
+    XCTAssertTrue(saveAlert.exists)
+    saveAlert.collectionViews.buttons["Done"].tap()
   }
     
   /**

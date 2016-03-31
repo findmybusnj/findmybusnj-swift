@@ -18,8 +18,8 @@ class PlacesAnnotationTest: XCTestCase {
   let title = "Test annotation"
   
   // test coordinates
-  let latitude = 40.9171205
-  let longitude = -74.0441104
+  let latitude = 40.9445783
+  let longitude = -74.1051304
   
   // MARK: Setup
   /**
@@ -89,9 +89,9 @@ class PlacesAnnotationTest: XCTestCase {
     }
     
     let mapItem = marker.mapItem()
-    if let placemarkTitle = mapItem.placemark.title {
-      let containsString = placemarkTitle.rangeOfString(self.title) != nil
-      XCTAssertTrue( containsString, "mapItem should match title")
+    if let markerName = mapItem.name {
+      let containsString = markerName.rangeOfString(self.title) != nil
+      XCTAssertTrue(containsString, "mapItem should match title")
     }
     else {
       XCTAssertFalse(false, "placemarkTitle was not unwrapped properly")
