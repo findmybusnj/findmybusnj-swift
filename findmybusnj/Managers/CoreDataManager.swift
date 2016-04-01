@@ -14,19 +14,38 @@ protocol CoreDataManager {
   
   func isDuplicate(fetchRequest: NSFetchRequest, predicate: NSPredicate) -> Bool
   func attemptToSave(managedObject: NSManagedObject) -> Bool
+  func attemptFetch(fetchRequest: NSFetchRequest) -> [NSManagedObject]
 }
 
 extension CoreDataManager {
   /**
-   Creates a new `ETACoreDataManager` using the given object context
+   Creates a new CDM using the given object context
    
    - parameter context: The managed object context to be used by the manager
    
-   - returns: A new `ETACoreDataManager`
+   - returns: A new CDM
    */
   init(context: NSManagedObjectContext) {
     self.init(context: context)
     managedObjectContext = context
+  }
+  
+  /**
+   Takes a fetch request and returns the fetched array, or an empty array if there is an error
+   
+   - parameter fetchRequest: Request specifiying entity type
+   
+   - returns: Array of `NSManagedObject`s
+   */
+  func attemptFetch(fetchRequest: NSFetchRequest) -> [NSManagedObject] {
+    do {
+      // Grab the favorites and order them based on frequency
+      let results = try managedObjectContext.executeFetchRequest(fetchRequest)
+      return results as! [NSManagedObject]
+    } catch let error as NSError {
+      print("Could not fetch \(error), \(error.userInfo)")
+      return [NSManagedObject]()
+    }
   }
   
   /**

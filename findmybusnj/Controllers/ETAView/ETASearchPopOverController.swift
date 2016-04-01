@@ -38,13 +38,8 @@ class ETASearchPopOverController: UIViewController {
     coreDataManager = ETACoreDataManager(context: managedObjectContext)
     let fetchRequest = NSFetchRequest(entityName: "Favorite")
     
-    do {
-      // Grab the favorites and order them based on frequency
-      let results = try managedObjectContext.executeFetchRequest(fetchRequest)
-      favorites = coreDataManager.sortDescending(results as! [NSManagedObject])
-    } catch let error as NSError {
-      print("Could not fetch \(error), \(error.userInfo)")
-    }
+    favorites = coreDataManager.attemptFetch(fetchRequest)
+    favorites = coreDataManager.sortDescending(favorites)
   }
   
   // MARK: Segues

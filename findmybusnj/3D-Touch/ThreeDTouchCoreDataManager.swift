@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 /**
- *  Updates the ShortCutItems in the 3D Touch menu.
+ *  Updates the ShortcutItems in the 3D Touch menu.
  */
 struct ThreeDTouchCoreDataManager: CoreDataManager {
   var managedObjectContext: NSManagedObjectContext
