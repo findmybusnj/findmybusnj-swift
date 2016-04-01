@@ -13,17 +13,6 @@ struct ETACoreDataManager: CoreDataManager {
   var managedObjectContext: NSManagedObjectContext
   
   /**
-   Creates a new `ETACoreDataManager` using the given object context
-   
-   - parameter context: The managed object context to be used by the manager
-   
-   - returns: A new `ETACoreDataManager`
-   */
-  init(context: NSManagedObjectContext) {
-    managedObjectContext = context
-  }
-  
-  /**
    Checks if the fetch request already exists in the `managedObjectContext`
    
    - parameter fetchRequest: Fetch request to execute
@@ -58,27 +47,5 @@ struct ETACoreDataManager: CoreDataManager {
     } catch {
       fatalError("Unable to save stop: \(error)")
     }
-  }
-  
-  /**
-   Takes an array of `Favorites` and sorts them descending based on the `frequency` of each item in the list
-   
-   - parameter array: Array consisting of `Favorites`
-  
-   - returns: A `Favorite` array sorted in descending order based on `frequency`
-   */
-  func sortDescending(array: [NSManagedObject]) -> [NSManagedObject] {
-    let sortedDescending = array.sort({ (favoriteOne: NSManagedObject, favoriteTwo: NSManagedObject) -> Bool in
-      guard let freqOne = (favoriteOne as! Favorite).frequency else {
-        return false
-      }
-      guard let freqTwo = (favoriteTwo as! Favorite).frequency else {
-        return false
-      }
-      
-      return freqOne.intValue > freqTwo.intValue
-    })
-    
-    return sortedDescending
   }
 }
