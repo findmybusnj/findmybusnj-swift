@@ -16,6 +16,7 @@ import NetworkManager
 class ETASearchPopOverController: UIViewController {
   private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
   private var managedObjectContext: NSManagedObjectContext!
+  private var coreDataManager: CoreDataManager!
   private var selectedFavorite = (stop: "",route: "")
   
   // MARK: Formatters
@@ -34,11 +35,13 @@ class ETASearchPopOverController: UIViewController {
     super.viewWillAppear(animated)
     
     managedObjectContext = appDelegate.managedObjectContext
+    coreDataManager = ETACoreDataManager(context: managedObjectContext)
     let fetchRequest = NSFetchRequest(entityName: "Favorite")
     
     do {
       let results = try managedObjectContext.executeFetchRequest(fetchRequest)
       favorites = results as! [NSManagedObject]
+      favorites = coreDataManager.sortDescending(favorites)
     } catch let error as NSError {
       print("Could not fetch \(error), \(error.userInfo)")
     }
@@ -186,9 +189,17 @@ extension ETASearchPopOverController: UITableViewDataSource {
       return indexPath
     }
     
+    guard let frequency = selectedItem.frequency else {
+      return indexPath
+    }
+    
     // If nothing else, these should always be ""
     selectedFavorite.stop = stop
     selectedFavorite.route = route
+    
+    // Attempt to save the new selection to Core Data
+    selectedItem.frequency! = NSNumber(int: frequency.integerValue + 1)
+    coreDataManager.attemptToSave(selectedItem)
     
     return indexPath
   }

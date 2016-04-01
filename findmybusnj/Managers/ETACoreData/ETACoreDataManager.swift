@@ -59,4 +59,26 @@ struct ETACoreDataManager: CoreDataManager {
       fatalError("Unable to save stop: \(error)")
     }
   }
+  
+  /**
+   Takes an array of `Favorites` and sorts them descending based on the `frequency` of each item in the list
+   
+   - parameter array: Array consisting of `Favorites`
+  
+   - returns: A `Favorite` array sorted in descending order based on `frequency`
+   */
+  func sortDescending(array: [NSManagedObject]) -> [NSManagedObject] {
+    let sortedDescending = array.sort({ (favoriteOne: NSManagedObject, favoriteTwo: NSManagedObject) -> Bool in
+      guard let freqOne = (favoriteOne as! Favorite).frequency else {
+        return false
+      }
+      guard let freqTwo = (favoriteTwo as! Favorite).frequency else {
+        return false
+      }
+      
+      return freqOne.intValue > freqTwo.intValue
+    })
+    
+    return sortedDescending
+  }
 }

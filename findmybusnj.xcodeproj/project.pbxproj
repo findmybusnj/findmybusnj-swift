@@ -321,6 +321,15 @@
 			name = "3D Touch";
 			sourceTree = "<group>";
 		};
+		D468CC8B1CADDAFC00C32556 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D4D6AB691BBA2FE200CE241D /* Main.storyboard */,
+				D4D6AB6E1BBA2FE200CE241D /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		D479C1911C34DAA200C434ED /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,13 +473,12 @@
 			children = (
 				D468CC8A1CADBE9900C32556 /* 3D Touch */,
 				D49411A51CACBD7300DC66C3 /* Managers */,
-				D4E4B1221BCBF9F500D06419 /* Model */,
+				D4E4B1221BCBF9F500D06419 /* Models */,
 				D45C934E1C8FC300002AC008 /* Presenters */,
 				D42357F91BBA35A900B5A08D /* View Controllers */,
+				D468CC8B1CADDAFC00C32556 /* Storyboards */,
 				D4D6AB631BBA2FE200CE241D /* AppDelegate.swift */,
-				D4D6AB691BBA2FE200CE241D /* Main.storyboard */,
 				D4D6AB6C1BBA2FE200CE241D /* Assets.xcassets */,
-				D4D6AB6E1BBA2FE200CE241D /* LaunchScreen.storyboard */,
 				D4A9E84B1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodeld */,
 				D4D6AB711BBA2FE200CE241D /* Info.plist */,
 			);
@@ -500,14 +508,14 @@
 			path = findmybusnjUITests;
 			sourceTree = "<group>";
 		};
-		D4E4B1221BCBF9F500D06419 /* Model */ = {
+		D4E4B1221BCBF9F500D06419 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D496BCDD1C95AF9D0024FCFB /* Favorites */,
 				D4BD9C0A1C8F810E0083FA55 /* ETACard */,
 				D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		D4EC73FD1BD69B8200FF2E88 /* ETAView */ = {

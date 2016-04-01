@@ -14,4 +14,6 @@ protocol CoreDataManager {
   
   func isDuplicate(fetchRequest: NSFetchRequest, predicate: NSPredicate) -> Bool
   func attemptToSave(managedObject: NSManagedObject) -> Bool
+  
+  func sortDescending(array: [NSManagedObject]) -> [NSManagedObject]
 }

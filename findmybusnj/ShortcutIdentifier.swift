@@ -9,10 +9,16 @@
 import Foundation
 
 /**
+ Idea originated form these sources:
+ - http://iostuts.io/2015/10/08/how-to-add-quick-actions/
+ - http://useyourloaf.com/blog/adding-3d-touch-quick-actions/
+ */
+
+/**
  Shorcuts that can be selected by 3D Touch
  
- - OpenSearch: Will open the `ETASearchPopOverController` overlay
- - FindFavorite: Will perform a search and open to `ETABusTimeTableController`
+ - openSearch: Will open the `ETASearchPopOverController` overlay
+ - findFavorite: Will perform a search and open to `ETABusTimeTableController`
  */
 enum ShortcutIdentifier: String {
   case openSearch

@@ -44,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
   // MARK: - 3D Touch
-  
   func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
     completionHandler(handleShortcut(shortcutItem))
   }
@@ -77,7 +76,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   
   // MARK: - Core Data stack
-  
   lazy var applicationDocumentsDirectory: NSURL = {
     // The directory the application uses to store the Core Data store file. This code uses a directory named "aghassi.findmybusnj" in the application's documents Application Support directory.
     let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
@@ -124,7 +122,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }()
   
   // MARK: - Core Data Saving support
-  
   func saveContext () {
     if managedObjectContext.hasChanges {
       do {
