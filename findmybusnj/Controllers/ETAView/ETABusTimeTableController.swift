@@ -29,7 +29,7 @@ class ETABusTimeTableController: CardTableViewController {
   // MARK: View Controller Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    coreDataManager = ETACoreDataManager(context: appDelegate.managedObjectContext)
+    coreDataManager = ETACoreDataManager(managedObjectContext: appDelegate.managedObjectContext)
   }
   
   override func didReceiveMemoryWarning() {

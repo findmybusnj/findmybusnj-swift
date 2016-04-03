@@ -6,7 +6,7 @@
 //  Copyright © 2016 David Aghassi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreData
 
 /**
@@ -31,5 +31,61 @@ struct ThreeDTouchCoreDataManager: CoreDataManager {
    */
   func attemptToSave(managedObject: NSManagedObject) -> Bool {
     return false
+  }
+  
+  /**
+   Updates the top three favorites selectable by 3D Touch shortcut icons
+   
+   - parameter favorites: Array of `NSManagedObject` that will be force cast to `Favorite` to update the `shortcutItems`
+   */
+  func updateShortcutItemsWithFavorites(favorites: [NSManagedObject]) {
+    var shortcutList = UIApplication.sharedApplication().shortcutItems
+    var shortcutItem: UIApplicationShortcutItem
+    
+    // Start by removing anything we have
+    if shortcutList?.count > 0  {
+      UIApplication.sharedApplication().shortcutItems?.removeAll()
+    }
+    
+    // Figure how far we have to travel
+    var end: Int {
+      if favorites.count >= 3 {
+        return 3
+      }
+      else {
+        // offset by one because this will be used as an index
+        return favorites.count - 1
+      }
+    }
+    
+    if favorites.count > 0 {
+      for i in (0...end).reverse() {
+        let currentFavorite = favorites[i] as! Favorite
+        
+        guard let identifier = NSBundle.mainBundle().bundleIdentifier else {
+          return
+        }
+        guard let title = currentFavorite.stop else {
+          return
+        }
+        guard let subtitle = currentFavorite.route else {
+          return
+        }
+        
+        // form type so we can react when pressed
+        let shortcutID = ShortcutIdentifier.findFavorite.rawValue
+        let type = "\(identifier).\(shortcutID)"
+        
+        // Certain icons are only available in iOS 9.3
+        if #available(iOS 9.1, *) {
+          shortcutItem = UIApplicationShortcutItem(type: type, localizedTitle: title, localizedSubtitle: subtitle, icon: UIApplicationShortcutIcon(type: .Favorite), userInfo: nil)
+        } else {
+          // Fallback on earlier versions
+          shortcutItem = UIApplicationShortcutItem(type: type, localizedTitle: title, localizedSubtitle: subtitle, icon: UIApplicationShortcutIcon(type: .Search), userInfo: nil)
+        }
+        
+        UIApplication.sharedApplication().shortcutItems?.insert(shortcutItem, atIndex: 0)
+      }
+    }
   }
 }

@@ -11,25 +11,13 @@ import CoreData
 
 protocol CoreDataManager {
   var managedObjectContext: NSManagedObjectContext { get set }
-  
+
   func isDuplicate(fetchRequest: NSFetchRequest, predicate: NSPredicate) -> Bool
   func attemptToSave(managedObject: NSManagedObject) -> Bool
   func attemptFetch(fetchRequest: NSFetchRequest) -> [NSManagedObject]
 }
 
 extension CoreDataManager {
-  /**
-   Creates a new CDM using the given object context
-   
-   - parameter context: The managed object context to be used by the manager
-   
-   - returns: A new CDM
-   */
-  init(context: NSManagedObjectContext) {
-    self.init(context: context)
-    managedObjectContext = context
-  }
-  
   /**
    Takes a fetch request and returns the fetched array, or an empty array if there is an error
    

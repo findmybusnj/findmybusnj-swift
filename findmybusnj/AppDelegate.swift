@@ -22,36 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
   
   func applicationWillResignActive(application: UIApplication) {
+    // Gather new favorites
     let fetchRequest = NSFetchRequest(entityName: "Favorite")
     var favorites = shortcutItemManager.attemptFetch(fetchRequest)
     favorites = shortcutItemManager.sortDescending(favorites)
-    var shortcutItem: UIApplicationShortcutItem
     
-    /**
-     *  TODO - Remove all prior favorites
-     */
+    // Update favorties
+    shortcutItemManager.updateShortcutItemsWithFavorites(favorites)
     
-    for i in 0..<3 {
-      let currentFavorite = favorites[i] as! Favorite
-      guard let type = NSBundle.mainBundle().bundleIdentifier else {
-        return
-      }
-      guard let title = currentFavorite.stop else {
-        return
-      }
-      guard let subtitle = currentFavorite.route else {
-        return
-      }
-      
-      if #available(iOS 9.1, *) {
-        shortcutItem = UIApplicationShortcutItem(type: type, localizedTitle: title, localizedSubtitle: subtitle, icon: UIApplicationShortcutIcon(type: .Favorite), userInfo: nil)
-      } else {
-        // Fallback on earlier versions
-        shortcutItem = UIApplicationShortcutItem(type: type, localizedTitle: title, localizedSubtitle: subtitle, icon: UIApplicationShortcutIcon(type: .Search), userInfo: nil)
-      }
-      
-      UIApplication.sharedApplication().shortcutItems?.insert(shortcutItem, atIndex: 0)
-    }
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
   }

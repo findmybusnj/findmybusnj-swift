@@ -35,7 +35,7 @@ class ETASearchPopOverController: UIViewController {
     super.viewWillAppear(animated)
     
     managedObjectContext = appDelegate.managedObjectContext
-    coreDataManager = ETACoreDataManager(context: managedObjectContext)
+    coreDataManager = ETACoreDataManager(managedObjectContext: managedObjectContext)
     let fetchRequest = NSFetchRequest(entityName: "Favorite")
     
     favorites = coreDataManager.attemptFetch(fetchRequest)
