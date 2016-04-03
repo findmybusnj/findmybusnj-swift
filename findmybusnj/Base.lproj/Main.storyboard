@@ -9,7 +9,7 @@
         <!--ETABusTimeTable-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="ETABusTimeTable" id="9pv-A4-QxB" customClass="ETABusTimeTableController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ETABusTimeTableController" title="ETABusTimeTable" id="9pv-A4-QxB" customClass="ETABusTimeTableController" customModule="findmybusnj" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="5e8-a6-Kmc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

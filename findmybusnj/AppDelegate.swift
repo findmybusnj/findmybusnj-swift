@@ -72,14 +72,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let root = UIApplication.sharedApplication().keyWindow?.rootViewController
     switch shortcutIdentifier {
       case ShortcutIdentifier.openSearch:
         let searchPopover = storyboard.instantiateViewControllerWithIdentifier("ETASearchPopOverController")
-        let root = UIApplication.sharedApplication().keyWindow?.rootViewController
         root?.presentViewController(searchPopover, animated: true, completion: nil)
         
         return true
       case ShortcutIdentifier.findFavorite:
+        // Look into there is a better way of doing this
+        let etaView = root?.childViewControllers[0].childViewControllers[0] as! ETABusTimeTableController
+        etaView.handleShortcut(shortcut)
         return true
     }
   }

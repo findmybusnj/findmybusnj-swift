@@ -101,13 +101,22 @@ class ETABusTimeTableController: CardTableViewController {
   }
   
   // MARK: Methods
+  func handleShortcut(shortcut: UIApplicationShortcutItem) {
+    currentStop = shortcut.localizedTitle
+    if let route = shortcut.localizedSubtitle {
+      filterRoute = route
+    }
+    
+    performSearch(currentStop, route: filterRoute)
+  }
+  
   /**
    Does the network search based on the search and route pass in. Sets the `navigationBar.title` to the stop (including route if one is passed in).
    
    - parameter stop:  Required, sent to endpoint to return next busses
    - parameter route: Optional, filters buses on the stop
    */
-  func performSearch(stop: String, route: String) {
+  private func performSearch(stop: String, route: String) {
     currentStop = stop
     filterRoute = route
     navigationBar.title = stop
