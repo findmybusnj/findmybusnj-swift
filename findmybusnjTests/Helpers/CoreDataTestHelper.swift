@@ -7,6 +7,7 @@
 //
 
 import CoreData
+@testable import findmybusnj
 
 enum TestFavorite: String {
   case STOP = "26229"
@@ -35,4 +36,30 @@ func setUpInMemoryManagedObjectContext() -> NSManagedObjectContext {
   managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
   
   return managedObjectContext
+}
+
+/**
+ Generates a `Favorite` with only a `stop` value
+ 
+ - returns: `Favorite` with only a `stop` value
+ */
+func generateFavorite(managedObjectContext: NSManagedObjectContext) -> Favorite {
+  let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
+  favorite.stop = TestFavorite.STOP.rawValue
+  favorite.route = TestFavorite.EMPTY_ROUTE.rawValue
+  
+  return favorite
+}
+
+/**
+ Generates a new `Favorite` that contains a `route` value
+ 
+ - returns: `Favorite` object with a `stop` and `route`.
+ */
+func generateFavoriteWithRoute(managedObjectContext: NSManagedObjectContext) -> Favorite {
+  let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
+  favorite.stop = TestFavorite.STOP.rawValue
+  favorite.route = TestFavorite.ROUTE.rawValue
+  
+  return favorite
 }

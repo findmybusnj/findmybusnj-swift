@@ -35,49 +35,24 @@ class ETACoreDataManagerTests: XCTestCase {
       }
     }
   }
-  
-  /**
-   Generates a `Favorite` with only a `stop` value
-   
-   - returns: `Favorite` with only a `stop` value
-   */
-  func generateFavorite() -> Favorite {
-    let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
-    favorite.stop = TestFavorite.STOP.rawValue
-    favorite.route = TestFavorite.EMPTY_ROUTE.rawValue
-    lastFavorite = favorite
-    
-    return favorite
-  }
-  
-  /**
-   Generates a new `Favorite` that contains a `route` value
-   
-   - returns: `Favorite` object with a `stop` and `route`.
-   */
-  func generateFavoriteWithRoute() -> Favorite {
-    let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
-    favorite.stop = TestFavorite.STOP.rawValue
-    favorite.route = TestFavorite.ROUTE.rawValue
-    lastFavorite = favorite
-    
-    return favorite
-  }
  
   func test_Assert_attemptToSave_For_Stop_Returns_True() {
-    let favorite = generateFavorite()
+    let favorite = generateFavorite(managedObjectContext)
+    lastFavorite = favorite
     let result = managerUnderTest.attemptToSave(favorite)
     XCTAssertTrue(result, "Core Data failed to save a new favorite with stop \(favorite.stop)")
   }
   
   func test_Assert_attemptToSave_For_Stop_And_Route_Returns_True() {
-    let favorite = generateFavoriteWithRoute()
+    let favorite = generateFavoriteWithRoute(managedObjectContext)
+    lastFavorite = favorite
     let result = managerUnderTest.attemptToSave(favorite)
     XCTAssertTrue(result, "Core Data failed to save a new favorite with stop: \(favorite.stop) and route: \(favorite.route)")
   }
   
   func test_Assert_isDuplicate_Returns_True() {
-    let favorite = generateFavoriteWithRoute()
+    let favorite = generateFavoriteWithRoute(managedObjectContext)
+    lastFavorite = favorite
     let result = managerUnderTest.attemptToSave(favorite)
     XCTAssertTrue(result, "Core Data failed to save a new favorite with stop: \(favorite.stop) and route: \(favorite.route)")
     

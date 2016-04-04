@@ -35,23 +35,7 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
         fatalError("Unable to save stop: \(error)")
       }
     }
-  }
-  
-  /**
-   Generates a new `Favorite` that contains a `route` value
-   
-   - returns: `Favorite` object with a `stop` and `route`.
-   */
-  func generateFavoriteWithRoute() -> Favorite {
-    let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
-    favorite.stop = TestFavorite.STOP.rawValue
-    favorite.route = TestFavorite.ROUTE.rawValue
-    lastFavorite = favorite
-    
-    return favorite
-  }
-
-  
+  }  
   
   /**
    `isDuplicate()` should never return true because it is unimplemented and set to return `false`
@@ -79,6 +63,61 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
       managerUnderTest.updateShortcutItemsWithFavorites(favorites)
       let shortcutItems = UIApplication.sharedApplication().shortcutItems
       XCTAssertTrue(shortcutItems?.count == 0, "No shortcut items should exist")
+    } catch {
+      fatalError("Unable to fetch favorites: \(error)")
+    }
+  }
+  
+  func test_Assert_updateShortcutItemsWithFavorites_For_Single_Favorite() {
+    let favorite = generateFavoriteWithRoute(managedObjectContext)
+    do {
+      try managedObjectContext.save()
+    } catch {
+      fatalError("Unable to save favorite for 3D Touch single favorite test: \(error)")
+    }
+    
+    let fetch = NSFetchRequest(entityName: "Favorite")
+    do {
+      let favorites = try managedObjectContext.executeFetchRequest(fetch) as! [NSManagedObject]
+      XCTAssertTrue(favorites.count > 0, "There should be NSManagedObjects to work with, can't create shortcut items without them")
+      
+      managerUnderTest.updateShortcutItemsWithFavorites(favorites)
+      let shortcutItems = UIApplication.sharedApplication().shortcutItems
+      XCTAssertTrue(shortcutItems?.count == 1, "No shortcut items should exist")
+      
+      let shortcut = shortcutItems?[0]
+      let type = "\(NSBundle.mainBundle().bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
+      XCTAssertTrue(favorite.stop == shortcut?.localizedTitle, "Stop should be the same as the title of the shortcut")
+      XCTAssertTrue(favorite.route == shortcut?.localizedSubtitle, "Route should be the same as the subtitle")
+      XCTAssertTrue(type == shortcut?.type, "Identifiers should match for given shortcut.")
+      
+    } catch {
+      fatalError("Unable to fetch favorites: \(error)")
+    }
+  }
+  
+  func test_Assert_updateShortcutItemsWithFavorites_Icon_Is_Star_Or_Search() {
+    generateFavoriteWithRoute(managedObjectContext)
+    
+    do {
+      try managedObjectContext.save()
+    } catch {
+      fatalError("Unable to save favorite for 3D Touch single favorite test: \(error)")
+    }
+    
+    let fetch = NSFetchRequest(entityName: "Favorite")
+    do {
+      let favorites = try managedObjectContext.executeFetchRequest(fetch) as! [NSManagedObject]
+      XCTAssertTrue(favorites.count > 0, "There should be NSManagedObjects to work with, can't create shortcut items without them")
+      
+      managerUnderTest.updateShortcutItemsWithFavorites(favorites)
+      let shortcutItems = UIApplication.sharedApplication().shortcutItems
+      XCTAssertTrue(shortcutItems?.count == 1, "No shortcut items should exist")
+      
+      let shortcut = shortcutItems?[0]
+      if #available(iOS 9.1, *) {
+        XCTAssertTrue(shortcut?.icon == UIApplicationShortcutIconType.Favorite)
+      }
     } catch {
       fatalError("Unable to fetch favorites: \(error)")
     }
