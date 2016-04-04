@@ -56,6 +56,7 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
     XCTAssertFalse(result, "attemptToSave is unimplemented for 3D Touch, this should never return true")
   }
   
+  // NOTE: `shortcutItems` in `UIApplication.sharedApplication()` is not the same when running tests as it is in your normal app. Hence, we don't have to mock here (though it would be nice)
   func test_Assert_updateShortcutItemsWithFavorites_For_Empty_List_Is_Empty() {
     let fetch = NSFetchRequest(entityName: "Favorite")
     do {
@@ -96,30 +97,7 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
     }
   }
   
-  func test_Assert_updateShortcutItemsWithFavorites_Icon_Is_Star_Or_Search() {
-    generateFavoriteWithRoute(managedObjectContext)
+  func test_Assert_updateShortcutItemsWithFavorites_For_Three_Favorites() {
     
-    do {
-      try managedObjectContext.save()
-    } catch {
-      fatalError("Unable to save favorite for 3D Touch single favorite test: \(error)")
-    }
-    
-    let fetch = NSFetchRequest(entityName: "Favorite")
-    do {
-      let favorites = try managedObjectContext.executeFetchRequest(fetch) as! [NSManagedObject]
-      XCTAssertTrue(favorites.count > 0, "There should be NSManagedObjects to work with, can't create shortcut items without them")
-      
-      managerUnderTest.updateShortcutItemsWithFavorites(favorites)
-      let shortcutItems = UIApplication.sharedApplication().shortcutItems
-      XCTAssertTrue(shortcutItems?.count == 1, "No shortcut items should exist")
-      
-      let shortcut = shortcutItems?[0]
-      if #available(iOS 9.1, *) {
-        XCTAssertTrue(shortcut?.icon == UIApplicationShortcutIconType.Favorite)
-      }
-    } catch {
-      fatalError("Unable to fetch favorites: \(error)")
-    }
   }
 }

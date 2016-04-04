@@ -77,6 +77,7 @@ struct ThreeDTouchCoreDataManager: CoreDataManager {
         let type = "\(identifier).\(shortcutID)"
         
         // Certain icons are only available in iOS 9.3
+        // NOTE - This isn't testable because you can't chekc the type of `UIApplicationShortcutIcon`
         if #available(iOS 9.1, *) {
           shortcutItem = UIApplicationShortcutItem(type: type, localizedTitle: title, localizedSubtitle: subtitle, icon: UIApplicationShortcutIcon(type: .Favorite), userInfo: nil)
         } else {
