@@ -20,6 +20,7 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
     
     managerUnderTest = ThreeDTouchCoreDataManager(managedObjectContext: managedObjectContext)
     XCTAssertNotNil(managedObjectContext, "Managed Object Context may not be nil when running these tests")
+    UIApplication.sharedApplication().shortcutItems?.removeAll()
     // Put setup code here. This method is called before the invocation of each test method in the class.
   }
   
@@ -35,6 +36,22 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
       }
     }
   }
+  
+  /**
+   Generates a new `Favorite` that contains a `route` value
+   
+   - returns: `Favorite` object with a `stop` and `route`.
+   */
+  func generateFavoriteWithRoute() -> Favorite {
+    let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
+    favorite.stop = TestFavorite.STOP.rawValue
+    favorite.route = TestFavorite.ROUTE.rawValue
+    lastFavorite = favorite
+    
+    return favorite
+  }
+
+  
   
   /**
    `isDuplicate()` should never return true because it is unimplemented and set to return `false`
@@ -53,5 +70,17 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
     let emptyManagedObject = NSManagedObject()
     let result = managerUnderTest.attemptToSave(emptyManagedObject)
     XCTAssertFalse(result, "attemptToSave is unimplemented for 3D Touch, this should never return true")
+  }
+  
+  func test_Assert_updateShortcutItemsWithFavorites_For_Empty_List_Is_Empty() {
+    let fetch = NSFetchRequest(entityName: "Favorite")
+    do {
+      let favorites = try managedObjectContext.executeFetchRequest(fetch) as! [NSManagedObject]
+      managerUnderTest.updateShortcutItemsWithFavorites(favorites)
+      let shortcutItems = UIApplication.sharedApplication().shortcutItems
+      XCTAssertTrue(shortcutItems?.count == 0, "No shortcut items should exist")
+    } catch {
+      fatalError("Unable to fetch favorites: \(error)")
+    }
   }
 }
