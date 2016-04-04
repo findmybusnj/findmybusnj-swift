@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import CoreData
 @testable import findmybusnj
 
 class ThreeDTouchCoreDataManagerTests: XCTestCase {
@@ -35,4 +36,22 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
     }
   }
   
+  /**
+   `isDuplicate()` should never return true because it is unimplemented and set to return `false`
+   */
+  func test_Assert_isDuplicate_Always_False() {
+    let emptyFetch = NSFetchRequest()
+    let emptyPredicate = NSPredicate()
+    let result = managerUnderTest.isDuplicate(emptyFetch, predicate: emptyPredicate)
+    XCTAssertFalse(result, "isDuplicate is unimplemented for 3D Touch, this should never return true")
+  }
+  
+  /**
+   `attemptToSave` should never return true because it is unimplemented and set to return `false`
+   */
+  func test_Assert_attemptToSave_Always_False() {
+    let emptyManagedObject = NSManagedObject()
+    let result = managerUnderTest.attemptToSave(emptyManagedObject)
+    XCTAssertFalse(result, "attemptToSave is unimplemented for 3D Touch, this should never return true")
+  }
 }
