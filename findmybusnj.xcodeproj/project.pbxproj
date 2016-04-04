@@ -11,6 +11,7 @@
 		D429904B1C8E916300FCADFF /* noPrediction.json in Resources */ = {isa = PBXBuildFile; fileRef = D429904A1C8E916300FCADFF /* noPrediction.json */; };
 		D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */; };
 		D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */; };
+		D44116641CB20C6D0002DD83 /* ThreeDTouchCoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44116631CB20C6D0002DD83 /* ThreeDTouchCoreDataManagerTests.swift */; };
 		D44E330A1C81561F0036D478 /* singleStop.json in Resources */ = {isa = PBXBuildFile; fileRef = D44E33061C814BBE0036D478 /* singleStop.json */; };
 		D44E330C1C8159220036D478 /* JsonTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44E330B1C8159220036D478 /* JsonTestHelper.swift */; };
 		D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */; };
@@ -142,6 +143,7 @@
 		D429904A1C8E916300FCADFF /* noPrediction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = noPrediction.json; path = ModelData/noPrediction.json; sourceTree = SOURCE_ROOT; };
 		D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		D44116631CB20C6D0002DD83 /* ThreeDTouchCoreDataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreeDTouchCoreDataManagerTests.swift; path = Managers/ThreeDTouchCoreDataManagerTests.swift; sourceTree = "<group>"; };
 		D44E33061C814BBE0036D478 /* singleStop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = singleStop.json; path = ModelData/singleStop.json; sourceTree = SOURCE_ROOT; };
 		D44E330B1C8159220036D478 /* JsonTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonTestHelper.swift; path = Helpers/JsonTestHelper.swift; sourceTree = "<group>"; };
 		D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindNearByStopsController.swift; path = Controllers/Map/FindNearByStopsController.swift; sourceTree = "<group>"; };
@@ -297,13 +299,13 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		D44E33081C814C970036D478 /* Test Files */ = {
+		D44E33081C814C970036D478 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
 				D44E33061C814BBE0036D478 /* singleStop.json */,
 				D429904A1C8E916300FCADFF /* noPrediction.json */,
 			);
-			name = "Test Files";
+			name = JSON;
 			path = ../findmybusnj;
 			sourceTree = "<group>";
 		};
@@ -381,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				D49411A91CACBF9900DC66C3 /* ETACoreDataManagerTests.swift */,
+				D44116631CB20C6D0002DD83 /* ThreeDTouchCoreDataManagerTests.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -493,7 +496,7 @@
 			children = (
 				D44E330B1C8159220036D478 /* JsonTestHelper.swift */,
 				D49411AB1CACC93F00DC66C3 /* CoreDataTestHelper.swift */,
-				D44E33081C814C970036D478 /* Test Files */,
+				D44E33081C814C970036D478 /* JSON */,
 				D485AD711C7E58F700B505CD /* Controllers */,
 				D49411A81CACBF7B00DC66C3 /* Managers */,
 				D4EFCFCB1C5D05A8003806A7 /* Models */,
@@ -971,6 +974,7 @@
 				D485AD701C7E585900B505CD /* CardTimeTableControllerUnitTests.swift in Sources */,
 				D49411AA1CACBF9900DC66C3 /* ETACoreDataManagerTests.swift in Sources */,
 				D44E330C1C8159220036D478 /* JsonTestHelper.swift in Sources */,
+				D44116641CB20C6D0002DD83 /* ThreeDTouchCoreDataManagerTests.swift in Sources */,
 				D4C0C7BA1C57C97100D15450 /* PlacesAnnotationTest.swift in Sources */,
 				D49411AC1CACC93F00DC66C3 /* CoreDataTestHelper.swift in Sources */,
 				D485AD6E1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift in Sources */,

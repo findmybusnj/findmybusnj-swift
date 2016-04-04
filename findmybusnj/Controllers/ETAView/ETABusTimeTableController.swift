@@ -100,7 +100,12 @@ class ETABusTimeTableController: CardTableViewController {
     super.unwindToMain(sender)
   }
   
-  // MARK: Methods
+  // MARK: Public Methods
+  /**
+   Handles when a `UIApplicationShortcutItem` is pressed via 3D Touch. This will perform a search for the favorite being selected.
+   
+   - parameter shortcut: The shortcut being pressed
+   */
   func handleShortcut(shortcut: UIApplicationShortcutItem) {
     currentStop = shortcut.localizedTitle
     if let route = shortcut.localizedSubtitle {
@@ -110,6 +115,7 @@ class ETABusTimeTableController: CardTableViewController {
     performSearch(currentStop, route: filterRoute)
   }
   
+  // MARK: Private Methods
   /**
    Does the network search based on the search and route pass in. Sets the `navigationBar.title` to the stop (including route if one is passed in).
    

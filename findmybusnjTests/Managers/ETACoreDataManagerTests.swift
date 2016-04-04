@@ -18,7 +18,7 @@ class ETACoreDataManagerTests: XCTestCase {
   override func setUp() {
     super.setUp()
     
-    managerUnderTest = ETACoreDataManager(context: managedObjectContext)
+    managerUnderTest = ETACoreDataManager(managedObjectContext: managedObjectContext)
     XCTAssertNotNil(managedObjectContext, "Managed Object Context may not be nil when running these tests")
     // Put setup code here. This method is called before the invocation of each test method in the class.
   }
