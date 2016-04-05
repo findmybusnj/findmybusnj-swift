@@ -31,7 +31,7 @@ extension XCTestCase {
     XCTAssertNotNil(path, "Failed to get path to json file. Double check that the file is added to the test bundle.")
     
     do {
-      // At this ponit we know it is safe to unwrap the path because we asserted prior
+      // At this point we know it is safe to unwrap the path because we asserted prior
       try jsonData = NSData(contentsOfFile: path!, options: .DataReadingMappedIfSafe)
     }
     catch let error as NSError {

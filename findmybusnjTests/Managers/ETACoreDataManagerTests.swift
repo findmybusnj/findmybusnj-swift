@@ -20,12 +20,11 @@ class ETACoreDataManagerTests: XCTestCase {
     
     managerUnderTest = ETACoreDataManager(managedObjectContext: managedObjectContext)
     XCTAssertNotNil(managedObjectContext, "Managed Object Context may not be nil when running these tests")
-    // Put setup code here. This method is called before the invocation of each test method in the class.
   }
   
   override func tearDown() {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     super.tearDown()
+    
     if let insertedObject = lastFavorite {
       managedObjectContext.deleteObject(insertedObject)
       do {

@@ -42,6 +42,8 @@ func setUpInMemoryManagedObjectContext() -> NSManagedObjectContext {
 /**
  Generates a `Favorite` with only a `stop` value
  
+ - parameter managedObjectContext: The object context that will have the items inserted.
+ 
  - returns: `Favorite` with only a `stop` value
  */
 func generateFavorite(managedObjectContext: NSManagedObjectContext) -> Favorite {
@@ -55,6 +57,8 @@ func generateFavorite(managedObjectContext: NSManagedObjectContext) -> Favorite 
 /**
  Generates a new `Favorite` that contains a `route` value
  
+ - parameter managedObjectContext: The object context that will have the items inserted.
+ 
  - returns: `Favorite` object with a `stop` and `route`.
  */
 func generateFavoriteWithRoute(managedObjectContext: NSManagedObjectContext) -> Favorite {
@@ -65,6 +69,13 @@ func generateFavoriteWithRoute(managedObjectContext: NSManagedObjectContext) -> 
   return favorite
 }
 
+/**
+ Generates a list of three `Favorite` managed objects that have a mix of stops and routes.
+ 
+ - parameter managedObjectContext: The object context that will have the items inserted.
+ 
+ - returns: An array of three `Favorite` objects
+ */
 func generateMultipleFavorites(managedObjectContext: NSManagedObjectContext) -> [Favorite] {
   let firstFavorite = generateFavorite(managedObjectContext)
   let secondFavorite = generateFavoriteWithRoute(managedObjectContext)

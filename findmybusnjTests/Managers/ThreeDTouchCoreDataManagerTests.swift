@@ -59,7 +59,7 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
       let favorites = try managedObjectContext.executeFetchRequest(fetch) as! [NSManagedObject]
       managerUnderTest.updateShortcutItemsWithFavorites(favorites)
       let shortcutItems = UIApplication.sharedApplication().shortcutItems
-      XCTAssertTrue(shortcutItems?.count == 0, "No shortcut items should exist")
+      XCTAssertTrue(shortcutItems?.count == 0, "No shortcut items should exist. There were: \(shortcutItems?.count)")
     } catch {
       fatalError("Unable to fetch favorites: \(error)")
     }
@@ -80,7 +80,7 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
       
       managerUnderTest.updateShortcutItemsWithFavorites(favorites)
       let shortcutItems = UIApplication.sharedApplication().shortcutItems
-      XCTAssertTrue(shortcutItems?.count == 1, "No shortcut items should exist")
+      XCTAssertTrue(shortcutItems?.count == 1, "There should be one shorcut items, there were: \(shortcutItems?.count)")
       
       let shortcut = shortcutItems?[0]
       let type = "\(NSBundle.mainBundle().bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
@@ -117,10 +117,10 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
       XCTAssertTrue(fetchedFavorites.count == favorites.count, "There should be the same amount of favorites stored as there were fetched")
       
       managerUnderTest.updateShortcutItemsWithFavorites(fetchedFavorites)
-      let shortcutItems = UIApplication.sharedApplication().shortcutItems
-      let shortcutCount = shortcutItems?.count
-      XCTAssertTrue(shortcutCount == 3, "There should be three shorcut items, there were: \(shortcutCount)")
+      
       let type = "\(NSBundle.mainBundle().bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
+      let shortcutItems = UIApplication.sharedApplication().shortcutItems
+      XCTAssertTrue(shortcutItems?.count == 3, "There should be three shorcut items, there were: \(shortcutItems?.count)")
       
       for index in (0...2) {
         guard let title = shortcutItems?[index].localizedTitle else {

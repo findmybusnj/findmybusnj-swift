@@ -145,7 +145,7 @@
 		D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D44116631CB20C6D0002DD83 /* ThreeDTouchCoreDataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreeDTouchCoreDataManagerTests.swift; path = Managers/ThreeDTouchCoreDataManagerTests.swift; sourceTree = "<group>"; };
 		D44E33061C814BBE0036D478 /* singleStop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = singleStop.json; path = ModelData/singleStop.json; sourceTree = SOURCE_ROOT; };
-		D44E330B1C8159220036D478 /* JsonTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonTestHelper.swift; path = Helpers/JsonTestHelper.swift; sourceTree = "<group>"; };
+		D44E330B1C8159220036D478 /* JsonTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonTestHelper.swift; path = findmybusnjTests/Helpers/JsonTestHelper.swift; sourceTree = SOURCE_ROOT; };
 		D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindNearByStopsController.swift; path = Controllers/Map/FindNearByStopsController.swift; sourceTree = "<group>"; };
 		D4598D291C4C729700A15B08 /* FilledCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilledCircle.swift; path = Shapes/FilledCircle.swift; sourceTree = "<group>"; };
 		D45C934F1C8FC32D002AC008 /* UIAlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertPresenter.swift; path = Presenter/Alert/UIAlertPresenter.swift; sourceTree = "<group>"; };
@@ -310,6 +310,7 @@
 		D44E33081C814C970036D478 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				D44E330B1C8159220036D478 /* JsonTestHelper.swift */,
 				D44E33061C814BBE0036D478 /* singleStop.json */,
 				D429904A1C8E916300FCADFF /* noPrediction.json */,
 			);
@@ -503,7 +504,6 @@
 		D4D6AB791BBA2FE200CE241D /* findmybusnjTests */ = {
 			isa = PBXGroup;
 			children = (
-				D44E330B1C8159220036D478 /* JsonTestHelper.swift */,
 				D44E33081C814C970036D478 /* JSON */,
 				D485AD711C7E58F700B505CD /* Controllers */,
 				D49411A81CACBF7B00DC66C3 /* Managers */,
