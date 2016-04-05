@@ -11,6 +11,7 @@ import CoreData
 
 enum TestFavorite: String {
   case STOP = "26229"
+  case ALTERNATE_STOP = "13577"
   case ROUTE = "167"
   case EMPTY_ROUTE = ""
 }
@@ -62,4 +63,17 @@ func generateFavoriteWithRoute(managedObjectContext: NSManagedObjectContext) -> 
   favorite.route = TestFavorite.ROUTE.rawValue
   
   return favorite
+}
+
+func generateMultipleFavorites(managedObjectContext: NSManagedObjectContext) -> [Favorite] {
+  let firstFavorite = generateFavorite(managedObjectContext)
+  let secondFavorite = generateFavoriteWithRoute(managedObjectContext)
+  secondFavorite.frequency = NSNumber(int: 2)
+  let thirdFavorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
+  thirdFavorite.stop = TestFavorite.ALTERNATE_STOP.rawValue
+  thirdFavorite.route = ""
+  thirdFavorite.frequency = NSNumber(int: 3)
+  
+  let favorites = [firstFavorite, secondFavorite, thirdFavorite]
+  return favorites
 }

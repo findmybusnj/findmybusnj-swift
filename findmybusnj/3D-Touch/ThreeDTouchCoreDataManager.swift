@@ -50,7 +50,7 @@ struct ThreeDTouchCoreDataManager: CoreDataManager {
     // Figure how far we have to travel
     var end: Int {
       if favorites.count >= 3 {
-        return 3
+        return 2
       }
       else {
         // offset by one because this will be used as an index
