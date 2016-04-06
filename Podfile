@@ -7,6 +7,8 @@ target 'findmybusnj' do
 pod 'SwiftyJSON', '~> 2.3.1'
 pod 'Alamofire', '~> 3.3.0'
 pod 'PKHUD', '~> 3.0.0'
+pod 'Fabric'
+pod 'Crashlytics'
 
 end
 

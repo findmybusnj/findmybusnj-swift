@@ -9,6 +9,10 @@
 import UIKit
 import CoreData
 
+// Dependecies
+import Fabric
+import Crashlytics
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
@@ -17,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     shortcutItemManager = ThreeDTouchCoreDataManager(managedObjectContext: self.managedObjectContext)
+    Fabric.with([Crashlytics.self])
     // Override point for customization after application launch.
     return true
   }

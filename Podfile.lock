@@ -1,15 +1,22 @@
 PODS:
   - Alamofire (3.3.0)
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.7)
   - PKHUD (3.0.1)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (~> 3.3.0)
+  - Crashlytics
+  - Fabric
   - PKHUD (~> 3.0.0)
   - SwiftyJSON (~> 2.3.1)
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   PKHUD: 473a97c2626847e5e2e7d6f535d65e0bb48da70c
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
