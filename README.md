@@ -18,6 +18,7 @@ TODO:
 - ~~User should be able to get navigation to a stop via the maps application~~ ✓
 - ~~Put TableView updates on main thread using `dispatch_async`~~ ✓
 - ~~Look into releasing/using `unowned` on self when in a closure~~ ✓
+- Expand test coverage
 
 Future Updates:
 - Add Today View Widget

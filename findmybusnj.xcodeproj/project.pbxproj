@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */; };
+		D4138B3E1CB5FDD800D61C9A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */; };
+		D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4138B401CB5FDD800D61C9A /* TodayViewController.swift */; };
+		D4138B441CB5FDD800D61C9A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */; };
+		D4138B481CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D429904B1C8E916300FCADFF /* noPrediction.json in Resources */ = {isa = PBXBuildFile; fileRef = D429904A1C8E916300FCADFF /* noPrediction.json */; };
 		D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */; };
 		D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */; };
@@ -62,6 +66,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D4138B461CB5FDD800D61C9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4138B3B1CB5FDD800D61C9A;
+			remoteInfo = "Find My Bus NJ Today Widget";
+		};
 		D479C19B1C34DAA200C434ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
@@ -121,6 +132,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D4138B4C1CB5FDD800D61C9A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D4138B481CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4D1AF351C0BA99C00FA6C91 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +161,11 @@
 		4CBCBE02954639DF7E50BFBA /* Pods-findmybusnj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.release.xcconfig"; sourceTree = "<group>"; };
 		C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
+		D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Find My Bus NJ Today Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		D4138B401CB5FDD800D61C9A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		D4138B431CB5FDD800D61C9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		D4138B451CB5FDD800D61C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D42358561BBCE01800032949 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D429904A1C8E916300FCADFF /* noPrediction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = noPrediction.json; path = ModelData/noPrediction.json; sourceTree = SOURCE_ROOT; };
 		D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -203,6 +230,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D4138B391CB5FDD800D61C9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4138B3E1CB5FDD800D61C9A /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D479C18C1C34DAA200C434ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,6 +311,7 @@
 				D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */,
 				D42358561BBCE01800032949 /* SwiftyJSON.framework */,
 				C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */,
+				D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -287,6 +323,16 @@
 				4CBCBE02954639DF7E50BFBA /* Pods-findmybusnj.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D4138B3F1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */ = {
+			isa = PBXGroup;
+			children = (
+				D4138B401CB5FDD800D61C9A /* TodayViewController.swift */,
+				D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */,
+				D4138B451CB5FDD800D61C9A /* Info.plist */,
+			);
+			path = "Find My Bus NJ Today Widget";
 			sourceTree = "<group>";
 		};
 		D42357F91BBA35A900B5A08D /* View Controllers */ = {
@@ -464,6 +510,7 @@
 				D4D1AF261C0BA99C00FA6C91 /* AnimationsFrameworkTests */,
 				D479C1911C34DAA200C434ED /* NetworkManager */,
 				D479C19F1C34DAA200C434ED /* NetworkManagerTests */,
+				D4138B3F1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */,
 				D4D6AB611BBA2FE200CE241D /* Products */,
 				CF87078E50546E553E842561 /* Pods */,
 				516CB71DBABA7F1FCD524014 /* Frameworks */,
@@ -480,6 +527,7 @@
 				D4D1AF201C0BA99C00FA6C91 /* AnimationsFrameworkTests.xctest */,
 				D479C1901C34DAA200C434ED /* NetworkManager.framework */,
 				D479C1991C34DAA200C434ED /* NetworkManagerTests.xctest */,
+				D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -582,6 +630,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4138B4B1CB5FDD800D61C9A /* Build configuration list for PBXNativeTarget "Find My Bus NJ Today Widget" */;
+			buildPhases = (
+				D4138B381CB5FDD800D61C9A /* Sources */,
+				D4138B391CB5FDD800D61C9A /* Frameworks */,
+				D4138B3A1CB5FDD800D61C9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Find My Bus NJ Today Widget";
+			productName = "Find My Bus NJ Today Widget";
+			productReference = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D479C18F1C34DAA200C434ED /* NetworkManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D479C1AD1C34DAA300C434ED /* Build configuration list for PBXNativeTarget "NetworkManager" */;
@@ -670,12 +735,14 @@
 				65D337A5AA59A9C108C847BE /* Copy Pods Resources */,
 				D4D1AF351C0BA99C00FA6C91 /* Embed Frameworks */,
 				D491FBC21CB49B4E0099A8A4 /* Crashalytics Script */,
+				D4138B4C1CB5FDD800D61C9A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				D4D1AF2B1C0BA99C00FA6C91 /* PBXTargetDependency */,
 				D479C1A41C34DAA200C434ED /* PBXTargetDependency */,
+				D4138B471CB5FDD800D61C9A /* PBXTargetDependency */,
 			);
 			name = findmybusnj;
 			productName = findmybusnj;
@@ -724,10 +791,14 @@
 		D4D6AB581BBA2FE200CE241D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "David Aghassi";
 				TargetAttributes = {
+					D4138B3B1CB5FDD800D61C9A = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 23254ZGZ6N;
+					};
 					D479C18F1C34DAA200C434ED = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 23254ZGZ6N;
@@ -778,11 +849,20 @@
 				D4D1AF1F1C0BA99C00FA6C91 /* AnimationsFrameworkTests */,
 				D479C18F1C34DAA200C434ED /* NetworkManager */,
 				D479C1981C34DAA200C434ED /* NetworkManagerTests */,
+				D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D4138B3A1CB5FDD800D61C9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4138B441CB5FDD800D61C9A /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D479C18E1C34DAA200C434ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -930,6 +1010,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D4138B381CB5FDD800D61C9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D479C18B1C34DAA200C434ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1015,6 +1103,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D4138B471CB5FDD800D61C9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */;
+			targetProxy = D4138B461CB5FDD800D61C9A /* PBXContainerItemProxy */;
+		};
 		D479C19C1C34DAA200C434ED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D479C18F1C34DAA200C434ED /* NetworkManager */;
@@ -1058,6 +1151,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4138B431CB5FDD800D61C9A /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		D4D6AB691BBA2FE200CE241D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1077,6 +1178,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D4138B491CB5FDD800D61C9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Find My Bus NJ Today Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D4138B4A1CB5FDD800D61C9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Find My Bus NJ Today Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		D479C1A71C34DAA300C434ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1322,7 +1453,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = findmybusnj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1341,7 +1472,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = findmybusnj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1403,6 +1534,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D4138B4B1CB5FDD800D61C9A /* Build configuration list for PBXNativeTarget "Find My Bus NJ Today Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4138B491CB5FDD800D61C9A /* Debug */,
+				D4138B4A1CB5FDD800D61C9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D479C1AD1C34DAA300C434ED /* Build configuration list for PBXNativeTarget "NetworkManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
