@@ -1,4 +1,5 @@
-# FIND MY BUS NJ [![Build Status](https://www.bitrise.io/app/5c8adfc7a3ee8755.svg?token=LiaTatcc2s4PIYhhSC-G6A&branch=master)](https://www.bitrise.io/app/5c8adfc7a3ee8755)
+# FIND MY BUS NJ 2 [![Build Status](https://www.bitrise.io/app/5c8adfc7a3ee8755.svg?token=LiaTatcc2s4PIYhhSC-G6A&branch=master)](https://www.bitrise.io/app/5c8adfc7a3ee8755)
+
 An app for tracking NJ Transit bus times.
 
 ## Dependancies
@@ -6,8 +7,9 @@ An app for tracking NJ Transit bus times.
 * [Alamofire](https://github.com/Alamofire/Alamofire)
 * [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 * [PKHUD](https://github.com/pkluz/PKHUD)
+* [Fabric](https://get.fabric.io)
 
-## Version: 2.0
+## Version: 2.0 Roadmap
 TODO:
 - Migrate old version to a totally rewritten app in Swift
 - User should be able to look up stop given a bus if they don't know it
