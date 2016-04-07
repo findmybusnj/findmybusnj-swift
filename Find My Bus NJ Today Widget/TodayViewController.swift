@@ -14,6 +14,16 @@ class TodayViewController: UIViewController {
   @IBOutlet weak var stopLabel: UILabel!
   @IBOutlet weak var routeLabel: UILabel!
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    // Fade in without retaining self
+    view.alpha = 0
+    UIView.animateWithDuration(0.4) { [unowned self] in
+      self.view.alpha = 1
+    }
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view from its nib.
