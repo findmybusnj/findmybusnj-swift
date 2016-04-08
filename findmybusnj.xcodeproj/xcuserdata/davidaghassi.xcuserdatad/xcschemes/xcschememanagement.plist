@@ -17,7 +17,7 @@
 		<key>findmybusnj-build-and-test.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>3</integer>
 		</dict>
 		<key>findmybusnj-release.xcscheme</key>
 		<dict>

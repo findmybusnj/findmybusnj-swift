@@ -21,7 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     shortcutItemManager = ThreeDTouchCoreDataManager(managedObjectContext: self.managedObjectContext)
-    Fabric.with([Crashlytics.self])
+    
+    #if RELEASE
+      Fabric.with([Crashlytics.self])
+    #endif
+    
     // Override point for customization after application launch.
     return true
   }
