@@ -93,3 +93,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-findmybusnj/PKHUD.framework"
   install_framework "Pods-findmybusnj/SwiftyJSON.framework"
 fi
+if [[ "$CONFIGURATION" == "Testflight" ]]; then
+  install_framework "Pods-findmybusnj/Alamofire.framework"
+  install_framework "Pods-findmybusnj/PKHUD.framework"
+  install_framework "Pods-findmybusnj/SwiftyJSON.framework"
+fi
