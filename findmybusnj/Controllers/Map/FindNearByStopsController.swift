@@ -13,6 +13,7 @@ import MapKit
 // MARK: Dependancies
 import SwiftyJSON
 import Alamofire
+import Crashlytics
 
 class FindNearByStopsController: UIViewController {
   @IBOutlet weak var mapView: MKMapView!
@@ -26,12 +27,12 @@ class FindNearByStopsController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     mapView.delegate = self
-    
-    #if RELEASE || TESTFLIGHT
-      centerMapOnLocation()
-    #endif
-    
-    queryPlaces("bus_station")
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    // always check to make sure we have permission before proceeding.
+    checkLocationAuthorizationStatus()
   }
   
   /**
@@ -88,7 +89,9 @@ class FindNearByStopsController: UIViewController {
       let json = response.result
       
       if (json.isFailure) {
-        NSLog("Error: \(json.error)")
+        if let error = json.error {
+          Crashlytics.sharedInstance().recordError(error)
+        }
       }
       else {
         // remove prior annotations if any
@@ -111,8 +114,7 @@ class FindNearByStopsController: UIViewController {
           #if DEBUG
             print(i, "bus is:",  locName, "with latitude", latitude, "and longitude", longitude)
           #endif
-          let busStopAnnotation = PlacesAnnotation(title: locName,
-            coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+          let busStopAnnotation = PlacesAnnotation(title: locName, coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
           self.mapView.addAnnotation(busStopAnnotation)
         }
       }
@@ -127,6 +129,7 @@ class FindNearByStopsController: UIViewController {
       mapView.showsUserLocation = true
     }
     else {
+      mapView.showsUserLocation = false
       locationManager.requestWhenInUseAuthorization()
     }
   }
@@ -134,8 +137,18 @@ class FindNearByStopsController: UIViewController {
 
 // MARK: MKMapViewDelegate
 extension FindNearByStopsController: MKMapViewDelegate {
-  func mapViewWillStartLoadingMap(mapView: MKMapView) {
-    checkLocationAuthorizationStatus()
+  func mapViewDidFinishRenderingMap(mapView: MKMapView, fullyRendered: Bool) {
+    if mapView.showsUserLocation {
+      #if RELEASE || TESTFLIGHT
+        centerMapOnLocation()
+      #endif
+      
+      queryPlaces("bus_station")
+    }
+    else {
+      // Show notification stating location services need enabling
+    }
+
   }
  
   func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
