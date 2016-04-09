@@ -55,7 +55,6 @@
 		D4D6AB861BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB851BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift */; };
 		D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */; };
 		D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */; };
-		D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */; };
 		D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */; };
 		D4F152811C39873F007D8EA7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F1527F1C39873F007D8EA7 /* Alamofire.framework */; };
 		D4F152821C39873F007D8EA7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F152801C39873F007D8EA7 /* SwiftyJSON.framework */; };
@@ -196,7 +195,6 @@
 		D4D6AB871BBA2FE200CE241D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTableViewController.swift; path = Controllers/CardTableViewController.swift; sourceTree = "<group>"; };
 		D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesAnnotation.swift; path = Model/PlacesAnnotation.swift; sourceTree = "<group>"; };
-		D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FNBSMapView.swift; path = Extensions/FNBSMapView.swift; sourceTree = "<group>"; };
 		D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACard.swift; path = Model/ETACard/ETACard.swift; sourceTree = "<group>"; };
 		D4F1527F1C39873F007D8EA7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		D4F152801C39873F007D8EA7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
@@ -555,7 +553,6 @@
 			isa = PBXGroup;
 			children = (
 				D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */,
-				D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -973,7 +970,6 @@
 				D496BCE11C95AFA90024FCFB /* Favorite.swift in Sources */,
 				D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */,
 				D49411A71CACBD8A00DC66C3 /* CoreDataManager.swift in Sources */,
-				D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */,
 				D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */,
 				D496BCE01C95AFA90024FCFB /* Favorite+CoreDataProperties.swift in Sources */,
 				D4640DD51C4DE50600D184E3 /* ETASearchPopOverController.swift in Sources */,
