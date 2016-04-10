@@ -23,24 +23,26 @@ class FindNearByStopsController: UIViewController {
   
   // location manager to authorize user location for Maps app
   var locationManager = CLLocationManager()
+  let mapAlertPresenter = MapAlertPresenter()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     mapView.delegate = self
-  }
+    locationManager.delegate = self
   
-  override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
     // always check to make sure we have permission before proceeding.
     checkLocationAuthorizationStatus()
+
   }
   
   /**
    Sets the location of the user on the map
    */
   private func centerMapOnLocation() {
-    let userlocation = locationManager
-    let coordinateRegion = MKCoordinateRegionMakeWithDistance(userlocation.location!.coordinate, regionRadius * 2.0, regionRadius * 2.0)
+    guard let userLocation = locationManager.location else {
+      return
+    }
+    let coordinateRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, regionRadius * 2.0, regionRadius * 2.0)
     mapView.setRegion(coordinateRegion, animated: true)
   }
   
@@ -137,20 +139,6 @@ class FindNearByStopsController: UIViewController {
 
 // MARK: MKMapViewDelegate
 extension FindNearByStopsController: MKMapViewDelegate {
-  func mapViewDidFinishRenderingMap(mapView: MKMapView, fullyRendered: Bool) {
-    if mapView.showsUserLocation {
-      #if RELEASE || TESTFLIGHT
-        centerMapOnLocation()
-      #endif
-      
-      queryPlaces("bus_station")
-    }
-    else {
-      // Show notification stating location services need enabling
-    }
-
-  }
- 
   func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
     if let annotation = annotation as? PlacesAnnotation {
       let identifier = "pin"
@@ -180,5 +168,24 @@ extension FindNearByStopsController: MKMapViewDelegate {
     let location = view.annotation as! PlacesAnnotation
     let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
     location.mapItem().openInMapsWithLaunchOptions(launchOptions)
+  }
+}
+
+// MARK: CLLocationManagerDelegate
+extension FindNearByStopsController: CLLocationManagerDelegate {
+  func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    // update if we can display the user location and use GPS
+    switch status {
+    case .AuthorizedWhenInUse, .AuthorizedAlways:
+      mapView.showsUserLocation = true
+      centerMapOnLocation()
+      queryPlaces("bus_station")
+    case .Denied, .Restricted, .NotDetermined:
+      mapView.showsUserLocation = false
+      mapView.removeAnnotations(mapView.annotations)
+      // Show notification stating location services need enabling
+      let alertController = mapAlertPresenter.presentAlertWarning(status)
+      presentViewController(alertController, animated: true, completion: nil)
+    }
   }
 }
