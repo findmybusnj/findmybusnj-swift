@@ -55,26 +55,25 @@ class ETABusTimeTableController: CardTableViewController {
     }
   }
   
-  @IBAction func searchForStop(segue: UIStoryboardSegue) {
-    let sourceController = segue.sourceViewController as! ETASearchPopOverController
-    
-    guard let stop = sourceController.stopNumberTextField.text else {
-      return
-    }
-    guard let route = sourceController.filterRouteNumberTextField.text else {
-      return
-    }
-    
-    performSearch(stop, route: route)
-  }
-  
-   /**
-   Loads the selected favorite from the `ETASearchPopOverController`
+  /**
+   Takes the current search information and performs a search on it. Information is passed from `ETASearchPopOverController`
    
-   - parameter sender: Storyboard segue exiting to unwind back to this controller
+   - parameter segue: Segue being performed
    */
-  @IBAction func loadSelectedFavorite(sender: UIStoryboardSegue) {
-    if sender.identifier == "loadSelectedFavorite" {
+  @IBAction func searchForStop(segue: UIStoryboardSegue) {
+    if segue.identifier == "search" {
+      let sourceController = segue.sourceViewController as! ETASearchPopOverController
+      
+      guard let stop = sourceController.stopNumberTextField.text else {
+        return
+      }
+      guard let route = sourceController.filterRouteNumberTextField.text else {
+        return
+      }
+      
+      performSearch(stop, route: route)
+    }
+    if segue.identifier == "loadSelectedFavorite" {
       performSearch(selectedFavorite.stop, route: selectedFavorite.route)
     }
   }

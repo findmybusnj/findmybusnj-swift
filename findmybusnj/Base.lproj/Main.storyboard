@@ -212,7 +212,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="W8o-yS-xKl" kind="unwind" identifier="loadSelectedFavorite" unwindAction="loadSelectedFavorite:" id="Q5Y-Ei-kzr"/>
+                                            <segue destination="W8o-yS-xKl" kind="unwind" identifier="loadSelectedFavorite" unwindAction="searchForStop:" id="Q5Y-Ei-kzr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
