@@ -9,10 +9,17 @@
 import UIKit
 import NotificationCenter
 
+// Dependencies
+import SwiftyJSON
+
 class TodayViewController: UIViewController {
+  // MARK: Properties
+  private var items: JSON = []
+  
   // MARK: Outlets
   @IBOutlet weak var stopLabel: UILabel!
   @IBOutlet weak var routeLabel: UILabel!
+  @IBOutlet weak var etaTableView: UITableView!
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
@@ -36,6 +43,7 @@ class TodayViewController: UIViewController {
   
 }
 
+// MARK: NCWidgetProviding
 extension TodayViewController: NCWidgetProviding {
   func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
     // Perform any setup necessary in order to update the view.
@@ -46,5 +54,10 @@ extension TodayViewController: NCWidgetProviding {
     
     completionHandler(NCUpdateResult.NewData)
   }
+  
+}
+
+// MARK: UITableViewDelegate
+extension TodayViewController: UITableViewDelegate {
   
 }

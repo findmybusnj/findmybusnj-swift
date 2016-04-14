@@ -37,6 +37,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="M4Y-Lb-cyx" id="nMT-an-Xxp"/>
+                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="WUQ-Dn-B9R"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZe-Jm-nxb">
                                 <rect key="frame" x="275" y="8" width="45" height="21"/>
@@ -63,6 +67,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="340" height="250"/>
                     <connections>
+                        <outlet property="etaTableView" destination="GQh-ff-ozY" id="gqj-vv-Shf"/>
                         <outlet property="routeLabel" destination="pZe-Jm-nxb" id="QrS-9T-7Ko"/>
                         <outlet property="stopLabel" destination="GZ7-fB-2ed" id="j3d-wX-mjs"/>
                     </connections>
