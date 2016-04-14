@@ -205,6 +205,7 @@
 		D4BD9C0B1C8F815B0083FA55 /* ETACardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACardPresenter.swift; path = Model/ETACard/ETACardPresenter.swift; sourceTree = "<group>"; };
 		D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesAnnotationTest.swift; path = Models/PlacesAnnotationTest.swift; sourceTree = "<group>"; };
 		D4C432891CC01374009E817B /* findmybusnj.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = findmybusnj.entitlements; sourceTree = "<group>"; };
+		D4C4328A1CC01539009E817B /* Find My Bus NJ Today Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Find My Bus NJ Today Widget.entitlements"; sourceTree = "<group>"; };
 		D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimationsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationsFramework.h; sourceTree = "<group>"; };
 		D4D1AF1B1C0BA99C00FA6C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -335,6 +336,7 @@
 		D4138B3F1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */ = {
 			isa = PBXGroup;
 			children = (
+				D4C4328A1CC01539009E817B /* Find My Bus NJ Today Widget.entitlements */,
 				D4138B401CB5FDD800D61C9A /* TodayViewController.swift */,
 				D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */,
 				D4138B451CB5FDD800D61C9A /* Info.plist */,
@@ -806,6 +808,11 @@
 					D4138B3B1CB5FDD800D61C9A = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 23254ZGZ6N;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					D479C18F1C34DAA200C434ED = {
 						CreatedOnToolsVersion = 7.2;
@@ -1196,6 +1203,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_ENTITLEMENTS = "Find My Bus NJ Today Widget/Find My Bus NJ Today Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Find My Bus NJ Today Widget/Info.plist";
@@ -1212,6 +1220,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_ENTITLEMENTS = "Find My Bus NJ Today Widget/Find My Bus NJ Today Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Find My Bus NJ Today Widget/Info.plist";

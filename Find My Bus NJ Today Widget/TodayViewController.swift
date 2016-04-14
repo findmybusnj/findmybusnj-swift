@@ -57,6 +57,19 @@ extension TodayViewController: NCWidgetProviding {
   
 }
 
+// MARK: UITableViewDataSource
+extension TodayViewController: UITableViewDataSource {
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return items.count
+  }
+  
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let identifier = "etaCell"
+    let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
+    return cell
+  }
+}
+
 // MARK: UITableViewDelegate
 extension TodayViewController: UITableViewDelegate {
   
