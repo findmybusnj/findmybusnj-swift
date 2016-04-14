@@ -324,7 +324,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
-                                    <segue destination="5RZ-04-DfF" kind="unwind" identifier="search" unwindAction="unwindToMain:" id="deE-UX-LZo"/>
+                                    <segue destination="W8o-yS-xKl" kind="unwind" identifier="search" unwindAction="searchForStop:" id="l2e-fS-rlO"/>
                                 </connections>
                             </button>
                         </subviews>

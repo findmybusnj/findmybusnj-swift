@@ -55,6 +55,19 @@ class ETABusTimeTableController: CardTableViewController {
     }
   }
   
+  @IBAction func searchForStop(segue: UIStoryboardSegue) {
+    let sourceController = segue.sourceViewController as! ETASearchPopOverController
+    
+    guard let stop = sourceController.stopNumberTextField.text else {
+      return
+    }
+    guard let route = sourceController.filterRouteNumberTextField.text else {
+      return
+    }
+    
+    performSearch(stop, route: route)
+  }
+  
    /**
    Loads the selected favorite from the `ETASearchPopOverController`
    
@@ -74,30 +87,6 @@ class ETABusTimeTableController: CardTableViewController {
   override func refresh(sender: AnyObject) {
     performSearch(currentStop, route: filterRoute)
     self.refreshControl?.endRefreshing()
-  }
-  
-  /**
-   Returns the popover back to this controller. Called when a modal or popover is dimissed.
-   If the button pressed to dismiss was "Search", we handle the data being passed so we can
-   use the new stop to make a request to the server and update the table
-   
-   - Parameter sender: The `UIStoryboardSegue` being dismissed
-   */
-  override func unwindToMain(sender: UIStoryboardSegue) {
-    // Make sure that we transfer data from the popover controller if user is searching
-    if sender.identifier == "search" {
-      let sourceController = sender.sourceViewController as! ETASearchPopOverController
-      
-      guard let stop = sourceController.stopNumberTextField.text else {
-        return
-      }
-      guard let route = sourceController.filterRouteNumberTextField.text else {
-        return
-      }
-      
-      performSearch(stop, route: route)
-    }
-    super.unwindToMain(sender)
   }
   
   // MARK: Public Methods
