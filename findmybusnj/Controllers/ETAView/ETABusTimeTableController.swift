@@ -73,7 +73,7 @@ class ETABusTimeTableController: CardTableViewController {
       
       performSearch(stop, route: route)
     }
-    if segue.identifier == "loadSelectedFavorite" {
+    else if segue.identifier == "loadSelectedFavorite" {
       performSearch(selectedFavorite.stop, route: selectedFavorite.route)
     }
   }
@@ -168,5 +168,9 @@ class ETABusTimeTableController: CardTableViewController {
     if coreDataManager.attemptToSave(favorite) {
       alertPresenter.presentCheckmarkInView(self.tableView, title: "Saved Favorite")
     }
+  }
+  
+  private func updateAppGroupData() {
+    if let appGroup = NSUserDefaults.init(suiteName: "group.aghassi.TodayExtensionsSharingDefaults")
   }
 }
