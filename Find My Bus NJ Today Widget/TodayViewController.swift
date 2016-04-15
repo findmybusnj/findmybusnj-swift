@@ -11,10 +11,13 @@ import NotificationCenter
 
 // Dependencies
 import SwiftyJSON
+import NetworkManager
 
 class TodayViewController: UIViewController {
   // MARK: Properties
   private var items: JSON = []
+  private var stop = "", route = ""
+  private let networkManager = NMServerManager()
   
   // MARK: Outlets
   @IBOutlet weak var stopLabel: UILabel!
@@ -48,12 +51,18 @@ class TodayViewController: UIViewController {
    */
   private func loadFromAppGroup() {
     if let appGroup = NSUserDefaults.init(suiteName: "group.aghassi.TodayExtensionSharingDefaults") {
-      guard let selectedStop = appGroup.objectForKey("selectedStop") as? (stop: String,route: String) else {
+      guard let currentStop = appGroup.objectForKey("currentStop") as? String else {
         return
       }
-      let stop = selectedStop.stop
-      let route = selectedStop.route
+      stop = currentStop
       stopLabel.text = stop
+      
+      if let selectedStop = appGroup.objectForKey("filterRoute") as? String {
+        route = selectedStop
+      }
+      else {
+        route = ""
+      }
       routeLabel.text = route
     }
   }

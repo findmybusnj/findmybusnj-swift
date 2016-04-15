@@ -17,6 +17,7 @@ class ETABusTimeTableController: CardTableViewController {
   private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
   private let alertPresenter = ETAAlertPresenter()
   private var coreDataManager: ETACoreDataManager!
+  private let networkManager = NMServerManager()
   
   // MARK: Properties
   var currentStop: String = ""
@@ -123,7 +124,7 @@ class ETABusTimeTableController: CardTableViewController {
     
     HUD.show(.Progress)
     if route.isEmpty {
-      NMServerManager.getJSONForStop(stop) {
+      networkManager.getJSONForStop(stop) {
         [unowned self] items, error in
         
         if error == nil {
@@ -135,7 +136,7 @@ class ETABusTimeTableController: CardTableViewController {
     else {
       navigationBar.title = "\(stop) via \(route)"
     
-      NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
+      networkManager.getJSONForStopFilteredByRoute(stop, route: route) {
         [unowned self] items, error in
         
         if error == nil {
@@ -174,7 +175,8 @@ class ETABusTimeTableController: CardTableViewController {
   
   private func updateAppGroupData() {
     if let appGroup = NSUserDefaults.init(suiteName: "group.aghassi.TodayExtensionsSharingDefaults") {
-      appGroup.setObject(selectedFavorite, forKey: "selectedFavorite")
+      appGroup.setObject(currentStop, forKey: "currentStop")
+      appGroup.setObject(filterRoute, forKey: "filterRoute")
     }
   }
 }

@@ -17,11 +17,18 @@ import SwiftyJSON
  Part of the `NetworkManager` framework. Used to make calls to findmybusnj.com server
  */
 public class NMServerManager {
-  private static let baseURL = "https://findmybusnj.com/rest"
-  static var lastEndpoint = ""
-  static var url : String {
+  private  let baseURL = "https://findmybusnj.com/rest"
+   var lastEndpoint = ""
+   var url : String {
     return "\(baseURL)\(lastEndpoint)"
   }
+  
+  /**
+   Creates an 'NMServerManager instance'
+   
+   - returns: an instance of 'NMServerManager'
+   */
+  public init() {}
   
   /**
    Get all the buses coming to a given stop. When using this, you need to pass a completion function in to handle the json returned by the server call.
@@ -30,7 +37,7 @@ public class NMServerManager {
      - stop: The six digit stop number that the user gets from myBus sign at stop
      - completion: A function to be called back upon success that takes a JSON array and any errors
    */
-  public static func getJSONForStop(stop: String, completion: (item: JSON, error: ErrorType?) -> Void) {
+  public func getJSONForStop(stop: String, completion: (item: JSON, error: ErrorType?) -> Void) {
     let parameters = [ "stop" : stop ]
     let endpoint = "/stop"
     makePOST(endpoint, parameters: parameters, completion: completion)
@@ -44,7 +51,7 @@ public class NMServerManager {
      - route: The three digit string that defines the bus number/route to filter on
      - completion: A callback function to handle the JSON data upon a successful request
    */
-  public static func getJSONForStopFilteredByRoute(stop: String, route: String, completion: (item: JSON, error: ErrorType?) -> Void) {
+  public func getJSONForStopFilteredByRoute(stop: String, route: String, completion: (item: JSON, error: ErrorType?) -> Void) {
     let parameters = [ "stop" : stop, "route" : route]
     let endpoint = "/stop/byRoute"
     makePOST(endpoint, parameters: parameters, completion: completion);
@@ -60,7 +67,7 @@ public class NMServerManager {
      - parameters: `[String : String]` of parameters that will be handled when the enpoint is hit
      - completion: The completion function that will be called when the data is succesfully returned
    */
-  private static func makePOST(endpoint: String, parameters: [String : String], completion: (item: JSON, error: ErrorType?) -> Void) {
+  private func makePOST(endpoint: String, parameters: [String : String], completion: (item: JSON, error: ErrorType?) -> Void) {
     let url = baseURL + endpoint
     lastEndpoint = endpoint
     
