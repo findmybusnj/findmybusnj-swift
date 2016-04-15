@@ -29,6 +29,8 @@ class TodayViewController: UIViewController {
     UIView.animateWithDuration(0.4) { [unowned self] in
       self.view.alpha = 1
     }
+    
+    loadFromAppGroup()
   }
   
   override func viewDidLoad() {
@@ -41,6 +43,20 @@ class TodayViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  /**
+   Loads the most recent `stop` and `route` from the shared AppGroup
+   */
+  private func loadFromAppGroup() {
+    if let appGroup = NSUserDefaults.init(suiteName: "group.aghassi.TodayExtensionSharingDefaults") {
+      guard let selectedStop = appGroup.objectForKey("selectedStop") as? (stop: String,route: String) else {
+        return
+      }
+      let stop = selectedStop.stop
+      let route = selectedStop.route
+      stopLabel.text = stop
+      routeLabel.text = route
+    }
+  }
 }
 
 // MARK: NCWidgetProviding

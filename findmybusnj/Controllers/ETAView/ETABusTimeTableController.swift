@@ -76,6 +76,8 @@ class ETABusTimeTableController: CardTableViewController {
     else if segue.identifier == "loadSelectedFavorite" {
       performSearch(selectedFavorite.stop, route: selectedFavorite.route)
     }
+    
+    updateAppGroupData()
   }
   
   /**
@@ -171,6 +173,8 @@ class ETABusTimeTableController: CardTableViewController {
   }
   
   private func updateAppGroupData() {
-    if let appGroup = NSUserDefaults.init(suiteName: "group.aghassi.TodayExtensionsSharingDefaults")
+    if let appGroup = NSUserDefaults.init(suiteName: "group.aghassi.TodayExtensionsSharingDefaults") {
+      appGroup.setObject(selectedFavorite, forKey: "selectedFavorite")
+    }
   }
 }
