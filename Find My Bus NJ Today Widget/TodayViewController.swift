@@ -39,6 +39,23 @@ class TodayViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view from its nib.
+    
+    if !route.isEmpty {
+      networkManager.getJSONForStopFilteredByRoute(stop, route: route, completion: { [unowned self] (item, error) in
+        // If error we don't change anything.
+        if !self.items.isEmpty {
+          self.updateTable(item)
+        }
+      })
+    }
+    else {
+      networkManager.getJSONForStopFilteredByRoute(stop, route: route, completion: { [unowned self] (item, error) in
+        // If error we don't change anything.
+        if !self.items.isEmpty {
+          self.updateTable(item)
+        }
+      })
+    }
   }
   
   override func didReceiveMemoryWarning() {
@@ -65,6 +82,16 @@ class TodayViewController: UIViewController {
       }
       routeLabel.text = route
     }
+  }
+  
+  /**
+   Used as a callback to update the `tableView` with new data, if any.
+   
+   - parameter items: Items that will populate the `tableView`
+   */
+  private func updateTable(items: JSON) {
+    self.items = items
+    etaTableView.reloadData()
   }
 }
 
