@@ -92,6 +92,19 @@ class TodayViewController: UIViewController {
   private func updateTable(items: JSON) {
     self.items = items
     etaTableView.reloadData()
+    updateViewSize()
+  }
+  
+  /**
+   Updates the views `preferredContentSize` based on the height of the tableView
+   */
+  private func updateViewSize() {
+    // Get the size and add a little so we don't cut off the button cell
+    // Set the new size to the size of the widget
+    let newHeight = etaTableView.contentSize.height + stopLabel.intrinsicContentSize().height + 20
+    let constantWidth = etaTableView.contentSize.width
+    let newPreferredContentSize = CGSize(width: constantWidth, height: newHeight)
+    self.preferredContentSize = newPreferredContentSize
   }
 }
 

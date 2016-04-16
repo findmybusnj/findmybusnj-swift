@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="340" height="250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ7-fB-2ed">
@@ -24,14 +24,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-ff-ozY">
-                                <rect key="frame" x="16" y="41" width="308" height="168"/>
+                                <rect key="frame" x="20" y="41" width="280" height="238"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="arrivalCell" rowHeight="33" id="YKO-BV-SJX">
-                                        <rect key="frame" x="0.0" y="28" width="308" height="33"/>
+                                        <rect key="frame" x="0.0" y="28" width="280" height="33"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YKO-BV-SJX" id="Qdq-IH-vCP">
-                                            <rect key="frame" x="0.0" y="0.0" width="308" height="32.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="32.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -42,7 +42,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZe-Jm-nxb">
-                                <rect key="frame" x="279" y="8" width="45" height="21"/>
+                                <rect key="frame" x="255" y="8" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -51,10 +51,11 @@
                         <constraints>
                             <constraint firstItem="GQh-ff-ozY" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="6KI-PF-lES"/>
                             <constraint firstItem="GZ7-fB-2ed" firstAttribute="baseline" secondItem="pZe-Jm-nxb" secondAttribute="baseline" id="SjD-SJ-H7E"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GQh-ff-ozY" secondAttribute="bottom" constant="41" id="V16-0d-88p"/>
                             <constraint firstItem="pZe-Jm-nxb" firstAttribute="trailing" secondItem="GQh-ff-ozY" secondAttribute="trailing" id="bls-yY-bCy"/>
                             <constraint firstItem="GQh-ff-ozY" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="cUC-sG-NMX"/>
+                            <constraint firstItem="GQh-ff-ozY" firstAttribute="leading" secondItem="GZ7-fB-2ed" secondAttribute="leading" id="hU9-gQ-PMp"/>
                             <constraint firstItem="GZ7-fB-2ed" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" symbolic="YES" id="o69-Sy-NwQ"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="GQh-ff-ozY" secondAttribute="leading" id="reF-ao-JWl"/>
                             <constraint firstItem="GQh-ff-ozY" firstAttribute="top" secondItem="GZ7-fB-2ed" secondAttribute="bottom" constant="12" id="tbq-dI-pYV"/>
                             <constraint firstItem="GZ7-fB-2ed" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="4" id="yws-jQ-I28"/>
                         </constraints>
@@ -64,7 +65,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="340" height="250"/>
+                    <size key="freeformSize" width="320" height="320"/>
                     <connections>
                         <outlet property="etaTableView" destination="GQh-ff-ozY" id="gqj-vv-Shf"/>
                         <outlet property="routeLabel" destination="pZe-Jm-nxb" id="QrS-9T-7Ko"/>
