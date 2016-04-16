@@ -34,28 +34,28 @@ class TodayViewController: UIViewController {
     }
     
     loadFromAppGroup()
-  }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view from its nib.
     
     if !route.isEmpty {
       networkManager.getJSONForStopFilteredByRoute(stop, route: route, completion: { [unowned self] (item, error) in
         // If error we don't change anything.
-        if !self.items.isEmpty {
+        if !item.isEmpty {
           self.updateTable(item)
         }
       })
     }
     else {
-      networkManager.getJSONForStopFilteredByRoute(stop, route: route, completion: { [unowned self] (item, error) in
+      networkManager.getJSONForStop(stop, completion: { [unowned self] (item, error) in
         // If error we don't change anything.
-        if !self.items.isEmpty {
+        if !item.isEmpty {
           self.updateTable(item)
         }
       })
     }
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view from its nib.
   }
   
   override func didReceiveMemoryWarning() {
@@ -112,12 +112,15 @@ extension TodayViewController: NCWidgetProviding {
 // MARK: UITableViewDataSource
 extension TodayViewController: UITableViewDataSource {
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return items.count
+    return 5
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let identifier = "etaCell"
+    let identifier = "arrivalCell"
     let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
+    
+    cell.textLabel?.text = items[indexPath.row]["pt"].description
+    cell.textLabel?.textColor = UIColor.whiteColor()
     return cell
   }
 }

@@ -174,7 +174,7 @@ class ETABusTimeTableController: CardTableViewController {
   }
   
   private func updateAppGroupData() {
-    if let appGroup = NSUserDefaults.init(suiteName: "group.aghassi.TodayExtensionsSharingDefaults") {
+    if let appGroup = NSUserDefaults.init(suiteName: "group.aghassi.TodayExtensionSharingDefaults") {
       appGroup.setObject(currentStop, forKey: "currentStop")
       appGroup.setObject(filterRoute, forKey: "filterRoute")
     }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -25,14 +24,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-ff-ozY">
-                                <rect key="frame" x="20" y="41" width="300" height="168"/>
+                                <rect key="frame" x="16" y="41" width="308" height="168"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="arrivalCell" rowHeight="33" id="YKO-BV-SJX">
-                                        <rect key="frame" x="0.0" y="28" width="300" height="33"/>
+                                        <rect key="frame" x="0.0" y="28" width="308" height="33"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YKO-BV-SJX" id="Qdq-IH-vCP">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="32"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="308" height="32.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -43,21 +42,21 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZe-Jm-nxb">
-                                <rect key="frame" x="275" y="8" width="45" height="21"/>
+                                <rect key="frame" x="279" y="8" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="GZ7-fB-2ed" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="4" id="263-O5-DgV"/>
                             <constraint firstItem="GQh-ff-ozY" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="6KI-PF-lES"/>
-                            <constraint firstItem="GZ7-fB-2ed" firstAttribute="leading" secondItem="GQh-ff-ozY" secondAttribute="leading" id="HvR-UY-aLr"/>
                             <constraint firstItem="GZ7-fB-2ed" firstAttribute="baseline" secondItem="pZe-Jm-nxb" secondAttribute="baseline" id="SjD-SJ-H7E"/>
                             <constraint firstItem="pZe-Jm-nxb" firstAttribute="trailing" secondItem="GQh-ff-ozY" secondAttribute="trailing" id="bls-yY-bCy"/>
                             <constraint firstItem="GQh-ff-ozY" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="cUC-sG-NMX"/>
                             <constraint firstItem="GZ7-fB-2ed" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" symbolic="YES" id="o69-Sy-NwQ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="GQh-ff-ozY" secondAttribute="leading" id="reF-ao-JWl"/>
                             <constraint firstItem="GQh-ff-ozY" firstAttribute="top" secondItem="GZ7-fB-2ed" secondAttribute="bottom" constant="12" id="tbq-dI-pYV"/>
+                            <constraint firstItem="GZ7-fB-2ed" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="4" id="yws-jQ-I28"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
