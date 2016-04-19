@@ -34,6 +34,7 @@
 		D4876CD31CC675E5004D92D5 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */; };
 		D4876CDB1CC67644004D92D5 /* findmybusnj_commonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CDA1CC67644004D92D5 /* findmybusnj_commonTests.swift */; };
 		D4876CE41CC67678004D92D5 /* ServerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */; };
+		D4876CE71CC678D7004D92D5 /* JSONSanitizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CE61CC678D7004D92D5 /* JSONSanitizer.swift */; };
 		D48E4C621CBFC39C00700C70 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */; };
 		D49411A41CACBA3A00DC66C3 /* ETACoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411A31CACBA3A00DC66C3 /* ETACoreDataManager.swift */; };
 		D49411A71CACBD8A00DC66C3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411A61CACBD8A00DC66C3 /* CoreDataManager.swift */; };
@@ -186,6 +187,7 @@
 		D4876CDA1CC67644004D92D5 /* findmybusnj_commonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findmybusnj_commonTests.swift; sourceTree = "<group>"; };
 		D4876CDC1CC67644004D92D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerManagerTests.swift; path = Networking/ServerManagerTests.swift; sourceTree = "<group>"; };
+		D4876CE61CC678D7004D92D5 /* JSONSanitizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSanitizer.swift; path = Parsers/JSONSanitizer.swift; sourceTree = "<group>"; };
 		D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Release-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D49411A31CACBA3A00DC66C3 /* ETACoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACoreDataManager.swift; path = Managers/ETACoreData/ETACoreDataManager.swift; sourceTree = "<group>"; };
 		D49411A61CACBD8A00DC66C3 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Managers/CoreDataManager.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 		D4876CC21CC67555004D92D5 /* findmybusnj-common */ = {
 			isa = PBXGroup;
 			children = (
+				D4876CE51CC67857004D92D5 /* Parsers */,
 				D4876CCD1CC67589004D92D5 /* Networking */,
 				D4876CC31CC67555004D92D5 /* findmybusnj-common.h */,
 				D4876CC51CC67555004D92D5 /* Info.plist */,
@@ -437,6 +440,14 @@
 				D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		D4876CE51CC67857004D92D5 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				D4876CE61CC678D7004D92D5 /* JSONSanitizer.swift */,
+			);
+			name = Parsers;
 			sourceTree = "<group>";
 		};
 		D49411A21CACBA1100DC66C3 /* ETACoreData */ = {
@@ -1054,6 +1065,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4876CCF1CC675C9004D92D5 /* ServerManager.swift in Sources */,
+				D4876CE71CC678D7004D92D5 /* JSONSanitizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

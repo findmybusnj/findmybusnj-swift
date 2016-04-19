@@ -16,19 +16,12 @@ import SwiftyJSON
 /**
  Part of the `findmybusnj-common` framework. Used to make calls to findmybusnj.com server
  */
-public class ServerManager {
+public class ServerManager: NSObject {
   private  let baseURL = "https://findmybusnj.com/rest"
    var lastEndpoint = ""
    var url : String {
     return "\(baseURL)\(lastEndpoint)"
   }
-  
-  /**
-   Creates an 'ServerManager instance'
-   
-   - returns: an instance of 'ServerManager'
-   */
-  public init() {}
   
   /**
    Get all the buses coming to a given stop. When using this, you need to pass a completion function in to handle the json returned by the server call.
