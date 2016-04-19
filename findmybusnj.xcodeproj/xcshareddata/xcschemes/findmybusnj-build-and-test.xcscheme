@@ -74,6 +74,16 @@
                </Test>
             </SkippedTests>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D4876CD71CC67644004D92D5"
+               BuildableName = "findmybusnj-commonTests.xctest"
+               BlueprintName = "findmybusnj-commonTests"
+               ReferencedContainer = "container:findmybusnj.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

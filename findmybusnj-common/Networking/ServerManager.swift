@@ -14,9 +14,9 @@ import Alamofire
 import SwiftyJSON
 
 /**
- Part of the `NetworkManager` framework. Used to make calls to findmybusnj.com server
+ Part of the `findmybusnj-common` framework. Used to make calls to findmybusnj.com server
  */
-public class NMServerManager {
+public class ServerManager {
   private  let baseURL = "https://findmybusnj.com/rest"
    var lastEndpoint = ""
    var url : String {
@@ -24,9 +24,9 @@ public class NMServerManager {
   }
   
   /**
-   Creates an 'NMServerManager instance'
+   Creates an 'ServerManager instance'
    
-   - returns: an instance of 'NMServerManager'
+   - returns: an instance of 'ServerManager'
    */
   public init() {}
   

@@ -11,13 +11,13 @@ import NotificationCenter
 
 // Dependencies
 import SwiftyJSON
-import NetworkManager
+import findmybusnj_common
 
 class TodayViewController: UIViewController {
   // MARK: Properties
   private var items: JSON = []
   private var stop = "", route = ""
-  private let networkManager = NMServerManager()
+  private let networkManager = ServerManager()
   
   // MARK: Outlets
   @IBOutlet weak var stopLabel: UILabel!

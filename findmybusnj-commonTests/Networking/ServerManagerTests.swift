@@ -7,11 +7,11 @@
 //
 
 import XCTest
-@testable import NetworkManager
+@testable import findmybusnj_common
 
 class NMServerManagerTests: XCTestCase {
   // MARK: Test variables
-  var networkManagerUnderTest: NMServerManager!
+  var networkManagerUnderTest: ServerManager!
   let testStop = "26229"
   var expect: XCTestExpectation?  // see: http://www.rockhoppertech.com/blog/unit-testing-async-network-calls-in-swift/
   
@@ -19,7 +19,7 @@ class NMServerManagerTests: XCTestCase {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
-    networkManagerUnderTest = NMServerManager()
+    networkManagerUnderTest = ServerManager()
     if networkManagerUnderTest.lastEndpoint != "" {
       networkManagerUnderTest.lastEndpoint = ""
     }

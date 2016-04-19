@@ -10,14 +10,14 @@ import UIKit
 import CoreData
 
 // MARK: Dependancies
-import NetworkManager
+import findmybusnj_common
 import PKHUD
 
 class ETABusTimeTableController: CardTableViewController {
   private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
   private let alertPresenter = ETAAlertPresenter()
   private var coreDataManager: ETACoreDataManager!
-  private let networkManager = NMServerManager()
+  private let networkManager = ServerManager()
   
   // MARK: Properties
   var currentStop: String = ""

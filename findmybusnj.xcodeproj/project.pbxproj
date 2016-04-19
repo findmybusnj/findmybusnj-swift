@@ -24,16 +24,17 @@
 		D4640DD51C4DE50600D184E3 /* ETASearchPopOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */; };
 		D468CC891CADBE0F00C32556 /* ShortcutIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468CC881CADBE0F00C32556 /* ShortcutIdentifier.swift */; };
 		D468CC8D1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */; };
-		D479C1931C34DAA200C434ED /* NetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D479C1921C34DAA200C434ED /* NetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D479C19A1C34DAA200C434ED /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; };
-		D479C1A11C34DAA200C434ED /* NMServerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C1A01C34DAA200C434ED /* NMServerManagerTests.swift */; };
-		D479C1A51C34DAA200C434ED /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; };
-		D479C1A61C34DAA200C434ED /* NetworkManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D479C1B01C34DE7400C434ED /* NMServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C1AF1C34DE7400C434ED /* NMServerManager.swift */; };
 		D485AD6E1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */; };
 		D485AD701C7E585900B505CD /* CardTimeTableControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */; };
+		D4876CC41CC67555004D92D5 /* findmybusnj-common.h in Headers */ = {isa = PBXBuildFile; fileRef = D4876CC31CC67555004D92D5 /* findmybusnj-common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4876CC81CC67555004D92D5 /* findmybusnj_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */; };
+		D4876CC91CC67555004D92D5 /* findmybusnj_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4876CCF1CC675C9004D92D5 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CCE1CC675C9004D92D5 /* ServerManager.swift */; };
+		D4876CD11CC675E1004D92D5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CD01CC675E1004D92D5 /* Alamofire.framework */; };
+		D4876CD31CC675E5004D92D5 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */; };
+		D4876CDB1CC67644004D92D5 /* findmybusnj_commonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CDA1CC67644004D92D5 /* findmybusnj_commonTests.swift */; };
+		D4876CE41CC67678004D92D5 /* ServerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */; };
 		D48E4C621CBFC39C00700C70 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */; };
-		D48E4C631CBFC3A700700C70 /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; };
 		D49411A41CACBA3A00DC66C3 /* ETACoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411A31CACBA3A00DC66C3 /* ETACoreDataManager.swift */; };
 		D49411A71CACBD8A00DC66C3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411A61CACBD8A00DC66C3 /* CoreDataManager.swift */; };
 		D49411AA1CACBF9900DC66C3 /* ETACoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411A91CACBF9900DC66C3 /* ETACoreDataManagerTests.swift */; };
@@ -63,8 +64,6 @@
 		D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */; };
 		D4E4B1291BCC1D1700D06419 /* FNBSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1281BCC1D1700D06419 /* FNBSMapView.swift */; };
 		D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */; };
-		D4F152811C39873F007D8EA7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F1527F1C39873F007D8EA7 /* Alamofire.framework */; };
-		D4F152821C39873F007D8EA7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F152801C39873F007D8EA7 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,26 +74,19 @@
 			remoteGlobalIDString = D4138B3B1CB5FDD800D61C9A;
 			remoteInfo = "Find My Bus NJ Today Widget";
 		};
-		D479C19B1C34DAA200C434ED /* PBXContainerItemProxy */ = {
+		D4876CC61CC67555004D92D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D479C18F1C34DAA200C434ED;
-			remoteInfo = NetworkManager;
+			remoteGlobalIDString = D4876CC01CC67555004D92D5;
+			remoteInfo = "findmybusnj-common";
 		};
-		D479C19D1C34DAA200C434ED /* PBXContainerItemProxy */ = {
+		D4876CDD1CC67644004D92D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D4D6AB5F1BBA2FE200CE241D;
 			remoteInfo = findmybusnj;
-		};
-		D479C1A31C34DAA200C434ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D479C18F1C34DAA200C434ED;
-			remoteInfo = NetworkManager;
 		};
 		D4D1AF221C0BA99C00FA6C91 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -152,7 +144,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D4D1AF2D1C0BA99C00FA6C91 /* AnimationsFramework.framework in Embed Frameworks */,
-				D479C1A61C34DAA200C434ED /* NetworkManager.framework in Embed Frameworks */,
+				D4876CC91CC67555004D92D5 /* findmybusnj_common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,16 +173,19 @@
 		D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETASearchPopOverController.swift; path = Controllers/ETAView/ETASearchPopOverController.swift; sourceTree = "<group>"; };
 		D468CC881CADBE0F00C32556 /* ShortcutIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShortcutIdentifier.swift; path = "3D-Touch/ShortcutIdentifier.swift"; sourceTree = "<group>"; };
 		D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreeDTouchCoreDataManager.swift; path = "3D-Touch/ThreeDTouchCoreDataManager.swift"; sourceTree = "<group>"; };
-		D479C1901C34DAA200C434ED /* NetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D479C1921C34DAA200C434ED /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
-		D479C1941C34DAA200C434ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D479C1991C34DAA200C434ED /* NetworkManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D479C1A01C34DAA200C434ED /* NMServerManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMServerManagerTests.swift; sourceTree = "<group>"; };
-		D479C1A21C34DAA200C434ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D479C1AF1C34DE7400C434ED /* NMServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMServerManager.swift; sourceTree = "<group>"; };
 		D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETABusTimeTableUnitTests.swift; path = Controllers/ETABusTimeTableUnitTests.swift; sourceTree = "<group>"; };
 		D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTimeTableControllerUnitTests.swift; path = Controllers/CardTimeTableControllerUnitTests.swift; sourceTree = "<group>"; };
+		D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = findmybusnj_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4876CC31CC67555004D92D5 /* findmybusnj-common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "findmybusnj-common.h"; sourceTree = "<group>"; };
+		D4876CC51CC67555004D92D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4876CCE1CC675C9004D92D5 /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerManager.swift; path = Networking/ServerManager.swift; sourceTree = "<group>"; };
+		D4876CD01CC675E1004D92D5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Debug-iphonesimulator/Alamofire.framework"; sourceTree = "<group>"; };
+		D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		D4876CD81CC67644004D92D5 /* findmybusnj-commonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "findmybusnj-commonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4876CDA1CC67644004D92D5 /* findmybusnj_commonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findmybusnj_commonTests.swift; sourceTree = "<group>"; };
+		D4876CDC1CC67644004D92D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerManagerTests.swift; path = Networking/ServerManagerTests.swift; sourceTree = "<group>"; };
 		D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Release-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D49411A31CACBA3A00DC66C3 /* ETACoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACoreDataManager.swift; path = Managers/ETACoreData/ETACoreDataManager.swift; sourceTree = "<group>"; };
 		D49411A61CACBD8A00DC66C3 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Managers/CoreDataManager.swift; sourceTree = "<group>"; };
@@ -239,26 +234,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48E4C631CBFC3A700700C70 /* NetworkManager.framework in Frameworks */,
 				D48E4C621CBFC39C00700C70 /* SwiftyJSON.framework in Frameworks */,
 				D4138B3E1CB5FDD800D61C9A /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D479C18C1C34DAA200C434ED /* Frameworks */ = {
+		D4876CBD1CC67555004D92D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4F152811C39873F007D8EA7 /* Alamofire.framework in Frameworks */,
-				D4F152821C39873F007D8EA7 /* SwiftyJSON.framework in Frameworks */,
+				D4876CD31CC675E5004D92D5 /* SwiftyJSON.framework in Frameworks */,
+				D4876CD11CC675E1004D92D5 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D479C1961C34DAA200C434ED /* Frameworks */ = {
+		D4876CD51CC67644004D92D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D479C19A1C34DAA200C434ED /* NetworkManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +279,7 @@
 				D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */,
 				D4D1AF2C1C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */,
 				6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */,
-				D479C1A51C34DAA200C434ED /* NetworkManager.framework in Frameworks */,
+				D4876CC81CC67555004D92D5 /* findmybusnj_common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +303,8 @@
 		516CB71DBABA7F1FCD524014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */,
+				D4876CD01CC675E1004D92D5 /* Alamofire.framework */,
 				D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */,
 				D4A9E8491C94E1FB003841DF /* CoreData.framework */,
 				D4F1527F1C39873F007D8EA7 /* Alamofire.framework */,
@@ -399,25 +394,6 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		D479C1911C34DAA200C434ED /* NetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-				D479C1921C34DAA200C434ED /* NetworkManager.h */,
-				D479C1941C34DAA200C434ED /* Info.plist */,
-				D479C1AF1C34DE7400C434ED /* NMServerManager.swift */,
-			);
-			path = NetworkManager;
-			sourceTree = "<group>";
-		};
-		D479C19F1C34DAA200C434ED /* NetworkManagerTests */ = {
-			isa = PBXGroup;
-			children = (
-				D479C1A01C34DAA200C434ED /* NMServerManagerTests.swift */,
-				D479C1A21C34DAA200C434ED /* Info.plist */,
-			);
-			path = NetworkManagerTests;
-			sourceTree = "<group>";
-		};
 		D485AD711C7E58F700B505CD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +401,42 @@
 				D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D4876CC21CC67555004D92D5 /* findmybusnj-common */ = {
+			isa = PBXGroup;
+			children = (
+				D4876CCD1CC67589004D92D5 /* Networking */,
+				D4876CC31CC67555004D92D5 /* findmybusnj-common.h */,
+				D4876CC51CC67555004D92D5 /* Info.plist */,
+			);
+			path = "findmybusnj-common";
+			sourceTree = "<group>";
+		};
+		D4876CCD1CC67589004D92D5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D4876CCE1CC675C9004D92D5 /* ServerManager.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		D4876CD91CC67644004D92D5 /* findmybusnj-commonTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4876CE21CC6764F004D92D5 /* Networking */,
+				D4876CDA1CC67644004D92D5 /* findmybusnj_commonTests.swift */,
+				D4876CDC1CC67644004D92D5 /* Info.plist */,
+			);
+			path = "findmybusnj-commonTests";
+			sourceTree = "<group>";
+		};
+		D4876CE21CC6764F004D92D5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		D49411A21CACBA1100DC66C3 /* ETACoreData */ = {
@@ -515,10 +527,10 @@
 				D4D6AB621BBA2FE200CE241D /* findmybusnj */,
 				D4D6AB791BBA2FE200CE241D /* findmybusnjTests */,
 				D4D6AB841BBA2FE200CE241D /* findmybusnjUITests */,
+				D4876CC21CC67555004D92D5 /* findmybusnj-common */,
+				D4876CD91CC67644004D92D5 /* findmybusnj-commonTests */,
 				D4D1AF181C0BA99C00FA6C91 /* AnimationsFramework */,
 				D4D1AF261C0BA99C00FA6C91 /* AnimationsFrameworkTests */,
-				D479C1911C34DAA200C434ED /* NetworkManager */,
-				D479C19F1C34DAA200C434ED /* NetworkManagerTests */,
 				D4138B3F1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */,
 				D4D6AB611BBA2FE200CE241D /* Products */,
 				CF87078E50546E553E842561 /* Pods */,
@@ -534,9 +546,9 @@
 				D4D6AB811BBA2FE200CE241D /* findmybusnjUITests.xctest */,
 				D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */,
 				D4D1AF201C0BA99C00FA6C91 /* AnimationsFrameworkTests.xctest */,
-				D479C1901C34DAA200C434ED /* NetworkManager.framework */,
-				D479C1991C34DAA200C434ED /* NetworkManagerTests.xctest */,
 				D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex */,
+				D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */,
+				D4876CD81CC67644004D92D5 /* findmybusnj-commonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -621,11 +633,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D479C18D1C34DAA200C434ED /* Headers */ = {
+		D4876CBE1CC67555004D92D5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D479C1931C34DAA200C434ED /* NetworkManager.h in Headers */,
+				D4876CC41CC67555004D92D5 /* findmybusnj-common.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,41 +669,40 @@
 			productReference = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		D479C18F1C34DAA200C434ED /* NetworkManager */ = {
+		D4876CC01CC67555004D92D5 /* findmybusnj-common */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D479C1AD1C34DAA300C434ED /* Build configuration list for PBXNativeTarget "NetworkManager" */;
+			buildConfigurationList = D4876CCC1CC67555004D92D5 /* Build configuration list for PBXNativeTarget "findmybusnj-common" */;
 			buildPhases = (
-				D479C18B1C34DAA200C434ED /* Sources */,
-				D479C18C1C34DAA200C434ED /* Frameworks */,
-				D479C18D1C34DAA200C434ED /* Headers */,
-				D479C18E1C34DAA200C434ED /* Resources */,
+				D4876CBC1CC67555004D92D5 /* Sources */,
+				D4876CBD1CC67555004D92D5 /* Frameworks */,
+				D4876CBE1CC67555004D92D5 /* Headers */,
+				D4876CBF1CC67555004D92D5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = NetworkManager;
-			productName = NetworkManager;
-			productReference = D479C1901C34DAA200C434ED /* NetworkManager.framework */;
+			name = "findmybusnj-common";
+			productName = "findmybusnj-common";
+			productReference = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D479C1981C34DAA200C434ED /* NetworkManagerTests */ = {
+		D4876CD71CC67644004D92D5 /* findmybusnj-commonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D479C1AE1C34DAA300C434ED /* Build configuration list for PBXNativeTarget "NetworkManagerTests" */;
+			buildConfigurationList = D4876CDF1CC67644004D92D5 /* Build configuration list for PBXNativeTarget "findmybusnj-commonTests" */;
 			buildPhases = (
-				D479C1951C34DAA200C434ED /* Sources */,
-				D479C1961C34DAA200C434ED /* Frameworks */,
-				D479C1971C34DAA200C434ED /* Resources */,
+				D4876CD41CC67644004D92D5 /* Sources */,
+				D4876CD51CC67644004D92D5 /* Frameworks */,
+				D4876CD61CC67644004D92D5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D479C19C1C34DAA200C434ED /* PBXTargetDependency */,
-				D479C19E1C34DAA200C434ED /* PBXTargetDependency */,
+				D4876CDE1CC67644004D92D5 /* PBXTargetDependency */,
 			);
-			name = NetworkManagerTests;
-			productName = NetworkManagerTests;
-			productReference = D479C1991C34DAA200C434ED /* NetworkManagerTests.xctest */;
+			name = "findmybusnj-commonTests";
+			productName = "findmybusnj-commonTests";
+			productReference = D4876CD81CC67644004D92D5 /* findmybusnj-commonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D4D1AF161C0BA99C00FA6C91 /* AnimationsFramework */ = {
@@ -751,8 +762,8 @@
 			);
 			dependencies = (
 				D4D1AF2B1C0BA99C00FA6C91 /* PBXTargetDependency */,
-				D479C1A41C34DAA200C434ED /* PBXTargetDependency */,
 				D4138B471CB5FDD800D61C9A /* PBXTargetDependency */,
+				D4876CC71CC67555004D92D5 /* PBXTargetDependency */,
 			);
 			name = findmybusnj;
 			productName = findmybusnj;
@@ -814,12 +825,12 @@
 							};
 						};
 					};
-					D479C18F1C34DAA200C434ED = {
-						CreatedOnToolsVersion = 7.2;
+					D4876CC01CC67555004D92D5 = {
+						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 23254ZGZ6N;
 					};
-					D479C1981C34DAA200C434ED = {
-						CreatedOnToolsVersion = 7.2;
+					D4876CD71CC67644004D92D5 = {
+						CreatedOnToolsVersion = 7.3;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 					D4D1AF161C0BA99C00FA6C91 = {
@@ -867,9 +878,9 @@
 				D4D6AB801BBA2FE200CE241D /* findmybusnjUITests */,
 				D4D1AF161C0BA99C00FA6C91 /* AnimationsFramework */,
 				D4D1AF1F1C0BA99C00FA6C91 /* AnimationsFrameworkTests */,
-				D479C18F1C34DAA200C434ED /* NetworkManager */,
-				D479C1981C34DAA200C434ED /* NetworkManagerTests */,
 				D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */,
+				D4876CC01CC67555004D92D5 /* findmybusnj-common */,
+				D4876CD71CC67644004D92D5 /* findmybusnj-commonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -883,14 +894,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D479C18E1C34DAA200C434ED /* Resources */ = {
+		D4876CBF1CC67555004D92D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D479C1971C34DAA200C434ED /* Resources */ = {
+		D4876CD61CC67644004D92D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1038,19 +1049,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D479C18B1C34DAA200C434ED /* Sources */ = {
+		D4876CBC1CC67555004D92D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D479C1B01C34DE7400C434ED /* NMServerManager.swift in Sources */,
+				D4876CCF1CC675C9004D92D5 /* ServerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D479C1951C34DAA200C434ED /* Sources */ = {
+		D4876CD41CC67644004D92D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D479C1A11C34DAA200C434ED /* NMServerManagerTests.swift in Sources */,
+				D4876CE41CC67678004D92D5 /* ServerManagerTests.swift in Sources */,
+				D4876CDB1CC67644004D92D5 /* findmybusnj_commonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1128,20 +1140,15 @@
 			target = D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */;
 			targetProxy = D4138B461CB5FDD800D61C9A /* PBXContainerItemProxy */;
 		};
-		D479C19C1C34DAA200C434ED /* PBXTargetDependency */ = {
+		D4876CC71CC67555004D92D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D479C18F1C34DAA200C434ED /* NetworkManager */;
-			targetProxy = D479C19B1C34DAA200C434ED /* PBXContainerItemProxy */;
+			target = D4876CC01CC67555004D92D5 /* findmybusnj-common */;
+			targetProxy = D4876CC61CC67555004D92D5 /* PBXContainerItemProxy */;
 		};
-		D479C19E1C34DAA200C434ED /* PBXTargetDependency */ = {
+		D4876CDE1CC67644004D92D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4D6AB5F1BBA2FE200CE241D /* findmybusnj */;
-			targetProxy = D479C19D1C34DAA200C434ED /* PBXContainerItemProxy */;
-		};
-		D479C1A41C34DAA200C434ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D479C18F1C34DAA200C434ED /* NetworkManager */;
-			targetProxy = D479C1A31C34DAA200C434ED /* PBXContainerItemProxy */;
+			targetProxy = D4876CDD1CC67644004D92D5 /* PBXContainerItemProxy */;
 		};
 		D4D1AF231C0BA99C00FA6C91 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1232,10 +1239,11 @@
 			};
 			name = Release;
 		};
-		D479C1A71C34DAA300C434ED /* Debug */ = {
+		D4876CCA1CC67555004D92D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1244,13 +1252,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = NetworkManager/Info.plist;
+				INFOPLIST_FILE = "findmybusnj-common/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.NetworkManager;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-common";
+				PRODUCT_NAME = findmybusnj_common;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1259,10 +1266,11 @@
 			};
 			name = Debug;
 		};
-		D479C1A81C34DAA300C434ED /* Release */ = {
+		D4876CCB1CC67555004D92D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1271,13 +1279,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = NetworkManager/Info.plist;
+				INFOPLIST_FILE = "findmybusnj-common/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.NetworkManager;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-common";
+				PRODUCT_NAME = findmybusnj_common;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1285,25 +1292,29 @@
 			};
 			name = Release;
 		};
-		D479C1A91C34DAA300C434ED /* Debug */ = {
+		D4876CE01CC67644004D92D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = NetworkManagerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = "findmybusnj-commonTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.NetworkManagerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-commonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Debug;
 		};
-		D479C1AA1C34DAA300C434ED /* Release */ = {
+		D4876CE11CC67644004D92D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = NetworkManagerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = "findmybusnj-commonTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.NetworkManagerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-commonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
@@ -1569,23 +1580,21 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D479C1AD1C34DAA300C434ED /* Build configuration list for PBXNativeTarget "NetworkManager" */ = {
+		D4876CCC1CC67555004D92D5 /* Build configuration list for PBXNativeTarget "findmybusnj-common" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D479C1A71C34DAA300C434ED /* Debug */,
-				D479C1A81C34DAA300C434ED /* Release */,
+				D4876CCA1CC67555004D92D5 /* Debug */,
+				D4876CCB1CC67555004D92D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		D479C1AE1C34DAA300C434ED /* Build configuration list for PBXNativeTarget "NetworkManagerTests" */ = {
+		D4876CDF1CC67644004D92D5 /* Build configuration list for PBXNativeTarget "findmybusnj-commonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D479C1A91C34DAA300C434ED /* Debug */,
-				D479C1AA1C34DAA300C434ED /* Release */,
+				D4876CE01CC67644004D92D5 /* Debug */,
+				D4876CE11CC67644004D92D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		D4D1AF341C0BA99C00FA6C91 /* Build configuration list for PBXNativeTarget "AnimationsFramework" */ = {
 			isa = XCConfigurationList;

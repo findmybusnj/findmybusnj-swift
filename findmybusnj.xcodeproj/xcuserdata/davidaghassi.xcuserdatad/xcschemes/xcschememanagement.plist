@@ -12,7 +12,7 @@
 		<key>Find My Bus NJ Today Widget.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>7</integer>
 		</dict>
 		<key>NetworkManager.xcscheme</key>
 		<dict>
@@ -24,10 +24,15 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>findmybusnj-common.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>findmybusnj-release.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>findmybusnj.xcscheme</key>
 		<dict>
@@ -48,6 +53,16 @@
 			<true/>
 		</dict>
 		<key>D479C1981C34DAA200C434ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D4876CC01CC67555004D92D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D4876CD71CC67644004D92D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
