@@ -330,6 +330,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D407670C1CC6B1F900B2D9FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
 		D4138B3F1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +415,7 @@
 		D4876CC21CC67555004D92D5 /* findmybusnj-common */ = {
 			isa = PBXGroup;
 			children = (
+				D407670C1CC6B1F900B2D9FF /* Presenter */,
 				D4876CE51CC67857004D92D5 /* Parsers */,
 				D4876CCD1CC67589004D92D5 /* Networking */,
 				D4876CC31CC67555004D92D5 /* findmybusnj-common.h */,
@@ -1599,6 +1607,7 @@
 				D4876CCB1CC67555004D92D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4876CDF1CC67644004D92D5 /* Build configuration list for PBXNativeTarget "findmybusnj-commonTests" */ = {
 			isa = XCConfigurationList;
@@ -1607,6 +1616,7 @@
 				D4876CE11CC67644004D92D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4D1AF341C0BA99C00FA6C91 /* Build configuration list for PBXNativeTarget "AnimationsFramework" */ = {
 			isa = XCConfigurationList;
