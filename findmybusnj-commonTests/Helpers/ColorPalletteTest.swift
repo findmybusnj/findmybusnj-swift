@@ -64,4 +64,20 @@ class ColorPalletteTest: XCTestCase {
     
     assertCorrectRGB(components, expectedComponents: expectedComponents, name: "emeraldGreen")
   }
+  
+  func test_Assert_creamsicleOrange() {
+    let creamsicleOrange = palletteUnderTest.creamsicleOrange()
+    let components = CGColorGetComponents(creamsicleOrange.CGColor)
+    let expectedComponents = [CGFloat(237.0/255.0), CGFloat(145.0/255.0), CGFloat(50.0/255.0), CGFloat(1)]
+    
+    assertCorrectRGB(components, expectedComponents: expectedComponents, name: "creamsicleOrange")
+  }
+  
+  func test_Assert_lollipopRed() {
+    let lollipopRed = palletteUnderTest.lollipopRed()
+    let components = CGColorGetComponents(lollipopRed.CGColor)
+    let expectedComponents = [CGFloat(204.0/255.0), CGFloat(25.0/255.0), CGFloat(36.0/255.0), CGFloat(1)]
+    
+    assertCorrectRGB(components, expectedComponents: expectedComponents, name: "lollipopRed")
+  }
 }
