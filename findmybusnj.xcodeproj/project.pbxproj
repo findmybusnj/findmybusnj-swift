@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */; };
 		D407670E1CC6B26000B2D9FF /* ETAPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */; };
+		D409DF5F1CC71E8200324C76 /* ETACardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */; };
+		D409DF611CC7203100324C76 /* WidgetETATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */; };
 		D4138B3E1CB5FDD800D61C9A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */; };
 		D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4138B401CB5FDD800D61C9A /* TodayViewController.swift */; };
 		D4138B441CB5FDD800D61C9A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */; };
-		D4138B481CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D4138B481CB5FDD800D61C9A /* Find My Bus NJ.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D429904B1C8E916300FCADFF /* noPrediction.json in Resources */ = {isa = PBXBuildFile; fileRef = D429904A1C8E916300FCADFF /* noPrediction.json */; };
 		D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */; };
 		D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */; };
@@ -47,7 +49,6 @@
 		D496BCE61C95D3FD0024FCFB /* ETAAlertEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496BCE51C95D3FD0024FCFB /* ETAAlertEnum.swift */; };
 		D4A9E84A1C94E1FB003841DF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A9E8491C94E1FB003841DF /* CoreData.framework */; };
 		D4A9E84D1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4A9E84B1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodeld */; };
-		D4BD9C0C1C8F815B0083FA55 /* ETACardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD9C0B1C8F815B0083FA55 /* ETACardPresenter.swift */; };
 		D4C0C7BA1C57C97100D15450 /* PlacesAnnotationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */; };
 		D4D1AF1A1C0BA99C00FA6C91 /* AnimationsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D1AF211C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */; };
@@ -134,7 +135,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D4138B481CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex in Embed App Extensions */,
+				D4138B481CB5FDD800D61C9A /* Find My Bus NJ.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,7 +159,9 @@
 		C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
 		D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPresenter.swift; path = Presenter/ETAPresenter.swift; sourceTree = "<group>"; };
-		D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Find My Bus NJ Today Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACardPresenter.swift; path = Presenter/ETACardPresenter.swift; sourceTree = "<group>"; };
+		D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WidgetETATableViewCell.swift; path = Model/WidgetETATableViewCell.swift; sourceTree = "<group>"; };
+		D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Find My Bus NJ.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		D4138B401CB5FDD800D61C9A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		D4138B431CB5FDD800D61C9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -201,7 +204,6 @@
 		D496BCE51C95D3FD0024FCFB /* ETAAlertEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAAlertEnum.swift; path = Presenter/Alert/ETAPresenter/ETAAlertEnum.swift; sourceTree = "<group>"; };
 		D4A9E8491C94E1FB003841DF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D4A9E84C1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindMyBusCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
-		D4BD9C0B1C8F815B0083FA55 /* ETACardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACardPresenter.swift; path = Model/ETACard/ETACardPresenter.swift; sourceTree = "<group>"; };
 		D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesAnnotationTest.swift; path = Models/PlacesAnnotationTest.swift; sourceTree = "<group>"; };
 		D4C432891CC01374009E817B /* findmybusnj.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = findmybusnj.entitlements; sourceTree = "<group>"; };
 		D4C4328A1CC01539009E817B /* Find My Bus NJ Today Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Find My Bus NJ Today Widget.entitlements"; sourceTree = "<group>"; };
@@ -340,9 +342,18 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
+		D409DF5D1CC71E2D00324C76 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		D4138B3F1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */ = {
 			isa = PBXGroup;
 			children = (
+				D409DF5D1CC71E2D00324C76 /* Models */,
 				D4C4328A1CC01539009E817B /* Find My Bus NJ Today Widget.entitlements */,
 				D4138B401CB5FDD800D61C9A /* TodayViewController.swift */,
 				D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */,
@@ -384,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				D45C934F1C8FC32D002AC008 /* UIAlertPresenter.swift */,
+				D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */,
 			);
 			name = Presenters;
 			sourceTree = "<group>";
@@ -509,7 +521,6 @@
 			isa = PBXGroup;
 			children = (
 				D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */,
-				D4BD9C0B1C8F815B0083FA55 /* ETACardPresenter.swift */,
 			);
 			name = ETACard;
 			sourceTree = "<group>";
@@ -568,7 +579,7 @@
 				D4D6AB811BBA2FE200CE241D /* findmybusnjUITests.xctest */,
 				D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */,
 				D4D1AF201C0BA99C00FA6C91 /* AnimationsFrameworkTests.xctest */,
-				D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex */,
+				D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */,
 				D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */,
 				D4876CD81CC67644004D92D5 /* findmybusnj-commonTests.xctest */,
 			);
@@ -688,7 +699,7 @@
 			);
 			name = "Find My Bus NJ Today Widget";
 			productName = "Find My Bus NJ Today Widget";
-			productReference = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex */;
+			productReference = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		D4876CC01CC67555004D92D5 /* findmybusnj-common */ = {
@@ -900,9 +911,9 @@
 				D4D6AB801BBA2FE200CE241D /* findmybusnjUITests */,
 				D4D1AF161C0BA99C00FA6C91 /* AnimationsFramework */,
 				D4D1AF1F1C0BA99C00FA6C91 /* AnimationsFrameworkTests */,
-				D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */,
 				D4876CC01CC67555004D92D5 /* findmybusnj-common */,
 				D4876CD71CC67644004D92D5 /* findmybusnj-commonTests */,
+				D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -1067,6 +1078,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D409DF611CC7203100324C76 /* WidgetETATableViewCell.swift in Sources */,
 				D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1112,7 +1124,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4BD9C0C1C8F815B0083FA55 /* ETACardPresenter.swift in Sources */,
 				D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */,
 				D496BCE11C95AFA90024FCFB /* Favorite.swift in Sources */,
 				D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */,
@@ -1124,6 +1135,7 @@
 				D496BCE31C95D2630024FCFB /* ETAAlertPresenter.swift in Sources */,
 				D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */,
 				D468CC8D1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift in Sources */,
+				D409DF5F1CC71E8200324C76 /* ETACardPresenter.swift in Sources */,
 				D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */,
 				D49411A41CACBA3A00DC66C3 /* ETACoreDataManager.swift in Sources */,
 				D496BCE61C95D3FD0024FCFB /* ETAAlertEnum.swift in Sources */,
@@ -1241,7 +1253,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Find My Bus NJ";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1258,7 +1270,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Find My Bus NJ";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
