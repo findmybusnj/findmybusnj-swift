@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */; };
+		D407670E1CC6B26000B2D9FF /* ETAPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */; };
 		D4138B3E1CB5FDD800D61C9A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */; };
 		D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4138B401CB5FDD800D61C9A /* TodayViewController.swift */; };
 		D4138B441CB5FDD800D61C9A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */; };
@@ -156,6 +157,7 @@
 		4CBCBE02954639DF7E50BFBA /* Pods-findmybusnj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.release.xcconfig"; sourceTree = "<group>"; };
 		C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
+		D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPresenter.swift; path = Presenter/ETAPresenter.swift; sourceTree = "<group>"; };
 		D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ Today Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Find My Bus NJ Today Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		D4138B401CB5FDD800D61C9A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 		D407670C1CC6B1F900B2D9FF /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -1072,6 +1075,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D407670E1CC6B26000B2D9FF /* ETAPresenter.swift in Sources */,
 				D4876CCF1CC675C9004D92D5 /* ServerManager.swift in Sources */,
 				D4876CE71CC678D7004D92D5 /* JSONSanitizer.swift in Sources */,
 			);

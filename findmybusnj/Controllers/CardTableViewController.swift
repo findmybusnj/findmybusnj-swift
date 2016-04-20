@@ -117,7 +117,7 @@ class CardTableViewController: UITableViewController {
     }
     else {
       let json = items[index]
-      etaCardPresenter.formatCardForPresentation(etaCard, json: json)
+      etaCardPresenter.formatCellForPresentation(etaCard, json: json)
     }
     
     return etaCard

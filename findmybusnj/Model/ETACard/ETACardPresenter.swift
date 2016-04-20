@@ -10,29 +10,11 @@ import UIKit
 
 // MARK: Dependencies
 import SwiftyJSON
+import findmybusnj_common
 
 // Handles laying out an `ETACard` for a `ETACardTableView`
-class ETACardPresenter {
-  
-  /**
-   Enum representing states of incoming buses that are less than 1 minute
-   
-   - APPROACHING: The `description` of the incoming bus is "APPROACHING"
-   - DELAYED:     The `description` of the incoming bus is "DELAYED"
-   */
-  enum NonNumericaArrivals: String {
-    case APPROACHING = "APPROACHING"
-    case DELAYED = "DELAYED"
-  }
-  
-  /**
-   Checks the cases that are special for numeric arrivals
-   
-   - ARRIVED: When the `description` of the incoming bus is `0`
-   */
-  enum NumericArrivals: Int {
-    case ARRIVED = 0
-  }
+class ETACardPresenter: ETAPresenter {
+  var sanitizer = JSONSanitizer()
   
   /**
    Formats the given `ETACard` for the `json` at the provided row
@@ -40,61 +22,65 @@ class ETACardPresenter {
    - parameter card:  ETACard for the given reusable cell
    - parameter json:  json for the given row in the table
    */
-  func formatCardForPresentation(card: ETACard, json: JSON) {
-    assignArrivalTimeForJson(card, json: json)
-    assignBusAndRouteTextForJson(card, json: json)
+  func formatCellForPresentation(cell: UITableViewCell, json: JSON) {
+    assignArrivalTimeForJson(cell, json: json)
+    assignBusAndRouteTextForJson(cell, json: json)
   }
   
-  // MARK: Private functions
   /**
    Assigns the arrival time to the given card given the json at that index
    If the time is not a number, we assign it Arriving/Delayed/No Current Prediction
-  
-  - TODO: Refactor the render method to make it loosely coupled.
+   
+   - TODO: Refactor the render method to make it loosely coupled.
    
    - Parameters:
    - card:   The card in the tableview being edited
    - json:   The json at the current index.
    */
-  private func assignArrivalTimeForJson(card: ETACard, json: JSON) {
-    let arrivalString = json["pu"].description
+  func assignArrivalTimeForJson(cell: UITableViewCell, json: JSON) {
+    guard let currentCell = cell as? ETACard else {
+      return
+    }
+    
+    let arrivalString = sanitizer.getSanatizedArrivalTimeAsString(json)
+    let arrivalTime = sanitizer.getSanitizedArrivaleTimeAsInt(json)
     
     // Reset to black everytime just in case
-    card.timeLabel.textColor = UIColor.blackColor()
-
+    currentCell.timeLabel.textColor = UIColor.blackColor()
     
-    if let arrivalTime = Int(json["pt"].description) {
+    if arrivalTime != -1 {
       if arrivalTime ==  NumericArrivals.ARRIVED.rawValue {
-        card.timeLabel.text = "Arrive"
-        card.timeLabel.textColor = UIColor.whiteColor()
-        card.renderFilledCircleForBusTime(arrivalTime) // We know this will be 0 at this point
+        currentCell.timeLabel.text = "Arrive"
+        currentCell.timeLabel.textColor = UIColor.whiteColor()
+        currentCell.renderFilledCircleForBusTime(arrivalTime) // We know this will be 0 at this point
       }
       else {
-        card.timeLabel.text = arrivalTime.description + " min."
+        currentCell.timeLabel.text = arrivalTime.description + " min."
         // We also render the circle here
-        card.renderCircleForBusTime(arrivalTime)
+        currentCell.renderCircleForBusTime(arrivalTime)
       }
     }
     else {
       #if DEBUG
-        print(json["pu"].description)
+        print(arrivalString)
         print(json)
       #endif
       
       switch arrivalString {
       case NonNumericaArrivals.APPROACHING.rawValue:
-        card.timeLabel.text = "Arrive"
-        card.timeLabel.textColor = UIColor.whiteColor()
-        card.renderFilledCircleForBusTime(0)
+        currentCell.timeLabel.text = "Arrive"
+        currentCell.timeLabel.textColor = UIColor.whiteColor()
+        currentCell.renderFilledCircleForBusTime(0)
       case NonNumericaArrivals.DELAYED.rawValue:
-        card.timeLabel.text = "Delay"
-        card.timeLabel.textColor = UIColor.whiteColor()
-        card.renderFilledCircleForBusTime(35)
+        currentCell.timeLabel.text = "Delay"
+        currentCell.timeLabel.textColor = UIColor.whiteColor()
+        currentCell.renderFilledCircleForBusTime(35)
       default:
-        card.timeLabel.text = "0"
-        card.timeLabel.textColor = UIColor.blueColor()
+        currentCell.timeLabel.text = "0"
+        currentCell.timeLabel.textColor = UIColor.blueColor()
       }
     }
+
   }
   
   /**
@@ -105,14 +91,15 @@ class ETACardPresenter {
    - card: The custom table view card we are modifying the values of
    - json: The json at the current index
    */
-  private func assignBusAndRouteTextForJson(card: ETACard, json: JSON) {
-    card.busNumberLabel.text = json["rd"].description
+  func assignBusAndRouteTextForJson(cell: UITableViewCell, json: JSON) {
+    guard let currentCell = cell as? ETACard else {
+      return
+    }
     
-    var route = json["fd"].description
-    route = route.stringByReplacingOccurrencesOfString("&amp;", withString: "&")
-    route = route.lowercaseString.capitalizedString
+    let route = sanitizer.getSanitizedRouteDescription(json)
     
-    card.routeLabel.text = route
-    card.routeLabel.adjustsFontSizeToFitWidth = true
+    currentCell.busNumberLabel.text = sanitizer.getSanitizedRouteNumber(json)
+    currentCell.routeLabel.text = route
+    currentCell.routeLabel.adjustsFontSizeToFitWidth = true
   }
 }
