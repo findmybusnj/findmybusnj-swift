@@ -16,6 +16,8 @@
 		D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4138B401CB5FDD800D61C9A /* TodayViewController.swift */; };
 		D4138B441CB5FDD800D61C9A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */; };
 		D4138B481CB5FDD800D61C9A /* Find My Bus NJ.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D4188F621CC7BCCC0048E9AA /* ColorPallette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4188F611CC7BCCC0048E9AA /* ColorPallette.swift */; };
+		D4188F651CC7BFCF0048E9AA /* ColorPalletteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4188F641CC7BFCF0048E9AA /* ColorPalletteTest.swift */; };
 		D429904B1C8E916300FCADFF /* noPrediction.json in Resources */ = {isa = PBXBuildFile; fileRef = D429904A1C8E916300FCADFF /* noPrediction.json */; };
 		D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */; };
 		D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */; };
@@ -168,6 +170,8 @@
 		D4138B401CB5FDD800D61C9A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		D4138B431CB5FDD800D61C9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		D4138B451CB5FDD800D61C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4188F611CC7BCCC0048E9AA /* ColorPallette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPallette.swift; path = Helpers/ColorPallette.swift; sourceTree = "<group>"; };
+		D4188F641CC7BFCF0048E9AA /* ColorPalletteTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPalletteTest.swift; path = Helpers/ColorPalletteTest.swift; sourceTree = "<group>"; };
 		D42358561BBCE01800032949 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D429904A1C8E916300FCADFF /* noPrediction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = noPrediction.json; path = ModelData/noPrediction.json; sourceTree = SOURCE_ROOT; };
 		D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -373,6 +377,22 @@
 			path = "Find My Bus NJ Today Widget";
 			sourceTree = "<group>";
 		};
+		D4188F601CC7BCAA0048E9AA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D4188F611CC7BCCC0048E9AA /* ColorPallette.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		D4188F631CC7BFBE0048E9AA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D4188F641CC7BFCF0048E9AA /* ColorPalletteTest.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		D42357F91BBA35A900B5A08D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,6 +461,7 @@
 		D4876CC21CC67555004D92D5 /* findmybusnj-common */ = {
 			isa = PBXGroup;
 			children = (
+				D4188F601CC7BCAA0048E9AA /* Helpers */,
 				D407670C1CC6B1F900B2D9FF /* Presenter */,
 				D4876CE51CC67857004D92D5 /* Parsers */,
 				D4876CCD1CC67589004D92D5 /* Networking */,
@@ -461,6 +482,7 @@
 		D4876CD91CC67644004D92D5 /* findmybusnj-commonTests */ = {
 			isa = PBXGroup;
 			children = (
+				D4188F631CC7BFBE0048E9AA /* Helpers */,
 				D4876CE21CC6764F004D92D5 /* Networking */,
 				D4876CDA1CC67644004D92D5 /* findmybusnj_commonTests.swift */,
 				D4876CDC1CC67644004D92D5 /* Info.plist */,
@@ -1100,6 +1122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D407670E1CC6B26000B2D9FF /* ETAPresenter.swift in Sources */,
+				D4188F621CC7BCCC0048E9AA /* ColorPallette.swift in Sources */,
 				D4876CCF1CC675C9004D92D5 /* ServerManager.swift in Sources */,
 				D4876CE71CC678D7004D92D5 /* JSONSanitizer.swift in Sources */,
 			);
@@ -1110,6 +1133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4876CE41CC67678004D92D5 /* ServerManagerTests.swift in Sources */,
+				D4188F651CC7BFCF0048E9AA /* ColorPalletteTest.swift in Sources */,
 				D4876CDB1CC67644004D92D5 /* findmybusnj_commonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
