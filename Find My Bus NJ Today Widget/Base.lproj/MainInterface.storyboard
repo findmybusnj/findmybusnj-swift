@@ -45,6 +45,14 @@
                                                         </label>
                                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zay-9W-Dyk" userLabel="ETAView">
                                                             <rect key="frame" x="191" y="0.0" width="41" height="41"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dp-ol-aUe">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Route Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cD1-Iw-8fL">
@@ -62,6 +70,7 @@
                                             <outlet property="etaView" destination="zay-9W-Dyk" id="wWD-bG-MOy"/>
                                             <outlet property="routeDescriptionLabel" destination="cD1-Iw-8fL" id="gHI-u7-ecW"/>
                                             <outlet property="routeLabel" destination="ode-Rr-Qmm" id="4M6-jk-KGP"/>
+                                            <outlet property="timeLabel" destination="9dp-ol-aUe" id="DHR-GB-kcV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

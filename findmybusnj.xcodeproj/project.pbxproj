@@ -11,6 +11,7 @@
 		D407670E1CC6B26000B2D9FF /* ETAPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */; };
 		D409DF5F1CC71E8200324C76 /* ETACardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */; };
 		D409DF611CC7203100324C76 /* WidgetETATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */; };
+		D409DF641CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF631CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift */; };
 		D4138B3E1CB5FDD800D61C9A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */; };
 		D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4138B401CB5FDD800D61C9A /* TodayViewController.swift */; };
 		D4138B441CB5FDD800D61C9A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */; };
@@ -161,6 +162,7 @@
 		D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPresenter.swift; path = Presenter/ETAPresenter.swift; sourceTree = "<group>"; };
 		D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACardPresenter.swift; path = Presenter/ETACardPresenter.swift; sourceTree = "<group>"; };
 		D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WidgetETATableViewCell.swift; path = Model/WidgetETATableViewCell.swift; sourceTree = "<group>"; };
+		D409DF631CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WidgetETATableViewCellPresenter.swift; path = Presenters/WidgetETATableViewCellPresenter.swift; sourceTree = "<group>"; };
 		D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Find My Bus NJ.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		D4138B401CB5FDD800D61C9A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -350,9 +352,18 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		D409DF621CC7259200324C76 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				D409DF631CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
 		D4138B3F1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */ = {
 			isa = PBXGroup;
 			children = (
+				D409DF621CC7259200324C76 /* Presenters */,
 				D409DF5D1CC71E2D00324C76 /* Models */,
 				D4C4328A1CC01539009E817B /* Find My Bus NJ Today Widget.entitlements */,
 				D4138B401CB5FDD800D61C9A /* TodayViewController.swift */,
@@ -1079,6 +1090,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D409DF611CC7203100324C76 /* WidgetETATableViewCell.swift in Sources */,
+				D409DF641CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift in Sources */,
 				D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

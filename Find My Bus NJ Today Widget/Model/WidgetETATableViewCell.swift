@@ -14,6 +14,7 @@ class WidgetETATableViewCell: UITableViewCell {
   @IBOutlet weak var routeLabel: UILabel!
   @IBOutlet weak var routeDescriptionLabel: UILabel!
   @IBOutlet weak var etaView: UIView!
+  @IBOutlet weak var timeLabel: UILabel!
   
   
   override func awakeFromNib() {
@@ -21,4 +22,8 @@ class WidgetETATableViewCell: UITableViewCell {
     // Initialization code
   }
   
+  func clearText() {
+    routeLabel.text = ""
+    routeDescriptionLabel.text = ""
+  }
 }
