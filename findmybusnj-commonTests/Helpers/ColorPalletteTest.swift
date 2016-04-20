@@ -24,24 +24,44 @@ class ColorPalletteTest: XCTestCase {
     super.tearDown()
   }
   
+  /**
+   Asserts the given array of colors matches the expected array of colors.
+   
+   - parameter components:         Array of `UnsafePointer<CGFloat>` that is generated from `CGColorGetComponents`
+   - parameter expectedComponents: Hardcoded array of expected values as `[CGFloat]`
+   - parameter name:               Name of the method being tested
+   */
+  func assertCorrectRGB(components: UnsafePointer<CGFloat>, expectedComponents: [CGFloat], name: String) {
+    let red = components[0]
+    let expectedRed = expectedComponents[0]
+    XCTAssertTrue(red == expectedRed, "Red of \(name) is not correct. \n Expected: \(expectedRed) \n Actual: \(red) \n")
+    
+    let green = components[1]
+    let expectedGreen = expectedComponents[1]
+    XCTAssertTrue(green == expectedGreen, "Green of \(name) is not correct. \n Expected: \(expectedGreen) \n Actual: \(green)")
+    
+    let blue = components[2]
+    let expectedBlue = expectedComponents[2]
+    XCTAssertTrue(blue == expectedBlue, "Blue of \(name) is not correct. \n Expected: \(expectedBlue) \n Actual: \(blue)")
+    
+    let alpha = components[3]
+    let expectedAlpha = expectedComponents[3]
+    XCTAssertTrue(alpha == expectedAlpha, "Alpha of \(name) is not correct. \n Expected \(expectedAlpha) \n Actual: \(alpha)")
+  }
+  
   func test_Assert_powderBlue() {
     let powderBlue = palletteUnderTest.powderBlue()
     let components = CGColorGetComponents(powderBlue.CGColor)
+    let expectedComponents = [CGFloat(67.0/255.0), CGFloat(174.0/255.0), CGFloat(249.0/255.0), CGFloat(1)]
     
-    let red = components[0]
-    let expectedRed = CGFloat(67.0/255.0)
-    XCTAssertTrue(red == expectedRed, "Red of powderBlue is not correct. \n Expected: \(expectedRed) \n Actual: \(red) \n")
+    assertCorrectRGB(components, expectedComponents: expectedComponents, name: "powderBlue")
+  }
+  
+  func test_Assert_emeraldGreen() {
+    let emeraldGreen = palletteUnderTest.emeraldGreen()
+    let components = CGColorGetComponents(emeraldGreen.CGColor)
+    let expectedComponents = [CGFloat(29.0/255.0), CGFloat(156.0/255.0), CGFloat(48.0/255.0), CGFloat(1)]
     
-    let green = components[1]
-    let expectedGreen = CGFloat(174.0/255.0)
-    XCTAssertTrue(green == expectedGreen, "Green of powderBlue is not correct. \n Expected: \(expectedGreen) \n Actual: \(green)")
-    
-    let blue = components[2]
-    let expectedBlue = CGFloat(249.0/255.0)
-    XCTAssertTrue(blue == expectedBlue, "Blue of powderBlue is not correct. \n Expected: \(expectedBlue) \n Actual: \(blue)")
-    
-    let alpha = components[3]
-    let expectedAlpha = CGFloat(1)
-    XCTAssertTrue(alpha == expectedAlpha, "Alpha of powderBlue is not correct. \n Expected \(expectedAlpha) \n Actual: \(alpha)")
+    assertCorrectRGB(components, expectedComponents: expectedComponents, name: "emeraldGreen")
   }
 }
