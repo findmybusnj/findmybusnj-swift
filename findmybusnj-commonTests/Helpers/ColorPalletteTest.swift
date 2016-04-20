@@ -30,6 +30,18 @@ class ColorPalletteTest: XCTestCase {
     
     let red = components[0]
     let expectedRed = CGFloat(67.0/255.0)
-    XCTAssertTrue(red == expectedRed)
+    XCTAssertTrue(red == expectedRed, "Red of powderBlue is not correct. \n Expected: \(expectedRed) \n Actual: \(red) \n")
+    
+    let green = components[1]
+    let expectedGreen = CGFloat(174.0/255.0)
+    XCTAssertTrue(green == expectedGreen, "Green of powderBlue is not correct. \n Expected: \(expectedGreen) \n Actual: \(green)")
+    
+    let blue = components[2]
+    let expectedBlue = CGFloat(249.0/255.0)
+    XCTAssertTrue(blue == expectedBlue, "Blue of powderBlue is not correct. \n Expected: \(expectedBlue) \n Actual: \(blue)")
+    
+    let alpha = components[3]
+    let expectedAlpha = CGFloat(1)
+    XCTAssertTrue(alpha == expectedAlpha, "Alpha of powderBlue is not correct. \n Expected \(expectedAlpha) \n Actual: \(alpha)")
   }
 }
