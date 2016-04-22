@@ -11,11 +11,37 @@ import UIKit
 // Dependecies
 import SwiftyJSON
 
+/**
+ *  Base protocol representing a presenter that handles ETA cell formatting
+ */
 public protocol ETAPresenter {
   var sanitizer: JSONSanitizer { get set }
   func formatCellForPresentation(cell: UITableViewCell, json: JSON)
   func assignArrivalTimeForJson(cell: UITableViewCell, json: JSON)
   func assignBusAndRouteTextForJson(cell: UITableViewCell, json: JSON)
+}
+
+public extension ETAPresenter {
+  func backgroundColorForTime(time: Int) -> UIColor {
+    let colorPallette = ColorPallette()
+    
+    if (time == 0) {
+      // Blue
+      return colorPallette.powderBlue()
+    }
+    else if (time <= 7) {
+      // Green
+      return colorPallette.emeraldGreen()
+    }
+    else if ( time <= 14) {
+      // Orange
+      return colorPallette.creamsicleOrange()
+    }
+    else {
+      // Red
+      return colorPallette.lollipopRed()
+    }
+  }
 }
 
 /**

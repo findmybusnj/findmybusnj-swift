@@ -14,6 +14,7 @@ import findmybusnj_common
 
 class WidgetETATableViewCellPresenter: ETAPresenter {
   var sanitizer = JSONSanitizer()
+  let colorPallette = ColorPallette()
   
   func formatCellForPresentation(cell: UITableViewCell, json: JSON) {
     assignArrivalTimeForJson(cell, json: json)
@@ -32,12 +33,11 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
       if arrivalTime ==  NumericArrivals.ARRIVED.rawValue {
         currentCell.timeLabel.text = "Arrive"
         currentCell.timeLabel.textColor = UIColor.whiteColor()
-        // render color for view here
+        currentCell.etaView.backgroundColor = colorPallette.powderBlue()
       }
       else {
         currentCell.timeLabel.text = arrivalTime.description + " min."
-        // render color for view here
-        
+        currentCell.etaView.backgroundColor = backgroundColorForTime(arrivalTime)
       }
     }
     else {
@@ -50,12 +50,15 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
       case NonNumericaArrivals.APPROACHING.rawValue:
         currentCell.timeLabel.text = "Arrive"
         currentCell.timeLabel.textColor = UIColor.whiteColor()
+        currentCell.etaView.backgroundColor = colorPallette.powderBlue()
       case NonNumericaArrivals.DELAYED.rawValue:
         currentCell.timeLabel.text = "Delay"
         currentCell.timeLabel.textColor = UIColor.whiteColor()
+        currentCell.etaView.backgroundColor = colorPallette.lollipopRed()
       default:
         currentCell.timeLabel.text = "0"
         currentCell.timeLabel.textColor = UIColor.blueColor()
+        currentCell.etaView.backgroundColor = UIColor.clearColor()
       }
     }
   }

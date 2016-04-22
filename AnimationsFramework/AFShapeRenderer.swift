@@ -14,6 +14,8 @@ import findmybusnj_common
 
 /**
  A class from the `AnimationsFramework` that will render shapes
+ 
+ TODO: Refactor this so it isn't static.
  */
 public class AFShapeRenderer {
   // Stroke color of the circle to be rendered
@@ -76,6 +78,8 @@ public class AFShapeRenderer {
   
   /**
    Sets the stroke color of the circle based on the bus time being passed in
+   
+   TODO: Remove this method and replace with use of `ETAPresenter`. This function is deprecated.
    
    - parameter busTime:    The time the bus will be arriving as an int
    */
