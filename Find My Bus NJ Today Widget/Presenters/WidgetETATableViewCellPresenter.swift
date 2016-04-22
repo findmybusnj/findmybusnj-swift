@@ -25,6 +25,7 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
     guard let currentCell = cell as? WidgetETATableViewCell else {
       return
     }
+    currentCell.timeLabel.textColor = UIColor.whiteColor()
     
     let arrivalString = sanitizer.getSanatizedArrivalTimeAsString(json)
     let arrivalTime = sanitizer.getSanitizedArrivaleTimeAsInt(json)
@@ -32,7 +33,6 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
     if arrivalTime != -1 {
       if arrivalTime ==  NumericArrivals.ARRIVED.rawValue {
         currentCell.timeLabel.text = "Arrive"
-        currentCell.timeLabel.textColor = UIColor.whiteColor()
         currentCell.etaView.backgroundColor = colorPallette.powderBlue()
       }
       else {
@@ -49,11 +49,9 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
       switch arrivalString {
       case NonNumericaArrivals.APPROACHING.rawValue:
         currentCell.timeLabel.text = "Arrive"
-        currentCell.timeLabel.textColor = UIColor.whiteColor()
         currentCell.etaView.backgroundColor = colorPallette.powderBlue()
       case NonNumericaArrivals.DELAYED.rawValue:
         currentCell.timeLabel.text = "Delay"
-        currentCell.timeLabel.textColor = UIColor.whiteColor()
         currentCell.etaView.backgroundColor = colorPallette.lollipopRed()
       default:
         currentCell.timeLabel.text = "0"
@@ -67,6 +65,9 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
     guard let currentCell = cell as? WidgetETATableViewCell else {
       return
     }
+    
+    currentCell.routeLabel.textColor = UIColor.whiteColor()
+    currentCell.routeDescriptionLabel.textColor = UIColor.whiteColor()
     
     currentCell.routeLabel.text = sanitizer.getSanitizedRouteNumber(json)
     currentCell.routeDescriptionLabel.text = sanitizer.getSanitizedRouteDescription(json)

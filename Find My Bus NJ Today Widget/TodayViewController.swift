@@ -18,6 +18,7 @@ class TodayViewController: UIViewController {
   private var items: JSON = []
   private var stop = "", route = ""
   private let networkManager = ServerManager()
+  private let tableViewCellPresenter = WidgetETATableViewCellPresenter()
   
   // MARK: Outlets
   @IBOutlet weak var stopLabel: UILabel!
@@ -101,7 +102,7 @@ class TodayViewController: UIViewController {
   private func updateViewSize() {
     // Get the size and add a little so we don't cut off the button cell
     // Set the new size to the size of the widget
-    let newHeight = etaTableView.contentSize.height + stopLabel.intrinsicContentSize().height + 20
+    let newHeight = etaTableView.contentSize.height + stopLabel.intrinsicContentSize().height + 50
     let constantWidth = etaTableView.contentSize.width
     let newPreferredContentSize = CGSize(width: constantWidth, height: newHeight)
     self.preferredContentSize = newPreferredContentSize
@@ -125,15 +126,20 @@ extension TodayViewController: NCWidgetProviding {
 // MARK: UITableViewDataSource
 extension TodayViewController: UITableViewDataSource {
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
+    if items.count > 5 {
+      return 5
+    }
+    else {
+      return items.count
+    }
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let identifier = "arrivalCell"
-    let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
+    let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! WidgetETATableViewCell
     
-    cell.textLabel?.text = items[indexPath.row]["pt"].description
-    cell.textLabel?.textColor = UIColor.whiteColor()
+    tableViewCellPresenter.formatCellForPresentation(cell, json: items[indexPath.row])
+
     return cell
   }
 }
