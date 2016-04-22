@@ -17,6 +17,8 @@ class TodayViewController: UIViewController {
   // MARK: Properties
   private var items: JSON = []
   private var stop = "", route = ""
+  
+  // MARK: Managers & Presenters
   private let networkManager = ServerManager()
   private let tableViewCellPresenter = WidgetETATableViewCellPresenter()
   
@@ -33,6 +35,7 @@ class TodayViewController: UIViewController {
     UIView.animateWithDuration(0.4) { [unowned self] in
       self.view.alpha = 1
     }
+    etaTableView.separatorColor = UIColor.clearColor()
     
     loadFromAppGroup()
     
@@ -102,7 +105,7 @@ class TodayViewController: UIViewController {
   private func updateViewSize() {
     // Get the size and add a little so we don't cut off the button cell
     // Set the new size to the size of the widget
-    let newHeight = etaTableView.contentSize.height + stopLabel.intrinsicContentSize().height + 50
+    let newHeight = etaTableView.contentSize.height + stopLabel.intrinsicContentSize().height + 75
     let constantWidth = etaTableView.contentSize.width
     let newPreferredContentSize = CGSize(width: constantWidth, height: newHeight)
     self.preferredContentSize = newPreferredContentSize
@@ -138,6 +141,7 @@ extension TodayViewController: UITableViewDataSource {
     let identifier = "arrivalCell"
     let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! WidgetETATableViewCell
     
+    cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.25)
     tableViewCellPresenter.formatCellForPresentation(cell, json: items[indexPath.row])
 
     return cell

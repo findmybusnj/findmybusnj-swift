@@ -31,39 +31,68 @@
                                         <rect key="frame" x="0.0" y="28" width="280" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YKO-BV-SJX" id="Qdq-IH-vCP">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DEL-5T-P4G">
-                                                    <rect key="frame" x="0.0" y="0.0" width="272" height="41.5"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEL-5T-P4G">
+                                                    <rect key="frame" x="0.0" y="0.0" width="272" height="44"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Route" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ode-Rr-Qmm">
-                                                            <rect key="frame" x="8" y="0.0" width="183" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ode-Rr-Qmm">
+                                                            <rect key="frame" x="8" y="8" width="183" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="183" id="9tu-P8-l2x"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zay-9W-Dyk" userLabel="ETAView">
-                                                            <rect key="frame" x="211" y="0.0" width="53" height="41"/>
+                                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zay-9W-Dyk" userLabel="ETAView">
+                                                            <rect key="frame" x="199" y="0.0" width="73" height="49"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dp-ol-aUe">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="53" height="41"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dp-ol-aUe">
+                                                                    <rect key="frame" x="0.0" y="2" width="73" height="46"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="9dp-ol-aUe" secondAttribute="trailing" id="45e-Tv-dDh"/>
+                                                                <constraint firstItem="9dp-ol-aUe" firstAttribute="centerY" secondItem="zay-9W-Dyk" secondAttribute="centerY" id="94r-Za-q0h"/>
+                                                                <constraint firstAttribute="bottom" secondItem="9dp-ol-aUe" secondAttribute="bottom" constant="1" id="Cdc-zz-EXY"/>
+                                                                <constraint firstItem="9dp-ol-aUe" firstAttribute="leading" secondItem="zay-9W-Dyk" secondAttribute="leading" id="Gs9-r3-lR5"/>
+                                                                <constraint firstItem="9dp-ol-aUe" firstAttribute="top" secondItem="zay-9W-Dyk" secondAttribute="top" constant="2" id="VHJ-ya-3gh"/>
+                                                            </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Route Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cD1-Iw-8fL">
-                                                            <rect key="frame" x="8" y="20" width="183" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="cD1-Iw-8fL">
+                                                            <rect key="frame" x="8" y="23" width="183" height="22"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="leading" secondItem="cD1-Iw-8fL" secondAttribute="trailing" constant="8" symbolic="YES" id="9cQ-me-PnZ"/>
+                                                        <constraint firstItem="ode-Rr-Qmm" firstAttribute="leading" secondItem="cD1-Iw-8fL" secondAttribute="leading" id="LYk-7Q-XnV"/>
+                                                        <constraint firstItem="ode-Rr-Qmm" firstAttribute="top" secondItem="DEL-5T-P4G" secondAttribute="top" constant="8" id="Zhm-Jr-GFQ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cD1-Iw-8fL" secondAttribute="bottom" constant="-1" id="cg1-nI-cgT"/>
+                                                        <constraint firstItem="cD1-Iw-8fL" firstAttribute="top" secondItem="DEL-5T-P4G" secondAttribute="top" constant="23" id="eMs-EO-KkH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zay-9W-Dyk" secondAttribute="trailing" id="fVv-ra-fVe"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ode-Rr-Qmm" secondAttribute="bottom" constant="18" id="fYV-fU-GRk"/>
+                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="top" secondItem="DEL-5T-P4G" secondAttribute="top" id="kd7-JB-FLY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zay-9W-Dyk" secondAttribute="bottom" constant="-5" id="mnJ-HS-Pal"/>
+                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="leading" secondItem="ode-Rr-Qmm" secondAttribute="trailing" constant="8" symbolic="YES" id="phA-Th-YQG"/>
+                                                        <constraint firstItem="ode-Rr-Qmm" firstAttribute="leading" secondItem="DEL-5T-P4G" secondAttribute="leadingMargin" id="vEX-QX-XzP"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DEL-5T-P4G" firstAttribute="top" secondItem="Qdq-IH-vCP" secondAttribute="top" id="3DH-jk-8Sq"/>
+                                                <constraint firstItem="DEL-5T-P4G" firstAttribute="trailing" secondItem="Qdq-IH-vCP" secondAttribute="trailingMargin" id="QxN-eF-KA1"/>
+                                                <constraint firstItem="DEL-5T-P4G" firstAttribute="leading" secondItem="Qdq-IH-vCP" secondAttribute="leading" id="WOS-dK-yMX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DEL-5T-P4G" secondAttribute="bottom" constant="-2.5" id="vkz-tF-pTJ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="etaView" destination="zay-9W-Dyk" id="wWD-bG-MOy"/>
