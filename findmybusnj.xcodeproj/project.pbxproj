@@ -30,6 +30,8 @@
 		D4640DD51C4DE50600D184E3 /* ETASearchPopOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */; };
 		D468CC891CADBE0F00C32556 /* ShortcutIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468CC881CADBE0F00C32556 /* ShortcutIdentifier.swift */; };
 		D468CC8D1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */; };
+		D46C40C51CCC22B4001373F8 /* ETAPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */; };
+		D46C40C71CCC2588001373F8 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C40C61CCC2588001373F8 /* MockPresenter.swift */; };
 		D485AD6E1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */; };
 		D485AD701C7E585900B505CD /* CardTimeTableControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */; };
 		D4876CC41CC67555004D92D5 /* findmybusnj-common.h in Headers */ = {isa = PBXBuildFile; fileRef = D4876CC31CC67555004D92D5 /* findmybusnj-common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -185,6 +187,8 @@
 		D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETASearchPopOverController.swift; path = Controllers/ETAView/ETASearchPopOverController.swift; sourceTree = "<group>"; };
 		D468CC881CADBE0F00C32556 /* ShortcutIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShortcutIdentifier.swift; path = "3D-Touch/ShortcutIdentifier.swift"; sourceTree = "<group>"; };
 		D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreeDTouchCoreDataManager.swift; path = "3D-Touch/ThreeDTouchCoreDataManager.swift"; sourceTree = "<group>"; };
+		D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPresenterTests.swift; path = Presenter/ETAPresenterTests.swift; sourceTree = "<group>"; };
+		D46C40C61CCC2588001373F8 /* MockPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockPresenter.swift; path = Presenter/MockPresenter.swift; sourceTree = "<group>"; };
 		D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETABusTimeTableUnitTests.swift; path = Controllers/ETABusTimeTableUnitTests.swift; sourceTree = "<group>"; };
 		D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTimeTableControllerUnitTests.swift; path = Controllers/CardTimeTableControllerUnitTests.swift; sourceTree = "<group>"; };
@@ -449,6 +453,15 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		D46C40C31CCC22A1001373F8 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */,
+				D46C40C61CCC2588001373F8 /* MockPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
 		D485AD711C7E58F700B505CD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,6 +495,7 @@
 		D4876CD91CC67644004D92D5 /* findmybusnj-commonTests */ = {
 			isa = PBXGroup;
 			children = (
+				D46C40C31CCC22A1001373F8 /* Presenter */,
 				D4188F631CC7BFBE0048E9AA /* Helpers */,
 				D4876CE21CC6764F004D92D5 /* Networking */,
 				D4876CDA1CC67644004D92D5 /* findmybusnj_commonTests.swift */,
@@ -1132,9 +1146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46C40C71CCC2588001373F8 /* MockPresenter.swift in Sources */,
 				D4876CE41CC67678004D92D5 /* ServerManagerTests.swift in Sources */,
 				D4188F651CC7BFCF0048E9AA /* ColorPalletteTest.swift in Sources */,
 				D4876CDB1CC67644004D92D5 /* findmybusnj_commonTests.swift in Sources */,
+				D46C40C51CCC22B4001373F8 /* ETAPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1395,7 +1411,7 @@
 		D4D1AF2E1C0BA99C00FA6C91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1421,7 +1437,7 @@
 		D4D1AF2F1C0BA99C00FA6C91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
