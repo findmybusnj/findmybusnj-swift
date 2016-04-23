@@ -9,7 +9,7 @@
 import XCTest
 @testable import findmybusnj_common
 
-class NMServerManagerTests: XCTestCase {
+class ServerManagerTests: XCTestCase {
   // MARK: Test variables
   var networkManagerUnderTest: ServerManager!
   let testStop = "26229"
