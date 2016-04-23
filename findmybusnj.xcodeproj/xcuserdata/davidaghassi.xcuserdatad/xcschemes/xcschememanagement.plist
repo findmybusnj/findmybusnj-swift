@@ -24,11 +24,6 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>findmybusnj-common.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
-		</dict>
 		<key>findmybusnj-release.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
