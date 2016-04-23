@@ -12,6 +12,7 @@ import XCTest
 class ETAPresenterTests: XCTestCase {
   var presenterUnderTest: MockPresenter!
   let colorPallette = ColorPallette()
+  var time: Int = 0
   
   override func setUp() {
     super.setUp()
@@ -22,6 +23,7 @@ class ETAPresenterTests: XCTestCase {
   
   override func tearDown() {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    time = 0
     super.tearDown()
   }
   
@@ -33,11 +35,11 @@ class ETAPresenterTests: XCTestCase {
    - parameter name:     The name of the color function being tested
    */
   func assertColorsAreEqual(actual: UIColor, expected: UIColor, name: String) {
-    XCTAssertTrue(actual == expected, "The actual color of \(name) was different from the expected. \n Expected: \(expected) \n Actual: \(actual).")
+    XCTAssertTrue(actual == expected, "The actual color of \(name) was different from the expected. \n Expected: \(expected) \n Actual: \(actual). \n See line \(#line)")
   }
   
   func test_Assert_backgroundColorForTime_Zero_Returns_PowderBlue() {
-    let time = 0
+    time = 0
     let expectedColor = colorPallette.powderBlue()
     let actualColor = presenterUnderTest.backgroundColorForTime(time)
     
@@ -45,10 +47,26 @@ class ETAPresenterTests: XCTestCase {
   }
   
   func test_Assert_backgroundColorForTime_Between_Zero_And_Seven_Returns_EmeraldGreen() {
-    let time = 6
+    time = 6
     let expectedColor = colorPallette.emeraldGreen()
     let actualColor = presenterUnderTest.backgroundColorForTime(time)
     
     assertColorsAreEqual(actualColor, expected: expectedColor, name: "emeraldGreen")
+  }
+  
+  func test_Assert_backgroundColorForTime_Between_Seven_And_Fourteen_Returns_CreamsicleOrange() {
+    time = 12
+    let expectedColor = colorPallette.creamsicleOrange()
+    let actualColor = presenterUnderTest.backgroundColorForTime(time)
+    
+    assertColorsAreEqual(actualColor, expected: expectedColor, name: "creamsicleOrange")
+  }
+  
+  func test_Assert_backgroundcolorForTime_GreaterThan_Fourteen_Returns_LollipopRed() {
+    time = 21
+    let expectedColor = colorPallette.lollipopRed()
+    let actualColor = presenterUnderTest.backgroundColorForTime(time)
+    
+    assertColorsAreEqual(actualColor, expected: expectedColor, name: "lollipopRed")
   }
 }

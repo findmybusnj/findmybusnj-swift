@@ -32,6 +32,8 @@
 		D468CC8D1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */; };
 		D46C40C51CCC22B4001373F8 /* ETAPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */; };
 		D46C40C71CCC2588001373F8 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C40C61CCC2588001373F8 /* MockPresenter.swift */; };
+		D46C40C91CCC2BA2001373F8 /* findmybusnj_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */; };
+		D46C40CA1CCC2BC7001373F8 /* findmybusnj_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */; };
 		D485AD6E1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */; };
 		D485AD701C7E585900B505CD /* CardTimeTableControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */; };
 		D4876CC41CC67555004D92D5 /* findmybusnj-common.h in Headers */ = {isa = PBXBuildFile; fileRef = D4876CC31CC67555004D92D5 /* findmybusnj-common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,7 +42,6 @@
 		D4876CCF1CC675C9004D92D5 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CCE1CC675C9004D92D5 /* ServerManager.swift */; };
 		D4876CD11CC675E1004D92D5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CD01CC675E1004D92D5 /* Alamofire.framework */; };
 		D4876CD31CC675E5004D92D5 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */; };
-		D4876CDB1CC67644004D92D5 /* findmybusnj_commonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CDA1CC67644004D92D5 /* findmybusnj_commonTests.swift */; };
 		D4876CE41CC67678004D92D5 /* ServerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */; };
 		D4876CE71CC678D7004D92D5 /* JSONSanitizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CE61CC678D7004D92D5 /* JSONSanitizer.swift */; };
 		D48E4C621CBFC39C00700C70 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */; };
@@ -199,7 +200,6 @@
 		D4876CD01CC675E1004D92D5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Debug-iphonesimulator/Alamofire.framework"; sourceTree = "<group>"; };
 		D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D4876CD81CC67644004D92D5 /* findmybusnj-commonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "findmybusnj-commonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4876CDA1CC67644004D92D5 /* findmybusnj_commonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findmybusnj_commonTests.swift; sourceTree = "<group>"; };
 		D4876CDC1CC67644004D92D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerManagerTests.swift; path = Networking/ServerManagerTests.swift; sourceTree = "<group>"; };
 		D4876CE61CC678D7004D92D5 /* JSONSanitizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSanitizer.swift; path = Parsers/JSONSanitizer.swift; sourceTree = "<group>"; };
@@ -250,6 +250,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46C40CA1CCC2BC7001373F8 /* findmybusnj_common.framework in Frameworks */,
 				D48E4C621CBFC39C00700C70 /* SwiftyJSON.framework in Frameworks */,
 				D4138B3E1CB5FDD800D61C9A /* NotificationCenter.framework in Frameworks */,
 			);
@@ -275,6 +276,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46C40C91CCC2BA2001373F8 /* findmybusnj_common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +500,6 @@
 				D46C40C31CCC22A1001373F8 /* Presenter */,
 				D4188F631CC7BFBE0048E9AA /* Helpers */,
 				D4876CE21CC6764F004D92D5 /* Networking */,
-				D4876CDA1CC67644004D92D5 /* findmybusnj_commonTests.swift */,
 				D4876CDC1CC67644004D92D5 /* Info.plist */,
 			);
 			path = "findmybusnj-commonTests";
@@ -1149,7 +1150,6 @@
 				D46C40C71CCC2588001373F8 /* MockPresenter.swift in Sources */,
 				D4876CE41CC67678004D92D5 /* ServerManagerTests.swift in Sources */,
 				D4188F651CC7BFCF0048E9AA /* ColorPalletteTest.swift in Sources */,
-				D4876CDB1CC67644004D92D5 /* findmybusnj_commonTests.swift in Sources */,
 				D46C40C51CCC22B4001373F8 /* ETAPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
