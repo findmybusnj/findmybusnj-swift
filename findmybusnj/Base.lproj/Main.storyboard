@@ -228,7 +228,7 @@
                                     <navigationItem id="Zsz-s0-nPP">
                                         <barButtonItem key="leftBarButtonItem" title="Close" id="QZm-dB-wll">
                                             <connections>
-                                                <segue destination="5RZ-04-DfF" kind="unwind" identifier="exit" unwindAction="unwindToMain:" id="pNt-Jf-jW7"/>
+                                                <segue destination="W8o-yS-xKl" kind="unwind" identifier="exit" unwindAction="dismissPopover:" id="DOV-Um-4Az"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -470,7 +470,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFK-Xe-SwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="5RZ-04-DfF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1204" y="1483"/>
         </scene>

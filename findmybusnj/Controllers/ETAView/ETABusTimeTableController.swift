@@ -82,6 +82,17 @@ class ETABusTimeTableController: CardTableViewController {
   }
   
   /**
+   Dismisses a popover and unwinds back to this view controller
+   
+   - parameter segue: A segue with the identifier `exit`
+   */
+  @IBAction func dismissPopover(segue: UIStoryboardSegue) {
+    if segue.identifier == "exit" {
+     self.unwindForSegue(segue, towardsViewController: self)
+    }
+  }
+  
+  /**
    Refreshes the table given the `currentStop`
    
    - parameter sender: Object calling the refresh
