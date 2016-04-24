@@ -26,6 +26,7 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
       return
     }
     currentCell.timeLabel.textColor = UIColor.whiteColor()
+    currentCell.timeLabel.adjustsFontSizeToFitWidth = true
     
     let arrivalString = sanitizer.getSanatizedArrivalTimeAsString(json)
     let arrivalTime = sanitizer.getSanitizedArrivaleTimeAsInt(json)
