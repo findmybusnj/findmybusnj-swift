@@ -175,7 +175,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    Asserts that `noPrediction` is false upon having more than one json item or an emtpy array. Also asserts that the json assigned to the view controller is the same as the on being passed to the update function.
    */
   func test_UpdateTable_For_OneJSONObject() {
-    let json = loadJSONFromFile("singleStop")
+    let json = loadJSONFromFile(JSONFileName.singleStop.rawValue)
     
     cardTableViewControllerUnderTest.updateTable(json)
     
@@ -187,7 +187,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    Asserts the number of sections in the table is one when the `json` array is greater than 0 items
    */
   func test_NumberOfSections_GreaterThan_One_For_NoneEmptyItems() {
-    let json = loadJSONFromFile("singleStop")
+    let json = loadJSONFromFile(JSONFileName.singleStop.rawValue)
     
     cardTableViewControllerUnderTest.updateTable(json)
     cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
@@ -223,7 +223,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    Assert that `backgroundView` on the `tableView` is nil when there is results
    */
   func test_BackgroundView_IsNil_For_NonEmptyItems() {
-    let json = loadJSONFromFile("singleStop")
+    let json = loadJSONFromFile(JSONFileName.singleStop.rawValue)
     
     let tableView = cardTableViewControllerUnderTest.tableView
     cardTableViewControllerUnderTest.updateTable(json)
@@ -236,7 +236,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    Asserts number of rows in table equals the length of the json array backing the table
    */
   func test_NumberOfRows_Equals_Json_Length() {
-    let json = loadJSONFromFile("singleStop")
+    let json = loadJSONFromFile(JSONFileName.singleStop.rawValue)
     
     let tableView = cardTableViewControllerUnderTest.tableView
     cardTableViewControllerUnderTest.updateTable(json)

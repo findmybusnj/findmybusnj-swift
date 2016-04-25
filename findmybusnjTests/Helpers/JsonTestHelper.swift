@@ -22,11 +22,6 @@ extension XCTestCase {
   func loadJSONFromFile(fileName: String) -> JSON {
     var jsonData: NSData = NSData()
     
-    #if DEBUG
-    print(NSBundle(forClass: CardTimeTableControllerUnitTests.self).description)
-    print(NSBundle(forClass: CardTimeTableControllerUnitTests.self).pathForResource(fileName, ofType: "json"))
-    #endif
-    
     let path = NSBundle(forClass: self.dynamicType).pathForResource(fileName, ofType: "json")
     XCTAssertNotNil(path, "Failed to get path to json file. Double check that the file is added to the test bundle.")
     
@@ -41,4 +36,9 @@ extension XCTestCase {
     let responseJSON = JSON(data: jsonData)
     return responseJSON
   }
+}
+
+enum JSONFileName: String {
+  case singleStop = "singleStop"
+  case noPrediction = "noPrediction"
 }
