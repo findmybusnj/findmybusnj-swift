@@ -29,7 +29,7 @@ public class JSONSanitizer: NSObject {
    
    - parameter json: `JSON` object containing `["pt"]`
    
-   - returns: Arrival time as an `Int`
+   - returns: Arrival time as an `Int`, '-1' if there isn't one
    */
   public func getSanitizedArrivaleTimeAsInt(json: JSON) -> Int {
     if let time = Int(json["pt"].description) {
