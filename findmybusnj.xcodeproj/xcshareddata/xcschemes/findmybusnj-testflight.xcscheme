@@ -87,7 +87,7 @@
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -108,8 +108,8 @@
       </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "DEBUG"
-            value = "DEBUG"
+            key = "TESTFLIGHT"
+            value = "TESTFLIGHT"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

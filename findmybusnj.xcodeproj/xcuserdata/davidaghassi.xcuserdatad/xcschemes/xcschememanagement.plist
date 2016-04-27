@@ -12,7 +12,7 @@
 		<key>Find My Bus NJ Today Widget.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<key>NetworkManager.xcscheme</key>
 		<dict>
@@ -29,10 +29,10 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>findmybusnj-testflight.xcscheme</key>
+		<key>findmybusnj-testflight.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<key>findmybusnj.xcscheme</key>
 		<dict>
