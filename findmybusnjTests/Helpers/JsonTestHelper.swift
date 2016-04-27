@@ -40,5 +40,6 @@ extension XCTestCase {
 
 enum JSONFileName: String {
   case singleStop = "singleStop"
+  case stopWithAmpersand = "singleStopWithAmpersand"
   case noPrediction = "noPrediction"
 }

@@ -59,8 +59,9 @@ class JSONSanitizerTests: XCTestCase {
   }
   
   func test_getSanitizedRouteDescription() {
-    let expected = json["fd"].description.lowercaseString.capitalizedString
-    let actual = sanitizerUnderTest.getSanitizedRouteDescription(json)
+    let tempJson = loadJSONFromFile(JSONFileName.stopWithAmpersand.rawValue)[0]
+    let expected = tempJson["fd"].description.stringByReplacingOccurrencesOfString("&amp;", withString: "&").lowercaseString.capitalizedString
+    let actual = sanitizerUnderTest.getSanitizedRouteDescription(tempJson)
     XCTAssertTrue(actual.dynamicType == String.self, "Returned value was not a String. Please see line \(#line) \n Expected a String \n Actual was \(actual.dynamicType)")
     XCTAssertTrue(!actual.containsString("&amp;"), "Sanitized string should not contain \"&amp;\". Please see line \(#line) for more details.")
     XCTAssertTrue(expected == actual, "Actual json is not what was expected \n Expected is \(expected) \n Actual is \(actual) ")

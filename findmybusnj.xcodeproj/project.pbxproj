@@ -34,6 +34,8 @@
 		D46C40C71CCC2588001373F8 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C40C61CCC2588001373F8 /* MockPresenter.swift */; };
 		D46C40C91CCC2BA2001373F8 /* findmybusnj_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */; };
 		D46C40CA1CCC2BC7001373F8 /* findmybusnj_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */; };
+		D47203421CD13E8900621EC4 /* singleStopWithAmpersand.json in Resources */ = {isa = PBXBuildFile; fileRef = D47203401CD13DB700621EC4 /* singleStopWithAmpersand.json */; };
+		D47203431CD13E8A00621EC4 /* singleStopWithAmpersand.json in Resources */ = {isa = PBXBuildFile; fileRef = D47203401CD13DB700621EC4 /* singleStopWithAmpersand.json */; };
 		D475C2B71CCE853700A952F5 /* JsonTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44E330B1C8159220036D478 /* JsonTestHelper.swift */; };
 		D475C2B91CCE853F00A952F5 /* noPrediction.json in Resources */ = {isa = PBXBuildFile; fileRef = D429904A1C8E916300FCADFF /* noPrediction.json */; };
 		D475C2BA1CCE854800A952F5 /* CoreDataTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411AB1CACC93F00DC66C3 /* CoreDataTestHelper.swift */; };
@@ -195,6 +197,7 @@
 		D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreeDTouchCoreDataManager.swift; path = "3D-Touch/ThreeDTouchCoreDataManager.swift"; sourceTree = "<group>"; };
 		D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPresenterTests.swift; path = Presenter/ETAPresenterTests.swift; sourceTree = "<group>"; };
 		D46C40C61CCC2588001373F8 /* MockPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockPresenter.swift; path = Presenter/MockPresenter.swift; sourceTree = "<group>"; };
+		D47203401CD13DB700621EC4 /* singleStopWithAmpersand.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = singleStopWithAmpersand.json; path = ModelData/singleStopWithAmpersand.json; sourceTree = SOURCE_ROOT; };
 		D475C2BB1CCE860A00A952F5 /* JSONSanitizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSanitizerTests.swift; path = Parsers/JSONSanitizerTests.swift; sourceTree = "<group>"; };
 		D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETABusTimeTableUnitTests.swift; path = Controllers/ETABusTimeTableUnitTests.swift; sourceTree = "<group>"; };
@@ -421,6 +424,7 @@
 			children = (
 				D44E330B1C8159220036D478 /* JsonTestHelper.swift */,
 				D44E33061C814BBE0036D478 /* singleStop.json */,
+				D47203401CD13DB700621EC4 /* singleStopWithAmpersand.json */,
 				D429904A1C8E916300FCADFF /* noPrediction.json */,
 			);
 			name = JSON;
@@ -1013,6 +1017,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47203431CD13E8A00621EC4 /* singleStopWithAmpersand.json in Resources */,
 				D475C2B91CCE853F00A952F5 /* noPrediction.json in Resources */,
 				D475C2C11CCE893F00A952F5 /* singleStop.json in Resources */,
 			);
@@ -1046,6 +1051,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47203421CD13E8900621EC4 /* singleStopWithAmpersand.json in Resources */,
 				D44E330A1C81561F0036D478 /* singleStop.json in Resources */,
 				D429904B1C8E916300FCADFF /* noPrediction.json in Resources */,
 			);
