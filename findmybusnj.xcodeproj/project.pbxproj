@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */; };
+		D407670E1CC6B26000B2D9FF /* ETAPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */; };
+		D409DF5F1CC71E8200324C76 /* ETACardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */; };
+		D409DF611CC7203100324C76 /* WidgetETATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */; };
+		D409DF641CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF631CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift */; };
+		D4138B3E1CB5FDD800D61C9A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */; };
+		D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4138B401CB5FDD800D61C9A /* TodayViewController.swift */; };
+		D4138B441CB5FDD800D61C9A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */; };
+		D4138B481CB5FDD800D61C9A /* Find My Bus NJ.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D4188F621CC7BCCC0048E9AA /* ColorPallette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4188F611CC7BCCC0048E9AA /* ColorPallette.swift */; };
+		D4188F651CC7BFCF0048E9AA /* ColorPalletteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4188F641CC7BFCF0048E9AA /* ColorPalletteTest.swift */; };
 		D429904B1C8E916300FCADFF /* noPrediction.json in Resources */ = {isa = PBXBuildFile; fileRef = D429904A1C8E916300FCADFF /* noPrediction.json */; };
 		D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */; };
 		D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */; };
@@ -20,14 +30,28 @@
 		D4640DD51C4DE50600D184E3 /* ETASearchPopOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */; };
 		D468CC891CADBE0F00C32556 /* ShortcutIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468CC881CADBE0F00C32556 /* ShortcutIdentifier.swift */; };
 		D468CC8D1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */; };
-		D479C1931C34DAA200C434ED /* NetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D479C1921C34DAA200C434ED /* NetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D479C19A1C34DAA200C434ED /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; };
-		D479C1A11C34DAA200C434ED /* NMServerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C1A01C34DAA200C434ED /* NMServerManagerTests.swift */; };
-		D479C1A51C34DAA200C434ED /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; };
-		D479C1A61C34DAA200C434ED /* NetworkManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D479C1901C34DAA200C434ED /* NetworkManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D479C1B01C34DE7400C434ED /* NMServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479C1AF1C34DE7400C434ED /* NMServerManager.swift */; };
+		D46C40C51CCC22B4001373F8 /* ETAPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */; };
+		D46C40C71CCC2588001373F8 /* MockPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C40C61CCC2588001373F8 /* MockPresenter.swift */; };
+		D46C40C91CCC2BA2001373F8 /* findmybusnj_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */; };
+		D46C40CA1CCC2BC7001373F8 /* findmybusnj_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */; };
+		D47203421CD13E8900621EC4 /* singleStopWithAmpersand.json in Resources */ = {isa = PBXBuildFile; fileRef = D47203401CD13DB700621EC4 /* singleStopWithAmpersand.json */; };
+		D47203431CD13E8A00621EC4 /* singleStopWithAmpersand.json in Resources */ = {isa = PBXBuildFile; fileRef = D47203401CD13DB700621EC4 /* singleStopWithAmpersand.json */; };
+		D475C2B71CCE853700A952F5 /* JsonTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44E330B1C8159220036D478 /* JsonTestHelper.swift */; };
+		D475C2B91CCE853F00A952F5 /* noPrediction.json in Resources */ = {isa = PBXBuildFile; fileRef = D429904A1C8E916300FCADFF /* noPrediction.json */; };
+		D475C2BA1CCE854800A952F5 /* CoreDataTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411AB1CACC93F00DC66C3 /* CoreDataTestHelper.swift */; };
+		D475C2C01CCE876700A952F5 /* JSONSanitizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D475C2BB1CCE860A00A952F5 /* JSONSanitizerTests.swift */; };
+		D475C2C11CCE893F00A952F5 /* singleStop.json in Resources */ = {isa = PBXBuildFile; fileRef = D44E33061C814BBE0036D478 /* singleStop.json */; };
 		D485AD6E1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */; };
 		D485AD701C7E585900B505CD /* CardTimeTableControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */; };
+		D4876CC41CC67555004D92D5 /* findmybusnj-common.h in Headers */ = {isa = PBXBuildFile; fileRef = D4876CC31CC67555004D92D5 /* findmybusnj-common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4876CC81CC67555004D92D5 /* findmybusnj_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */; };
+		D4876CC91CC67555004D92D5 /* findmybusnj_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4876CCF1CC675C9004D92D5 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CCE1CC675C9004D92D5 /* ServerManager.swift */; };
+		D4876CD11CC675E1004D92D5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CD01CC675E1004D92D5 /* Alamofire.framework */; };
+		D4876CD31CC675E5004D92D5 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */; };
+		D4876CE41CC67678004D92D5 /* ServerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */; };
+		D4876CE71CC678D7004D92D5 /* JSONSanitizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CE61CC678D7004D92D5 /* JSONSanitizer.swift */; };
+		D48E4C621CBFC39C00700C70 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */; };
 		D49411A41CACBA3A00DC66C3 /* ETACoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411A31CACBA3A00DC66C3 /* ETACoreDataManager.swift */; };
 		D49411A71CACBD8A00DC66C3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411A61CACBD8A00DC66C3 /* CoreDataManager.swift */; };
 		D49411AA1CACBF9900DC66C3 /* ETACoreDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411A91CACBF9900DC66C3 /* ETACoreDataManagerTests.swift */; };
@@ -38,7 +62,6 @@
 		D496BCE61C95D3FD0024FCFB /* ETAAlertEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D496BCE51C95D3FD0024FCFB /* ETAAlertEnum.swift */; };
 		D4A9E84A1C94E1FB003841DF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A9E8491C94E1FB003841DF /* CoreData.framework */; };
 		D4A9E84D1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4A9E84B1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodeld */; };
-		D4BD9C0C1C8F815B0083FA55 /* ETACardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BD9C0B1C8F815B0083FA55 /* ETACardPresenter.swift */; };
 		D4C0C7BA1C57C97100D15450 /* PlacesAnnotationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */; };
 		D4D1AF1A1C0BA99C00FA6C91 /* AnimationsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D1AF211C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */; };
@@ -62,26 +85,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D479C19B1C34DAA200C434ED /* PBXContainerItemProxy */ = {
+		D4138B461CB5FDD800D61C9A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D479C18F1C34DAA200C434ED;
-			remoteInfo = NetworkManager;
+			remoteGlobalIDString = D4138B3B1CB5FDD800D61C9A;
+			remoteInfo = "Find My Bus NJ Today Widget";
 		};
-		D479C19D1C34DAA200C434ED /* PBXContainerItemProxy */ = {
+		D4876CC61CC67555004D92D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4876CC01CC67555004D92D5;
+			remoteInfo = "findmybusnj-common";
+		};
+		D4876CDD1CC67644004D92D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D4D6AB5F1BBA2FE200CE241D;
 			remoteInfo = findmybusnj;
-		};
-		D479C1A31C34DAA200C434ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4D6AB581BBA2FE200CE241D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D479C18F1C34DAA200C434ED;
-			remoteInfo = NetworkManager;
 		};
 		D4D1AF221C0BA99C00FA6C91 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -121,6 +144,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D4138B4C1CB5FDD800D61C9A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D4138B481CB5FDD800D61C9A /* Find My Bus NJ.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D4D1AF351C0BA99C00FA6C91 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,7 +162,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				D4D1AF2D1C0BA99C00FA6C91 /* AnimationsFramework.framework in Embed Frameworks */,
-				D479C1A61C34DAA200C434ED /* NetworkManager.framework in Embed Frameworks */,
+				D4876CC91CC67555004D92D5 /* findmybusnj_common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +174,17 @@
 		86380F7789E2BF8B92C57B88 /* Pods-findmybusnj.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.testflight.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.testflight.xcconfig"; sourceTree = "<group>"; };
 		C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
-		D4014C5F1CC00F5A00BD7E41 /* findmybusnj.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = findmybusnj.entitlements; sourceTree = "<group>"; };
+		D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPresenter.swift; path = Presenter/ETAPresenter.swift; sourceTree = "<group>"; };
+		D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACardPresenter.swift; path = Presenter/ETACardPresenter.swift; sourceTree = "<group>"; };
+		D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WidgetETATableViewCell.swift; path = Model/WidgetETATableViewCell.swift; sourceTree = "<group>"; };
+		D409DF631CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WidgetETATableViewCellPresenter.swift; path = Presenters/WidgetETATableViewCellPresenter.swift; sourceTree = "<group>"; };
+		D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Find My Bus NJ.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		D4138B401CB5FDD800D61C9A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		D4138B431CB5FDD800D61C9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		D4138B451CB5FDD800D61C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4188F611CC7BCCC0048E9AA /* ColorPallette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPallette.swift; path = Helpers/ColorPallette.swift; sourceTree = "<group>"; };
+		D4188F641CC7BFCF0048E9AA /* ColorPalletteTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPalletteTest.swift; path = Helpers/ColorPalletteTest.swift; sourceTree = "<group>"; };
 		D42358561BBCE01800032949 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D429904A1C8E916300FCADFF /* noPrediction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = noPrediction.json; path = ModelData/noPrediction.json; sourceTree = SOURCE_ROOT; };
 		D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -154,28 +198,37 @@
 		D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETASearchPopOverController.swift; path = Controllers/ETAView/ETASearchPopOverController.swift; sourceTree = "<group>"; };
 		D468CC881CADBE0F00C32556 /* ShortcutIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShortcutIdentifier.swift; path = "3D-Touch/ShortcutIdentifier.swift"; sourceTree = "<group>"; };
 		D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreeDTouchCoreDataManager.swift; path = "3D-Touch/ThreeDTouchCoreDataManager.swift"; sourceTree = "<group>"; };
-		D479C1901C34DAA200C434ED /* NetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D479C1921C34DAA200C434ED /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
-		D479C1941C34DAA200C434ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D479C1991C34DAA200C434ED /* NetworkManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D479C1A01C34DAA200C434ED /* NMServerManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMServerManagerTests.swift; sourceTree = "<group>"; };
-		D479C1A21C34DAA200C434ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D479C1AF1C34DE7400C434ED /* NMServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NMServerManager.swift; sourceTree = "<group>"; };
+		D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPresenterTests.swift; path = Presenter/ETAPresenterTests.swift; sourceTree = "<group>"; };
+		D46C40C61CCC2588001373F8 /* MockPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockPresenter.swift; path = Presenter/MockPresenter.swift; sourceTree = "<group>"; };
+		D47203401CD13DB700621EC4 /* singleStopWithAmpersand.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = singleStopWithAmpersand.json; path = ModelData/singleStopWithAmpersand.json; sourceTree = SOURCE_ROOT; };
+		D475C2BB1CCE860A00A952F5 /* JSONSanitizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSanitizerTests.swift; path = Parsers/JSONSanitizerTests.swift; sourceTree = "<group>"; };
 		D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETABusTimeTableUnitTests.swift; path = Controllers/ETABusTimeTableUnitTests.swift; sourceTree = "<group>"; };
 		D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTimeTableControllerUnitTests.swift; path = Controllers/CardTimeTableControllerUnitTests.swift; sourceTree = "<group>"; };
+		D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = findmybusnj_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4876CC31CC67555004D92D5 /* findmybusnj-common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "findmybusnj-common.h"; sourceTree = "<group>"; };
+		D4876CC51CC67555004D92D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4876CCE1CC675C9004D92D5 /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerManager.swift; path = Networking/ServerManager.swift; sourceTree = "<group>"; };
+		D4876CD01CC675E1004D92D5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Debug-iphonesimulator/Alamofire.framework"; sourceTree = "<group>"; };
+		D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Debug-iphonesimulator/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		D4876CD81CC67644004D92D5 /* findmybusnj-commonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "findmybusnj-commonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4876CDC1CC67644004D92D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServerManagerTests.swift; path = Networking/ServerManagerTests.swift; sourceTree = "<group>"; };
+		D4876CE61CC678D7004D92D5 /* JSONSanitizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSanitizer.swift; path = Parsers/JSONSanitizer.swift; sourceTree = "<group>"; };
+		D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Release-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D49411A31CACBA3A00DC66C3 /* ETACoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACoreDataManager.swift; path = Managers/ETACoreData/ETACoreDataManager.swift; sourceTree = "<group>"; };
 		D49411A61CACBD8A00DC66C3 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = Managers/CoreDataManager.swift; sourceTree = "<group>"; };
 		D49411A91CACBF9900DC66C3 /* ETACoreDataManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACoreDataManagerTests.swift; path = Managers/ETACoreDataManagerTests.swift; sourceTree = "<group>"; };
-		D49411AB1CACC93F00DC66C3 /* CoreDataTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataTestHelper.swift; path = Helpers/CoreDataTestHelper.swift; sourceTree = "<group>"; };
+		D49411AB1CACC93F00DC66C3 /* CoreDataTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataTestHelper.swift; path = findmybusnjTests/Helpers/CoreDataTestHelper.swift; sourceTree = "<group>"; };
 		D496BCDE1C95AFA90024FCFB /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Favorite+CoreDataProperties.swift"; path = "Model/Favorites/Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D496BCDF1C95AFA90024FCFB /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorite.swift; path = Model/Favorites/Favorite.swift; sourceTree = "<group>"; };
 		D496BCE21C95D2630024FCFB /* ETAAlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAAlertPresenter.swift; path = Presenter/Alert/ETAAlertPresenter.swift; sourceTree = "<group>"; };
 		D496BCE51C95D3FD0024FCFB /* ETAAlertEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAAlertEnum.swift; path = Presenter/Alert/ETAPresenter/ETAAlertEnum.swift; sourceTree = "<group>"; };
 		D4A9E8491C94E1FB003841DF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D4A9E84C1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindMyBusCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
-		D4BD9C0B1C8F815B0083FA55 /* ETACardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACardPresenter.swift; path = Model/ETACard/ETACardPresenter.swift; sourceTree = "<group>"; };
 		D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesAnnotationTest.swift; path = Models/PlacesAnnotationTest.swift; sourceTree = "<group>"; };
+		D4C432891CC01374009E817B /* findmybusnj.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = findmybusnj.entitlements; sourceTree = "<group>"; };
+		D4C4328A1CC01539009E817B /* Find My Bus NJ Today Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Find My Bus NJ Today Widget.entitlements"; sourceTree = "<group>"; };
 		D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimationsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationsFramework.h; sourceTree = "<group>"; };
 		D4D1AF1B1C0BA99C00FA6C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -205,20 +258,29 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D479C18C1C34DAA200C434ED /* Frameworks */ = {
+		D4138B391CB5FDD800D61C9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4F152811C39873F007D8EA7 /* Alamofire.framework in Frameworks */,
-				D4F152821C39873F007D8EA7 /* SwiftyJSON.framework in Frameworks */,
+				D46C40CA1CCC2BC7001373F8 /* findmybusnj_common.framework in Frameworks */,
+				D48E4C621CBFC39C00700C70 /* SwiftyJSON.framework in Frameworks */,
+				D4138B3E1CB5FDD800D61C9A /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D479C1961C34DAA200C434ED /* Frameworks */ = {
+		D4876CBD1CC67555004D92D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D479C19A1C34DAA200C434ED /* NetworkManager.framework in Frameworks */,
+				D4876CD31CC675E5004D92D5 /* SwiftyJSON.framework in Frameworks */,
+				D4876CD11CC675E1004D92D5 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4876CD51CC67644004D92D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +288,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46C40C91CCC2BA2001373F8 /* findmybusnj_common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +309,7 @@
 				D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */,
 				D4D1AF2C1C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */,
 				6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */,
-				D479C1A51C34DAA200C434ED /* NetworkManager.framework in Frameworks */,
+				D4876CC81CC67555004D92D5 /* findmybusnj_common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +333,9 @@
 		516CB71DBABA7F1FCD524014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */,
+				D4876CD01CC675E1004D92D5 /* Alamofire.framework */,
+				D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */,
 				D4A9E8491C94E1FB003841DF /* CoreData.framework */,
 				D4F1527F1C39873F007D8EA7 /* Alamofire.framework */,
 				D4F152801C39873F007D8EA7 /* SwiftyJSON.framework */,
@@ -278,6 +344,7 @@
 				D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */,
 				D42358561BBCE01800032949 /* SwiftyJSON.framework */,
 				C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */,
+				D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -292,6 +359,60 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D407670C1CC6B1F900B2D9FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		D409DF5D1CC71E2D00324C76 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D409DF621CC7259200324C76 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				D409DF631CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
+		D4138B3F1CB5FDD800D61C9A /* findmybusnj-widget */ = {
+			isa = PBXGroup;
+			children = (
+				D409DF621CC7259200324C76 /* Presenters */,
+				D409DF5D1CC71E2D00324C76 /* Models */,
+				D4C4328A1CC01539009E817B /* Find My Bus NJ Today Widget.entitlements */,
+				D4138B401CB5FDD800D61C9A /* TodayViewController.swift */,
+				D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */,
+				D4138B451CB5FDD800D61C9A /* Info.plist */,
+			);
+			name = "findmybusnj-widget";
+			path = "Find My Bus NJ Today Widget";
+			sourceTree = "<group>";
+		};
+		D4188F601CC7BCAA0048E9AA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D4188F611CC7BCCC0048E9AA /* ColorPallette.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		D4188F631CC7BFBE0048E9AA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D4188F641CC7BFCF0048E9AA /* ColorPalletteTest.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		D42357F91BBA35A900B5A08D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,29 +423,23 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		D44116651CB2A7950002DD83 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				D49411AB1CACC93F00DC66C3 /* CoreDataTestHelper.swift */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
 		D44E33081C814C970036D478 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
 				D44E330B1C8159220036D478 /* JsonTestHelper.swift */,
 				D44E33061C814BBE0036D478 /* singleStop.json */,
+				D47203401CD13DB700621EC4 /* singleStopWithAmpersand.json */,
 				D429904A1C8E916300FCADFF /* noPrediction.json */,
 			);
 			name = JSON;
-			path = ../findmybusnj;
+			path = findmybusnj;
 			sourceTree = "<group>";
 		};
 		D45C934E1C8FC300002AC008 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
 				D45C934F1C8FC32D002AC008 /* UIAlertPresenter.swift */,
+				D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */,
 			);
 			name = Presenters;
 			sourceTree = "<group>";
@@ -347,23 +462,38 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		D479C1911C34DAA200C434ED /* NetworkManager */ = {
+		D46C40C31CCC22A1001373F8 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				D479C1921C34DAA200C434ED /* NetworkManager.h */,
-				D479C1941C34DAA200C434ED /* Info.plist */,
-				D479C1AF1C34DE7400C434ED /* NMServerManager.swift */,
+				D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */,
+				D46C40C61CCC2588001373F8 /* MockPresenter.swift */,
 			);
-			path = NetworkManager;
+			name = Presenter;
 			sourceTree = "<group>";
 		};
-		D479C19F1C34DAA200C434ED /* NetworkManagerTests */ = {
+		D475C2BD1CCE862B00A952F5 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
-				D479C1A01C34DAA200C434ED /* NMServerManagerTests.swift */,
-				D479C1A21C34DAA200C434ED /* Info.plist */,
+				D475C2BB1CCE860A00A952F5 /* JSONSanitizerTests.swift */,
 			);
-			path = NetworkManagerTests;
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		D475C2BE1CCE86F100A952F5 /* Test-Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D475C2BF1CCE870700A952F5 /* CoreData */,
+				D44E33081C814C970036D478 /* JSON */,
+			);
+			name = "Test-Helpers";
+			sourceTree = "<group>";
+		};
+		D475C2BF1CCE870700A952F5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D49411AB1CACC93F00DC66C3 /* CoreDataTestHelper.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		D485AD711C7E58F700B505CD /* Controllers */ = {
@@ -373,6 +503,56 @@
 				D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D4876CC21CC67555004D92D5 /* findmybusnj-common */ = {
+			isa = PBXGroup;
+			children = (
+				D4188F601CC7BCAA0048E9AA /* Helpers */,
+				D407670C1CC6B1F900B2D9FF /* Presenter */,
+				D4876CE51CC67857004D92D5 /* Parsers */,
+				D4876CCD1CC67589004D92D5 /* Networking */,
+				D4876CC31CC67555004D92D5 /* findmybusnj-common.h */,
+				D4876CC51CC67555004D92D5 /* Info.plist */,
+			);
+			path = "findmybusnj-common";
+			sourceTree = "<group>";
+		};
+		D4876CCD1CC67589004D92D5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D4876CCE1CC675C9004D92D5 /* ServerManager.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		D4876CD91CC67644004D92D5 /* findmybusnj-common-UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4188F631CC7BFBE0048E9AA /* Helpers */,
+				D475C2BD1CCE862B00A952F5 /* Parsers */,
+				D46C40C31CCC22A1001373F8 /* Presenter */,
+				D4876CE21CC6764F004D92D5 /* Networking */,
+				D4876CDC1CC67644004D92D5 /* Info.plist */,
+			);
+			name = "findmybusnj-common-UnitTests";
+			path = "findmybusnj-commonTests";
+			sourceTree = "<group>";
+		};
+		D4876CE21CC6764F004D92D5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		D4876CE51CC67857004D92D5 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				D4876CE61CC678D7004D92D5 /* JSONSanitizer.swift */,
+			);
+			name = Parsers;
 			sourceTree = "<group>";
 		};
 		D49411A21CACBA1100DC66C3 /* ETACoreData */ = {
@@ -394,7 +574,6 @@
 		D49411A81CACBF7B00DC66C3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				D44116651CB2A7950002DD83 /* Helpers */,
 				D49411A91CACBF9900DC66C3 /* ETACoreDataManagerTests.swift */,
 				D44116631CB20C6D0002DD83 /* ThreeDTouchCoreDataManagerTests.swift */,
 			);
@@ -423,7 +602,6 @@
 			isa = PBXGroup;
 			children = (
 				D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */,
-				D4BD9C0B1C8F815B0083FA55 /* ETACardPresenter.swift */,
 			);
 			name = ETACard;
 			sourceTree = "<group>";
@@ -461,12 +639,14 @@
 			isa = PBXGroup;
 			children = (
 				D4D6AB621BBA2FE200CE241D /* findmybusnj */,
-				D4D6AB791BBA2FE200CE241D /* findmybusnjTests */,
-				D4D6AB841BBA2FE200CE241D /* findmybusnjUITests */,
+				D4D6AB791BBA2FE200CE241D /* findmybusnj-UnitTests */,
+				D4D6AB841BBA2FE200CE241D /* findmybusnj-UITests */,
+				D4876CC21CC67555004D92D5 /* findmybusnj-common */,
+				D4876CD91CC67644004D92D5 /* findmybusnj-common-UnitTests */,
+				D4138B3F1CB5FDD800D61C9A /* findmybusnj-widget */,
+				D475C2BE1CCE86F100A952F5 /* Test-Helpers */,
 				D4D1AF181C0BA99C00FA6C91 /* AnimationsFramework */,
 				D4D1AF261C0BA99C00FA6C91 /* AnimationsFrameworkTests */,
-				D479C1911C34DAA200C434ED /* NetworkManager */,
-				D479C19F1C34DAA200C434ED /* NetworkManagerTests */,
 				D4D6AB611BBA2FE200CE241D /* Products */,
 				CF87078E50546E553E842561 /* Pods */,
 				516CB71DBABA7F1FCD524014 /* Frameworks */,
@@ -481,8 +661,9 @@
 				D4D6AB811BBA2FE200CE241D /* findmybusnjUITests.xctest */,
 				D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */,
 				D4D1AF201C0BA99C00FA6C91 /* AnimationsFrameworkTests.xctest */,
-				D479C1901C34DAA200C434ED /* NetworkManager.framework */,
-				D479C1991C34DAA200C434ED /* NetworkManagerTests.xctest */,
+				D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */,
+				D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */,
+				D4876CD81CC67644004D92D5 /* findmybusnj-commonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -490,7 +671,7 @@
 		D4D6AB621BBA2FE200CE241D /* findmybusnj */ = {
 			isa = PBXGroup;
 			children = (
-				D4014C5F1CC00F5A00BD7E41 /* findmybusnj.entitlements */,
+				D4C432891CC01374009E817B /* findmybusnj.entitlements */,
 				D468CC8A1CADBE9900C32556 /* 3D Touch */,
 				D49411A51CACBD7300DC66C3 /* Managers */,
 				D4E4B1221BCBF9F500D06419 /* Models */,
@@ -505,24 +686,25 @@
 			path = findmybusnj;
 			sourceTree = "<group>";
 		};
-		D4D6AB791BBA2FE200CE241D /* findmybusnjTests */ = {
+		D4D6AB791BBA2FE200CE241D /* findmybusnj-UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				D44E33081C814C970036D478 /* JSON */,
 				D485AD711C7E58F700B505CD /* Controllers */,
 				D49411A81CACBF7B00DC66C3 /* Managers */,
 				D4EFCFCB1C5D05A8003806A7 /* Models */,
 				D4D6AB7C1BBA2FE200CE241D /* Info.plist */,
 			);
+			name = "findmybusnj-UnitTests";
 			path = findmybusnjTests;
 			sourceTree = "<group>";
 		};
-		D4D6AB841BBA2FE200CE241D /* findmybusnjUITests */ = {
+		D4D6AB841BBA2FE200CE241D /* findmybusnj-UITests */ = {
 			isa = PBXGroup;
 			children = (
 				D4D6AB851BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift */,
 				D4D6AB871BBA2FE200CE241D /* Info.plist */,
 			);
+			name = "findmybusnj-UITests";
 			path = findmybusnjUITests;
 			sourceTree = "<group>";
 		};
@@ -575,11 +757,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D479C18D1C34DAA200C434ED /* Headers */ = {
+		D4876CBE1CC67555004D92D5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D479C1931C34DAA200C434ED /* NetworkManager.h in Headers */,
+				D4876CC41CC67555004D92D5 /* findmybusnj-common.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,41 +776,57 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D479C18F1C34DAA200C434ED /* NetworkManager */ = {
+		D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D479C1AD1C34DAA300C434ED /* Build configuration list for PBXNativeTarget "NetworkManager" */;
+			buildConfigurationList = D4138B4B1CB5FDD800D61C9A /* Build configuration list for PBXNativeTarget "Find My Bus NJ Today Widget" */;
 			buildPhases = (
-				D479C18B1C34DAA200C434ED /* Sources */,
-				D479C18C1C34DAA200C434ED /* Frameworks */,
-				D479C18D1C34DAA200C434ED /* Headers */,
-				D479C18E1C34DAA200C434ED /* Resources */,
+				D4138B381CB5FDD800D61C9A /* Sources */,
+				D4138B391CB5FDD800D61C9A /* Frameworks */,
+				D4138B3A1CB5FDD800D61C9A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = NetworkManager;
-			productName = NetworkManager;
-			productReference = D479C1901C34DAA200C434ED /* NetworkManager.framework */;
+			name = "Find My Bus NJ Today Widget";
+			productName = "Find My Bus NJ Today Widget";
+			productReference = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		D4876CC01CC67555004D92D5 /* findmybusnj-common */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4876CCC1CC67555004D92D5 /* Build configuration list for PBXNativeTarget "findmybusnj-common" */;
+			buildPhases = (
+				D4876CBC1CC67555004D92D5 /* Sources */,
+				D4876CBD1CC67555004D92D5 /* Frameworks */,
+				D4876CBE1CC67555004D92D5 /* Headers */,
+				D4876CBF1CC67555004D92D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "findmybusnj-common";
+			productName = "findmybusnj-common";
+			productReference = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D479C1981C34DAA200C434ED /* NetworkManagerTests */ = {
+		D4876CD71CC67644004D92D5 /* findmybusnj-commonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D479C1AE1C34DAA300C434ED /* Build configuration list for PBXNativeTarget "NetworkManagerTests" */;
+			buildConfigurationList = D4876CDF1CC67644004D92D5 /* Build configuration list for PBXNativeTarget "findmybusnj-commonTests" */;
 			buildPhases = (
-				D479C1951C34DAA200C434ED /* Sources */,
-				D479C1961C34DAA200C434ED /* Frameworks */,
-				D479C1971C34DAA200C434ED /* Resources */,
+				D4876CD41CC67644004D92D5 /* Sources */,
+				D4876CD51CC67644004D92D5 /* Frameworks */,
+				D4876CD61CC67644004D92D5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D479C19C1C34DAA200C434ED /* PBXTargetDependency */,
-				D479C19E1C34DAA200C434ED /* PBXTargetDependency */,
+				D4876CDE1CC67644004D92D5 /* PBXTargetDependency */,
 			);
-			name = NetworkManagerTests;
-			productName = NetworkManagerTests;
-			productReference = D479C1991C34DAA200C434ED /* NetworkManagerTests.xctest */;
+			name = "findmybusnj-commonTests";
+			productName = "findmybusnj-commonTests";
+			productReference = D4876CD81CC67644004D92D5 /* findmybusnj-commonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		D4D1AF161C0BA99C00FA6C91 /* AnimationsFramework */ = {
@@ -682,12 +880,14 @@
 				65D337A5AA59A9C108C847BE /* Copy Pods Resources */,
 				D4D1AF351C0BA99C00FA6C91 /* Embed Frameworks */,
 				D491FBC21CB49B4E0099A8A4 /* Crashalytics Script */,
+				D4138B4C1CB5FDD800D61C9A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				D4D1AF2B1C0BA99C00FA6C91 /* PBXTargetDependency */,
-				D479C1A41C34DAA200C434ED /* PBXTargetDependency */,
+				D4138B471CB5FDD800D61C9A /* PBXTargetDependency */,
+				D4876CC71CC67555004D92D5 /* PBXTargetDependency */,
 			);
 			name = findmybusnj;
 			productName = findmybusnj;
@@ -736,16 +936,25 @@
 		D4D6AB581BBA2FE200CE241D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "David Aghassi";
 				TargetAttributes = {
-					D479C18F1C34DAA200C434ED = {
-						CreatedOnToolsVersion = 7.2;
+					D4138B3B1CB5FDD800D61C9A = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 23254ZGZ6N;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					D4876CC01CC67555004D92D5 = {
+						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 23254ZGZ6N;
 					};
-					D479C1981C34DAA200C434ED = {
-						CreatedOnToolsVersion = 7.2;
+					D4876CD71CC67644004D92D5 = {
+						CreatedOnToolsVersion = 7.3;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 					D4D1AF161C0BA99C00FA6C91 = {
@@ -793,24 +1002,36 @@
 				D4D6AB801BBA2FE200CE241D /* findmybusnjUITests */,
 				D4D1AF161C0BA99C00FA6C91 /* AnimationsFramework */,
 				D4D1AF1F1C0BA99C00FA6C91 /* AnimationsFrameworkTests */,
-				D479C18F1C34DAA200C434ED /* NetworkManager */,
-				D479C1981C34DAA200C434ED /* NetworkManagerTests */,
+				D4876CC01CC67555004D92D5 /* findmybusnj-common */,
+				D4876CD71CC67644004D92D5 /* findmybusnj-commonTests */,
+				D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D479C18E1C34DAA200C434ED /* Resources */ = {
+		D4138B3A1CB5FDD800D61C9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4138B441CB5FDD800D61C9A /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4876CBF1CC67555004D92D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D479C1971C34DAA200C434ED /* Resources */ = {
+		D4876CD61CC67644004D92D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47203431CD13E8A00621EC4 /* singleStopWithAmpersand.json in Resources */,
+				D475C2B91CCE853F00A952F5 /* noPrediction.json in Resources */,
+				D475C2C11CCE893F00A952F5 /* singleStop.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,6 +1063,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47203421CD13E8900621EC4 /* singleStopWithAmpersand.json in Resources */,
 				D44E330A1C81561F0036D478 /* singleStop.json in Resources */,
 				D429904B1C8E916300FCADFF /* noPrediction.json in Resources */,
 			);
@@ -947,19 +1169,38 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D479C18B1C34DAA200C434ED /* Sources */ = {
+		D4138B381CB5FDD800D61C9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D479C1B01C34DE7400C434ED /* NMServerManager.swift in Sources */,
+				D409DF611CC7203100324C76 /* WidgetETATableViewCell.swift in Sources */,
+				D409DF641CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift in Sources */,
+				D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D479C1951C34DAA200C434ED /* Sources */ = {
+		D4876CBC1CC67555004D92D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D479C1A11C34DAA200C434ED /* NMServerManagerTests.swift in Sources */,
+				D407670E1CC6B26000B2D9FF /* ETAPresenter.swift in Sources */,
+				D4188F621CC7BCCC0048E9AA /* ColorPallette.swift in Sources */,
+				D4876CCF1CC675C9004D92D5 /* ServerManager.swift in Sources */,
+				D4876CE71CC678D7004D92D5 /* JSONSanitizer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4876CD41CC67644004D92D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D46C40C71CCC2588001373F8 /* MockPresenter.swift in Sources */,
+				D475C2B71CCE853700A952F5 /* JsonTestHelper.swift in Sources */,
+				D4876CE41CC67678004D92D5 /* ServerManagerTests.swift in Sources */,
+				D4188F651CC7BFCF0048E9AA /* ColorPalletteTest.swift in Sources */,
+				D475C2BA1CCE854800A952F5 /* CoreDataTestHelper.swift in Sources */,
+				D46C40C51CCC22B4001373F8 /* ETAPresenterTests.swift in Sources */,
+				D475C2C01CCE876700A952F5 /* JSONSanitizerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,7 +1226,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4BD9C0C1C8F815B0083FA55 /* ETACardPresenter.swift in Sources */,
 				D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */,
 				D496BCE11C95AFA90024FCFB /* Favorite.swift in Sources */,
 				D4FD52231CB9F23A00B1F948 /* MapAlertPresenter.swift in Sources */,
@@ -997,6 +1237,7 @@
 				D496BCE31C95D2630024FCFB /* ETAAlertPresenter.swift in Sources */,
 				D450208D1BBB87A400E76633 /* FindNearByStopsController.swift in Sources */,
 				D468CC8D1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift in Sources */,
+				D409DF5F1CC71E8200324C76 /* ETACardPresenter.swift in Sources */,
 				D4D6AB641BBA2FE200CE241D /* AppDelegate.swift in Sources */,
 				D49411A41CACBA3A00DC66C3 /* ETACoreDataManager.swift in Sources */,
 				D496BCE61C95D3FD0024FCFB /* ETAAlertEnum.swift in Sources */,
@@ -1032,20 +1273,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D479C19C1C34DAA200C434ED /* PBXTargetDependency */ = {
+		D4138B471CB5FDD800D61C9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D479C18F1C34DAA200C434ED /* NetworkManager */;
-			targetProxy = D479C19B1C34DAA200C434ED /* PBXContainerItemProxy */;
+			target = D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */;
+			targetProxy = D4138B461CB5FDD800D61C9A /* PBXContainerItemProxy */;
 		};
-		D479C19E1C34DAA200C434ED /* PBXTargetDependency */ = {
+		D4876CC71CC67555004D92D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4876CC01CC67555004D92D5 /* findmybusnj-common */;
+			targetProxy = D4876CC61CC67555004D92D5 /* PBXContainerItemProxy */;
+		};
+		D4876CDE1CC67644004D92D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D4D6AB5F1BBA2FE200CE241D /* findmybusnj */;
-			targetProxy = D479C19D1C34DAA200C434ED /* PBXContainerItemProxy */;
-		};
-		D479C1A41C34DAA200C434ED /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D479C18F1C34DAA200C434ED /* NetworkManager */;
-			targetProxy = D479C1A31C34DAA200C434ED /* PBXContainerItemProxy */;
+			targetProxy = D4876CDD1CC67644004D92D5 /* PBXContainerItemProxy */;
 		};
 		D4D1AF231C0BA99C00FA6C91 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1075,6 +1316,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4138B431CB5FDD800D61C9A /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		D4D6AB691BBA2FE200CE241D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1094,168 +1343,45 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D46EEA441CB98FA80050A73C /* Testflight */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_SWIFT_FLAGS = "-DRELEASE";
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Testflight;
-		};
-		D46EEA451CB98FA80050A73C /* Testflight */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86380F7789E2BF8B92C57B88 /* Pods-findmybusnj.testflight.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = findmybusnj/findmybusnj.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = findmybusnj/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.aghassi.findmybusnj;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-			};
-			name = Testflight;
-		};
-		D46EEA461CB98FA80050A73C /* Testflight */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = findmybusnjTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
-			};
-			name = Testflight;
-		};
-		D46EEA471CB98FA80050A73C /* Testflight */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = findmybusnjUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = findmybusnj;
-				USES_XCTRUNNER = YES;
-			};
-			name = Testflight;
-		};
-		D46EEA481CB98FA80050A73C /* Testflight */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AnimationsFramework/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFramework;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Testflight;
-		};
-		D46EEA491CB98FA80050A73C /* Testflight */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = AnimationsFrameworkTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFrameworkTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
-			};
-			name = Testflight;
-		};
-		D46EEA4A1CB98FA80050A73C /* Testflight */ = {
+		D4138B491CB5FDD800D61C9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_ENTITLEMENTS = "Find My Bus NJ Today Widget/Find My Bus NJ Today Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = NetworkManager/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = "Find My Bus NJ Today Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.NetworkManager;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
+				PRODUCT_NAME = "Find My Bus NJ";
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
-			name = Testflight;
+			name = Debug;
 		};
-		D46EEA4B1CB98FA80050A73C /* Testflight */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = NetworkManagerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.NetworkManagerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
-			};
-			name = Testflight;
-		};
-		D479C1A71C34DAA300C434ED /* Debug */ = {
+		D4138B4A1CB5FDD800D61C9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_ENTITLEMENTS = "Find My Bus NJ Today Widget/Find My Bus NJ Today Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Find My Bus NJ Today Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
+				PRODUCT_NAME = "Find My Bus NJ";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D4876CCA1CC67555004D92D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1264,13 +1390,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = NetworkManager/Info.plist;
+				INFOPLIST_FILE = "findmybusnj-common/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.NetworkManager;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-common";
+				PRODUCT_NAME = findmybusnj_common;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1279,10 +1404,11 @@
 			};
 			name = Debug;
 		};
-		D479C1A81C34DAA300C434ED /* Release */ = {
+		D4876CCB1CC67555004D92D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1291,13 +1417,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = NetworkManager/Info.plist;
+				INFOPLIST_FILE = "findmybusnj-common/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.NetworkManager;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-common";
+				PRODUCT_NAME = findmybusnj_common;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1305,25 +1430,29 @@
 			};
 			name = Release;
 		};
-		D479C1A91C34DAA300C434ED /* Debug */ = {
+		D4876CE01CC67644004D92D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = NetworkManagerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = "findmybusnj-commonTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.NetworkManagerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-commonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Debug;
 		};
-		D479C1AA1C34DAA300C434ED /* Release */ = {
+		D4876CE11CC67644004D92D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = NetworkManagerTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = "findmybusnj-commonTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = aghassi.NetworkManagerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-commonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
@@ -1332,7 +1461,7 @@
 		D4D1AF2E1C0BA99C00FA6C91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1358,7 +1487,7 @@
 		D4D1AF2F1C0BA99C00FA6C91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1498,7 +1627,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = findmybusnj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1518,7 +1647,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = findmybusnj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1580,22 +1709,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D479C1AD1C34DAA300C434ED /* Build configuration list for PBXNativeTarget "NetworkManager" */ = {
+		D4138B4B1CB5FDD800D61C9A /* Build configuration list for PBXNativeTarget "Find My Bus NJ Today Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D479C1A71C34DAA300C434ED /* Debug */,
-				D479C1A81C34DAA300C434ED /* Release */,
-				D46EEA4A1CB98FA80050A73C /* Testflight */,
+				D4138B491CB5FDD800D61C9A /* Debug */,
+				D4138B4A1CB5FDD800D61C9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D479C1AE1C34DAA300C434ED /* Build configuration list for PBXNativeTarget "NetworkManagerTests" */ = {
+		D4876CCC1CC67555004D92D5 /* Build configuration list for PBXNativeTarget "findmybusnj-common" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D479C1A91C34DAA300C434ED /* Debug */,
-				D479C1AA1C34DAA300C434ED /* Release */,
-				D46EEA4B1CB98FA80050A73C /* Testflight */,
+				D4876CCA1CC67555004D92D5 /* Debug */,
+				D4876CCB1CC67555004D92D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4876CDF1CC67644004D92D5 /* Build configuration list for PBXNativeTarget "findmybusnj-commonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4876CE01CC67644004D92D5 /* Debug */,
+				D4876CE11CC67644004D92D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -75,16 +75,6 @@ class CardTableViewController: UITableViewController {
     self.refreshControl?.endRefreshing()
   }
   
-  
-  /**
-   Used to dismiss a popover view back to the root parent
-   
-   - parameter sender: The sender calling the function. Used to set the view to `sourceViewConroller`
-   */
-  @IBAction func unwindToMain(sender: UIStoryboardSegue) {
-    _ = sender.sourceViewController
-  }
-  
   // MARK: UITableViewController
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     if (!items.isEmpty || noPrediction) {
@@ -127,7 +117,7 @@ class CardTableViewController: UITableViewController {
     }
     else {
       let json = items[index]
-      etaCardPresenter.formatCardForPresentation(etaCard, json: json)
+      etaCardPresenter.formatCellForPresentation(etaCard, json: json)
     }
     
     return etaCard

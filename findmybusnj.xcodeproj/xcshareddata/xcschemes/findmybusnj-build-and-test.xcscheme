@@ -43,16 +43,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D479C1981C34DAA200C434ED"
-               BuildableName = "NetworkManagerTests.xctest"
-               BlueprintName = "NetworkManagerTests"
-               ReferencedContainer = "container:findmybusnj.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "D4D6AB751BBA2FE200CE241D"
                BuildableName = "findmybusnjTests.xctest"
                BlueprintName = "findmybusnjTests"
@@ -73,6 +63,16 @@
                   Identifier = "ETABusTimeTableControllerUITests/testEmptyListRefreshes()">
                </Test>
             </SkippedTests>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D4876CD71CC67644004D92D5"
+               BuildableName = "findmybusnj-commonTests.xctest"
+               BlueprintName = "findmybusnj-commonTests"
+               ReferencedContainer = "container:findmybusnj.xcodeproj">
+            </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>

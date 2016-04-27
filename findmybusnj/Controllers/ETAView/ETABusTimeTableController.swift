@@ -10,13 +10,14 @@ import UIKit
 import CoreData
 
 // MARK: Dependancies
-import NetworkManager
+import findmybusnj_common
 import PKHUD
 
 class ETABusTimeTableController: CardTableViewController {
   private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
   private let alertPresenter = ETAAlertPresenter()
   private var coreDataManager: ETACoreDataManager!
+  private let networkManager = ServerManager()
   
   // MARK: Properties
   var currentStop: String = ""
@@ -55,14 +56,39 @@ class ETABusTimeTableController: CardTableViewController {
     }
   }
   
-   /**
-   Loads the selected favorite from the `ETASearchPopOverController`
+  /**
+   Takes the current search information and performs a search on it. Information is passed from `ETASearchPopOverController`
    
-   - parameter sender: Storyboard segue exiting to unwind back to this controller
+   - parameter segue: Segue being performed
    */
-  @IBAction func loadSelectedFavorite(sender: UIStoryboardSegue) {
-    if sender.identifier == "loadSelectedFavorite" {
+  @IBAction func searchForStop(segue: UIStoryboardSegue) {
+    if segue.identifier == "search" {
+      let sourceController = segue.sourceViewController as! ETASearchPopOverController
+      
+      guard let stop = sourceController.stopNumberTextField.text else {
+        return
+      }
+      guard let route = sourceController.filterRouteNumberTextField.text else {
+        return
+      }
+      
+      performSearch(stop, route: route)
+    }
+    else if segue.identifier == "loadSelectedFavorite" {
       performSearch(selectedFavorite.stop, route: selectedFavorite.route)
+    }
+    
+    updateAppGroupData()
+  }
+  
+  /**
+   Dismisses a popover and unwinds back to this view controller
+   
+   - parameter segue: A segue with the identifier `exit`
+   */
+  @IBAction func dismissPopover(segue: UIStoryboardSegue) {
+    if segue.identifier == "exit" {
+     self.unwindForSegue(segue, towardsViewController: self)
     }
   }
   
@@ -74,30 +100,6 @@ class ETABusTimeTableController: CardTableViewController {
   override func refresh(sender: AnyObject) {
     performSearch(currentStop, route: filterRoute)
     self.refreshControl?.endRefreshing()
-  }
-  
-  /**
-   Returns the popover back to this controller. Called when a modal or popover is dimissed.
-   If the button pressed to dismiss was "Search", we handle the data being passed so we can
-   use the new stop to make a request to the server and update the table
-   
-   - Parameter sender: The `UIStoryboardSegue` being dismissed
-   */
-  override func unwindToMain(sender: UIStoryboardSegue) {
-    // Make sure that we transfer data from the popover controller if user is searching
-    if sender.identifier == "search" {
-      let sourceController = sender.sourceViewController as! ETASearchPopOverController
-      
-      guard let stop = sourceController.stopNumberTextField.text else {
-        return
-      }
-      guard let route = sourceController.filterRouteNumberTextField.text else {
-        return
-      }
-      
-      performSearch(stop, route: route)
-    }
-    super.unwindToMain(sender)
   }
   
   // MARK: Public Methods
@@ -133,7 +135,7 @@ class ETABusTimeTableController: CardTableViewController {
     
     HUD.show(.Progress)
     if route.isEmpty {
-      NMServerManager.getJSONForStop(stop) {
+      networkManager.getJSONForStop(stop) {
         [unowned self] items, error in
         
         if error == nil {
@@ -145,7 +147,7 @@ class ETABusTimeTableController: CardTableViewController {
     else {
       navigationBar.title = "\(stop) via \(route)"
     
-      NMServerManager.getJSONForStopFilteredByRoute(stop, route: route) {
+      networkManager.getJSONForStopFilteredByRoute(stop, route: route) {
         [unowned self] items, error in
         
         if error == nil {
@@ -179,6 +181,13 @@ class ETABusTimeTableController: CardTableViewController {
     
     if coreDataManager.attemptToSave(favorite) {
       alertPresenter.presentCheckmarkInView(self.tableView, title: "Saved Favorite")
+    }
+  }
+  
+  private func updateAppGroupData() {
+    if let appGroup = NSUserDefaults.init(suiteName: "group.aghassi.TodayExtensionSharingDefaults") {
+      appGroup.setObject(currentStop, forKey: "currentStop")
+      appGroup.setObject(filterRoute, forKey: "filterRoute")
     }
   }
 }

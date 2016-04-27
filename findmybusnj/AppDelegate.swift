@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     shortcutItemManager = ThreeDTouchCoreDataManager(managedObjectContext: self.managedObjectContext)
-    
+
     #if RELEASE
       Fabric.with([Crashlytics.self])
     #endif

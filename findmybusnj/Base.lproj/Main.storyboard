@@ -212,7 +212,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="W8o-yS-xKl" kind="unwind" identifier="loadSelectedFavorite" unwindAction="loadSelectedFavorite:" id="Q5Y-Ei-kzr"/>
+                                            <segue destination="W8o-yS-xKl" kind="unwind" identifier="loadSelectedFavorite" unwindAction="searchForStop:" id="Q5Y-Ei-kzr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -228,7 +228,7 @@
                                     <navigationItem id="Zsz-s0-nPP">
                                         <barButtonItem key="leftBarButtonItem" title="Close" id="QZm-dB-wll">
                                             <connections>
-                                                <segue destination="5RZ-04-DfF" kind="unwind" identifier="exit" unwindAction="unwindToMain:" id="pNt-Jf-jW7"/>
+                                                <segue destination="W8o-yS-xKl" kind="unwind" identifier="exit" unwindAction="dismissPopover:" id="DOV-Um-4Az"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -324,7 +324,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
-                                    <segue destination="5RZ-04-DfF" kind="unwind" identifier="search" unwindAction="unwindToMain:" id="deE-UX-LZo"/>
+                                    <segue destination="W8o-yS-xKl" kind="unwind" identifier="search" unwindAction="searchForStop:" id="l2e-fS-rlO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -470,7 +470,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFK-Xe-SwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="5RZ-04-DfF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1204" y="1483"/>
         </scene>

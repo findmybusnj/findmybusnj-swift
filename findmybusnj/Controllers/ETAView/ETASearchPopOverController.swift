@@ -10,9 +10,6 @@ import Foundation
 import UIKit
 import CoreData
 
-// MARK: Dependancies
-import NetworkManager
-
 class ETASearchPopOverController: UIViewController {
   private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
   private var managedObjectContext: NSManagedObjectContext!

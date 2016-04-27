@@ -7,20 +7,22 @@
 //
 
 import XCTest
-@testable import NetworkManager
+@testable import findmybusnj_common
 
-class NMServerManagerTests: XCTestCase {
+class ServerManagerTests: XCTestCase {
   // MARK: Test variables
+  var networkManagerUnderTest: ServerManager!
   let testStop = "26229"
   var expect: XCTestExpectation?  // see: http://www.rockhoppertech.com/blog/unit-testing-async-network-calls-in-swift/
   
   override func setUp() {
-    if NMServerManager.lastEndpoint != "" {
-      NMServerManager.lastEndpoint = ""
-    }
-    
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    networkManagerUnderTest = ServerManager()
+    if networkManagerUnderTest.lastEndpoint != "" {
+      networkManagerUnderTest.lastEndpoint = ""
+    }
   }
   
   override func tearDown() {
@@ -32,13 +34,13 @@ class NMServerManagerTests: XCTestCase {
    Tests to make sure the `url` matches what it should be before use
    */
   func test_BaseURL_isCorrect() {
-    XCTAssertEqual(NMServerManager.url, "https://findmybusnj.com/rest", "Base url should be https://findmybusnj.com/rest")
+    XCTAssertEqual(networkManagerUnderTest.url, "https://findmybusnj.com/rest", "Base url should be https://findmybusnj.com/rest")
   }
   
   /**
    Tests to make sure `lastEndpoint` is an empty string before first use
    */
   func test_LastEndpoint_IsEmpty_BeforeUse() {
-    XCTAssertEqual(NMServerManager.lastEndpoint, "", "`lastEndpoint` should be empty on first use")
+    XCTAssertEqual(networkManagerUnderTest.lastEndpoint, "", "`lastEndpoint` should be empty on first use")
   }
 }

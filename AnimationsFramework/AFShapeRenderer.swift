@@ -9,12 +9,18 @@
 import Foundation
 import UIKit
 
+// Dependecies
+import findmybusnj_common
+
 /**
  A class from the `AnimationsFramework` that will render shapes
+ 
+ TODO: Refactor this so it isn't static.
  */
 public class AFShapeRenderer {
   // Stroke color of the circle to be rendered
   private static var strokeColor: CGColor!
+  private static let colorPallette = ColorPallette()
   
   /**
    Creates a circle and renders it given the current bus time
@@ -73,24 +79,26 @@ public class AFShapeRenderer {
   /**
    Sets the stroke color of the circle based on the bus time being passed in
    
+   TODO: Remove this method and replace with use of `ETAPresenter`. This function is deprecated.
+   
    - parameter busTime:    The time the bus will be arriving as an int
    */
   private static func determineStrokeColorForBusTime(busTime: Int) {
     if (busTime == 0) {
       // Blue
-      self.strokeColor = UIColor(red: 67.0/255.0, green: 174.0/255.0, blue: 249.0/255.0, alpha: 1.0).CGColor
+      self.strokeColor = colorPallette.powderBlue().CGColor
     }
     else if (busTime <= 7) {
       // Green
-      self.strokeColor = UIColor(red: 29.0/255.0, green: 156.0/255.0, blue: 48.0/255.0, alpha: 1.0).CGColor
+      self.strokeColor = colorPallette.emeraldGreen().CGColor
     }
     else if ( busTime <= 14) {
       // Orange
-      self.strokeColor = UIColor(red: 237.0/255.0, green: 145.0/255.0, blue: 50.0/255.0, alpha: 1.0).CGColor
+      self.strokeColor = colorPallette.creamsicleOrange().CGColor
     }
     else {
       // Red
-      self.strokeColor = UIColor(red: 204.0/255.0, green: 25.0/255.0, blue: 36.0/255.0, alpha: 1.0).CGColor
+      self.strokeColor = colorPallette.lollipopRed().CGColor
     }
   }
 }

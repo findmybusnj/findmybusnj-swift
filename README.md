@@ -19,6 +19,7 @@ TODO:
 - ~~User should be able to get navigation to a stop via the maps application~~ ✓
 - ~~Look into releasing/using `unowned` on self when in a closure~~ ✓
 - ~~Add 3D Touch Shortcuts~~ ✓
+- Expand test coverage
 
 Future Updates:
 - Add Today View Widget
