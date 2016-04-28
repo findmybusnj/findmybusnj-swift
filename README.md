@@ -22,7 +22,7 @@ TODO:
 - Expand test coverage
 
 Future Updates:
-- Add Today View Widget
+- ~~Add Today View Widget~~
 - Add watch app (native)
 
 ## Documentation
