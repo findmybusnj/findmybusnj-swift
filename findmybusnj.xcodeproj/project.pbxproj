@@ -79,8 +79,6 @@
 		D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */; };
 		D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */; };
 		D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */; };
-		D4F152811C39873F007D8EA7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F1527F1C39873F007D8EA7 /* Alamofire.framework */; };
-		D4F152821C39873F007D8EA7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F152801C39873F007D8EA7 /* SwiftyJSON.framework */; };
 		D4FD52231CB9F23A00B1F948 /* MapAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD52221CB9F23A00B1F948 /* MapAlertPresenter.swift */; };
 /* End PBXBuildFile section */
 
@@ -1741,7 +1739,6 @@
 			buildConfigurations = (
 				D4D1AF2E1C0BA99C00FA6C91 /* Debug */,
 				D4D1AF2F1C0BA99C00FA6C91 /* Release */,
-				D46EEA481CB98FA80050A73C /* Testflight */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1751,7 +1748,6 @@
 			buildConfigurations = (
 				D4D1AF301C0BA99C00FA6C91 /* Debug */,
 				D4D1AF311C0BA99C00FA6C91 /* Release */,
-				D46EEA491CB98FA80050A73C /* Testflight */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1761,7 +1757,6 @@
 			buildConfigurations = (
 				D4D6AB881BBA2FE200CE241D /* Debug */,
 				D4D6AB891BBA2FE200CE241D /* Release */,
-				D46EEA441CB98FA80050A73C /* Testflight */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1771,7 +1766,6 @@
 			buildConfigurations = (
 				D4D6AB8B1BBA2FE200CE241D /* Debug */,
 				D4D6AB8C1BBA2FE200CE241D /* Release */,
-				D46EEA451CB98FA80050A73C /* Testflight */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1781,7 +1775,6 @@
 			buildConfigurations = (
 				D4D6AB8E1BBA2FE200CE241D /* Debug */,
 				D4D6AB8F1BBA2FE200CE241D /* Release */,
-				D46EEA461CB98FA80050A73C /* Testflight */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1791,7 +1784,6 @@
 			buildConfigurations = (
 				D4D6AB911BBA2FE200CE241D /* Debug */,
 				D4D6AB921BBA2FE200CE241D /* Release */,
-				D46EEA471CB98FA80050A73C /* Testflight */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

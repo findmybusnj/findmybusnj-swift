@@ -32,7 +32,6 @@ class FindNearByStopsController: UIViewController {
   
     // always check to make sure we have permission before proceeding.
     checkLocationAuthorizationStatus()
-
   }
   
   /**
@@ -49,7 +48,7 @@ class FindNearByStopsController: UIViewController {
   /**
    Takes in a string that denotes the type of place to query google for,
    Sends a `.POST` request to the endpoint, which hits google, and returns JSON
-   This method needs to be moved to the `NetworkManager` eventually
+   This method needs to be moved to the `ServerManager` eventually
    
    - parameter googleType: A string that represents the google types. You can find more
    info on the type at the [Google Places API](https://developers.google.com/places/supported_types)
@@ -129,6 +128,8 @@ class FindNearByStopsController: UIViewController {
   private func checkLocationAuthorizationStatus() {
     if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
       mapView.showsUserLocation = true
+      centerMapOnLocation()
+      queryPlaces("bus_station")
     }
     else {
       mapView.showsUserLocation = false
