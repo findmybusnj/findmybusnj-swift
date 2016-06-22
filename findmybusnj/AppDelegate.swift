@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     shortcutItemManager = ThreeDTouchCoreDataManager(managedObjectContext: self.managedObjectContext)
+    
+    // Set background refresh time
+    UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
 
     #if RELEASE
       Fabric.with([Crashlytics.self])
@@ -60,6 +63,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     self.saveContext()
+  }
+  
+  func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+    guard let rootView = UIApplication.sharedApplication().keyWindow?.rootViewController else {
+      completionHandler(.Failed)
+      return
+    }
+    
+    if (rootView.childViewControllers[0].childViewControllers[0].isKindOfClass(ETABusTimeTableController)) {
+      let etaController = rootView.childViewControllers[0].childViewControllers[0] as! ETABusTimeTableController
+      etaController.updateInBackground(completionHandler)
+    }
   }
   
   // MARK: - 3D Touch

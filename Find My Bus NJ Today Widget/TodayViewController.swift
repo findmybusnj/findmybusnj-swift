@@ -36,6 +36,11 @@ class TodayViewController: UIViewController {
       self.view.alpha = 1
     }
     etaTableView.separatorColor = UIColor.clearColor()
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view from its nib.
     
     loadFromAppGroup()
     
@@ -45,7 +50,7 @@ class TodayViewController: UIViewController {
         if !item.isEmpty {
           self.updateTable(item)
         }
-      })
+        })
     }
     else {
       networkManager.getJSONForStop(stop, completion: { [unowned self] (item, error) in
@@ -53,13 +58,8 @@ class TodayViewController: UIViewController {
         if !item.isEmpty {
           self.updateTable(item)
         }
-      })
+        })
     }
-  }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view from its nib.
   }
   
   override func didReceiveMemoryWarning() {

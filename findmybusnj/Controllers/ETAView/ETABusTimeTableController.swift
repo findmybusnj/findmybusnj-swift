@@ -117,6 +117,15 @@ class ETABusTimeTableController: CardTableViewController {
     performSearch(currentStop, route: filterRoute)
   }
   
+  /**
+   Handles background fetches by system. Updates the table with any new data
+   
+   - parameter completionHandler: To be called when the data is fetched or failed to fetch
+   */
+  func updateInBackground(completionHandler: (UIBackgroundFetchResult) -> Void) {
+    performSearchInBackground(completionHandler)
+  }
+  
   // MARK: Private Methods
   /**
    Does the network search based on the search and route pass in. Sets the `navigationBar.title` to the stop (including route if one is passed in).
@@ -159,6 +168,48 @@ class ETABusTimeTableController: CardTableViewController {
   }
   
   /**
+   Modified version of `performSearch` that is only called when backgrounded.
+   TODO: Refactor this into the normal `performSearch` method.
+   
+   - parameter completionHandler: `UIBackgroundFetchResult` function to be called after data is successfully fetched or not
+   */
+  private func performSearchInBackground(completionHandler: (UIBackgroundFetchResult) -> Void) {
+    if (currentStop.isEmpty) {
+      return
+    }
+    
+    if (filterRoute.isEmpty) {
+      networkManager.getJSONForStop(currentStop, completion: {
+        [unowned self] items, error in
+        
+        if error == nil {
+          self.updateTable(items)
+          completionHandler(.NewData)
+        }
+        else if (error != nil) {
+          completionHandler(.Failed)
+        }
+      })
+    }
+    else {
+      navigationBar.title = "\(currentStop) via \(filterRoute)"
+      
+      networkManager.getJSONForStopFilteredByRoute(currentStop, route: filterRoute) {
+        [unowned self] items, error in
+        
+        if error == nil {
+          self.updateTable(items)
+          completionHandler(.NewData)
+        }
+        else if (error != nil) {
+          completionHandler(.Failed)
+        }
+      }
+
+    }
+  }
+  
+  /**
    Called when a user attempts to save a stop
    */
   private func saveToFavorite() {
@@ -184,6 +235,10 @@ class ETABusTimeTableController: CardTableViewController {
     }
   }
   
+  /**
+   Called when a new stop is selected. Passes information to the `AppGroup` so the widget can perform updates
+   independantly on load.
+   */
   private func updateAppGroupData() {
     if let appGroup = NSUserDefaults.init(suiteName: "group.aghassi.TodayExtensionSharingDefaults") {
       appGroup.setObject(currentStop, forKey: "currentStop")

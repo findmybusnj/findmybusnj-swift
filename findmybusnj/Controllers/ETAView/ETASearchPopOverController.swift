@@ -158,15 +158,24 @@ extension ETASearchPopOverController: UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("FavCell")
+    let cell = tableView.dequeueReusableCellWithIdentifier("FavCell")!
     let index = indexPath.row
     
     let favItem = favorites[index] as! Favorite
     
-    cell?.textLabel?.text = favItem.stop
-    cell?.detailTextLabel?.text = favItem.route
+    guard let stop = favItem.stop else {
+      return cell
+    }
+    cell.textLabel?.text = "Stop: \(stop)"
     
-    return cell!
+    guard let route = favItem.route else {
+      return cell
+    }
+    if !route.isEmpty {
+      cell.detailTextLabel?.text = "Route: \(route)"
+    }    
+    
+    return cell
   }
   
   func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
