@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (3.3.0)
-  - Crashlytics (3.7.0):
+  - Crashlytics (3.7.2):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.7)
   - PKHUD (3.0.1)
@@ -15,9 +15,11 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
-  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  Crashlytics: 130ab943f8c78cda7a814b434f270b2e2c8a3cba
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   PKHUD: 473a97c2626847e5e2e7d6f535d65e0bb48da70c
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 21b0c7f35202c3d07a30ca952ee7d0d54b628b6f
+
+COCOAPODS: 1.0.1
