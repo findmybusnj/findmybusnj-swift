@@ -1,6 +1,0 @@
-framework module Pods_findmybusnjUITests {
-  umbrella header "Pods-findmybusnjUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

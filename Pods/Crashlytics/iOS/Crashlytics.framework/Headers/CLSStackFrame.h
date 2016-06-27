@@ -26,7 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)stackFrameWithSymbol:(NSString *)symbol;
 
 @property (nonatomic, copy, nullable) NSString *symbol;
-@property (nonatomic, copy, nullable) NSString *rawSymbol;
 @property (nonatomic, copy, nullable) NSString *library;
 @property (nonatomic, copy, nullable) NSString *fileName;
 @property (nonatomic, assign) uint32_t lineNumber;

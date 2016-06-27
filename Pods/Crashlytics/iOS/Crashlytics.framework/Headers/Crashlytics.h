@@ -18,10 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol CrashlyticsDelegate;
 
 /**
- * Crashlytics. Handles configuration and initialization of Crashlytics.
- *
- * Note: The Crashlytics class cannot be subclassed. If this is causing you pain for
- * testing, we suggest using either a wrapper class or a protocol extension.
+ *  Crashlytics. Handles configuration and initialization of Crashlytics.
  */
 @interface Crashlytics : NSObject
 
