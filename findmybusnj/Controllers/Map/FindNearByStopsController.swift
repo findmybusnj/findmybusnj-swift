@@ -58,7 +58,7 @@ class FindNearByStopsController: UIViewController {
       let coordinate = locationManager.location!.coordinate
     #endif
     
-    let queryRegion = regionRadius * 3
+    let queryRegion = regionRadius * 5
     
     // Test data
     #if DEBUG
@@ -107,7 +107,7 @@ class FindNearByStopsController: UIViewController {
         var latitude: Double
         var longitude: Double
         
-        for i in 0.stride(to: 15, by: 1) {
+        for i in 0.stride(to: results.count, by: 1) {
           locName = String(results[i]["name"])
           latitude = results[i]["geometry"]["location"]["lat"].double!
           longitude = results[i]["geometry"]["location"]["lng"].double!
