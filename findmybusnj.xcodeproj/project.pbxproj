@@ -391,8 +391,7 @@
 				D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */,
 				D4138B451CB5FDD800D61C9A /* Info.plist */,
 			);
-			name = "findmybusnj-widget";
-			path = "Find My Bus NJ Today Widget";
+			path = "findmybusnj-widget";
 			sourceTree = "<group>";
 		};
 		D4188F601CC7BCAA0048E9AA /* Helpers */ = {
@@ -774,9 +773,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */ = {
+		D4138B3B1CB5FDD800D61C9A /* findmybusnj-widget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4138B4B1CB5FDD800D61C9A /* Build configuration list for PBXNativeTarget "Find My Bus NJ Today Widget" */;
+			buildConfigurationList = D4138B4B1CB5FDD800D61C9A /* Build configuration list for PBXNativeTarget "findmybusnj-widget" */;
 			buildPhases = (
 				D4138B381CB5FDD800D61C9A /* Sources */,
 				D4138B391CB5FDD800D61C9A /* Frameworks */,
@@ -786,7 +785,7 @@
 			);
 			dependencies = (
 			);
-			name = "Find My Bus NJ Today Widget";
+			name = "findmybusnj-widget";
 			productName = "Find My Bus NJ Today Widget";
 			productReference = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -1004,7 +1003,7 @@
 				D4D1AF1F1C0BA99C00FA6C91 /* AnimationsFrameworkTests */,
 				D4876CC01CC67555004D92D5 /* findmybusnj-common */,
 				D4876CD71CC67644004D92D5 /* findmybusnj-commonTests */,
-				D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */,
+				D4138B3B1CB5FDD800D61C9A /* findmybusnj-widget */,
 			);
 		};
 /* End PBXProject section */
@@ -1261,7 +1260,7 @@
 /* Begin PBXTargetDependency section */
 		D4138B471CB5FDD800D61C9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D4138B3B1CB5FDD800D61C9A /* Find My Bus NJ Today Widget */;
+			target = D4138B3B1CB5FDD800D61C9A /* findmybusnj-widget */;
 			targetProxy = D4138B461CB5FDD800D61C9A /* PBXContainerItemProxy */;
 		};
 		D4876CC71CC67555004D92D5 /* PBXTargetDependency */ = {
@@ -1334,10 +1333,10 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_ENTITLEMENTS = "Find My Bus NJ Today Widget/Find My Bus NJ Today Widget.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "findmybusnj-widget/Find My Bus NJ Today Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Find My Bus NJ Today Widget/Info.plist";
+				INFOPLIST_FILE = "findmybusnj-widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
@@ -1351,10 +1350,10 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_ENTITLEMENTS = "Find My Bus NJ Today Widget/Find My Bus NJ Today Widget.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "findmybusnj-widget/Find My Bus NJ Today Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Find My Bus NJ Today Widget/Info.plist";
+				INFOPLIST_FILE = "findmybusnj-widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
@@ -1695,7 +1694,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D4138B4B1CB5FDD800D61C9A /* Build configuration list for PBXNativeTarget "Find My Bus NJ Today Widget" */ = {
+		D4138B4B1CB5FDD800D61C9A /* Build configuration list for PBXNativeTarget "findmybusnj-widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4138B491CB5FDD800D61C9A /* Debug */,
