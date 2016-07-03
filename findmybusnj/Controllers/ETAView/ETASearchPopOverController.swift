@@ -164,16 +164,21 @@ extension ETASearchPopOverController: UITableViewDataSource {
     let favItem = favorites[index] as! Favorite
     
     guard let stop = favItem.stop else {
+      cell.textLabel?.text = " "
       return cell
     }
     cell.textLabel?.text = "Stop: \(stop)"
     
     guard let route = favItem.route else {
+      cell.detailTextLabel?.text = ""
       return cell
     }
     if !route.isEmpty {
       cell.detailTextLabel?.text = "Route: \(route)"
-    }    
+    }
+    else {
+      cell.detailTextLabel?.text = ""
+    }
     
     return cell
   }
