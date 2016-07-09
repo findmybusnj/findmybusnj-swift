@@ -23,23 +23,20 @@ public protocol ETAPresenter {
 
 public extension ETAPresenter {
   func backgroundColorForTime(time: Int) -> UIColor {
-    let colorPallette = ColorPallette()
+    let colorPalette = ColorPallette()
     
-    if (time == 0) {
+    switch(time) {
+    case 0:
       // Blue
-      return colorPallette.powderBlue()
-    }
-    else if (time <= 7) {
+      return colorPalette.powderBlue()
+    case 1...7:
       // Green
-      return colorPallette.emeraldGreen()
-    }
-    else if ( time <= 14) {
+      return colorPalette.emeraldGreen()
+    case 8...14:
       // Orange
-      return colorPallette.creamsicleOrange()
-    }
-    else {
-      // Red
-      return colorPallette.lollipopRed()
+      return colorPalette.creamsicleOrange()
+    default:
+      return colorPalette.lollipopRed()
     }
   }
 }

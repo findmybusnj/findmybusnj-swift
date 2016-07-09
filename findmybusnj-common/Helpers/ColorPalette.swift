@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ColorPallette: UIColor {
+public class ColorPalette: UIColor {
   public func powderBlue() -> UIColor {
     return  UIColor(red: 67.0/255.0, green: 174.0/255.0, blue: 249.0/255.0, alpha: 1.0)
   }

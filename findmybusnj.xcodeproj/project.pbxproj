@@ -16,7 +16,7 @@
 		D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4138B401CB5FDD800D61C9A /* TodayViewController.swift */; };
 		D4138B441CB5FDD800D61C9A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */; };
 		D4138B481CB5FDD800D61C9A /* Find My Bus NJ.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D4188F621CC7BCCC0048E9AA /* ColorPallette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4188F611CC7BCCC0048E9AA /* ColorPallette.swift */; };
+		D4188F621CC7BCCC0048E9AA /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4188F611CC7BCCC0048E9AA /* ColorPalette.swift */; };
 		D4188F651CC7BFCF0048E9AA /* ColorPalletteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4188F641CC7BFCF0048E9AA /* ColorPalletteTest.swift */; };
 		D429904B1C8E916300FCADFF /* noPrediction.json in Resources */ = {isa = PBXBuildFile; fileRef = D429904A1C8E916300FCADFF /* noPrediction.json */; };
 		D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */; };
@@ -181,7 +181,7 @@
 		D4138B401CB5FDD800D61C9A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		D4138B431CB5FDD800D61C9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		D4138B451CB5FDD800D61C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4188F611CC7BCCC0048E9AA /* ColorPallette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPallette.swift; path = Helpers/ColorPallette.swift; sourceTree = "<group>"; };
+		D4188F611CC7BCCC0048E9AA /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPalette.swift; path = Helpers/ColorPalette.swift; sourceTree = "<group>"; };
 		D4188F641CC7BFCF0048E9AA /* ColorPalletteTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPalletteTest.swift; path = Helpers/ColorPalletteTest.swift; sourceTree = "<group>"; };
 		D42358561BBCE01800032949 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D429904A1C8E916300FCADFF /* noPrediction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = noPrediction.json; path = ModelData/noPrediction.json; sourceTree = SOURCE_ROOT; };
@@ -397,7 +397,7 @@
 		D4188F601CC7BCAA0048E9AA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				D4188F611CC7BCCC0048E9AA /* ColorPallette.swift */,
+				D4188F611CC7BCCC0048E9AA /* ColorPalette.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -1169,7 +1169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D407670E1CC6B26000B2D9FF /* ETAPresenter.swift in Sources */,
-				D4188F621CC7BCCC0048E9AA /* ColorPallette.swift in Sources */,
+				D4188F621CC7BCCC0048E9AA /* ColorPalette.swift in Sources */,
 				D4876CCF1CC675C9004D92D5 /* ServerManager.swift in Sources */,
 				D4876CE71CC678D7004D92D5 /* JSONSanitizer.swift in Sources */,
 			);
