@@ -23,7 +23,7 @@ public protocol ETAPresenter {
 
 public extension ETAPresenter {
   func backgroundColorForTime(time: Int) -> UIColor {
-    let colorPalette = ColorPallette()
+    let colorPalette = ColorPalette()
     
     switch(time) {
     case 0:

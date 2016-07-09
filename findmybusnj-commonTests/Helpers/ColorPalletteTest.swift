@@ -11,11 +11,11 @@ import CoreGraphics
 @testable import findmybusnj_common
 
 class ColorPalletteTest: XCTestCase {
-  var palletteUnderTest: ColorPallette!
+  var palletteUnderTest: ColorPalette!
   
   override func setUp() {
     super.setUp()
-    palletteUnderTest = ColorPallette()
+    palletteUnderTest = ColorPalette()
     // Put setup code here. This method is called before the invocation of each test method in the class.
   }
   

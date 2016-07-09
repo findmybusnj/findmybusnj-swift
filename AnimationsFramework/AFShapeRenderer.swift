@@ -20,7 +20,7 @@ import findmybusnj_common
 public class AFShapeRenderer {
   // Stroke color of the circle to be rendered
   private static var strokeColor: CGColor!
-  private static let colorPallette = ColorPallette()
+  private static let colorPallette = ColorPalette()
   
   /**
    Creates a circle and renders it given the current bus time

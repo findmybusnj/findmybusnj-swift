@@ -14,7 +14,7 @@ import findmybusnj_common
 
 class WidgetETATableViewCellPresenter: ETAPresenter {
   var sanitizer = JSONSanitizer()
-  let colorPallette = ColorPallette()
+  let colorPallette = ColorPalette()
   
   func formatCellForPresentation(cell: UITableViewCell, json: JSON) {
     assignArrivalTimeForJson(cell, json: json)

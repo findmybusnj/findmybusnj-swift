@@ -11,7 +11,7 @@ import XCTest
 
 class ETAPresenterTests: XCTestCase {
   var presenterUnderTest: MockPresenter!
-  let colorPallette = ColorPallette()
+  let colorPallette = ColorPalette()
   var time: Int = 0
   
   override func setUp() {
