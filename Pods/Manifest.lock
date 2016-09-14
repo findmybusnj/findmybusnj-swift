@@ -1,23 +1,35 @@
 PODS:
-  - Alamofire (3.3.0)
-  - Crashlytics (3.7.0):
+  - Alamofire (4.0.0)
+  - Crashlytics (3.8.1):
     - Fabric (~> 1.6.3)
-  - Fabric (1.6.7)
+  - Fabric (1.6.8)
   - PKHUD (3.0.1)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.3.0)
+  - Alamofire (~> 4.0)
   - Crashlytics
   - Fabric
   - PKHUD (~> 3.0.0)
-  - SwiftyJSON (~> 2.3.1)
+  - SwiftyJSON (from `https://github.com/acegreen/SwiftyJSON.git`, branch `swift3`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :branch: swift3
+    :git: https://github.com/acegreen/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 8971384559780e631b041ac91b16734a396d4c14
+    :git: https://github.com/acegreen/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
-  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
-  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  Crashlytics: 4391d8df0b125345e9f209c5db6e7f40a6a8435d
+  Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
   PKHUD: 473a97c2626847e5e2e7d6f535d65e0bb48da70c
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 998005bf47a19905d913d2b2063c61e2a2488ad2
+
+COCOAPODS: 1.0.1
