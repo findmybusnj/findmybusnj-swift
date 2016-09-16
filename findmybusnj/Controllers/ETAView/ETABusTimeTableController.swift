@@ -14,10 +14,10 @@ import findmybusnj_common
 import PKHUD
 
 class ETABusTimeTableController: CardTableViewController {
-  private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-  private let alertPresenter = ETAAlertPresenter()
-  private var coreDataManager: ETACoreDataManager!
-  private let networkManager = ServerManager()
+  fileprivate let appDelegate = UIApplication.shared.delegate as! AppDelegate
+  fileprivate let alertPresenter = ETAAlertPresenter()
+  fileprivate var coreDataManager: ETACoreDataManager!
+  fileprivate let networkManager = ServerManager()
   
   // MARK: Properties
   var currentStop: String = ""
@@ -46,13 +46,13 @@ class ETABusTimeTableController: CardTableViewController {
    
    - parameter sender: The bar button being pressed
    */
-  @IBAction func saveFavorite(sender: UIButton) {
+  @IBAction func saveFavorite(_ sender: UIButton) {
     if !currentStop.isEmpty {
       saveToFavorite()
     }
     else {
-      let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Empty_Stop)
-      presentViewController(warning, animated: true, completion: nil)
+      let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.empty_Stop)
+      present(warning, animated: true, completion: nil)
     }
   }
   
@@ -61,9 +61,9 @@ class ETABusTimeTableController: CardTableViewController {
    
    - parameter segue: Segue being performed
    */
-  @IBAction func searchForStop(segue: UIStoryboardSegue) {
+  @IBAction func searchForStop(_ segue: UIStoryboardSegue) {
     if segue.identifier == "search" {
-      let sourceController = segue.sourceViewController as! ETASearchPopOverController
+      let sourceController = segue.source as! ETASearchPopOverController
       
       guard let stop = sourceController.stopNumberTextField.text else {
         return
@@ -86,9 +86,9 @@ class ETABusTimeTableController: CardTableViewController {
    
    - parameter segue: A segue with the identifier `exit`
    */
-  @IBAction func dismissPopover(segue: UIStoryboardSegue) {
+  @IBAction func dismissPopover(_ segue: UIStoryboardSegue) {
     if segue.identifier == "exit" {
-     self.unwindForSegue(segue, towardsViewController: self)
+     self.unwind(for: segue, towardsViewController: self)
     }
   }
   
@@ -97,7 +97,7 @@ class ETABusTimeTableController: CardTableViewController {
    
    - parameter sender: Object calling the refresh
    */
-  override func refresh(sender: AnyObject) {
+  override func refresh(_ sender: AnyObject) {
     performSearch(currentStop, route: filterRoute)
     self.refreshControl?.endRefreshing()
   }
@@ -108,7 +108,7 @@ class ETABusTimeTableController: CardTableViewController {
    
    - parameter shortcut: The shortcut being pressed
    */
-  func handleShortcut(shortcut: UIApplicationShortcutItem) {
+  func handleShortcut(_ shortcut: UIApplicationShortcutItem) {
     currentStop = shortcut.localizedTitle
     if let route = shortcut.localizedSubtitle {
       filterRoute = route
@@ -122,7 +122,7 @@ class ETABusTimeTableController: CardTableViewController {
    
    - parameter completionHandler: To be called when the data is fetched or failed to fetch
    */
-  func updateInBackground(completionHandler: (UIBackgroundFetchResult) -> Void) {
+  func updateInBackground(_ completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
     performSearchInBackground(completionHandler)
   }
   
@@ -133,7 +133,7 @@ class ETABusTimeTableController: CardTableViewController {
    - parameter stop:  Required, sent to endpoint to return next busses
    - parameter route: Optional, filters buses on the stop
    */
-  private func performSearch(stop: String, route: String) {
+  fileprivate func performSearch(_ stop: String, route: String) {
     currentStop = stop
     filterRoute = route
     navigationBar.title = stop
@@ -173,7 +173,7 @@ class ETABusTimeTableController: CardTableViewController {
    
    - parameter completionHandler: `UIBackgroundFetchResult` function to be called after data is successfully fetched or not
    */
-  private func performSearchInBackground(completionHandler: (UIBackgroundFetchResult) -> Void) {
+  fileprivate func performSearchInBackground(_ completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
     if (currentStop.isEmpty) {
       return
     }
@@ -212,7 +212,7 @@ class ETABusTimeTableController: CardTableViewController {
   /**
    Called when a user attempts to save a stop
    */
-  private func saveToFavorite() {
+  fileprivate func saveToFavorite() {
     let managedObjectContext = appDelegate.managedObjectContext
     
     // Check for duplicates
@@ -220,13 +220,13 @@ class ETABusTimeTableController: CardTableViewController {
     let predicate = NSPredicate(format: "stop == %@ AND route == %@", currentStop, filterRoute)
     
     if coreDataManager.isDuplicate(fetchRequest, predicate: predicate) {
-      let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Duplicate_Stop_Saved)
-      presentViewController(warning, animated: true, completion: nil)
+      let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.duplicate_Stop_Saved)
+      present(warning, animated: true, completion: nil)
       return
     }
     
     // Save otherwise
-    let favorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: managedObjectContext) as! Favorite
+    let favorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite", into: managedObjectContext) as! Favorite
     favorite.stop = currentStop
     favorite.route = filterRoute
     
@@ -239,10 +239,10 @@ class ETABusTimeTableController: CardTableViewController {
    Called when a new stop is selected. Passes information to the `AppGroup` so the widget can perform updates
    independantly on load.
    */
-  private func updateAppGroupData() {
-    if let appGroup = NSUserDefaults.init(suiteName: "group.aghassi.TodayExtensionSharingDefaults") {
-      appGroup.setObject(currentStop, forKey: "currentStop")
-      appGroup.setObject(filterRoute, forKey: "filterRoute")
+  fileprivate func updateAppGroupData() {
+    if let appGroup = UserDefaults.init(suiteName: "group.aghassi.TodayExtensionSharingDefaults") {
+      appGroup.set(currentStop, forKey: "currentStop")
+      appGroup.set(filterRoute, forKey: "filterRoute")
     }
   }
 }

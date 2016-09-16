@@ -15,15 +15,15 @@ extension CLAuthorizationStatus: AlertEnum {
 
 struct MapAlertPresenter: UIAlertPresenter {
   
-  func presentAlertWarning(type: AlertEnum) -> UIAlertController {
+  func presentAlertWarning(_ type: AlertEnum) -> UIAlertController {
     switch type {
-    case CLAuthorizationStatus.Denied, CLAuthorizationStatus.Restricted, CLAuthorizationStatus.NotDetermined:
-      let alertController = UIAlertController.init(title: "Please enable location service", message: "To see near by bus stops, location services needs to be enabled. Please go to Settings -> Privacy -> Location Services and enable it for this app.", preferredStyle: .Alert)
-      let done = UIAlertAction(title: "Done", style: .Default, handler: nil)
+    case CLAuthorizationStatus.denied, CLAuthorizationStatus.restricted, CLAuthorizationStatus.notDetermined:
+      let alertController = UIAlertController.init(title: "Please enable location service", message: "To see near by bus stops, location services needs to be enabled. Please go to Settings -> Privacy -> Location Services and enable it for this app.", preferredStyle: .alert)
+      let done = UIAlertAction(title: "Done", style: .default, handler: nil)
       alertController.addAction(done)
       return alertController
     default:
-      return UIAlertController(title: "", message: "", preferredStyle: .Alert)
+      return UIAlertController(title: "", message: "", preferredStyle: .alert)
     }
   }
 }

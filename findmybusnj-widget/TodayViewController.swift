@@ -15,27 +15,27 @@ import findmybusnj_common
 
 class TodayViewController: UIViewController {
   // MARK: Properties
-  private var items: JSON = []
-  private var stop = "", route = ""
+  fileprivate var items: JSON = []
+  fileprivate var stop = "", route = ""
   
   // MARK: Managers & Presenters
-  private let networkManager = ServerManager()
-  private let tableViewCellPresenter = WidgetETATableViewCellPresenter()
+  fileprivate let networkManager = ServerManager()
+  fileprivate let tableViewCellPresenter = WidgetETATableViewCellPresenter()
   
   // MARK: Outlets
   @IBOutlet weak var stopLabel: UILabel!
   @IBOutlet weak var routeLabel: UILabel!
   @IBOutlet weak var etaTableView: UITableView!
   
-  override func viewWillAppear(animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
     // Fade in without retaining self
     view.alpha = 0
-    UIView.animateWithDuration(0.4) { [unowned self] in
+    UIView.animate(withDuration: 0.4, animations: { [unowned self] in
       self.view.alpha = 1
-    }
-    etaTableView.separatorColor = UIColor.clearColor()
+    }) 
+    etaTableView.separatorColor = UIColor.clear
   }
   
   override func viewDidLoad() {
@@ -70,15 +70,15 @@ class TodayViewController: UIViewController {
   /**
    Loads the most recent `stop` and `route` from the shared AppGroup
    */
-  private func loadFromAppGroup() {
-    if let appGroup = NSUserDefaults.init(suiteName: "group.aghassi.TodayExtensionSharingDefaults") {
-      guard let currentStop = appGroup.objectForKey("currentStop") as? String else {
+  fileprivate func loadFromAppGroup() {
+    if let appGroup = UserDefaults.init(suiteName: "group.aghassi.TodayExtensionSharingDefaults") {
+      guard let currentStop = appGroup.object(forKey: "currentStop") as? String else {
         return
       }
       stop = currentStop
       stopLabel.text = stop
       
-      if let selectedStop = appGroup.objectForKey("filterRoute") as? String {
+      if let selectedStop = appGroup.object(forKey: "filterRoute") as? String {
         route = selectedStop
       }
       else {
@@ -93,7 +93,7 @@ class TodayViewController: UIViewController {
    
    - parameter items: Items that will populate the `tableView`
    */
-  private func updateTable(items: JSON) {
+  fileprivate func updateTable(_ items: JSON) {
     self.items = items
     etaTableView.reloadData()
     updateViewSize()
@@ -102,10 +102,10 @@ class TodayViewController: UIViewController {
   /**
    Updates the views `preferredContentSize` based on the height of the tableView
    */
-  private func updateViewSize() {
+  fileprivate func updateViewSize() {
     // Get the size and add a little so we don't cut off the button cell
     // Set the new size to the size of the widget
-    let newHeight = etaTableView.contentSize.height + stopLabel.intrinsicContentSize().height + 75
+    let newHeight = etaTableView.contentSize.height + stopLabel.intrinsicContentSize.height + 75
     let constantWidth = etaTableView.contentSize.width
     let newPreferredContentSize = CGSize(width: constantWidth, height: newHeight)
     self.preferredContentSize = newPreferredContentSize
@@ -114,21 +114,21 @@ class TodayViewController: UIViewController {
 
 // MARK: NCWidgetProviding
 extension TodayViewController: NCWidgetProviding {
-  func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
+  func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
     // Perform any setup necessary in order to update the view.
     
     // If an error is encountered, use NCUpdateResult.Failed
     // If there's no update required, use NCUpdateResult.NoData
     // If there's an update, use NCUpdateResult.NewData
     
-    completionHandler(NCUpdateResult.NewData)
+    completionHandler(NCUpdateResult.newData)
   }
   
 }
 
 // MARK: UITableViewDataSource
 extension TodayViewController: UITableViewDataSource {
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if items.count > 5 {
       return 5
     }
@@ -137,11 +137,11 @@ extension TodayViewController: UITableViewDataSource {
     }
   }
   
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let identifier = "arrivalCell"
-    let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! WidgetETATableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! WidgetETATableViewCell
     
-    cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.25)
+    cell.backgroundColor = UIColor.white.withAlphaComponent(0.25)
     tableViewCellPresenter.formatCellForPresentation(cell, json: items[indexPath.row])
 
     return cell

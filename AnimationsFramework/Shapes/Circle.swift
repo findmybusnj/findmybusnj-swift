@@ -26,7 +26,7 @@ class Circle: UIView {
    */
   init(frame: CGRect, color: CGColor) {
     super.init(frame: frame);
-    self.backgroundColor = UIColor.clearColor()
+    self.backgroundColor = UIColor.clear
     
     // Use UIBezierPath as an easy way to create the CGPath for the layer.
     // The path should be the entire circle.
@@ -34,8 +34,8 @@ class Circle: UIView {
     
     // Set the properties on the circle
     circle = CAShapeLayer()
-    circle.path = circlePath.CGPath
-    circle.fillColor = UIColor.clearColor().CGColor
+    circle.path = circlePath.cgPath
+    circle.fillColor = UIColor.clear.cgColor
     circle.strokeColor = color
     circle.lineWidth = 8.0
     
@@ -54,7 +54,7 @@ class Circle: UIView {
    - duration: Takes an NSTimeInterval to denote how long it should take to draw the circle
    - borderLength: how far around the circle should travel. If more than 1 it will be set to one (hence it is variable and not let)
    */
-  func animateCircle(duration: NSTimeInterval, borderLength: CGFloat) {
+  func animateCircle(_ duration: TimeInterval, borderLength: CGFloat) {
     var length = borderLength
     
     if (borderLength > 1) {
@@ -78,7 +78,7 @@ class Circle: UIView {
     circle.strokeEnd = length
     
     // Do the actual animation
-    circle.addAnimation(animation, forKey: "animateCircle")
+    circle.add(animation, forKey: "animateCircle")
   }
   
   /**
@@ -89,10 +89,10 @@ class Circle: UIView {
    - xCoordinates: Where in the view to the top left of the circle should be placed
    - busTimeForBorderLength: Denotes the bus time that will determine how far the circle goes
    */
-  func addCircleToView(view: UIView, xCoordinate: CGFloat, busTimeForBorderLength: Int) {
+  func addCircleToView(_ view: UIView, xCoordinate: CGFloat, busTimeForBorderLength: Int) {
     self.tag = 4    //  4 Stands for the item it should be (which in this case is the last) so we can remove it
     view.addSubview(self)
-    view.sendSubviewToBack(self)
+    view.sendSubview(toBack: self)
     
     // Animate the drawing of the circle over the course of 1 second
     let borderLength = calculateBorderLengthForBusTime(busTimeForBorderLength)
@@ -105,7 +105,7 @@ class Circle: UIView {
    - parameter busTime: The time, as an int, that will determine the border lenght
    - returns: A `CGFloat` between 0 and 1 that reperesents the border length
    */
-  private func calculateBorderLengthForBusTime(busTime: Int) -> CGFloat {
+  fileprivate func calculateBorderLengthForBusTime(_ busTime: Int) -> CGFloat {
     let time = (Float(busTime))/35.0    // 35 is a magic number that allows
     // the circle to be broken up into sections of 8ths
     // so long as we never get higher than 35 minutes

@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11C2E2110DF7160E9AAFE90B /* Pods_findmybusnj_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781ABAAB8A2AEAE87EA1A77F /* Pods_findmybusnj_common.framework */; };
 		42CC5A25F8073CD1651ED40A /* Pods_findmybusnjUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65F3EB9D98422C653903624 /* Pods_findmybusnjUITests.framework */; };
 		A7DDD3A85EFD48F38ECEEDE9 /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B39A272ED7D2734100F86BA /* Pods_findmybusnj.framework */; };
+		B14D095BEE0A081806A330A0 /* Pods_findmybusnj_widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6B9CE8255E948F055F2037 /* Pods_findmybusnj_widget.framework */; };
+		D40545031D8C684E00A34B89 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46CA1061D8C6560008B2774 /* SwiftyJSON.framework */; };
 		D407670E1CC6B26000B2D9FF /* ETAPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */; };
 		D409DF5F1CC71E8200324C76 /* ETACardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */; };
 		D409DF611CC7203100324C76 /* WidgetETATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */; };
@@ -49,7 +52,6 @@
 		D4876CC91CC67555004D92D5 /* findmybusnj_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4876CCF1CC675C9004D92D5 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CCE1CC675C9004D92D5 /* ServerManager.swift */; };
 		D4876CD11CC675E1004D92D5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CD01CC675E1004D92D5 /* Alamofire.framework */; };
-		D4876CD31CC675E5004D92D5 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */; };
 		D4876CE41CC67678004D92D5 /* ServerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */; };
 		D4876CE71CC678D7004D92D5 /* JSONSanitizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CE61CC678D7004D92D5 /* JSONSanitizer.swift */; };
 		D48E4C621CBFC39C00700C70 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */; };
@@ -170,11 +172,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E6B9CE8255E948F055F2037 /* Pods_findmybusnj_widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj_widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F50856554864107243BCD2F /* Pods-findmybusnj-common.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj-common.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj-common/Pods-findmybusnj-common.debug.xcconfig"; sourceTree = "<group>"; };
+		494948168CA6953E3BE9C7F2 /* Pods-findmybusnj-widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj-widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj-widget/Pods-findmybusnj-widget.debug.xcconfig"; sourceTree = "<group>"; };
 		76154486FD3333F4492E125C /* Pods_findmybusnjTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnjTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		781ABAAB8A2AEAE87EA1A77F /* Pods_findmybusnj_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		823A56C01A03209999FBDC6B /* Pods-findmybusnjUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnjUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnjUITests/Pods-findmybusnjUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8BF695EA6C5237B5A87B6ACE /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
 		9B39A272ED7D2734100F86BA /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A36C3E0C2091EDFB02CEFB /* Pods-findmybusnjTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnjTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnjTests/Pods-findmybusnjTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6370C2941EE6EF91310B79D /* Pods-findmybusnj-widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj-widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj-widget/Pods-findmybusnj-widget.release.xcconfig"; sourceTree = "<group>"; };
 		A95A74ADAD34766035CC8D1F /* Pods-findmybusnj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.release.xcconfig"; sourceTree = "<group>"; };
 		AF9726769C4002D1117F5981 /* Pods-findmybusnjUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnjUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnjUITests/Pods-findmybusnjUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C89CB2B5A5E95C0283FFE239 /* Pods-findmybusnjTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnjTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnjTests/Pods-findmybusnjTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +211,7 @@
 		D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreeDTouchCoreDataManager.swift; path = "3D-Touch/ThreeDTouchCoreDataManager.swift"; sourceTree = "<group>"; };
 		D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPresenterTests.swift; path = Presenter/ETAPresenterTests.swift; sourceTree = "<group>"; };
 		D46C40C61CCC2588001373F8 /* MockPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockPresenter.swift; path = Presenter/MockPresenter.swift; sourceTree = "<group>"; };
+		D46CA1061D8C6560008B2774 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D47203401CD13DB700621EC4 /* singleStopWithAmpersand.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = singleStopWithAmpersand.json; path = ModelData/singleStopWithAmpersand.json; sourceTree = SOURCE_ROOT; };
 		D475C2BB1CCE860A00A952F5 /* JSONSanitizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSanitizerTests.swift; path = Parsers/JSONSanitizerTests.swift; sourceTree = "<group>"; };
 		D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -260,6 +268,7 @@
 		D4F152801C39873F007D8EA7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D4FD52221CB9F23A00B1F948 /* MapAlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapAlertPresenter.swift; path = Presenter/Alert/MapAlertPresenter.swift; sourceTree = "<group>"; };
 		F65F3EB9D98422C653903624 /* Pods_findmybusnjUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnjUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E63D87D5D7B348AD8090C6 /* Pods-findmybusnj-common.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj-common.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj-common/Pods-findmybusnj-common.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +279,7 @@
 				D46C40CA1CCC2BC7001373F8 /* findmybusnj_common.framework in Frameworks */,
 				D48E4C621CBFC39C00700C70 /* SwiftyJSON.framework in Frameworks */,
 				D4138B3E1CB5FDD800D61C9A /* NotificationCenter.framework in Frameworks */,
+				B14D095BEE0A081806A330A0 /* Pods_findmybusnj_widget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +287,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4876CD31CC675E5004D92D5 /* SwiftyJSON.framework in Frameworks */,
+				D40545031D8C684E00A34B89 /* SwiftyJSON.framework in Frameworks */,
 				D4876CD11CC675E1004D92D5 /* Alamofire.framework in Frameworks */,
+				11C2E2110DF7160E9AAFE90B /* Pods_findmybusnj_common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +351,7 @@
 		516CB71DBABA7F1FCD524014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D46CA1061D8C6560008B2774 /* SwiftyJSON.framework */,
 				D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */,
 				D4876CD01CC675E1004D92D5 /* Alamofire.framework */,
 				D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */,
@@ -354,6 +366,8 @@
 				9B39A272ED7D2734100F86BA /* Pods_findmybusnj.framework */,
 				76154486FD3333F4492E125C /* Pods_findmybusnjTests.framework */,
 				F65F3EB9D98422C653903624 /* Pods_findmybusnjUITests.framework */,
+				781ABAAB8A2AEAE87EA1A77F /* Pods_findmybusnj_common.framework */,
+				3E6B9CE8255E948F055F2037 /* Pods_findmybusnj_widget.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -367,6 +381,10 @@
 				C89CB2B5A5E95C0283FFE239 /* Pods-findmybusnjTests.release.xcconfig */,
 				AF9726769C4002D1117F5981 /* Pods-findmybusnjUITests.debug.xcconfig */,
 				823A56C01A03209999FBDC6B /* Pods-findmybusnjUITests.release.xcconfig */,
+				3F50856554864107243BCD2F /* Pods-findmybusnj-common.debug.xcconfig */,
+				F6E63D87D5D7B348AD8090C6 /* Pods-findmybusnj-common.release.xcconfig */,
+				494948168CA6953E3BE9C7F2 /* Pods-findmybusnj-widget.debug.xcconfig */,
+				A6370C2941EE6EF91310B79D /* Pods-findmybusnj-widget.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -791,9 +809,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4138B4B1CB5FDD800D61C9A /* Build configuration list for PBXNativeTarget "findmybusnj-widget" */;
 			buildPhases = (
+				733F11305D6E671072E56AB3 /* [CP] Check Pods Manifest.lock */,
 				D4138B381CB5FDD800D61C9A /* Sources */,
 				D4138B391CB5FDD800D61C9A /* Frameworks */,
 				D4138B3A1CB5FDD800D61C9A /* Resources */,
+				67FEB97CAFFD4AEAEDAF95B7 /* [CP] Embed Pods Frameworks */,
+				BDF670516DDFA328094941FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -808,10 +829,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4876CCC1CC67555004D92D5 /* Build configuration list for PBXNativeTarget "findmybusnj-common" */;
 			buildPhases = (
+				16556A3BD79ED7178473CD94 /* [CP] Check Pods Manifest.lock */,
 				D4876CBC1CC67555004D92D5 /* Sources */,
 				D4876CBD1CC67555004D92D5 /* Frameworks */,
 				D4876CBE1CC67555004D92D5 /* Headers */,
 				D4876CBF1CC67555004D92D5 /* Resources */,
+				EC50A2039CF99DAAE480A631 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -952,12 +975,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "David Aghassi";
 				TargetAttributes = {
 					D4138B3B1CB5FDD800D61C9A = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 23254ZGZ6N;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -967,22 +991,27 @@
 					D4876CC01CC67555004D92D5 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 23254ZGZ6N;
+						LastSwiftMigration = 0800;
 					};
 					D4876CD71CC67644004D92D5 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 					D4D1AF161C0BA99C00FA6C91 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 23254ZGZ6N;
+						LastSwiftMigration = 0800;
 					};
 					D4D1AF1F1C0BA99C00FA6C91 = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 					D4D6AB5F1BBA2FE200CE241D = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 23254ZGZ6N;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -994,10 +1023,12 @@
 					};
 					D4D6AB751BBA2FE200CE241D = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 					D4D6AB801BBA2FE200CE241D = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 				};
@@ -1097,6 +1128,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16556A3BD79ED7178473CD94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		18F976EC49E3E7D3D1D033DC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1142,7 +1188,37 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		67FEB97CAFFD4AEAEDAF95B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnj-widget/Pods-findmybusnj-widget-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6E11A4CFDE2CFDFFC9851B0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		733F11305D6E671072E56AB3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1202,6 +1278,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnjTests/Pods-findmybusnjTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BDF670516DDFA328094941FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnj-widget/Pods-findmybusnj-widget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D41C70E51C8C70DE00495315 /* Increment Version and Build Number Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1243,6 +1334,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC50A2039CF99DAAE480A631 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnj-common/Pods-findmybusnj-common-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1424,7 +1530,9 @@
 /* Begin XCBuildConfiguration section */
 		D4138B491CB5FDD800D61C9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 494948168CA6953E3BE9C7F2 /* Pods-findmybusnj-widget.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = "findmybusnj-widget/Find My Bus NJ Today Widget.entitlements";
@@ -1436,13 +1544,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
 				PRODUCT_NAME = "Find My Bus NJ";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		D4138B4A1CB5FDD800D61C9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6370C2941EE6EF91310B79D /* Pods-findmybusnj-widget.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = "findmybusnj-widget/Find My Bus NJ Today Widget.entitlements";
@@ -1454,18 +1564,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
 				PRODUCT_NAME = "Find My Bus NJ";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		D4876CCA1CC67555004D92D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F50856554864107243BCD2F /* Pods-findmybusnj-common.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1479,7 +1591,7 @@
 				PRODUCT_NAME = findmybusnj_common;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1488,12 +1600,14 @@
 		};
 		D4876CCB1CC67555004D92D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6E63D87D5D7B348AD8090C6 /* Pods-findmybusnj-common.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1506,7 +1620,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-common";
 				PRODUCT_NAME = findmybusnj_common;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1523,7 +1637,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-commonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Debug;
@@ -1538,7 +1652,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-commonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Release;
@@ -1549,7 +1663,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1563,7 +1677,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1576,7 +1690,7 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1589,7 +1703,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1604,7 +1718,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Debug;
@@ -1617,7 +1731,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Release;
@@ -1625,6 +1739,7 @@
 		D4D6AB881BBA2FE200CE241D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1635,14 +1750,15 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1671,6 +1787,7 @@
 		D4D6AB891BBA2FE200CE241D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1681,14 +1798,15 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1703,6 +1821,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_SWIFT_FLAGS = "-DRELEASE";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1711,12 +1830,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8BF695EA6C5237B5A87B6ACE /* Pods-findmybusnj.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = findmybusnj/findmybusnj.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = findmybusnj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1724,7 +1843,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aghassi.findmybusnj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1732,12 +1851,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A95A74ADAD34766035CC8D1F /* Pods-findmybusnj.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = findmybusnj/findmybusnj.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = findmybusnj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1745,7 +1864,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aghassi.findmybusnj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1758,7 +1877,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Debug;
@@ -1772,7 +1891,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Release;
@@ -1785,7 +1904,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = findmybusnj;
 				USES_XCTRUNNER = YES;
 			};
@@ -1799,7 +1918,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = findmybusnj;
 				USES_XCTRUNNER = YES;
 			};

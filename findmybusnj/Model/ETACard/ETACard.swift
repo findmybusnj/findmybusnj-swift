@@ -36,11 +36,11 @@ class ETACard: UITableViewCell {
     self.card.alpha = 1
     self.card.layer.masksToBounds = false
     self.card.layer.cornerRadius = 1
-    self.card.layer.shadowOffset = CGSizeMake(-0.2, 0.2)
+    self.card.layer.shadowOffset = CGSize(width: -0.2, height: 0.2)
     self.card.layer.shadowRadius = 1
     
     let path = UIBezierPath(rect: self.card.bounds)
-    self.card.layer.shadowPath = path.CGPath
+    self.card.layer.shadowPath = path.cgPath
     
     self.card.layer.shadowOpacity = 0.2
   }
@@ -51,7 +51,7 @@ class ETACard: UITableViewCell {
    
    - Parameter busTime: The integer time that will be used to denote the circumference of the circle
    */
-  func renderCircleForBusTime(busTime: Int) {
+  func renderCircleForBusTime(_ busTime: Int) {
     AFShapeRenderer.renderCircleForBusTime(circleView, busTime: busTime)
   }
   
@@ -61,7 +61,7 @@ class ETACard: UITableViewCell {
    - Parameter: bustime: The integer time that will be used to render the circumference of the circle
    */
   
-  func renderFilledCircleForBusTime(busTime: Int){
+  func renderFilledCircleForBusTime(_ busTime: Int){
     AFShapeRenderer.renderFilledCircleForBusTime(circleView, busTime: busTime)
   }
   
@@ -70,7 +70,7 @@ class ETACard: UITableViewCell {
    
    - Parameter view: The view to remove the circle from
    */
-  func removeCircleFromCard(view: UIView) {
+  func removeCircleFromCard(_ view: UIView) {
     AFShapeRenderer.removeRenderedCircle(view);
   }
   
@@ -81,7 +81,7 @@ class ETACard: UITableViewCell {
     busNumberLabel.text = ""
     routeLabel.text = ""
     timeLabel.text = ""
-    noPrediction.hidden = true
+    noPrediction.isHidden = true
   }
   
 }

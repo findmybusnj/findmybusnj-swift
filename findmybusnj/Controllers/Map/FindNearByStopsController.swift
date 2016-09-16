@@ -19,7 +19,7 @@ class FindNearByStopsController: UIViewController {
   @IBOutlet weak var mapView: MKMapView!
   
   // How much to show outside of the center
-  private let regionRadius: CLLocationDistance = 1000
+  fileprivate let regionRadius: CLLocationDistance = 1000
   
   // location manager to authorize user location for Maps app
   var locationManager = CLLocationManager()
@@ -37,7 +37,7 @@ class FindNearByStopsController: UIViewController {
   /**
    Sets the location of the user on the map
    */
-  private func centerMapOnLocation() {
+  fileprivate func centerMapOnLocation() {
     guard let userLocation = locationManager.location else {
       return
     }
@@ -53,7 +53,7 @@ class FindNearByStopsController: UIViewController {
    - parameter googleType: A string that represents the google types. You can find more
    info on the type at the [Google Places API](https://developers.google.com/places/supported_types)
    */
-  private func queryPlaces(googleType: String) {
+  fileprivate func queryPlaces(_ googleType: String) {
     #if RELEASE || TESTFLIGHT
       let coordinate = locationManager.location!.coordinate
     #endif
@@ -125,8 +125,8 @@ class FindNearByStopsController: UIViewController {
   /**
    Checks to see if the user has authorized use of location services
    */
-  private func checkLocationAuthorizationStatus() {
-    if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+  fileprivate func checkLocationAuthorizationStatus() {
+    if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
       mapView.showsUserLocation = true
       centerMapOnLocation()
       queryPlaces("bus_station")
@@ -140,18 +140,18 @@ class FindNearByStopsController: UIViewController {
 
 // MARK: MKMapViewDelegate
 extension FindNearByStopsController: MKMapViewDelegate {
-  func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     if let annotation = annotation as? PlacesAnnotation {
       let identifier = "pin"
       var view: MKPinAnnotationView
       
-      if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier) as? MKPinAnnotationView {
+      if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
         dequeuedView.annotation = annotation
         view = dequeuedView
       }
       else {
-        let button = UIButton(type: .DetailDisclosure)
-        button.setImage(UIImage(named: "Car"), forState: .Normal)
+        let button = UIButton(type: .detailDisclosure)
+        button.setImage(UIImage(named: "Car"), for: UIControlState())
         
         view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
         view.canShowCallout = true
@@ -165,28 +165,28 @@ extension FindNearByStopsController: MKMapViewDelegate {
     return nil
   }
   
-  func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+  func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
     let location = view.annotation as! PlacesAnnotation
     let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-    location.mapItem().openInMapsWithLaunchOptions(launchOptions)
+    location.mapItem().openInMaps(launchOptions: launchOptions)
   }
 }
 
 // MARK: CLLocationManagerDelegate
 extension FindNearByStopsController: CLLocationManagerDelegate {
-  func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+  func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
     // update if we can display the user location and use GPS
     switch status {
-    case .AuthorizedWhenInUse, .AuthorizedAlways:
+    case .authorizedWhenInUse, .authorizedAlways:
       mapView.showsUserLocation = true
       centerMapOnLocation()
       queryPlaces("bus_station")
-    case .Denied, .Restricted, .NotDetermined:
+    case .denied, .restricted, .notDetermined:
       mapView.showsUserLocation = false
       mapView.removeAnnotations(mapView.annotations)
       // Show notification stating location services need enabling
       let alertController = mapAlertPresenter.presentAlertWarning(status)
-      presentViewController(alertController, animated: true, completion: nil)
+      present(alertController, animated: true, completion: nil)
     }
   }
 }

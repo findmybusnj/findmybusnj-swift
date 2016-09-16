@@ -5,11 +5,24 @@ use_frameworks!
 
 target 'findmybusnj' do
 
-pod 'SwiftyJSON', :git => 'https://github.com/acegreen/SwiftyJSON.git', :branch => 'swift3'
+pod 'SwiftyJSON', :git => 'https://github.com/IBM-Swift/SwiftyJSON'
 pod 'Alamofire', '~> 4.0'
-pod 'PKHUD', '~> 3.0.0'
+pod 'PKHUD', :git => 'https://github.com/toyship/PKHUD'
 pod 'Fabric'
 pod 'Crashlytics'
+
+end
+
+target 'findmybusnj-common' do
+
+pod 'SwiftyJSON', :git => 'https://github.com/IBM-Swift/SwiftyJSON'
+pod 'Alamofire', '~> 4.0'
+
+end
+
+target 'findmybusnj-widget' do
+
+pod 'SwiftyJSON', :git => 'https://github.com/IBM-Swift/SwiftyJSON'
 
 end
 

@@ -16,23 +16,23 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
   var sanitizer = JSONSanitizer()
   let colorPallette = ColorPalette()
   
-  func formatCellForPresentation(cell: UITableViewCell, json: JSON) {
+  func formatCellForPresentation(_ cell: UITableViewCell, json: JSON) {
     assignArrivalTimeForJson(cell, json: json)
     assignBusAndRouteTextForJson(cell, json: json)
   }
   
-  func assignArrivalTimeForJson(cell: UITableViewCell, json: JSON) {
+  func assignArrivalTimeForJson(_ cell: UITableViewCell, json: JSON) {
     guard let currentCell = cell as? WidgetETATableViewCell else {
       return
     }
-    currentCell.timeLabel.textColor = UIColor.whiteColor()
+    currentCell.timeLabel.textColor = UIColor.white
     currentCell.timeLabel.adjustsFontSizeToFitWidth = true
     
     let arrivalString = sanitizer.getSanatizedArrivalTimeAsString(json)
     let arrivalTime = sanitizer.getSanitizedArrivaleTimeAsInt(json)
     
     if arrivalTime != -1 {
-      if arrivalTime ==  NumericArrivals.ARRIVED.rawValue {
+      if arrivalTime ==  NumericArrivals.arrived.rawValue {
         currentCell.timeLabel.text = "Arrive"
         currentCell.etaView.backgroundColor = colorPallette.powderBlue()
       }
@@ -56,19 +56,19 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
         currentCell.etaView.backgroundColor = colorPallette.lollipopRed()
       default:
         currentCell.timeLabel.text = "0"
-        currentCell.timeLabel.textColor = UIColor.blueColor()
-        currentCell.etaView.backgroundColor = UIColor.clearColor()
+        currentCell.timeLabel.textColor = UIColor.blue
+        currentCell.etaView.backgroundColor = UIColor.clear
       }
     }
   }
   
-  func assignBusAndRouteTextForJson(cell: UITableViewCell, json: JSON) {
+  func assignBusAndRouteTextForJson(_ cell: UITableViewCell, json: JSON) {
     guard let currentCell = cell as? WidgetETATableViewCell else {
       return
     }
     
-    currentCell.routeLabel.textColor = UIColor.whiteColor()
-    currentCell.routeDescriptionLabel.textColor = UIColor.whiteColor()
+    currentCell.routeLabel.textColor = UIColor.white
+    currentCell.routeDescriptionLabel.textColor = UIColor.white
     
     currentCell.routeLabel.text = sanitizer.getSanitizedRouteNumber(json)
     currentCell.routeDescriptionLabel.text = sanitizer.getSanitizedRouteDescription(json)

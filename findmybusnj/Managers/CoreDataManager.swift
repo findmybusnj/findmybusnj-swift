@@ -12,8 +12,8 @@ import CoreData
 protocol CoreDataManager {
   var managedObjectContext: NSManagedObjectContext { get set }
 
-  func isDuplicate(fetchRequest: NSFetchRequest, predicate: NSPredicate) -> Bool
-  func attemptToSave(managedObject: NSManagedObject) -> Bool
+  func isDuplicate(_ fetchRequest: NSFetchRequest<AnyObject>, predicate: NSPredicate) -> Bool
+  func attemptToSave(_ managedObject: NSManagedObject) -> Bool
 }
 
 extension CoreDataManager {
@@ -24,10 +24,10 @@ extension CoreDataManager {
    
    - returns: Array of `NSManagedObject`s
    */
-  func attemptFetch(fetchRequest: NSFetchRequest) -> [NSManagedObject] {
+  func attemptFetch(_ fetchRequest: NSFetchRequest<AnyObject>) -> [NSManagedObject] {
     do {
       // Grab the favorites and order them based on frequency
-      let results = try managedObjectContext.executeFetchRequest(fetchRequest)
+      let results = try managedObjectContext.fetch(fetchRequest)
       return results as! [NSManagedObject]
     } catch let error as NSError {
       print("Could not fetch \(error), \(error.userInfo)")
@@ -42,8 +42,8 @@ extension CoreDataManager {
    
    - returns: A `Favorite` array sorted in descending order based on `frequency`
    */
-  func sortDescending(array: [NSManagedObject]) -> [NSManagedObject] {
-    let sortedDescending = array.sort({ (favoriteOne: NSManagedObject, favoriteTwo: NSManagedObject) -> Bool in
+  func sortDescending(_ array: [NSManagedObject]) -> [NSManagedObject] {
+    let sortedDescending = array.sorted(by: { (favoriteOne: NSManagedObject, favoriteTwo: NSManagedObject) -> Bool in
       guard let freqOne = (favoriteOne as! Favorite).frequency else {
         return false
       }
@@ -51,7 +51,7 @@ extension CoreDataManager {
         return false
       }
       
-      return freqOne.intValue > freqTwo.intValue
+      return freqOne.int32Value > freqTwo.int32Value
     })
     
     return sortedDescending

@@ -35,10 +35,10 @@ class FilledCircle: Circle {
    - xCoordinates: Where in the view to the top left of the circle should be placed
    - busTimeForBorderLength: Denotes the bus time that will determine how far the circle goes
    */
-  func addFilledCircleToView(view: UIView, xCoordinate: CGFloat) {
+  func addFilledCircleToView(_ view: UIView, xCoordinate: CGFloat) {
     self.tag = 4    //  4 Stands for the item it should be (which in this case is the last) so we can remove it
     view.addSubview(self)
-    view.sendSubviewToBack(self)
+    view.sendSubview(toBack: self)
     
     self.animateCircle(1.0, borderLength: 0)       // Border length should change when we have a time in the future
   }

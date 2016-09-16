@@ -21,7 +21,7 @@ class CardTableViewController: UITableViewController {
   var noPrediction = false
   
   // MARK: Formatters
-  private let etaCardPresenter = ETACardPresenter()
+  fileprivate let etaCardPresenter = ETACardPresenter()
   
   // MARK: View Controller Life Cycle
   override func viewDidLoad() {
@@ -30,16 +30,16 @@ class CardTableViewController: UITableViewController {
     // setup the refresh controller for the table
     self.refreshControl = UIRefreshControl()
     self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh stops")
-    self.refreshControl?.addTarget(self, action: #selector(CardTableViewController.refresh(_:)), forControlEvents: .ValueChanged)
+    self.refreshControl?.addTarget(self, action: #selector(CardTableViewController.refresh(_:)), for: .valueChanged)
     
-    self.tableView.separatorColor = UIColor.clearColor()
-    self.tableView.separatorStyle = .None
-    self.tableView.backgroundColor = UIColor.lightGrayColor()
+    self.tableView.separatorColor = UIColor.clear
+    self.tableView.separatorStyle = .none
+    self.tableView.backgroundColor = UIColor.lightGray
     
     // Prevents refresh controller from showing on emtpy list
     // Idea came from http://stackoverflow.com/questions/19243177/how-to-scroll-to-top-in-ios7-uitableview
     let top = tableView.contentInset.top
-    self.tableView.contentOffset = CGPointMake(0, 0-top)
+    self.tableView.contentOffset = CGPoint(x: 0, y: 0-top)
   }
   
   override func didReceiveMemoryWarning() {
@@ -52,7 +52,7 @@ class CardTableViewController: UITableViewController {
    
    - Parameter sender: The object calling the refresh
    */
-  func refresh(sender: AnyObject) {
+  func refresh(_ sender: AnyObject) {
     // Overridden in sub-classes
     // This model was taken from http://stackoverflow.com/questions/24475792/how-to-use-pull-to-refresh-in-swift/24476087#24476087
   }
@@ -63,7 +63,7 @@ class CardTableViewController: UITableViewController {
    
    - parameter json: The json returned from a network call to be added to the table
    */
-  func updateTable(json: JSON) {
+  func updateTable(_ json: JSON) {
     if json.rawString() == "No arrival times" || json.isEmpty {
       self.noPrediction = true
     }
@@ -76,7 +76,7 @@ class CardTableViewController: UITableViewController {
   }
   
   // MARK: UITableViewController
-  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  override func numberOfSections(in tableView: UITableView) -> Int {
     if (!items.isEmpty || noPrediction) {
       tableView.backgroundView = nil
       return 1
@@ -86,8 +86,8 @@ class CardTableViewController: UITableViewController {
       let emptyMessage = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
       
       emptyMessage.text = "Please tap on \"Find\" to get started"
-      emptyMessage.textAlignment = .Center
-      emptyMessage.textColor = UIColor.lightTextColor()
+      emptyMessage.textAlignment = .center
+      emptyMessage.textColor = UIColor.lightText
       emptyMessage.sizeToFit()
       
       tableView.backgroundView = emptyMessage
@@ -95,7 +95,7 @@ class CardTableViewController: UITableViewController {
     }
   }
   
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if (noPrediction) {
       return 1;
     }
@@ -103,17 +103,17 @@ class CardTableViewController: UITableViewController {
     return self.items.count
   }
   
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let identifier = "eta"
-    let index = indexPath.row
+    let index = (indexPath as NSIndexPath).row
     
-    let etaCard: ETACard = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath) as! ETACard
+    let etaCard: ETACard = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ETACard
     
     etaCard.removeCircleFromCard(etaCard)
     etaCard.clearText()
     
     if (noPrediction) {
-      etaCard.noPrediction.hidden = false;
+      etaCard.noPrediction.isHidden = false;
     }
     else {
       let json = items[index]

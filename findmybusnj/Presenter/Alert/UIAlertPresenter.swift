@@ -14,5 +14,5 @@ protocol AlertEnum {
 }
 
 protocol UIAlertPresenter {
-  func presentAlertWarning(type: AlertEnum) -> UIAlertController
+  func presentAlertWarning(_ type: AlertEnum) -> UIAlertController
 }

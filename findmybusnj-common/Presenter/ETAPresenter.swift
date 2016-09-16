@@ -16,13 +16,13 @@ import SwiftyJSON
  */
 public protocol ETAPresenter {
   var sanitizer: JSONSanitizer { get set }
-  func formatCellForPresentation(cell: UITableViewCell, json: JSON)
-  func assignArrivalTimeForJson(cell: UITableViewCell, json: JSON)
-  func assignBusAndRouteTextForJson(cell: UITableViewCell, json: JSON)
+  func formatCellForPresentation(_ cell: UITableViewCell, json: JSON)
+  func assignArrivalTimeForJson(_ cell: UITableViewCell, json: JSON)
+  func assignBusAndRouteTextForJson(_ cell: UITableViewCell, json: JSON)
 }
 
 public extension ETAPresenter {
-  func backgroundColorForTime(time: Int) -> UIColor {
+  func backgroundColorForTime(_ time: Int) -> UIColor {
     let colorPalette = ColorPalette()
     
     switch(time) {
@@ -58,5 +58,5 @@ public enum NonNumericaArrivals: String {
  - ARRIVED: When the `description` of the incoming bus is `0`
  */
 public enum NumericArrivals: Int {
-  case ARRIVED = 0
+  case arrived = 0
 }

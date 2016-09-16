@@ -22,7 +22,7 @@ class ETACardPresenter: ETAPresenter {
    - parameter card:  ETACard for the given reusable cell
    - parameter json:  json for the given row in the table
    */
-  func formatCellForPresentation(cell: UITableViewCell, json: JSON) {
+  func formatCellForPresentation(_ cell: UITableViewCell, json: JSON) {
     assignArrivalTimeForJson(cell, json: json)
     assignBusAndRouteTextForJson(cell, json: json)
   }
@@ -37,7 +37,7 @@ class ETACardPresenter: ETAPresenter {
    - card:   The card in the tableview being edited
    - json:   The json at the current index.
    */
-  func assignArrivalTimeForJson(cell: UITableViewCell, json: JSON) {
+  func assignArrivalTimeForJson(_ cell: UITableViewCell, json: JSON) {
     guard let currentCell = cell as? ETACard else {
       return
     }
@@ -46,12 +46,12 @@ class ETACardPresenter: ETAPresenter {
     let arrivalTime = sanitizer.getSanitizedArrivaleTimeAsInt(json)
     
     // Reset to black everytime just in case
-    currentCell.timeLabel.textColor = UIColor.blackColor()
+    currentCell.timeLabel.textColor = UIColor.black
     
     if arrivalTime != -1 {
       if arrivalTime ==  NumericArrivals.ARRIVED.rawValue {
         currentCell.timeLabel.text = "Arrive"
-        currentCell.timeLabel.textColor = UIColor.whiteColor()
+        currentCell.timeLabel.textColor = UIColor.white
         currentCell.renderFilledCircleForBusTime(arrivalTime) // We know this will be 0 at this point
       }
       else {
@@ -69,15 +69,15 @@ class ETACardPresenter: ETAPresenter {
       switch arrivalString {
       case NonNumericaArrivals.APPROACHING.rawValue:
         currentCell.timeLabel.text = "Arrive"
-        currentCell.timeLabel.textColor = UIColor.whiteColor()
+        currentCell.timeLabel.textColor = UIColor.white
         currentCell.renderFilledCircleForBusTime(0)
       case NonNumericaArrivals.DELAYED.rawValue:
         currentCell.timeLabel.text = "Delay"
-        currentCell.timeLabel.textColor = UIColor.whiteColor()
+        currentCell.timeLabel.textColor = UIColor.white
         currentCell.renderFilledCircleForBusTime(35)
       default:
         currentCell.timeLabel.text = "0"
-        currentCell.timeLabel.textColor = UIColor.blueColor()
+        currentCell.timeLabel.textColor = UIColor.blue
       }
     }
 
@@ -91,7 +91,7 @@ class ETACardPresenter: ETAPresenter {
    - card: The custom table view card we are modifying the values of
    - json: The json at the current index
    */
-  func assignBusAndRouteTextForJson(cell: UITableViewCell, json: JSON) {
+  func assignBusAndRouteTextForJson(_ cell: UITableViewCell, json: JSON) {
     guard let currentCell = cell as? ETACard else {
       return
     }

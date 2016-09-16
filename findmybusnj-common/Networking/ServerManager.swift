@@ -16,8 +16,8 @@ import SwiftyJSON
 /**
  Part of the `findmybusnj-common` framework. Used to make calls to findmybusnj.com server
  */
-public class ServerManager: NSObject {
-  private  let baseURL = "https://findmybusnj.com/rest"
+open class ServerManager: NSObject {
+  fileprivate  let baseURL = "https://findmybusnj.com/rest"
    var lastEndpoint = ""
    var url : String {
     return "\(baseURL)\(lastEndpoint)"
@@ -30,7 +30,7 @@ public class ServerManager: NSObject {
      - stop: The six digit stop number that the user gets from myBus sign at stop
      - completion: A function to be called back upon success that takes a JSON array and any errors
    */
-  public func getJSONForStop(stop: String, completion: (item: JSON, error: ErrorType?) -> Void) {
+  open func getJSONForStop(_ stop: String, completion: @escaping (_ item: JSON, _ error: Error?) -> Void) {
     let parameters = [ "stop" : stop ]
     let endpoint = "/stop"
     makePOST(endpoint, parameters: parameters, completion: completion)
@@ -44,7 +44,7 @@ public class ServerManager: NSObject {
      - route: The three digit string that defines the bus number/route to filter on
      - completion: A callback function to handle the JSON data upon a successful request
    */
-  public func getJSONForStopFilteredByRoute(stop: String, route: String, completion: (item: JSON, error: ErrorType?) -> Void) {
+  open func getJSONForStopFilteredByRoute(_ stop: String, route: String, completion: @escaping (_ item: JSON, _ error: Error?) -> Void) {
     let parameters = [ "stop" : stop, "route" : route]
     let endpoint = "/stop/byRoute"
     makePOST(endpoint, parameters: parameters, completion: completion);
@@ -60,11 +60,11 @@ public class ServerManager: NSObject {
      - parameters: `[String : String]` of parameters that will be handled when the enpoint is hit
      - completion: The completion function that will be called when the data is succesfully returned
    */
-  private func makePOST(endpoint: String, parameters: [String : String], completion: (item: JSON, error: ErrorType?) -> Void) {
+  fileprivate func makePOST(_ endpoint: String, parameters: [String : String], completion: @escaping (_ item: JSON, _ error: Error?) -> Void) {
     let url = baseURL + endpoint
     lastEndpoint = endpoint
     
-    Alamofire.request(.POST, url, parameters: parameters)
+    Alamofire.request(url, parameters: parameters)
       .responseJSON { response in
         let json = response.result
         
@@ -76,7 +76,7 @@ public class ServerManager: NSObject {
           let json = JSON(json.value!)
           
           // call closure for what is past in (kind of like an anonymous function)
-          completion(item: json, error: nil)
+          completion(json, nil)
         }
     }
   }

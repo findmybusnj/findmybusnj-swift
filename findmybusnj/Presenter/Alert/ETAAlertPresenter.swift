@@ -20,16 +20,16 @@ struct ETAAlertPresenter: UIAlertPresenter {
    
    - returns: `UIAlertController` with pre formatted text and no handlers
    */
-  func presentAlertWarning(type: AlertEnum) -> UIAlertController {
+  func presentAlertWarning(_ type: AlertEnum) -> UIAlertController {
     switch type {
-    case ETAAlertEnum.Empty_Search:
+    case ETAAlertEnum.empty_Search:
       return empty_search()
-    case ETAAlertEnum.Empty_Stop:
+    case ETAAlertEnum.empty_Stop:
       return empty_stop()
-    case ETAAlertEnum.Duplicate_Stop_Saved:
+    case ETAAlertEnum.duplicate_Stop_Saved:
       return duplicate_stop()
     default:
-      return UIAlertController(title: "", message: "", preferredStyle: .Alert)
+      return UIAlertController(title: "", message: "", preferredStyle: .alert)
     }
   }
   
@@ -39,7 +39,7 @@ struct ETAAlertPresenter: UIAlertPresenter {
    - parameter view: View that will have the progress notification overlaying it
    - parameter title: Title of the view to be presented
    */
-  func presentCheckmarkInView(view: UIView, title: String) {
+  func presentCheckmarkInView(_ view: UIView, title: String) {
     HUD.flash(.Success, withDelay: 1.0)
   }
   
@@ -48,7 +48,7 @@ struct ETAAlertPresenter: UIAlertPresenter {
    
    - returns: `UIAlertController` that contains a "No stop to save" message and no handlers
    */
-  private func empty_stop() -> UIAlertController {
+  fileprivate func empty_stop() -> UIAlertController {
     let warning = createUIAlertControllerWithDoneButton()
     warning.title = "No stop to save"
     warning.message = "Please search for a bus stop before saving"
@@ -60,7 +60,7 @@ struct ETAAlertPresenter: UIAlertPresenter {
    
    - returns: `UIAlertController` that contains a "No stop entered" message and no handlers
    */
-  private func empty_search() -> UIAlertController {
+  fileprivate func empty_search() -> UIAlertController {
     let warning = createUIAlertControllerWithDoneButton()
     warning.title = "No stop entered"
     warning.message = "Please enter a stop before searching"
@@ -72,7 +72,7 @@ struct ETAAlertPresenter: UIAlertPresenter {
    
    - returns: `UIAlertController` that contains a "Stop already saved" message and no handlers
    */
-  private func duplicate_stop() -> UIAlertController {
+  fileprivate func duplicate_stop() -> UIAlertController {
     let warning = createUIAlertControllerWithDoneButton()
     warning.title = "Stop already saved"
     warning.message = ""
@@ -88,9 +88,9 @@ extension UIAlertPresenter {
    
    - returns: A basic `UIAlertController` with a done button attached to it to dismiss it
    */
-  private func createUIAlertControllerWithDoneButton() -> UIAlertController {
-    let alert = UIAlertController(title: "", message: "", preferredStyle: .Alert)
-    let button = UIAlertAction(title: "Done", style: .Default, handler: nil)
+  fileprivate func createUIAlertControllerWithDoneButton() -> UIAlertController {
+    let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
+    let button = UIAlertAction(title: "Done", style: .default, handler: nil)
     alert.addAction(button)
     return alert
   }

@@ -31,7 +31,7 @@ class ColorPalletteTest: XCTestCase {
    - parameter expectedComponents: Hardcoded array of expected values as `[CGFloat]`
    - parameter name:               Name of the method being tested
    */
-  func assertCorrectRGB(components: UnsafePointer<CGFloat>, expectedComponents: [CGFloat], name: String) {
+  func assertCorrectRGB(_ components: UnsafePointer<CGFloat>, expectedComponents: [CGFloat], name: String) {
     let red = components[0]
     let expectedRed = expectedComponents[0]
     XCTAssertTrue(red == expectedRed, "Red of \(name) is not correct. \n Expected: \(expectedRed) \n Actual: \(red) \n")

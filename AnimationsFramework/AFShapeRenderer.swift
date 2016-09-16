@@ -17,10 +17,10 @@ import findmybusnj_common
  
  TODO: Refactor this so it isn't static.
  */
-public class AFShapeRenderer {
+open class AFShapeRenderer {
   // Stroke color of the circle to be rendered
-  private static var strokeColor: CGColor!
-  private static let colorPallette = ColorPalette()
+  fileprivate static var strokeColor: CGColor!
+  fileprivate static let colorPallette = ColorPalette()
   
   /**
    Creates a circle and renders it given the current bus time
@@ -30,13 +30,13 @@ public class AFShapeRenderer {
    - view:   The view the circle will be added to
    - busTime:    Time of the next arriving bus as an int
    */
-  public static func renderCircleForBusTime(view: UIView, busTime: Int) {
+  open static func renderCircleForBusTime(_ view: UIView, busTime: Int) {
     determineStrokeColorForBusTime(busTime)
     
     let circleWidth = CGFloat(view.frame.width)
     let circleHeight = circleWidth
     // view.frame.origin.x is where the circle will be rendered from
-    let circle = Circle(frame: CGRectMake(view.frame.origin.x, 0, circleWidth, circleHeight), color: strokeColor)
+    let circle = Circle(frame: CGRect(x: view.frame.origin.x, y: 0, width: circleWidth, height: circleHeight), color: strokeColor)
     circle.layer.addSublayer(circle.circle)
     
     // Draw the circle in the view at the top left origin
@@ -50,13 +50,13 @@ public class AFShapeRenderer {
    - view:   The view the circle will be added to
    - busTime:    Time of the next arriving bus as an int
    */
-  public static func renderFilledCircleForBusTime(view: UIView, busTime: Int) {
+  open static func renderFilledCircleForBusTime(_ view: UIView, busTime: Int) {
     determineStrokeColorForBusTime(busTime)
     
     let circleWidth = CGFloat(view.frame.width)
     let circleHeight = circleWidth
     // view.frame.origin.x is where the circle will be rendered from
-    let circle = FilledCircle(frame: CGRectMake(view.frame.origin.x, 0, circleWidth, circleHeight), color: strokeColor)
+    let circle = FilledCircle(frame: CGRect(x: view.frame.origin.x, y: 0, width: circleWidth, height: circleHeight), color: strokeColor)
     circle.layer.addSublayer(circle.circle)
     
     // Draw the circle in the view at the top left origin
@@ -68,7 +68,7 @@ public class AFShapeRenderer {
    
    - parameter view:   The view to remove the circle from
    */
-  public static func removeRenderedCircle(view: UIView) {
+  open static func removeRenderedCircle(_ view: UIView) {
     guard let tag = view.viewWithTag(4) else {
       return
     }
@@ -83,22 +83,22 @@ public class AFShapeRenderer {
    
    - parameter busTime:    The time the bus will be arriving as an int
    */
-  private static func determineStrokeColorForBusTime(busTime: Int) {
+  fileprivate static func determineStrokeColorForBusTime(_ busTime: Int) {
     if (busTime == 0) {
       // Blue
-      self.strokeColor = colorPallette.powderBlue().CGColor
+      self.strokeColor = colorPallette.powderBlue().cgColor
     }
     else if (busTime <= 7) {
       // Green
-      self.strokeColor = colorPallette.emeraldGreen().CGColor
+      self.strokeColor = colorPallette.emeraldGreen().cgColor
     }
     else if ( busTime <= 14) {
       // Orange
-      self.strokeColor = colorPallette.creamsicleOrange().CGColor
+      self.strokeColor = colorPallette.creamsicleOrange().cgColor
     }
     else {
       // Red
-      self.strokeColor = colorPallette.lollipopRed().CGColor
+      self.strokeColor = colorPallette.lollipopRed().cgColor
     }
   }
 }

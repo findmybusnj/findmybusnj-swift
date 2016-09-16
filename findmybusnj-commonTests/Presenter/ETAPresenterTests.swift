@@ -34,7 +34,7 @@ class ETAPresenterTests: XCTestCase {
    - parameter expected: Expected `UIColor`
    - parameter name:     The name of the color function being tested
    */
-  func assertColorsAreEqual(actual: UIColor, expected: UIColor, name: String) {
+  func assertColorsAreEqual(_ actual: UIColor, expected: UIColor, name: String) {
     XCTAssertTrue(actual == expected, "The actual color of \(name) was different from the expected. \n Expected: \(expected) \n Actual: \(actual). \n See line \(#line)")
   }
   

@@ -32,14 +32,14 @@ class JSONSanitizerTests: XCTestCase {
   func test_getSanatizedArrivalTimeAsString() {
     let expected = json["pu"].description
     let actual = sanitizerUnderTest.getSanatizedArrivalTimeAsString(json)
-    XCTAssertTrue(actual.dynamicType == String.self, "Returned value was not a String. Please see line \(#line) \n Expected a String \n Actual was \(actual.dynamicType)")
+    XCTAssertTrue(type(of: actual) == String.self, "Returned value was not a String. Please see line \(#line) \n Expected a String \n Actual was \(type(of: actual))")
     XCTAssertTrue(expected == actual, "Actual json is not what was expected. \n Expected is \(expected) \n Actual is \(actual).")
   }
   
   func test_getSanitizedArrivaleTimeAsInt_For_Number() {
     let expected = Int(json["pt"].description)
     let actual = sanitizerUnderTest.getSanitizedArrivaleTimeAsInt(json)
-    XCTAssertTrue(actual.dynamicType == Int.self, "Returned value was not an Int. Please see line \(#line) \n Expected an Int \n Actual was \(actual.dynamicType)")
+    XCTAssertTrue(type(of: actual) == Int.self, "Returned value was not an Int. Please see line \(#line) \n Expected an Int \n Actual was \(type(of: actual))")
     XCTAssertTrue(expected == actual, "Actual json is not what was expected \n Expected is \(expected) \n Actual is \(actual)")
   }
   
@@ -47,14 +47,14 @@ class JSONSanitizerTests: XCTestCase {
     let tempJson = loadJSONFromFile(JSONFileName.noPrediction.rawValue)
     let expected = -1
     let actual = sanitizerUnderTest.getSanitizedArrivaleTimeAsInt(tempJson)
-    XCTAssertTrue(actual.dynamicType == Int.self, "Returned value was not an Int. Please see line \(#line) \n Expected an Int \n Actual was \(actual.dynamicType)")
+    XCTAssertTrue(type(of: actual) == Int.self, "Returned value was not an Int. Please see line \(#line) \n Expected an Int \n Actual was \(type(of: actual))")
     XCTAssertTrue(expected == actual, "Actual json is not what was expected \n Expected is \(expected) \n Actual is \(actual) ")
   }
   
   func test_getSanitizedRouteNumber() {
     let expected = json["rd"].description
     let actual = sanitizerUnderTest.getSanitizedRouteNumber(json)
-    XCTAssertTrue(actual.dynamicType == String.self, "Returned value was not a String. Please see line \(#line) \n Expected a String \n Actual was \(actual.dynamicType)")
+    XCTAssertTrue(type(of: actual) == String.self, "Returned value was not a String. Please see line \(#line) \n Expected a String \n Actual was \(type(of: actual))")
     XCTAssertTrue(expected == actual, "Actual json is not what was expected. \n Expected is \(expected) \n Actual is \(actual) ")
   }
   
@@ -62,7 +62,7 @@ class JSONSanitizerTests: XCTestCase {
     let tempJson = loadJSONFromFile(JSONFileName.stopWithAmpersand.rawValue)[0]
     let expected = tempJson["fd"].description.stringByReplacingOccurrencesOfString("&amp;", withString: "&").lowercaseString.capitalizedString
     let actual = sanitizerUnderTest.getSanitizedRouteDescription(tempJson)
-    XCTAssertTrue(actual.dynamicType == String.self, "Returned value was not a String. Please see line \(#line) \n Expected a String \n Actual was \(actual.dynamicType)")
+    XCTAssertTrue(type(of: actual) == String.self, "Returned value was not a String. Please see line \(#line) \n Expected a String \n Actual was \(type(of: actual))")
     XCTAssertTrue(!actual.containsString("&amp;"), "Sanitized string should not contain \"&amp;\". Please see line \(#line) for more details.")
     XCTAssertTrue(expected == actual, "Actual json is not what was expected \n Expected is \(expected) \n Actual is \(actual) ")
   }

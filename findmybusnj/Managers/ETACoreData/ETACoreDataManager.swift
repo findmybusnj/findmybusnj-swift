@@ -20,12 +20,12 @@ struct ETACoreDataManager: CoreDataManager {
    
    - returns: True if the request does exist, false otherwise
    */
-  func isDuplicate(fetchRequest: NSFetchRequest, predicate: NSPredicate) -> Bool {
+  func isDuplicate(_ fetchRequest: NSFetchRequest<AnyObject>, predicate: NSPredicate) -> Bool {
     // Duplicate check
     fetchRequest.predicate = predicate
     
     do {
-      let result = try managedObjectContext.executeFetchRequest(fetchRequest)
+      let result = try managedObjectContext.fetch(fetchRequest)
       let duplicate = result as! [NSManagedObject]
       return duplicate.count > 0
     } catch {
@@ -40,7 +40,7 @@ struct ETACoreDataManager: CoreDataManager {
    
    - returns: True if the save is successful, `fatalError` otherwise
    */
-  func attemptToSave(managedObject: NSManagedObject) -> Bool {    
+  func attemptToSave(_ managedObject: NSManagedObject) -> Bool {    
     do {
       try managedObjectContext.save()
       return true

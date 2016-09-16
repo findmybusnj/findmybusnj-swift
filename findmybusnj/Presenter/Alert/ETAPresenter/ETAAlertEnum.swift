@@ -16,7 +16,7 @@ import Foundation
  - Stop_Saved:   Should be shown if there is a stop already existing in Core Data
  */
 enum ETAAlertEnum: AlertEnum {
-  case Empty_Search
-  case Empty_Stop
-  case Duplicate_Stop_Saved
+  case empty_Search
+  case empty_Stop
+  case duplicate_Stop_Saved
 }

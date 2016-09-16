@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-findmybusnj-common.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-findmybusnj-widget.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-findmybusnj.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,6 +62,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8836CF23E4365FDB3377E8DDB618E838</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8CAC2986BF10D5A12DEC942FBD326A1F</key>
 		<dict>
 			<key>primary</key>
@@ -63,6 +78,11 @@
 			<true/>
 		</dict>
 		<key>F6F0516F82D07656D12F1C0716898F73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FC62013C2FB8A14388040878776EE43E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

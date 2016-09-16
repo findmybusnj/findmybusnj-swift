@@ -54,8 +54,8 @@ class ETABusTimeTableControllerUITests: XCTestCase {
     saveButton.doubleTap()  // TODO - Figure out why a doubleTap() is needed over a tap()
     
     let exists = NSPredicate(format: "exists == true")
-    expectationForPredicate(exists, evaluatedWithObject: saveAlert, handler: nil)
-    waitForExpectationsWithTimeout(5, handler: nil)
+    expectation(for: exists, evaluatedWith: saveAlert, handler: nil)
+    waitForExpectations(timeout: 5, handler: nil)
     
     XCTAssertTrue(saveAlert.exists)
     saveAlert.collectionViews.buttons["Done"].tap()
@@ -70,10 +70,10 @@ class ETABusTimeTableControllerUITests: XCTestCase {
     let table = app.navigationBars["findmybusnj.ETABusTimeTable"]
     XCTAssertTrue(table.tableRows.count == 0)
     
-    let start = table.coordinateWithNormalizedOffset(CGVectorMake(10, 10))
-    let end = table.coordinateWithNormalizedOffset(CGVectorMake(10, 16))
+    let start = table.coordinate(withNormalizedOffset: CGVector(dx: 10, dy: 10))
+    let end = table.coordinate(withNormalizedOffset: CGVector(dx: 10, dy: 16))
     
-    start.pressForDuration(0, thenDragToCoordinate: end)
+    start.press(forDuration: 0, thenDragTo: end)
     XCTAssertTrue(table.tableRows.count == 0)
   }
 }

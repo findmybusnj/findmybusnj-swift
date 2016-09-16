@@ -114,7 +114,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    */
   func test_InitialTableView_OffsetY_IsNegative() {
     let offset = cardTableViewControllerUnderTest.tableView.contentOffset
-    let offsetPoint = CGPointMake(0, 0)
+    let offsetPoint = CGPoint(x: 0, y: 0)
     XCTAssertTrue(offset.y <= offsetPoint.y, "Offset is incorrectly set. Incorrect offset can cause refreshController's attributed title to show in empty list. The y coordinate should be negative. The value of the offset point was: (x: \(offset.x), y: \(offset.y))")
   }
   
@@ -146,7 +146,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     assertTableIsEmpty()
     
     XCTAssertNotNil(tableViewBackgroundView, "tableViewBackgroundView should not be nil")
-    XCTAssertFalse(tableViewBackgroundView!.hidden, "Background view should not be hidden")
+    XCTAssertFalse(tableViewBackgroundView!.isHidden, "Background view should not be hidden")
   }
   
   /**

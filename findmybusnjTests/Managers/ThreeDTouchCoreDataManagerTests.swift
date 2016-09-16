@@ -19,7 +19,7 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
     
     managerUnderTest = ThreeDTouchCoreDataManager(managedObjectContext: managedObjectContext)
     XCTAssertNotNil(managedObjectContext, "Managed Object Context may not be nil when running these tests")
-    UIApplication.sharedApplication().shortcutItems?.removeAll()
+    UIApplication.shared.shortcutItems?.removeAll()
   }
   
   override func tearDown() {
@@ -56,9 +56,9 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
   func test_Assert_updateShortcutItemsWithFavorites_For_Empty_List_Is_Empty() {
     let fetch = NSFetchRequest(entityName: "Favorite")
     do {
-      let favorites = try managedObjectContext.executeFetchRequest(fetch) as! [NSManagedObject]
+      let favorites = try managedObjectContext.fetch(fetch) as! [NSManagedObject]
       managerUnderTest.updateShortcutItemsWithFavorites(favorites)
-      let shortcutItems = UIApplication.sharedApplication().shortcutItems
+      let shortcutItems = UIApplication.shared.shortcutItems
       XCTAssertTrue(shortcutItems?.count == 0, "No shortcut items should exist. There were: \(shortcutItems?.count)")
     } catch {
       fatalError("Unable to fetch favorites: \(error)")
@@ -75,15 +75,15 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
     
     let fetch = NSFetchRequest(entityName: "Favorite")
     do {
-      let favorites = try managedObjectContext.executeFetchRequest(fetch) as! [NSManagedObject]
+      let favorites = try managedObjectContext.fetch(fetch) as! [NSManagedObject]
       XCTAssertTrue(favorites.count > 0, "There should be NSManagedObjects to work with, can't create shortcut items without them")
       
       managerUnderTest.updateShortcutItemsWithFavorites(favorites)
-      let shortcutItems = UIApplication.sharedApplication().shortcutItems
+      let shortcutItems = UIApplication.shared.shortcutItems
       XCTAssertTrue(shortcutItems?.count == 1, "There should be one shorcut items, there were: \(shortcutItems?.count)")
       
       let shortcut = shortcutItems?[0]
-      let type = "\(NSBundle.mainBundle().bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
+      let type = "\(Bundle.mainBundle().bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
       
       guard let title = shortcutItems?[0].localizedTitle else {
         XCTFail("Title was nil when it shouldn't be for multiple favorites: \(#line)")
@@ -113,13 +113,13 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
     
     let fetch = NSFetchRequest(entityName: "Favorite")
     do {
-      let fetchedFavorites = try managedObjectContext.executeFetchRequest(fetch) as! [NSManagedObject]
+      let fetchedFavorites = try managedObjectContext.fetch(fetch) as! [NSManagedObject]
       XCTAssertTrue(fetchedFavorites.count == favorites.count, "There should be the same amount of favorites stored as there were fetched")
       
       managerUnderTest.updateShortcutItemsWithFavorites(fetchedFavorites)
       
-      let type = "\(NSBundle.mainBundle().bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
-      let shortcutItems = UIApplication.sharedApplication().shortcutItems
+      let type = "\(Bundle.mainBundle().bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
+      let shortcutItems = UIApplication.shared.shortcutItems
       XCTAssertTrue(shortcutItems?.count == 3, "There should be three shorcut items, there were: \(shortcutItems?.count)")
       
       for index in (0...2) {
