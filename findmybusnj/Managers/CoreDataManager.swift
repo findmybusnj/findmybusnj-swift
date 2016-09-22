@@ -12,7 +12,7 @@ import CoreData
 protocol CoreDataManager {
   var managedObjectContext: NSManagedObjectContext { get set }
 
-  func isDuplicate(_ fetchRequest: NSFetchRequest<AnyObject>, predicate: NSPredicate) -> Bool
+  func isDuplicate(_ fetchRequest: NSFetchRequest<NSManagedObject>, predicate: NSPredicate) -> Bool
   func attemptToSave(_ managedObject: NSManagedObject) -> Bool
 }
 
@@ -24,11 +24,11 @@ extension CoreDataManager {
    
    - returns: Array of `NSManagedObject`s
    */
-  func attemptFetch(_ fetchRequest: NSFetchRequest<AnyObject>) -> [NSManagedObject] {
+  func attemptFetch(_ fetchRequest: NSFetchRequest<NSManagedObject>) -> [NSManagedObject] {
     do {
       // Grab the favorites and order them based on frequency
       let results = try managedObjectContext.fetch(fetchRequest)
-      return results as! [NSManagedObject]
+      return results 
     } catch let error as NSError {
       print("Could not fetch \(error), \(error.userInfo)")
       return [NSManagedObject]()

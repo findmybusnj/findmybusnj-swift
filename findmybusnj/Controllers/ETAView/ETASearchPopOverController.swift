@@ -33,7 +33,7 @@ class ETASearchPopOverController: UIViewController {
     
     managedObjectContext = appDelegate.managedObjectContext
     coreDataManager = ETACoreDataManager(managedObjectContext: managedObjectContext)
-    let fetchRequest = NSFetchRequest(entityName: "Favorite")
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorite")
     
     favorites = coreDataManager.attemptFetch(fetchRequest)
     favorites = coreDataManager.sortDescending(favorites)
@@ -95,7 +95,7 @@ extension ETASearchPopOverController: UITextFieldDelegate {
       return false
     }
     
-    let currentCharCount = textFieldText.characters.count ?? 0;
+    let currentCharCount = textFieldText.characters.count
     if (range.length + range.location > currentCharCount) {
       return false
     }
@@ -126,10 +126,6 @@ extension ETASearchPopOverController: UITextFieldDelegate {
 
 // MARK: UITableViewDelegate
 extension ETASearchPopOverController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-    return true
-  }
-  
   func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?  {
     let index = (indexPath as NSIndexPath).row
     
@@ -153,6 +149,10 @@ extension ETASearchPopOverController: UITableViewDelegate {
 
 // MARK: UITableViewDataSource
 extension ETASearchPopOverController: UITableViewDataSource {
+  @objc(tableView:canEditRowAtIndexPath:) func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    return true
+  }
+  
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return favorites.count
   }
@@ -183,7 +183,7 @@ extension ETASearchPopOverController: UITableViewDataSource {
     return cell
   }
   
-  func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+  @objc(tableView:willSelectRowAtIndexPath:) func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
     let index = (indexPath as NSIndexPath).row
     let selectedItem = favorites[index] as! Favorite
     

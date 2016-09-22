@@ -40,7 +40,7 @@ struct ThreeDTouchCoreDataManager: CoreDataManager {
    
    - returns: False
    */
-  func isDuplicate(_ fetchRequest: NSFetchRequest<AnyObject>, predicate: NSPredicate) -> Bool {
+  func isDuplicate(_ fetchRequest: NSFetchRequest<NSManagedObject>, predicate: NSPredicate) -> Bool {
     return false
   }
   
