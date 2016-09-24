@@ -74,7 +74,7 @@ class FindNearByStopsController: UIViewController {
     /**
      Pass data to server using headers, not through string
      */
-    let url = String("https://findmybusnj.com/rest/getPlaces")
+    let url: String = String("https://findmybusnj.com/rest/getPlaces")
     let parameters = [
       "latitude" : String(latitude),
       "longitude" : String(longitude),
@@ -85,7 +85,7 @@ class FindNearByStopsController: UIViewController {
       print(parameters)
     #endif
     
-    Alamofire.request(.POST, url, parameters: parameters).responseJSON {
+    Alamofire.request(url, parameters: parameters).responseJSON {
       [unowned self] response in
       let json = response.result
       
@@ -107,8 +107,8 @@ class FindNearByStopsController: UIViewController {
         var latitude: Double
         var longitude: Double
         
-        for i in 0.stride(to: results.count, by: 1) {
-          locName = String(results[i]["name"])
+        for i in stride(from: 0, to: results.count, by: 1) {
+          locName = String(describing: results[i]["name"])
           latitude = results[i]["geometry"]["location"]["lat"].double!
           longitude = results[i]["geometry"]["location"]["lng"].double!
           

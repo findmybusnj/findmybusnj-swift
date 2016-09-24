@@ -142,7 +142,7 @@ class ETABusTimeTableController: CardTableViewController {
       return
     }
     
-    HUD.show(.Progress)
+    HUD.show(.progress)
     if route.isEmpty {
       networkManager.getJSONForStop(stop) {
         [unowned self] items, error in
@@ -184,10 +184,10 @@ class ETABusTimeTableController: CardTableViewController {
         
         if error == nil {
           self.updateTable(items)
-          completionHandler(.NewData)
+          completionHandler(.newData)
         }
         else if (error != nil) {
-          completionHandler(.Failed)
+          completionHandler(.failed)
         }
       })
     }
@@ -199,10 +199,10 @@ class ETABusTimeTableController: CardTableViewController {
         
         if error == nil {
           self.updateTable(items)
-          completionHandler(.NewData)
+          completionHandler(.newData)
         }
         else if (error != nil) {
-          completionHandler(.Failed)
+          completionHandler(.failed)
         }
       }
 

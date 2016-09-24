@@ -49,7 +49,7 @@ class ETACardPresenter: ETAPresenter {
     currentCell.timeLabel.textColor = UIColor.black
     
     if arrivalTime != -1 {
-      if arrivalTime ==  NumericArrivals.ARRIVED.rawValue {
+      if arrivalTime ==  NumericArrivals.arrived.rawValue {
         currentCell.timeLabel.text = "Arrive"
         currentCell.timeLabel.textColor = UIColor.white
         currentCell.renderFilledCircleForBusTime(arrivalTime) // We know this will be 0 at this point

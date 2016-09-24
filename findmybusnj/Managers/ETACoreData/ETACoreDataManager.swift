@@ -20,13 +20,13 @@ struct ETACoreDataManager: CoreDataManager {
    
    - returns: True if the request does exist, false otherwise
    */
-  func isDuplicate(_ fetchRequest: NSFetchRequest<AnyObject>, predicate: NSPredicate) -> Bool {
+  func isDuplicate(_ fetchRequest: NSFetchRequest<NSManagedObject>, predicate: NSPredicate) -> Bool {
     // Duplicate check
     fetchRequest.predicate = predicate
     
     do {
       let result = try managedObjectContext.fetch(fetchRequest)
-      let duplicate = result as! [NSManagedObject]
+      let duplicate = result 
       return duplicate.count > 0
     } catch {
       fatalError("Unable to check for duplicate stop: \(error)")
