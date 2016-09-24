@@ -216,7 +216,7 @@ class ETABusTimeTableController: CardTableViewController {
     let managedObjectContext = appDelegate.managedObjectContext
     
     // Check for duplicates
-    let fetchRequest = NSFetchRequest(entityName: "Favorite")
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorite")
     let predicate = NSPredicate(format: "stop == %@ AND route == %@", currentStop, filterRoute)
     
     if coreDataManager.isDuplicate(fetchRequest, predicate: predicate) {

@@ -85,7 +85,7 @@ class FindNearByStopsController: UIViewController {
       print(parameters)
     #endif
     
-    Alamofire.request(url, parameters: parameters).responseJSON {
+    Alamofire.request(url, method:.post, parameters: parameters).responseJSON {
       [unowned self] response in
       let json = response.result
       

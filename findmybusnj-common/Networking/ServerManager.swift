@@ -64,7 +64,7 @@ open class ServerManager: NSObject {
     let url = baseURL + endpoint
     lastEndpoint = endpoint
     
-    Alamofire.request(url, parameters: parameters)
+    Alamofire.request(url, method: .post, parameters: parameters)
       .responseJSON { response in
         let json = response.result
         

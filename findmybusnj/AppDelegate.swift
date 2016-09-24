@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func applicationWillResignActive(_ application: UIApplication) {
     // Gather new favorites
-    let fetchRequest = NSFetchRequest(entityName: "Favorite")
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorite")
     var favorites = shortcutItemManager.attemptFetch(fetchRequest)
     favorites = shortcutItemManager.sortDescending(favorites)
     
