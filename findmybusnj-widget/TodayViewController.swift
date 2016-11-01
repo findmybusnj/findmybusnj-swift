@@ -117,6 +117,10 @@ class TodayViewController: UIViewController {
     self.preferredContentSize = newPreferredContentSize
   }
   
+  func widgetMarginInsets(forProposedMarginInsets defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+    return UIEdgeInsetsMake(0,45,0,30);
+  }
+  
   @available(iOS 10.0, *)
   func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
     if (activeDisplayMode == NCWidgetDisplayMode.compact) {
