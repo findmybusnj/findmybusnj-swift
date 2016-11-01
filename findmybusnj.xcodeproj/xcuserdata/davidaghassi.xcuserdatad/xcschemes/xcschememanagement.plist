@@ -29,10 +29,20 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>findmybusnj-testflight.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>findmybusnj-testflight.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
+		</dict>
+		<key>findmybusnj-widget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>findmybusnj.xcscheme</key>
 		<dict>

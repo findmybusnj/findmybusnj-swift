@@ -50,7 +50,7 @@ class TodayViewController: UIViewController {
         if !item.isEmpty {
           self.updateTable(item)
         }
-        })
+      })
     }
     else {
       networkManager.getJSONForStop(stop, completion: { [unowned self] (item, error) in
@@ -58,7 +58,7 @@ class TodayViewController: UIViewController {
         if !item.isEmpty {
           self.updateTable(item)
         }
-        })
+      })
     }
   }
   
@@ -96,7 +96,13 @@ class TodayViewController: UIViewController {
   fileprivate func updateTable(_ items: JSON) {
     self.items = items
     etaTableView.reloadData()
-    updateViewSize()
+    
+    if #available(iOS 10.0, *) {
+      self.extensionContext?.widgetLargestAvailableDisplayMode = NCWidgetDisplayMode.expanded
+    } else {
+      // Fallback on earlier versions
+      updateViewSize()
+    }
   }
   
   /**
@@ -109,6 +115,16 @@ class TodayViewController: UIViewController {
     let constantWidth = etaTableView.contentSize.width
     let newPreferredContentSize = CGSize(width: constantWidth, height: newHeight)
     self.preferredContentSize = newPreferredContentSize
+  }
+  
+  @available(iOS 10.0, *)
+  func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+    if (activeDisplayMode == NCWidgetDisplayMode.compact) {
+      self.preferredContentSize = maxSize
+    }
+    else {
+      self.preferredContentSize = CGSize(width: maxSize.width, height: 200)
+    }
   }
 }
 
