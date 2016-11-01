@@ -30,6 +30,12 @@ class TodayViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
+    if #available(iOS 10.0, *) {
+      self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+    } else {
+      // Handled down below in the updateTable() method
+    }
+    
     // Fade in without retaining self
     view.alpha = 0
     UIView.animate(withDuration: 0.4, animations: { [unowned self] in
@@ -97,12 +103,13 @@ class TodayViewController: UIViewController {
     self.items = items
     etaTableView.reloadData()
     
-    if #available(iOS 10.0, *) {
-      self.extensionContext?.widgetLargestAvailableDisplayMode = NCWidgetDisplayMode.expanded
-    } else {
-      // Fallback on earlier versions
-      updateViewSize()
+    // Let the system handle the resize
+    guard #available(iOS 10.0, *) else {
+      return
     }
+    
+    // If we are on iOS 9, do it ourself
+    updateViewSize()
   }
   
   /**
@@ -127,7 +134,7 @@ class TodayViewController: UIViewController {
       self.preferredContentSize = maxSize
     }
     else {
-      self.preferredContentSize = CGSize(width: maxSize.width, height: 200)
+      self.preferredContentSize = CGSize(width: maxSize.width, height: 500)
     }
   }
 }
