@@ -21,20 +21,16 @@ class TodayViewController: UIViewController {
   // MARK: Managers & Presenters
   fileprivate let networkManager = ServerManager()
   fileprivate let tableViewCellPresenter = WidgetETATableViewCellPresenter()
+  fileprivate let sanatizer = JSONSanitizer()
   
   // MARK: Outlets
   @IBOutlet weak var stopLabel: UILabel!
   @IBOutlet weak var routeLabel: UILabel!
   @IBOutlet weak var etaTableView: UITableView!
+  @IBOutlet weak var nextArrivingLabel: UILabel!
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
-    if #available(iOS 10.0, *) {
-      self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
-    } else {
-      // Handled down below in the updateTable() method
-    }
     
     // Fade in without retaining self
     view.alpha = 0
@@ -100,6 +96,8 @@ class TodayViewController: UIViewController {
    - parameter items: Items that will populate the `tableView`
    */
   fileprivate func updateTable(_ items: JSON) {
+    let firstResponse = items.array?.first
+    self.nextArrivingLabel.text = "The next bus will arrive in \(sanatizer.getSanitizedArrivaleTimeAsInt(firstResponse!)) minutes."
     self.items = items
     etaTableView.reloadData()
     
@@ -156,7 +154,7 @@ extension TodayViewController: NCWidgetProviding {
 // MARK: UITableViewDataSource
 extension TodayViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if items.count > 5 {
+    if items.count >  5 {
       return 5
     }
     else {
