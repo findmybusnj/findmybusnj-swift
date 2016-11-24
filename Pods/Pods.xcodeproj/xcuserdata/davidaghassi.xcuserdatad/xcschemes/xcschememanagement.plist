@@ -33,7 +33,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>3</integer>
 		</dict>
 		<key>Pods-findmybusnjTests.xcscheme</key>
 		<dict>

@@ -103,11 +103,10 @@ class TodayViewController: UIViewController {
     
     // Let the system handle the resize
     guard #available(iOS 10.0, *) else {
-      return
+        // If we are on iOS 9, do it ourself
+        updateViewSize()
+        return
     }
-    
-    // If we are on iOS 9, do it ourself
-    updateViewSize()
   }
   
   /**

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-ff-ozY">
-                                <rect key="frame" x="16" y="124" width="288" height="331"/>
+                                <rect key="frame" x="16" y="123.5" width="288" height="331.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="288" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YKO-BV-SJX" id="Qdq-IH-vCP">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEL-5T-P4G">
@@ -111,7 +111,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next bus status unknown." lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRR-ti-6OT">
-                                <rect key="frame" x="16" y="0.0" width="288" height="116"/>
+                                <rect key="frame" x="16" y="5" width="288" height="67.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -124,17 +124,16 @@
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="GQh-ff-ozY" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" constant="39.5" id="6KI-PF-lES"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="GQh-ff-ozY" secondAttribute="leading" identifier="etaTableViewLeadingEqualsLeading" id="EJE-ny-7bS"/>
+                            <constraint firstItem="pZe-Jm-nxb" firstAttribute="top" secondItem="GQh-ff-ozY" secondAttribute="bottom" constant="18" id="Igo-60-p1Y"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yRR-ti-6OT" secondAttribute="leading" id="MCx-G4-MOA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yRR-ti-6OT" secondAttribute="trailing" id="PzX-xd-t2t"/>
-                            <constraint firstItem="GZ7-fB-2ed" firstAttribute="baseline" secondItem="pZe-Jm-nxb" secondAttribute="baseline" id="SjD-SJ-H7E"/>
-                            <constraint firstItem="yRR-ti-6OT" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="UQn-9A-nET"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GQh-ff-ozY" secondAttribute="bottom" constant="45" id="V16-0d-88p"/>
-                            <constraint firstItem="pZe-Jm-nxb" firstAttribute="trailing" secondItem="GQh-ff-ozY" secondAttribute="trailing" id="bls-yY-bCy"/>
-                            <constraint firstItem="GQh-ff-ozY" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="cUC-sG-NMX"/>
-                            <constraint firstItem="yRR-ti-6OT" firstAttribute="leading" secondItem="GQh-ff-ozY" secondAttribute="leading" id="efV-Ja-1g6"/>
-                            <constraint firstItem="GQh-ff-ozY" firstAttribute="leading" secondItem="GZ7-fB-2ed" secondAttribute="leading" id="hU9-gQ-PMp"/>
-                            <constraint firstItem="GZ7-fB-2ed" firstAttribute="top" secondItem="GQh-ff-ozY" secondAttribute="bottom" constant="18" id="lhH-ee-KK3"/>
-                            <constraint firstItem="GQh-ff-ozY" firstAttribute="top" secondItem="yRR-ti-6OT" secondAttribute="bottom" constant="8" symbolic="YES" id="pcs-Sm-ssS"/>
+                            <constraint firstItem="GZ7-fB-2ed" firstAttribute="baseline" secondItem="pZe-Jm-nxb" secondAttribute="baseline" identifier="stopBaselineEqualsRouteBaseline" id="SjD-SJ-H7E"/>
+                            <constraint firstItem="yRR-ti-6OT" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="5" identifier="nextArrivingLabelTopEqualsTop" id="UQn-9A-nET"/>
+                            <constraint firstItem="pZe-Jm-nxb" firstAttribute="trailing" secondItem="GQh-ff-ozY" secondAttribute="trailing" identifier="routeLabelTrailingEqualsEtaTableTrailing" id="bls-yY-bCy"/>
+                            <constraint firstItem="GQh-ff-ozY" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" identifier="etaTableCenterX" id="cUC-sG-NMX"/>
+                            <constraint firstItem="GQh-ff-ozY" firstAttribute="top" secondItem="yRR-ti-6OT" secondAttribute="bottom" constant="51" id="gwC-X1-ax5"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GZ7-fB-2ed" secondAttribute="bottom" constant="9" id="x7B-LZ-IXp"/>
                             <constraint firstItem="GZ7-fB-2ed" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="yws-jQ-I28"/>
                         </constraints>
                     </view>
