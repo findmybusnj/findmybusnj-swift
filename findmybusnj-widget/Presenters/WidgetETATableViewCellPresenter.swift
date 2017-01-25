@@ -67,8 +67,14 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
       return
     }
     
-    currentCell.routeLabel.textColor = UIColor.white
-    currentCell.routeDescriptionLabel.textColor = UIColor.white
+    if #available(iOS 10.0, *) {
+        // no-op
+    }
+    else {
+        // for versions less than ios 10, we display white text
+        currentCell.routeLabel.textColor = UIColor.white
+        currentCell.routeDescriptionLabel.textColor = UIColor.white
+    }
     
     currentCell.routeLabel.text = sanitizer.getSanitizedRouteNumber(json)
     currentCell.routeDescriptionLabel.text = sanitizer.getSanitizedRouteDescription(json)

@@ -38,6 +38,8 @@ class TodayViewController: UIViewController {
       self.view.alpha = 1
     }) 
     etaTableView.separatorColor = UIColor.clear
+    etaTableView.tableFooterView = UIView(frame: CGRect.zero)
+    
   }
   
   override func viewDidLoad() {
@@ -45,6 +47,11 @@ class TodayViewController: UIViewController {
     // Do any additional setup after loading the view from its nib.
     
     loadFromAppGroup()
+    if #available(iOS 10.0, *) {
+        self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
+    } else {
+        // Fallback on earlier versions
+    }
     
     if !route.isEmpty {
       networkManager.getJSONForStopFilteredByRoute(stop, route: route, completion: { [unowned self] (item, error) in
@@ -96,7 +103,7 @@ class TodayViewController: UIViewController {
    - parameter items: Items that will populate the `tableView`
    */
   fileprivate func updateTable(_ items: JSON) {
-    let firstResponse = items.array?.first
+    let firstResponse = items.array?.first  // TODO: Find a better way to do this
     self.nextArrivingLabel.text = "The next bus will arrive in \(sanatizer.getSanitizedArrivaleTimeAsInt(firstResponse!)) minutes."
     self.items = items
     etaTableView.reloadData()
@@ -122,7 +129,7 @@ class TodayViewController: UIViewController {
   }
   
   func widgetMarginInsets(forProposedMarginInsets defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
-    return UIEdgeInsetsMake(0,45,0,30);
+    return UIEdgeInsets.zero;
   }
   
   @available(iOS 10.0, *)
@@ -131,7 +138,7 @@ class TodayViewController: UIViewController {
       self.preferredContentSize = maxSize
     }
     else {
-      self.preferredContentSize = CGSize(width: maxSize.width, height: 500)
+      self.preferredContentSize = CGSize(width: maxSize.width, height: 400)
     }
   }
 }
@@ -153,11 +160,17 @@ extension TodayViewController: NCWidgetProviding {
 // MARK: UITableViewDataSource
 extension TodayViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if items.count >  5 {
-      return 5
+    if let array = items.array {
+        if array.count >  5 {
+            return 5
+        }
+        else {
+            return array.count
+        }
+
     }
     else {
-      return items.count
+        return 0;
     }
   }
   
@@ -165,7 +178,7 @@ extension TodayViewController: UITableViewDataSource {
     let identifier = "arrivalCell"
     let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! WidgetETATableViewCell
     
-    cell.backgroundColor = UIColor.white.withAlphaComponent(0.25)
+    // cell.backgroundColor = UIColor.white.withAlphaComponent(0.25)
     tableViewCellPresenter.formatCellForPresentation(cell, json: items[indexPath.row])
 
     return cell

@@ -20,6 +20,8 @@ class WidgetETATableViewCell: UITableViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
+    
+    etaView.layer.cornerRadius = 10
   }
   
   func clearText() {
