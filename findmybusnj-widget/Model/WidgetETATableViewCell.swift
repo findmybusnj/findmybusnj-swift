@@ -21,7 +21,7 @@ class WidgetETATableViewCell: UITableViewCell {
     super.awakeFromNib()
     // Initialization code
     
-    etaView.layer.cornerRadius = 10
+    etaView.layer.cornerRadius = 5
   }
   
   func clearText() {

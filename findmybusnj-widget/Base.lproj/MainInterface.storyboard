@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="288" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YKO-BV-SJX" id="Qdq-IH-vCP">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEL-5T-P4G">
@@ -45,40 +45,40 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zay-9W-Dyk" userLabel="ETAView">
-                                                            <rect key="frame" x="199" y="0.0" width="81" height="49"/>
+                                                            <rect key="frame" x="210" y="5" width="70" height="37"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dp-ol-aUe">
-                                                                    <rect key="frame" x="9" y="13" width="81" height="24"/>
-                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="15m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dp-ol-aUe">
+                                                                    <rect key="frame" x="26" y="10" width="31" height="20"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="9dp-ol-aUe" secondAttribute="trailing" constant="-9" identifier="etaViewTimeLabelTrailing" id="45e-Tv-dDh"/>
                                                                 <constraint firstItem="9dp-ol-aUe" firstAttribute="centerY" secondItem="zay-9W-Dyk" secondAttribute="centerY" identifier="etaViewTimeLabelCenter" id="94r-Za-q0h"/>
-                                                                <constraint firstItem="9dp-ol-aUe" firstAttribute="leading" secondItem="zay-9W-Dyk" secondAttribute="leading" constant="9" identifier="etaViewTimeLabelLeading" id="Gs9-r3-lR5"/>
+                                                                <constraint firstAttribute="width" constant="70" id="SBF-cr-qgm"/>
+                                                                <constraint firstItem="9dp-ol-aUe" firstAttribute="centerX" secondItem="zay-9W-Dyk" secondAttribute="centerX" id="pSv-CF-vjr"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="cD1-Iw-8fL">
-                                                            <rect key="frame" x="3" y="23" width="183" height="22"/>
+                                                            <rect key="frame" x="3" y="23" width="123" height="22"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="leading" secondItem="cD1-Iw-8fL" secondAttribute="trailing" constant="13" id="9cQ-me-PnZ"/>
+                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cD1-Iw-8fL" secondAttribute="trailing" constant="13" id="9cQ-me-PnZ"/>
                                                         <constraint firstItem="ode-Rr-Qmm" firstAttribute="leading" secondItem="cD1-Iw-8fL" secondAttribute="leading" id="LYk-7Q-XnV"/>
                                                         <constraint firstItem="ode-Rr-Qmm" firstAttribute="top" secondItem="DEL-5T-P4G" secondAttribute="top" constant="8" id="Zhm-Jr-GFQ"/>
                                                         <constraint firstAttribute="bottom" secondItem="cD1-Iw-8fL" secondAttribute="bottom" constant="-1" id="cg1-nI-cgT"/>
                                                         <constraint firstItem="cD1-Iw-8fL" firstAttribute="top" secondItem="DEL-5T-P4G" secondAttribute="top" constant="23" id="eMs-EO-KkH"/>
                                                         <constraint firstAttribute="trailing" secondItem="zay-9W-Dyk" secondAttribute="trailing" id="fVv-ra-fVe"/>
                                                         <constraint firstAttribute="bottom" secondItem="ode-Rr-Qmm" secondAttribute="bottom" constant="18" id="fYV-fU-GRk"/>
-                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="top" secondItem="DEL-5T-P4G" secondAttribute="top" id="kd7-JB-FLY"/>
-                                                        <constraint firstAttribute="bottom" secondItem="zay-9W-Dyk" secondAttribute="bottom" constant="-5" id="mnJ-HS-Pal"/>
-                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="leading" secondItem="ode-Rr-Qmm" secondAttribute="trailing" constant="13" id="phA-Th-YQG"/>
+                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="top" secondItem="DEL-5T-P4G" secondAttribute="top" constant="5" id="kd7-JB-FLY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zay-9W-Dyk" secondAttribute="bottom" constant="2" id="mnJ-HS-Pal"/>
+                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ode-Rr-Qmm" secondAttribute="trailing" constant="13" id="phA-Th-YQG"/>
                                                         <constraint firstItem="ode-Rr-Qmm" firstAttribute="leading" secondItem="DEL-5T-P4G" secondAttribute="leadingMargin" constant="-5" id="vEX-QX-XzP"/>
                                                     </constraints>
                                                 </view>
