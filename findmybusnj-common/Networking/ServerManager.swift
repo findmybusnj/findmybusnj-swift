@@ -17,7 +17,8 @@ import SwiftyJSON
  Part of the `findmybusnj-common` framework. Used to make calls to findmybusnj.com server
  */
 open class ServerManager: NSObject {
-  fileprivate  let baseURL = "https://findmybusnj.com/rest"
+  fileprivate let baseURL = "https://findmybusnj.com/rest"
+  fileprivate let manager = Alamofire.SessionManager.default
    var lastEndpoint = ""
    var url : String {
     return "\(baseURL)\(lastEndpoint)"
@@ -63,8 +64,9 @@ open class ServerManager: NSObject {
   fileprivate func makePOST(_ endpoint: String, parameters: [String : String], completion: @escaping (_ item: JSON, _ error: Error?) -> Void) {
     let url = baseURL + endpoint
     lastEndpoint = endpoint
+    manager.session.configuration.timeoutIntervalForRequest = 30
     
-    Alamofire.request(url, method: .post, parameters: parameters)
+    manager.request(url, method: .post, parameters: parameters)
       .responseJSON { response in
         let json = response.result
         
