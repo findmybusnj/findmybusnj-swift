@@ -1,39 +1,34 @@
 PODS:
-  - Alamofire (4.0.0)
+  - Alamofire (4.3.0)
   - Crashlytics (3.8.1):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.8)
   - PKHUD (3.2.1)
-  - SwiftyJSON (2.3.2)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - Crashlytics
   - Fabric
   - PKHUD (from `https://github.com/toyship/PKHUD`)
-  - SwiftyJSON (from `https://github.com/IBM-Swift/SwiftyJSON`)
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
   PKHUD:
     :git: https://github.com/toyship/PKHUD
-  SwiftyJSON:
-    :git: https://github.com/IBM-Swift/SwiftyJSON
 
 CHECKOUT OPTIONS:
   PKHUD:
     :commit: 28fb970b41d63134e962f9da766b96670c0f55f0
     :git: https://github.com/toyship/PKHUD
-  SwiftyJSON:
-    :commit: 73b523a107b798021ca9af74b5f7c20e435c8809
-    :git: https://github.com/IBM-Swift/SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: fef59f00388f267e52d9b432aa5d93dc97190f14
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Crashlytics: 4391d8df0b125345e9f209c5db6e7f40a6a8435d
   Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
   PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: d01898e0efa6d42a151fc21c345fada72bd72c0f
+PODFILE CHECKSUM: 6bb96306eff1fcb0df08f55e432cb853d25a4cc5
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.0

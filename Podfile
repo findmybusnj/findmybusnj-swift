@@ -5,7 +5,7 @@ use_frameworks!
 
 target 'findmybusnj' do
 
-pod 'SwiftyJSON', :git => 'https://github.com/IBM-Swift/SwiftyJSON'
+pod 'SwiftyJSON'
 pod 'Alamofire', '~> 4.0'
 pod 'PKHUD', :git => 'https://github.com/toyship/PKHUD'
 pod 'Fabric'
@@ -15,14 +15,14 @@ end
 
 target 'findmybusnj-common' do
 
-pod 'SwiftyJSON', :git => 'https://github.com/IBM-Swift/SwiftyJSON'
+pod 'SwiftyJSON'
 pod 'Alamofire', '~> 4.0'
 
 end
 
 target 'findmybusnj-widget' do
 
-pod 'SwiftyJSON', :git => 'https://github.com/IBM-Swift/SwiftyJSON'
+pod 'SwiftyJSON'
 
 end
 
