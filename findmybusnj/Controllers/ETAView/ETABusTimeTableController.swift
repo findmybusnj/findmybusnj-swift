@@ -6,11 +6,13 @@
 //  Copyright © 2015 David Aghassi. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import CoreData
 
 // MARK: Dependancies
 import findmybusnj_common
+import SwiftyJSON
 import PKHUD
 
 class ETABusTimeTableController: CardTableViewController {
@@ -18,6 +20,7 @@ class ETABusTimeTableController: CardTableViewController {
   fileprivate let alertPresenter = ETAAlertPresenter()
   fileprivate var coreDataManager: ETACoreDataManager!
   fileprivate let networkManager = ServerManager()
+  fileprivate var backgroundUpdateSuccess = false
   
   // MARK: Properties
   var currentStop: String = ""
@@ -147,10 +150,7 @@ class ETABusTimeTableController: CardTableViewController {
       networkManager.getJSONForStop(stop) {
         [unowned self] items, error in
         
-        if error == nil {
-          self.updateTable(items)
-          HUD.hide()
-        }
+        self.updateResults(items: JSON, error: error)
       }
     }
     else {
@@ -159,53 +159,42 @@ class ETABusTimeTableController: CardTableViewController {
       networkManager.getJSONForStopFilteredByRoute(stop, route: route) {
         [unowned self] items, error in
         
-        if error == nil {
-          self.updateTable(items)
-          HUD.hide()
-        }
+        self.updateResults(error: error)
       }
     }
   }
   
   /**
-   Modified version of `performSearch` that is only called when backgrounded.
-   TODO: Refactor this into the normal `performSearch` method.
+   Updates the table based on the result of `performSearch`
+  
+  - paramter error: The error code, if any, passed by result of search
+  */
+  fileprivate func updateResults(items: JSON, error: Error?) {
+    if let failure = error {
+      if failure._code == NSURLErrorTimedOut {
+        self.backgroundUpdateSuccess = false
+        HUD.hide()
+      }
+    }
+    else {
+      self.updateTable(items)
+      self.backgroundUpdateSuccess = true
+      HUD.hide()
+    }
+  }
+  
+  /**
+   Calls `performSearch` when app is backgrounded.
    
    - parameter completionHandler: `UIBackgroundFetchResult` function to be called after data is successfully fetched or not
    */
   fileprivate func performSearchInBackground(_ completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-    if (currentStop.isEmpty) {
-      return
-    }
-    
-    if (filterRoute.isEmpty) {
-      networkManager.getJSONForStop(currentStop, completion: {
-        [unowned self] items, error in
-        
-        if error == nil {
-          self.updateTable(items)
-          completionHandler(.newData)
-        }
-        else if (error != nil) {
-          completionHandler(.failed)
-        }
-      })
+    performSearch(currentStop, route: filterRoute)
+    if backgroundUpdateSuccess {
+      completionHandler(.newData)
     }
     else {
-      navigationBar.title = "\(currentStop) via \(filterRoute)"
-      
-      networkManager.getJSONForStopFilteredByRoute(currentStop, route: filterRoute) {
-        [unowned self] items, error in
-        
-        if error == nil {
-          self.updateTable(items)
-          completionHandler(.newData)
-        }
-        else if (error != nil) {
-          completionHandler(.failed)
-        }
-      }
-
+      completionHandler(.failed)
     }
   }
   

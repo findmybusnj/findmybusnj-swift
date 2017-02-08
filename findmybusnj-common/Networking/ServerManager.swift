@@ -70,15 +70,23 @@ open class ServerManager: NSObject {
       .responseJSON { response in
         let json = response.result
         
-        if (response.result.isFailure) {
-          print("Error: \(json.error)")
-        }
-        else {
+        switch(response.result) {
+        case .success:
           // we know we can force case since it isn't a failure
           let json = JSON(json.value!)
           
           // call closure for what is past in (kind of like an anonymous function)
           completion(json, nil)
+          break
+        case .failure(let error):
+          // Remove loading HUD
+          // Use existing data
+          if error._code == NSURLErrorTimedOut {
+            completion(JSON.null, error)
+          }
+          else {
+            print("Error: \(json.error)")
+          }
         }
     }
   }
