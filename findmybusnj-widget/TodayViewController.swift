@@ -20,7 +20,7 @@ class TodayViewController: UIViewController {
   
   // MARK: Managers & Presenters
   fileprivate let networkManager = ServerManager()
-  fileprivate let tableViewCellPresenter = WidgetETATableViewCellPresenter()
+  fileprivate let tableViewCellPresenter = WidgetTodayViewCellPresenter()
   fileprivate let sanatizer = JSONSanitizer()
   
   // MARK: Outlets
@@ -118,6 +118,8 @@ class TodayViewController: UIViewController {
   
   /**
    Updates the views `preferredContentSize` based on the height of the tableView
+   
+   NOTE: This method is only called for iOS 9. iOS 10 uses `widgetActiveDisplayModeDidChange`
    */
   fileprivate func updateViewSize() {
     // Get the size and add a little so we don't cut off the button cell
@@ -167,7 +169,6 @@ extension TodayViewController: UITableViewDataSource {
         else {
             return array.count
         }
-
     }
     else {
         return 0;

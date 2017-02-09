@@ -50,7 +50,7 @@ class ETACardPresenter: ETAPresenter {
     
     if arrivalTime != -1 {
       if arrivalTime ==  NumericArrivals.arrived.rawValue {
-        currentCell.timeLabel.text = "Arrive"
+        currentCell.timeLabel.text = "Arrived"
         currentCell.timeLabel.textColor = UIColor.white
         currentCell.renderFilledCircleForBusTime(arrivalTime) // We know this will be 0 at this point
       }
@@ -66,17 +66,16 @@ class ETACardPresenter: ETAPresenter {
         print(json)
       #endif
       
+      let nonZeroArrivalString = determineNonZeroArrivalString(arrivalString: arrivalString)
+      currentCell.timeLabel.text = nonZeroArrivalString
+      currentCell.timeLabel.textColor = UIColor.white
+      
       switch arrivalString {
       case NonNumericaArrivals.APPROACHING.rawValue:
-        currentCell.timeLabel.text = "Arrive"
-        currentCell.timeLabel.textColor = UIColor.white
         currentCell.renderFilledCircleForBusTime(0)
       case NonNumericaArrivals.DELAYED.rawValue:
-        currentCell.timeLabel.text = "Delay"
-        currentCell.timeLabel.textColor = UIColor.white
         currentCell.renderFilledCircleForBusTime(35)
       default:
-        currentCell.timeLabel.text = "0"
         currentCell.timeLabel.textColor = UIColor.blue
       }
     }

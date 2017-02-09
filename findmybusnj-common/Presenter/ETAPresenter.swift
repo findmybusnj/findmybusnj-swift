@@ -39,6 +39,17 @@ public extension ETAPresenter {
       return colorPalette.lollipopRed()
     }
   }
+  
+  func determineNonZeroArrivalString(arrivalString: String) -> String {
+    switch arrivalString {
+    case NonNumericaArrivals.APPROACHING.rawValue:
+      return "Arriving"
+    case NonNumericaArrivals.DELAYED.rawValue:
+      return "Delay"
+    default:
+      return "0"
+    }
+  }
 }
 
 /**

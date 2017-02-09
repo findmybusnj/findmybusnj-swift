@@ -12,7 +12,7 @@ import UIKit
 import SwiftyJSON
 import findmybusnj_common
 
-class WidgetETATableViewCellPresenter: ETAPresenter {
+class WidgetTodayViewCellPresenter: ETAPresenter {
   var sanitizer = JSONSanitizer()
   let colorPallette = ColorPalette()
   
@@ -21,6 +21,16 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
     assignBusAndRouteTextForJson(cell, json: json)
   }
   
+  /**
+    Asssigns the arrival time to the given table view cell for the json provided.
+    If the time is not a number, we assign it Arriving/Delayed/No Current Prediction
+ 
+    - TODO: Refactor this method to move similar logic to `ETAPresenter` so logic isn't duplicated from `ETACardPresenter`
+ 
+    - Parameters:
+    - card:   table view cell being edited
+    - json:   The json at the current index
+  */
   func assignArrivalTimeForJson(_ cell: UITableViewCell, json: JSON) {
     guard let currentCell = cell as? WidgetETATableViewCell else {
       return
@@ -33,7 +43,7 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
     
     if arrivalTime != -1 {
       if arrivalTime ==  NumericArrivals.arrived.rawValue {
-        currentCell.timeLabel.text = "Arrive"
+        currentCell.timeLabel.text = "Arrived"
         currentCell.etaView.backgroundColor = colorPallette.powderBlue()
       }
       else {
@@ -47,15 +57,15 @@ class WidgetETATableViewCellPresenter: ETAPresenter {
         print(json)
       #endif
       
+      let nonZeroArrivalString = determineNonZeroArrivalString(arrivalString: arrivalString)
+      currentCell.timeLabel.text = nonZeroArrivalString
+      
       switch arrivalString {
       case NonNumericaArrivals.APPROACHING.rawValue:
-        currentCell.timeLabel.text = "Arrive"
         currentCell.etaView.backgroundColor = colorPallette.powderBlue()
       case NonNumericaArrivals.DELAYED.rawValue:
-        currentCell.timeLabel.text = "Delay"
         currentCell.etaView.backgroundColor = colorPallette.lollipopRed()
       default:
-        currentCell.timeLabel.text = "0"
         currentCell.timeLabel.textColor = UIColor.blue
         currentCell.etaView.backgroundColor = UIColor.clear
       }
