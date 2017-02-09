@@ -150,7 +150,7 @@ class ETABusTimeTableController: CardTableViewController {
       networkManager.getJSONForStop(stop) {
         [unowned self] items, error in
         
-        self.updateResults(items: JSON, error: error)
+        self.updateResults(items: items, error: error)
       }
     }
     else {
@@ -159,7 +159,7 @@ class ETABusTimeTableController: CardTableViewController {
       networkManager.getJSONForStopFilteredByRoute(stop, route: route) {
         [unowned self] items, error in
         
-        self.updateResults(error: error)
+        self.updateResults(items: items,error: error)
       }
     }
   }
