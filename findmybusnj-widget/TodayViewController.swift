@@ -52,6 +52,9 @@ class TodayViewController: UIViewController {
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
     } else {
         // Fallback on earlier versions
+      nextArrivingLabel.textColor = UIColor.white
+      routeLabel.textColor = UIColor.white
+      stopLabel.textColor = UIColor.white
     }
     
     if !route.isEmpty {
@@ -137,14 +140,10 @@ class TodayViewController: UIViewController {
   fileprivate func updateViewSize() {
     // Get the size and add a little so we don't cut off the button cell
     // Set the new size to the size of the widget
-    let newHeight = etaTableView.contentSize.height + stopLabel.intrinsicContentSize.height + 75
+    let newHeight = etaTableView.contentSize.height + stopLabel.intrinsicContentSize.height + 100
     let constantWidth = etaTableView.contentSize.width
     let newPreferredContentSize = CGSize(width: constantWidth, height: newHeight)
     self.preferredContentSize = newPreferredContentSize
-  }
-  
-  func widgetMarginInsets(forProposedMarginInsets defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
-    return UIEdgeInsets.zero;
   }
   
   @available(iOS 10.0, *)
@@ -169,7 +168,6 @@ extension TodayViewController: NCWidgetProviding {
     
     completionHandler(NCUpdateResult.newData)
   }
-  
 }
 
 // MARK: UITableViewDataSource
