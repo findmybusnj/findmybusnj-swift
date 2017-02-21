@@ -57,6 +57,12 @@ class WidgetTodayViewCellPresenter: ETAPresenter {
     }
   }
   
+  /**
+   Exists as a legacy call to handle displaying data for iOS 9 since it requires different color schemes
+   
+   -  parameter cell: `UITableViewCell` provided to be decorated
+   -  parameter json: The json data for the current index
+   */
   func assignBusAndRouteTextForJson(_ cell: UITableViewCell, json: JSON) {
     guard let currentCell = cell as? WidgetETATableViewCell else {
       return
@@ -74,10 +80,5 @@ class WidgetTodayViewCellPresenter: ETAPresenter {
     currentCell.routeLabel.text = sanitizer.getSanitizedRouteNumber(json)
     currentCell.routeDescriptionLabel.text = sanitizer.getSanitizedRouteDescription(json)
     currentCell.routeDescriptionLabel.adjustsFontSizeToFitWidth = true
-  }
-  
-  func assignTextForArrivalBanner(json: JSON) {
-    
-    
   }
 }

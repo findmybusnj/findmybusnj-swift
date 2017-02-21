@@ -21,6 +21,7 @@ class TodayViewController: UIViewController {
   // MARK: Managers & Presenters
   fileprivate let networkManager = ServerManager()
   fileprivate let tableViewCellPresenter = WidgetTodayViewCellPresenter()
+  fileprivate let bannerPresenter = WidgetBannerPresenter()
   fileprivate let sanatizer = JSONSanitizer()
   
   // MARK: Outlets
@@ -103,8 +104,7 @@ class TodayViewController: UIViewController {
    - parameter items: Items that will populate the `tableView`
    */
   fileprivate func updateTable(_ items: JSON) {
-    let firstResponse = items.array?.first  // TODO: Find a better way to do this
-    self.nextArrivingLabel.text = "The next bus will arrive in \(sanatizer.getSanitizedArrivaleTimeAsInt(firstResponse!)) minutes."
+    updateBanner(items)
     self.items = items
     etaTableView.reloadData()
     
@@ -113,6 +113,19 @@ class TodayViewController: UIViewController {
         // If we are on iOS 9, do it ourself
         updateViewSize()
         return
+    }
+  }
+  
+  /**
+   Used as a callback to update the `nextArrivingLabel` with the first item in the json response.
+ 
+   - paramater items Items that were returned from the network call for the next buses
+   */
+  fileprivate func updateBanner(_ items: JSON) {
+    if let jsonArray = items.array {
+      if let firstResponse = jsonArray.first {
+        bannerPresenter.assignTextForArrivalBanner(label: self.nextArrivingLabel, json: firstResponse)
+      }
     }
   }
   

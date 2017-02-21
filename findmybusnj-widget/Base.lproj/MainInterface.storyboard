@@ -111,7 +111,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next bus status unknown." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRR-ti-6OT">
                                 <rect key="frame" x="16" y="5" width="288" height="40"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -126,13 +126,14 @@
                             <constraint firstItem="GQh-ff-ozY" firstAttribute="top" secondItem="yRR-ti-6OT" secondAttribute="bottom" constant="35" id="9kg-yz-vA0"/>
                             <constraint firstItem="GQh-ff-ozY" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="80" id="Bjz-JC-EHj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GQh-ff-ozY" secondAttribute="leading" identifier="etaTableViewLeadingEqualsLeading" id="EJE-ny-7bS"/>
-                            <constraint firstItem="pZe-Jm-nxb" firstAttribute="top" secondItem="GQh-ff-ozY" secondAttribute="bottom" constant="18" id="Igo-60-p1Y"/>
                             <constraint firstAttribute="leadingMargin" secondItem="yRR-ti-6OT" secondAttribute="leading" id="MCx-G4-MOA"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="pZe-Jm-nxb" secondAttribute="bottom" constant="9" id="PAb-2F-NEn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yRR-ti-6OT" secondAttribute="trailing" id="PzX-xd-t2t"/>
                             <constraint firstItem="GZ7-fB-2ed" firstAttribute="baseline" secondItem="pZe-Jm-nxb" secondAttribute="baseline" identifier="stopBaselineEqualsRouteBaseline" id="SjD-SJ-H7E"/>
                             <constraint firstItem="yRR-ti-6OT" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="5" identifier="nextArrivingLabelTopEqualsTop" id="UQn-9A-nET"/>
                             <constraint firstItem="pZe-Jm-nxb" firstAttribute="trailing" secondItem="GQh-ff-ozY" secondAttribute="trailing" identifier="routeLabelTrailingEqualsEtaTableTrailing" id="bls-yY-bCy"/>
                             <constraint firstItem="GQh-ff-ozY" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" identifier="etaTableCenterX" id="cUC-sG-NMX"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GQh-ff-ozY" secondAttribute="bottom" constant="45" id="ddb-mx-dIc"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GZ7-fB-2ed" secondAttribute="bottom" constant="9" id="x7B-LZ-IXp"/>
                             <constraint firstItem="GZ7-fB-2ed" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="yws-jQ-I28"/>
                         </constraints>
