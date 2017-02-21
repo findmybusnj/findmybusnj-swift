@@ -38,37 +38,22 @@ class WidgetTodayViewCellPresenter: ETAPresenter {
     currentCell.timeLabel.textColor = UIColor.white
     currentCell.timeLabel.adjustsFontSizeToFitWidth = true
     
-    let arrivalString = sanitizer.getSanatizedArrivalTimeAsString(json)
-    let arrivalTime = sanitizer.getSanitizedArrivaleTimeAsInt(json)
+    let arrivalCase = determineArrivalCase(json: json)
     
-    if arrivalTime != -1 {
-      if arrivalTime ==  NumericArrivals.arrived.rawValue {
-        currentCell.timeLabel.text = "Arrived"
-        currentCell.etaView.backgroundColor = colorPallette.powderBlue()
-      }
-      else {
-        currentCell.timeLabel.text = arrivalTime.description + " min."
-        currentCell.etaView.backgroundColor = backgroundColorForTime(arrivalTime)
-      }
-    }
-    else {
-      #if DEBUG
-        print(arrivalString)
-        print(json)
-      #endif
-      
-      let nonZeroArrivalString = determineNonZeroArrivalString(arrivalString: arrivalString)
-      currentCell.timeLabel.text = nonZeroArrivalString
-      
-      switch arrivalString {
-      case NonNumericaArrivals.APPROACHING.rawValue:
-        currentCell.etaView.backgroundColor = colorPallette.powderBlue()
-      case NonNumericaArrivals.DELAYED.rawValue:
-        currentCell.etaView.backgroundColor = colorPallette.lollipopRed()
-      default:
-        currentCell.timeLabel.textColor = UIColor.blue
-        currentCell.etaView.backgroundColor = UIColor.clear
-      }
+    switch arrivalCase {
+    case "Arrived", "Arriving":
+      currentCell.timeLabel.text = arrivalCase
+      currentCell.etaView.backgroundColor = backgroundColorForTime(0)
+      return
+    case "Delay":
+      currentCell.timeLabel.text = "Delay"
+      currentCell.etaView.backgroundColor = backgroundColorForTime(15)
+      return
+    default:
+      let arrivalTime = sanitizer.getSanitizedArrivaleTimeAsInt(json)
+      currentCell.timeLabel.text = arrivalTime.description + " min."
+      currentCell.etaView.backgroundColor = backgroundColorForTime(arrivalTime)
+      return
     }
   }
   
@@ -89,5 +74,10 @@ class WidgetTodayViewCellPresenter: ETAPresenter {
     currentCell.routeLabel.text = sanitizer.getSanitizedRouteNumber(json)
     currentCell.routeDescriptionLabel.text = sanitizer.getSanitizedRouteDescription(json)
     currentCell.routeDescriptionLabel.adjustsFontSizeToFitWidth = true
+  }
+  
+  func assignTextForArrivalBanner(json: JSON) {
+    
+    
   }
 }

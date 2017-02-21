@@ -42,44 +42,28 @@ class ETACardPresenter: ETAPresenter {
       return
     }
     
-    let arrivalString = sanitizer.getSanatizedArrivalTimeAsString(json)
-    let arrivalTime = sanitizer.getSanitizedArrivaleTimeAsInt(json)
-    
     // Reset to black everytime just in case
     currentCell.timeLabel.textColor = UIColor.black
     
-    if arrivalTime != -1 {
-      if arrivalTime ==  NumericArrivals.arrived.rawValue {
-        currentCell.timeLabel.text = "Arrived"
-        currentCell.timeLabel.textColor = UIColor.white
-        currentCell.renderFilledCircleForBusTime(arrivalTime) // We know this will be 0 at this point
-      }
-      else {
-        currentCell.timeLabel.text = arrivalTime.description + " min."
-        // We also render the circle here
-        currentCell.renderCircleForBusTime(arrivalTime)
-      }
-    }
-    else {
-      #if DEBUG
-        print(arrivalString)
-        print(json)
-      #endif
-      
-      let nonZeroArrivalString = determineNonZeroArrivalString(arrivalString: arrivalString)
-      currentCell.timeLabel.text = nonZeroArrivalString
+    let arrivalCase = determineArrivalCase(json: json)
+    
+    switch arrivalCase {
+    case "Arrived", "Arriving":
+      currentCell.timeLabel.text = arrivalCase
       currentCell.timeLabel.textColor = UIColor.white
-      
-      switch arrivalString {
-      case NonNumericaArrivals.APPROACHING.rawValue:
-        currentCell.renderFilledCircleForBusTime(0)
-      case NonNumericaArrivals.DELAYED.rawValue:
-        currentCell.renderFilledCircleForBusTime(35)
-      default:
-        currentCell.timeLabel.textColor = UIColor.blue
-      }
+      currentCell.renderFilledCircleForBusTime(0)
+      return
+    case "Delay":
+      currentCell.timeLabel.text = "Delay"
+      currentCell.timeLabel.textColor = UIColor.white
+      currentCell.renderFilledCircleForBusTime(35)
+      return
+    default:
+      let arrivalTime = sanitizer.getSanitizedArrivaleTimeAsInt(json)
+      currentCell.timeLabel.text = arrivalTime.description + " min."
+      currentCell.renderCircleForBusTime(arrivalTime)
+      return
     }
-
   }
   
   /**

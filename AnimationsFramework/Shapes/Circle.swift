@@ -102,7 +102,7 @@ class Circle: UIView {
   /**
    Given a bus time, this will decide how long the border length should be
    
-   - parameter busTime: The time, as an int, that will determine the border lenght
+   - parameter busTime: The time, as an int, that will determine the border length
    - returns: A `CGFloat` between 0 and 1 that reperesents the border length
    */
   fileprivate func calculateBorderLengthForBusTime(_ busTime: Int) -> CGFloat {

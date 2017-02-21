@@ -22,14 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-ff-ozY">
-                                <rect key="frame" x="16" y="82.5" width="288" height="372.5"/>
+                                <rect key="frame" x="16" y="80" width="288" height="375"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="arrivalCell" rowHeight="50" id="YKO-BV-SJX" customClass="WidgetETATableViewCell" customModule="Find_My_Bus_NJ" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="288" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YKO-BV-SJX" id="Qdq-IH-vCP">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEL-5T-P4G">
@@ -48,7 +48,7 @@
                                                             <rect key="frame" x="210" y="5" width="70" height="37"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dp-ol-aUe">
-                                                                    <rect key="frame" x="19.5" y="8.5" width="31" height="20"/>
+                                                                    <rect key="frame" x="20" y="9" width="31" height="20"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -109,9 +109,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next bus status unknown." lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRR-ti-6OT">
-                                <rect key="frame" x="16" y="5" width="288" height="26.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next bus status unknown." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRR-ti-6OT">
+                                <rect key="frame" x="16" y="5" width="288" height="40"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -123,6 +123,8 @@
                             </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="GQh-ff-ozY" firstAttribute="top" secondItem="yRR-ti-6OT" secondAttribute="bottom" constant="35" id="9kg-yz-vA0"/>
+                            <constraint firstItem="GQh-ff-ozY" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="80" id="Bjz-JC-EHj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GQh-ff-ozY" secondAttribute="leading" identifier="etaTableViewLeadingEqualsLeading" id="EJE-ny-7bS"/>
                             <constraint firstItem="pZe-Jm-nxb" firstAttribute="top" secondItem="GQh-ff-ozY" secondAttribute="bottom" constant="18" id="Igo-60-p1Y"/>
                             <constraint firstAttribute="leadingMargin" secondItem="yRR-ti-6OT" secondAttribute="leading" id="MCx-G4-MOA"/>
@@ -131,7 +133,6 @@
                             <constraint firstItem="yRR-ti-6OT" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="5" identifier="nextArrivingLabelTopEqualsTop" id="UQn-9A-nET"/>
                             <constraint firstItem="pZe-Jm-nxb" firstAttribute="trailing" secondItem="GQh-ff-ozY" secondAttribute="trailing" identifier="routeLabelTrailingEqualsEtaTableTrailing" id="bls-yY-bCy"/>
                             <constraint firstItem="GQh-ff-ozY" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" identifier="etaTableCenterX" id="cUC-sG-NMX"/>
-                            <constraint firstItem="GQh-ff-ozY" firstAttribute="top" secondItem="yRR-ti-6OT" secondAttribute="bottom" constant="51" id="gwC-X1-ax5"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GZ7-fB-2ed" secondAttribute="bottom" constant="9" id="x7B-LZ-IXp"/>
                             <constraint firstItem="GZ7-fB-2ed" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="yws-jQ-I28"/>
                         </constraints>

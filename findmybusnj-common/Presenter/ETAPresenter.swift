@@ -22,6 +22,28 @@ public protocol ETAPresenter {
 }
 
 public extension ETAPresenter {
+  func determineArrivalCase(json: JSON) -> String {
+    let arrivalString = sanitizer.getSanatizedArrivalTimeAsString(json)
+    let arrivalTime = sanitizer.getSanitizedArrivaleTimeAsInt(json)
+    
+    if arrivalTime != -1 {
+      if arrivalTime ==  NumericArrivals.arrived.rawValue {
+        return "Arrived"
+      }
+      else {
+        return "Minutes"
+      }
+    }
+    else {
+      #if DEBUG
+        print(arrivalString)
+        print(json)
+      #endif
+      
+      return determineNonZeroArrivalString(arrivalString: arrivalString)
+    }
+  }
+  
   func backgroundColorForTime(_ time: Int) -> UIColor {
     let colorPalette = ColorPalette()
     
