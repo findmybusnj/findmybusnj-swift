@@ -51,33 +51,49 @@ class ColorPalletteTest: XCTestCase {
   
   func test_Assert_powderBlue() {
     let powderBlue = palletteUnderTest.powderBlue()
-    let components = CGColorGetComponents(powderBlue.CGColor)
-    let expectedComponents = [CGFloat(67.0/255.0), CGFloat(174.0/255.0), CGFloat(249.0/255.0), CGFloat(1)]
-    
-    assertCorrectRGB(components, expectedComponents: expectedComponents, name: "powderBlue")
+    if let components = powderBlue.cgColor.components {
+      let expectedComponents = [CGFloat(67.0/255.0), CGFloat(174.0/255.0), CGFloat(249.0/255.0), CGFloat(1)]
+      
+      assertCorrectRGB(components, expectedComponents: expectedComponents, name: "powderBlue")
+    }
+    else {
+      XCTFail()
+    }
   }
   
   func test_Assert_emeraldGreen() {
     let emeraldGreen = palletteUnderTest.emeraldGreen()
-    let components = CGColorGetComponents(emeraldGreen.CGColor)
-    let expectedComponents = [CGFloat(29.0/255.0), CGFloat(156.0/255.0), CGFloat(48.0/255.0), CGFloat(1)]
-    
-    assertCorrectRGB(components, expectedComponents: expectedComponents, name: "emeraldGreen")
+    if let components = emeraldGreen.cgColor.components {
+      let expectedComponents = [CGFloat(29.0/255.0), CGFloat(156.0/255.0), CGFloat(48.0/255.0), CGFloat(1)]
+      
+      assertCorrectRGB(components, expectedComponents: expectedComponents, name: "emeraldGreen")
+    }
+    else {
+      XCTFail()
+    }
   }
   
   func test_Assert_creamsicleOrange() {
     let creamsicleOrange = palletteUnderTest.creamsicleOrange()
-    let components = CGColorGetComponents(creamsicleOrange.CGColor)
-    let expectedComponents = [CGFloat(237.0/255.0), CGFloat(145.0/255.0), CGFloat(50.0/255.0), CGFloat(1)]
-    
-    assertCorrectRGB(components, expectedComponents: expectedComponents, name: "creamsicleOrange")
+    if let components = creamsicleOrange.cgColor.components {
+      let expectedComponents = [CGFloat(237.0/255.0), CGFloat(145.0/255.0), CGFloat(50.0/255.0), CGFloat(1)]
+      
+      assertCorrectRGB(components, expectedComponents: expectedComponents, name: "creamsicleOrange")
+    }
+    else {
+      XCTFail()
+    }
   }
   
   func test_Assert_lollipopRed() {
     let lollipopRed = palletteUnderTest.lollipopRed()
-    let components = CGColorGetComponents(lollipopRed.CGColor)
-    let expectedComponents = [CGFloat(204.0/255.0), CGFloat(25.0/255.0), CGFloat(36.0/255.0), CGFloat(1)]
-    
-    assertCorrectRGB(components, expectedComponents: expectedComponents, name: "lollipopRed")
+    if let components = lollipopRed.cgColor.components {
+      let expectedComponents = [CGFloat(204.0/255.0), CGFloat(25.0/255.0), CGFloat(36.0/255.0), CGFloat(1)]
+      
+      assertCorrectRGB(components, expectedComponents: expectedComponents, name: "lollipopRed")
+    }
+    else {
+      XCTFail()
+    }
   }
 }

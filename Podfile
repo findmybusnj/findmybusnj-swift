@@ -36,6 +36,12 @@ target 'findmybusnjUITests' do
 
 end
 
+target 'findmybusnj-commonTests' do
+
+pod 'SwiftyJSON'
+
+end
+
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|

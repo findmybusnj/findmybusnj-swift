@@ -1,0 +1,6 @@
+framework module Pods_findmybusnj_commonTests {
+  umbrella header "Pods-findmybusnj-commonTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

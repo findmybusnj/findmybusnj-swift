@@ -60,10 +60,10 @@ class JSONSanitizerTests: XCTestCase {
   
   func test_getSanitizedRouteDescription() {
     let tempJson = loadJSONFromFile(JSONFileName.stopWithAmpersand.rawValue)[0]
-    let expected = tempJson["fd"].description.stringByReplacingOccurrencesOfString("&amp;", withString: "&").lowercaseString.capitalizedString
+    let expected = tempJson["fd"].description.replacingOccurrences(of: "&amp;", with: "&").lowercased().capitalized
     let actual = sanitizerUnderTest.getSanitizedRouteDescription(tempJson)
     XCTAssertTrue(type(of: actual) == String.self, "Returned value was not a String. Please see line \(#line) \n Expected a String \n Actual was \(type(of: actual))")
-    XCTAssertTrue(!actual.containsString("&amp;"), "Sanitized string should not contain \"&amp;\". Please see line \(#line) for more details.")
+    XCTAssertTrue(!actual.contains("&amp;"), "Sanitized string should not contain \"&amp;\". Please see line \(#line) for more details.")
     XCTAssertTrue(expected == actual, "Actual json is not what was expected \n Expected is \(expected) \n Actual is \(actual) ")
   }
 }

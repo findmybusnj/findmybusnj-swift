@@ -62,7 +62,6 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    */
   func assertTableIsEmpty() {
     XCTAssertTrue(cardTableViewControllerUnderTest.items.isEmpty, "items should be empty when running this test")
-    cardTableViewControllerUnderTest.numberOfSections(in: cardTableViewControllerUnderTest.tableView)
   }
   
   // Mark: Properties
@@ -195,7 +194,6 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     let json = loadJSONFromFile(JSONFileName.singleStop.rawValue)
     
     cardTableViewControllerUnderTest.updateTable(json)
-    cardTableViewControllerUnderTest.numberOfSections(in: cardTableViewControllerUnderTest.tableView)
     
     XCTAssertTrue(numberOfSections == 1, "Number of sections is not 1 when it should be. Actual result was \(numberOfSections)")
   }
@@ -230,9 +228,8 @@ class CardTimeTableControllerUnitTests: XCTestCase {
   func test_BackgroundView_IsNil_For_NonEmptyItems() {
     let json = loadJSONFromFile(JSONFileName.singleStop.rawValue)
     
-    if let tableView = cardTableViewControllerUnderTest.tableView {
+    if (cardTableViewControllerUnderTest.tableView) != nil {
       cardTableViewControllerUnderTest.updateTable(json)
-      cardTableViewControllerUnderTest.numberOfSections(in: tableView)
       
       XCTAssertNil(tableViewBackgroundView, "Table view backgroundView should be nil when there are items backing the table. The actual value was \(tableViewBackgroundView)")
     }
@@ -247,9 +244,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
   func test_NumberOfRows_Equals_Json_Length() {
     let json = loadJSONFromFile(JSONFileName.singleStop.rawValue)
     
-    let tableView = cardTableViewControllerUnderTest.tableView
     cardTableViewControllerUnderTest.updateTable(json)
-    cardTableViewControllerUnderTest.numberOfSections(in: tableView)
     XCTAssertTrue(numberOfSections == 1, "Number of sections is not one when it should be. The actual value was: \(numberOfSections)")
     
     XCTAssertTrue(numberOfRows == json.count, "Number of rows did not equal the size of the json array. The value for the row was: \(numberOfRows) \n The count of the json array was: \(json.count)")
