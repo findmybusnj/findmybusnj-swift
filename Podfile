@@ -28,6 +28,8 @@ end
 
 target 'findmybusnjTests' do
 
+pod 'SwiftyJSON'
+
 end
 
 target 'findmybusnjUITests' do

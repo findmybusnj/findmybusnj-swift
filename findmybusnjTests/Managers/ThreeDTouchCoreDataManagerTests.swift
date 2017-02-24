@@ -37,9 +37,9 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
    `isDuplicate()` should never return true because it is unimplemented and set to return `false`
    */
   func test_Assert_isDuplicate_Always_False() {
-    let fetch = NSFetchRequest(entityName: "Favorite")
+    let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorite")
     let predicate = NSPredicate(format: "stop == %@", "")
-    let result = managerUnderTest.isDuplicate(fetch, predicate: predicate)
+    let result = managerUnderTest.isDuplicate(fetch as! NSFetchRequest<NSManagedObject>, predicate: predicate)
     XCTAssertFalse(result, "isDuplicate is unimplemented for 3D Touch Shortcuts, this should never return true")
   }
   
@@ -54,7 +54,7 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
   
   // NOTE: `shortcutItems` in `UIApplication.sharedApplication()` is not the same when running tests as it is in your normal app. Hence, we don't have to mock here (though it would be nice)
   func test_Assert_updateShortcutItemsWithFavorites_For_Empty_List_Is_Empty() {
-    let fetch = NSFetchRequest(entityName: "Favorite")
+    let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorite")
     do {
       let favorites = try managedObjectContext.fetch(fetch) as! [NSManagedObject]
       managerUnderTest.updateShortcutItemsWithFavorites(favorites)
@@ -73,7 +73,7 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
       fatalError("Unable to save favorite for 3D Touch single favorite test: \(error)")
     }
     
-    let fetch = NSFetchRequest(entityName: "Favorite")
+    let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorite")
     do {
       let favorites = try managedObjectContext.fetch(fetch) as! [NSManagedObject]
       XCTAssertTrue(favorites.count > 0, "There should be NSManagedObjects to work with, can't create shortcut items without them")
@@ -83,7 +83,7 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
       XCTAssertTrue(shortcutItems?.count == 1, "There should be one shorcut items, there were: \(shortcutItems?.count)")
       
       let shortcut = shortcutItems?[0]
-      let type = "\(Bundle.mainBundle().bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
+      let type = "\(Bundle.main.bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
       
       guard let title = shortcutItems?[0].localizedTitle else {
         XCTFail("Title was nil when it shouldn't be for multiple favorites: \(#line)")
@@ -111,14 +111,14 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
       fatalError("Unable to save multiple favorites for 3D Touch multiple favorite test: \(error)")
     }
     
-    let fetch = NSFetchRequest(entityName: "Favorite")
+    let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorite")
     do {
       let fetchedFavorites = try managedObjectContext.fetch(fetch) as! [NSManagedObject]
       XCTAssertTrue(fetchedFavorites.count == favorites.count, "There should be the same amount of favorites stored as there were fetched")
       
       managerUnderTest.updateShortcutItemsWithFavorites(fetchedFavorites)
       
-      let type = "\(Bundle.mainBundle().bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
+      let type = "\(Bundle.main.bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
       let shortcutItems = UIApplication.shared.shortcutItems
       XCTAssertTrue(shortcutItems?.count == 3, "There should be three shorcut items, there were: \(shortcutItems?.count)")
       

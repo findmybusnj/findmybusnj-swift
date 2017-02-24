@@ -1834,7 +1834,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8BF695EA6C5237B5A87B6ACE /* Pods-findmybusnj.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = findmybusnj/findmybusnj.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1856,7 +1856,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A95A74ADAD34766035CC8D1F /* Pods-findmybusnj.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = findmybusnj/findmybusnj.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

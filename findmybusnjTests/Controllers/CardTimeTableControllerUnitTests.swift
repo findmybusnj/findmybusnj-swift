@@ -24,7 +24,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     return cardTableViewControllerUnderTest.tableView.numberOfSections
   }
   var numberOfRows: Int {
-    return cardTableViewControllerUnderTest.tableView.numberOfRowsInSection(0)
+    return cardTableViewControllerUnderTest.tableView.numberOfRows(inSection: 0)
   }
   
   // MARK: Setup and Teardown
@@ -39,10 +39,15 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     cardTableViewControllerUnderTest.viewDidLoad()
     
     // Initialize the tableview sections
-    let tableView = cardTableViewControllerUnderTest.tableView
-    assertTableIsEmpty()
-    XCTAssertNotNil(tableView.backgroundView, "Background view should not be nil if empty list")
-    XCTAssertTrue(tableView.backgroundView is UILabel, "tableView.background should contain a UILabel")
+    if let tableView = cardTableViewControllerUnderTest.tableView {
+      assertTableIsEmpty()
+      XCTAssertNotNil(tableView.backgroundView, "Background view should not be nil if empty list")
+      XCTAssertTrue(tableView.backgroundView is UILabel, "tableView.background should contain a UILabel")
+    }
+    else {
+      XCTFail()
+    }
+    
     
   }
   
@@ -57,7 +62,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    */
   func assertTableIsEmpty() {
     XCTAssertTrue(cardTableViewControllerUnderTest.items.isEmpty, "items should be empty when running this test")
-    cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
+    cardTableViewControllerUnderTest.numberOfSections(in: cardTableViewControllerUnderTest.tableView)
   }
   
   // Mark: Properties
@@ -98,7 +103,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    */
   func test_SeparatorColor_IsClear() {
     let color =  cardTableViewControllerUnderTest.tableView.separatorColor
-    XCTAssert(color == UIColor.clearColor(), "Color was not clear. Value was \(color)")
+    XCTAssert(color == UIColor.clear, "Color was not clear. Value was \(color)")
   }
   
   /**
@@ -106,7 +111,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    */
   func test_SeparatorStyle_IsNone() {
     let style = cardTableViewControllerUnderTest.tableView.separatorStyle
-    XCTAssert(style == .None, "Style is not .None. Value was \(style)")
+    XCTAssert(style == .none, "Style is not .None. Value was \(style)")
   }
   
   /**
@@ -190,7 +195,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     let json = loadJSONFromFile(JSONFileName.singleStop.rawValue)
     
     cardTableViewControllerUnderTest.updateTable(json)
-    cardTableViewControllerUnderTest.numberOfSectionsInTableView(cardTableViewControllerUnderTest.tableView)
+    cardTableViewControllerUnderTest.numberOfSections(in: cardTableViewControllerUnderTest.tableView)
     
     XCTAssertTrue(numberOfSections == 1, "Number of sections is not 1 when it should be. Actual result was \(numberOfSections)")
   }
@@ -225,11 +230,15 @@ class CardTimeTableControllerUnitTests: XCTestCase {
   func test_BackgroundView_IsNil_For_NonEmptyItems() {
     let json = loadJSONFromFile(JSONFileName.singleStop.rawValue)
     
-    let tableView = cardTableViewControllerUnderTest.tableView
-    cardTableViewControllerUnderTest.updateTable(json)
-    cardTableViewControllerUnderTest.numberOfSectionsInTableView(tableView)
-    
-    XCTAssertNil(tableViewBackgroundView, "Table view backgroundView should be nil when there are items backing the table. The actual value was \(tableViewBackgroundView)")
+    if let tableView = cardTableViewControllerUnderTest.tableView {
+      cardTableViewControllerUnderTest.updateTable(json)
+      cardTableViewControllerUnderTest.numberOfSections(in: tableView)
+      
+      XCTAssertNil(tableViewBackgroundView, "Table view backgroundView should be nil when there are items backing the table. The actual value was \(tableViewBackgroundView)")
+    }
+    else {
+      XCTFail()
+    }
   }
   
   /**
@@ -240,7 +249,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     
     let tableView = cardTableViewControllerUnderTest.tableView
     cardTableViewControllerUnderTest.updateTable(json)
-    cardTableViewControllerUnderTest.numberOfSectionsInTableView(tableView)
+    cardTableViewControllerUnderTest.numberOfSections(in: tableView)
     XCTAssertTrue(numberOfSections == 1, "Number of sections is not one when it should be. The actual value was: \(numberOfSections)")
     
     XCTAssertTrue(numberOfRows == json.count, "Number of rows did not equal the size of the json array. The value for the row was: \(numberOfRows) \n The count of the json array was: \(json.count)")

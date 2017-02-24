@@ -77,7 +77,7 @@ class PlacesAnnotationTest: XCTestCase {
     }
     
     let mapItem = marker.mapItem()
-    XCTAssertTrue(mapItem.isKindOfClass(MKMapItem), "Function .mapItem() should return a MKMapItem")
+    XCTAssertTrue(mapItem.isKind(of: MKMapItem.self), "Function .mapItem() should return a MKMapItem")
   }
   
   /**
@@ -90,7 +90,7 @@ class PlacesAnnotationTest: XCTestCase {
     
     let mapItem = marker.mapItem()
     if let markerName = mapItem.name {
-      let containsString = markerName.rangeOfString(self.title) != nil
+      let containsString = markerName.range(of: self.title) != nil
       XCTAssertTrue(containsString, "mapItem should match title")
     }
     else {
