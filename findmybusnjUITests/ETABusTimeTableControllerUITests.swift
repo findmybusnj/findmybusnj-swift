@@ -39,8 +39,8 @@ class ETABusTimeTableControllerUITests: XCTestCase {
     XCTAssert(app.staticTexts["Please tap on \"Find\" to get started"].exists, "Background hint information is missing.")
   }
   
-  func test_Assert_Find_Button_Exists() {
-    XCTAssert(app.buttons["Find"].exists, "Find button should exist")
+  func test_Assert_Search_Button_Exists() {
+    XCTAssert(app.buttons["Search"].exists, "Find button should exist")
   }
   
   /**
@@ -58,7 +58,7 @@ class ETABusTimeTableControllerUITests: XCTestCase {
     waitForExpectations(timeout: 5, handler: nil)
     
     XCTAssertTrue(saveAlert.exists)
-    saveAlert.collectionViews.buttons["Done"].tap()
+    saveAlert.buttons["Done"].tap()
   }
     
   /**
