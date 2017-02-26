@@ -58,11 +58,6 @@
                BlueprintName = "findmybusnjUITests"
                ReferencedContainer = "container:findmybusnj.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "ETABusTimeTableControllerUITests/testEmptyListRefreshes()">
-               </Test>
-            </SkippedTests>
          </TestableReference>
          <TestableReference
             skipped = "NO">

@@ -70,7 +70,7 @@ class ETABusTimeTableControllerUITests: XCTestCase {
     let table = app.navigationBars["findmybusnj.ETABusTimeTable"]
     XCTAssertTrue(table.tableRows.count == 0)
     
-    let start = table.coordinate(withNormalizedOffset: CGVector(dx: 10, dy: 10))
+    let start = table.coordinate(withNormalizedOffset: CGVector(dx: 10, dy: 8))
     let end = table.coordinate(withNormalizedOffset: CGVector(dx: 10, dy: 16))
     
     start.press(forDuration: 0, thenDragTo: end)
