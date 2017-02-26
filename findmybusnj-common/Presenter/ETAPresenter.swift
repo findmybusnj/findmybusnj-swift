@@ -92,9 +92,9 @@ public extension ETAPresenter {
  */
   func determineNonZeroArrivalString(arrivalString: String) -> String {
     switch arrivalString {
-    case NonNumericaArrivals.APPROACHING.rawValue:
+    case NonNumericArrivals.APPROACHING.rawValue:
       return "Arriving"
-    case NonNumericaArrivals.DELAYED.rawValue:
+    case NonNumericArrivals.DELAYED.rawValue:
       return "Delay"
     default:
       return "0"
@@ -108,7 +108,7 @@ public extension ETAPresenter {
  - APPROACHING: The `description` of the incoming bus is "APPROACHING"
  - DELAYED:     The `description` of the incoming bus is "DELAYED"
  */
-public enum NonNumericaArrivals: String {
+public enum NonNumericArrivals: String {
   case APPROACHING = "APPROACHING"
   case DELAYED = "DELAYED"
 }

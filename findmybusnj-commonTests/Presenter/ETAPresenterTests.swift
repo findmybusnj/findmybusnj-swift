@@ -31,10 +31,10 @@ class ETAPresenterTests: XCTestCase {
   
   override func tearDown() {
     time = 0
-    testArrivalString = ""
     super.tearDown()
   }
   
+  // MARK: Helper Methods
   /**
    Asserts the actual color recieved is `==` to that of the expected
    
@@ -53,12 +53,23 @@ class ETAPresenterTests: XCTestCase {
    - parameter expected: The string we expect to get back from the test string
    */
   func assertNonZeroStringsAreEqual(testString: String, expected: String) {
-    let actualReturnString = presenterUnderTest.determineNonZeroArrivalString(arrivalString: testArrivalString)
+    let actualReturnString = presenterUnderTest.determineNonZeroArrivalString(arrivalString: testString)
     
     XCTAssertEqual(expected, actualReturnString, "Expected \(expected), but instead found \(actualReturnString)")
 
   }
   
+  /**
+   Asserts that the expected enum `rawValue` is equal to the string being passed in.
+
+   - paremeter expected: The expected string representation of the enum's raw value
+   - parameter actual: The enum passed in using the `rawValue` property
+   */
+  func assertNonNumericEnumsAreEqual(expected: String, actual: String) {
+    XCTAssertEqual(expected, actual, "NonNumericArrivals case is different than expected. \n Expected: \(expected) \n Actual: \(actual)")
+  }
+
+  // MARK: Background Color Tests
   func test_Assert_backgroundColorForTime_Zero_Returns_PowderBlue() {
     time = 0
     let expectedColor = colorPallette.powderBlue()
@@ -91,6 +102,7 @@ class ETAPresenterTests: XCTestCase {
     assertColorsAreEqual(actualColor, expected: expectedColor, name: "lollipopRed")
   }
   
+  // MARK: Determine Non Zero Arrivals Tests
   func test_Assert_determineNonZeroArrivalString_For_APPROACHING() {
     assertNonZeroStringsAreEqual(testString: "APPROACHING", expected: "Arriving")
   }
@@ -101,5 +113,14 @@ class ETAPresenterTests: XCTestCase {
   
   func test_Assert_determineNonZeroArrivalString_For_Default() {
     assertNonZeroStringsAreEqual(testString: "0", expected: "0")
+  }
+
+  // MARK: Enum Tests
+  func test_Assert_NonNumericArrivals_APPROACHING() {
+    assertNonNumericEnumsAreEqual(expected: "APPROACHING", actual: NonNumericArrivals.APPROACHING.rawValue)
+  }
+
+  func test_Assert_NonNumericArrivals_DELAYED() {
+    assertNonNumericEnumsAreEqual(expected: "DELAYED", actual: NonNumericArrivals.DELAYED.rawValue)
   }
 }
