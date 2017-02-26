@@ -7,23 +7,31 @@
 //
 
 import XCTest
+
+// Dependancies
+import SwiftyJSON
+
 @testable import findmybusnj_common
 
 class ETAPresenterTests: XCTestCase {
   var presenterUnderTest: MockPresenter!
   let colorPallette = ColorPalette()
+  
+  // MARK: Test Variables
   var time: Int = 0
+  var testArrivalString: String = ""
+  var json: JSON = []
   
   override func setUp() {
     super.setUp()
-    // Put setup code here. This method is called before the invocation of each test method in the class.
     
     presenterUnderTest = MockPresenter()
+    json = loadJSONFromFile(JSONFileName.singleStop.rawValue)
   }
   
   override func tearDown() {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     time = 0
+    testArrivalString = ""
     super.tearDown()
   }
   
@@ -36,6 +44,19 @@ class ETAPresenterTests: XCTestCase {
    */
   func assertColorsAreEqual(_ actual: UIColor, expected: UIColor, name: String) {
     XCTAssertTrue(actual == expected, "The actual color of \(name) was different from the expected. \n Expected: \(expected) \n Actual: \(actual). \n See line \(#line)")
+  }
+  
+  /**
+   Asserts that the test string provided generates the expected string provided using the `determineNonZeroArrivalString` function.
+   
+   - parameter testString: The string being provided for comprison
+   - parameter expected: The string we expect to get back from the test string
+   */
+  func assertNonZeroStringsAreEqual(testString: String, expected: String) {
+    let actualReturnString = presenterUnderTest.determineNonZeroArrivalString(arrivalString: testArrivalString)
+    
+    XCTAssertEqual(expected, actualReturnString, "Expected \(expected), but instead found \(actualReturnString)")
+
   }
   
   func test_Assert_backgroundColorForTime_Zero_Returns_PowderBlue() {
@@ -68,5 +89,17 @@ class ETAPresenterTests: XCTestCase {
     let actualColor = presenterUnderTest.backgroundColorForTime(time)
     
     assertColorsAreEqual(actualColor, expected: expectedColor, name: "lollipopRed")
+  }
+  
+  func test_Assert_determineNonZeroArrivalString_For_APPROACHING() {
+    assertNonZeroStringsAreEqual(testString: "APPROACHING", expected: "Arriving")
+  }
+  
+  func test_Assert_determineNonZeroArrivalString_For_DELAYED() {
+    assertNonZeroStringsAreEqual(testString: "DELAYED", expected: "Delay")
+  }
+  
+  func test_Assert_determineNonZeroArrivalString_For_Default() {
+    assertNonZeroStringsAreEqual(testString: "0", expected: "0")
   }
 }
