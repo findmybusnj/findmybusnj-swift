@@ -35,12 +35,12 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     
     // Initialize view
     XCTAssertNotNil(cardTableViewControllerUnderTest.view)
-    cardTableViewControllerUnderTest.loadView()
-    cardTableViewControllerUnderTest.viewDidLoad()
+    
     
     // Initialize the tableview sections
     if let tableView = cardTableViewControllerUnderTest.tableView {
       assertTableIsEmpty()
+      XCTAssertGreaterThan(numberOfRows, -1, "Number of rows should never be less than 0. This method is used to initialize backgroundView for future tests.")  // By doing this, we cause the backgroundView to be initialized
       XCTAssertNotNil(tableView.backgroundView, "Background view should not be nil if empty list")
       XCTAssertTrue(tableView.backgroundView is UILabel, "tableView.background should contain a UILabel")
     }
@@ -132,26 +132,26 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     XCTAssertTrue(numberOfSections == 0, "The number of sections should be 0 on an empty item set. The value was: \(numberOfSections)")
   }
   
-//  /**
-//   Asserts the message in the empty table displays "Please tap on \"Find\" to get started"
-//   */
-//  func test_EmptyTable_DisplaysProperMessageText() {
-//    assertTableIsEmpty()
-//    
-//    let message = "Please tap on \"Find\" to get started"
-//    XCTAssertNotNil(tableViewBackgroundView, "tableViewBackgroundView should not be nil")
-//    XCTAssertTrue(tableViewBackgroundView!.text == message, "background.text didn't match intended message. The actual text was: \(tableViewBackgroundView!.text)")
-//  }
+  /**
+   Asserts the message in the empty table displays "Please tap on \"Find\" to get started"
+   */
+  func test_EmptyTable_DisplaysProperMessageText() {
+    assertTableIsEmpty()
+    
+    let message = "Please tap on \"Find\" to get started"
+    XCTAssertNotNil(tableViewBackgroundView, "tableViewBackgroundView should not be nil")
+    XCTAssertTrue(tableViewBackgroundView!.text == message, "background.text didn't match intended message. The actual text was: \(tableViewBackgroundView!.text)")
+  }
   
-//  /**
-//   Asserts that the backgroundView is visible on an empty list
-//   */
-//  func test_EmptyTable_DisplaysMessageView() {
-//    assertTableIsEmpty()
-//    
-//    XCTAssertNotNil(tableViewBackgroundView, "tableViewBackgroundView should not be nil")
-//    XCTAssertFalse(tableViewBackgroundView!.isHidden, "Background view should not be hidden")
-//  }
+  /**
+   Asserts that the backgroundView is visible on an empty list
+   */
+  func test_EmptyTable_DisplaysMessageView() {
+    assertTableIsEmpty()
+    
+    XCTAssertNotNil(tableViewBackgroundView, "tableViewBackgroundView should not be nil")
+    XCTAssertFalse(tableViewBackgroundView!.isHidden, "Background view should not be hidden")
+  }
   
   /**
    Asserts that an empty `JSON` array will set `noPrediction` to true
