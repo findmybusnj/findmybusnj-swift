@@ -123,4 +123,8 @@ class ETAPresenterTests: XCTestCase {
   func test_Assert_NonNumericArrivals_DELAYED() {
     assertNonNumericEnumsAreEqual(expected: "DELAYED", actual: NonNumericArrivals.DELAYED.rawValue)
   }
+  
+  func test_Assert_NumericaArrivals_ARRIVED() {
+    XCTAssertEqual(NumericArrivals.arrived.rawValue, 0, "NumericArrivals.arrived should always have value of 0")
+  }
 }
