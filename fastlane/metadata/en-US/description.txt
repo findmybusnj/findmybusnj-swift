@@ -1,0 +1,14 @@
+The next iteration of NJ Transit routing application, Find My Bus NJ 2 is rewritten from the ground up in Swift! The app has been totally redone and rethought to be more accurate and simple. It contains many of the same features of the prior, but with cleaner implementations and easier to navigate UI.
+
+You can:
+- Search for buses by the stop you are at
+- Filter the results by the route you want to take
+- Save your searches and filters
+- See near by stops on a map
+- Access quick information via a Today View Widget in Notification Center
+
+Stop waiting, start finding. Plan your morning around your bus departures!
+
+Disclaimer: This app pulls data from NJ Transit's website. I don't own this data, nor am I responsible for it being unavailable or incorrect. Please keep that in mind when using this app.
+
+Credit to www.Icons8.com for tabbar icons.

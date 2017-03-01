@@ -1,0 +1,3 @@
+This app can be tested by searching 26229 under "Find" to be able to get results from NJ Transit. You can save that search by pressing the heart button. You can filter that search by passing in a route, 165 is a good one to try. Also 127 will work. You should be able to save a filtered stop also.
+
+The functionality with the GPS tab is automatic, and the app should find the user and provide results based on location.
