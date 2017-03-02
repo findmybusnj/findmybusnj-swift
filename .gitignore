@@ -32,3 +32,6 @@ playground.xcworkspace
 
 ## Snapshots
 screenshots/
+
+## Fastlane
+fastlane/test_output
