@@ -32,13 +32,14 @@ open class AFShapeRenderer {
    */
   open static func renderCircleForBusTime(_ view: UIView, busTime: Int) {
     determineStrokeColorForBusTime(busTime)
-    
+
     let circleWidth = CGFloat(view.frame.width)
     let circleHeight = circleWidth
     // view.frame.origin.x is where the circle will be rendered from
-    let circle = Circle(frame: CGRect(x: view.frame.origin.x, y: 0, width: circleWidth, height: circleHeight), color: strokeColor)
+    let circle = Circle(frame: CGRect(x: view.frame.origin.x, y: 0, width: circleWidth, height: circleHeight),
+                        color: strokeColor)
     circle.layer.addSublayer(circle.circle)
-    
+
     // Draw the circle in the view at the top left origin
     circle.addCircleToView(view, xCoordinate: view.frame.origin.x, busTimeForBorderLength: busTime)
   }

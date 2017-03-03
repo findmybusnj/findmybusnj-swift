@@ -13,20 +13,20 @@ import UIKit
  A class that will render a circle that has a filled color
  */
 class FilledCircle: Circle {
-  
+
   /**
    Creates a `Circle` object and then sets the `fillColor` to the color of the stroke color
    */
   override init(frame: CGRect, color: CGColor) {
     super.init(frame: frame, color: color)
-    
+
     circle.fillColor = color
   }
-  
+
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
+
   /**
    Adds a circle to the given view controller, will draw based on time passed in
    
@@ -39,7 +39,7 @@ class FilledCircle: Circle {
     self.tag = 4    //  4 Stands for the item it should be (which in this case is the last) so we can remove it
     view.addSubview(self)
     view.sendSubview(toBack: self)
-    
+
     self.animateCircle(1.0, borderLength: 0)       // Border length should change when we have a time in the future
   }
 }

@@ -23,7 +23,7 @@ import Foundation
 enum ShortcutIdentifier: String {
   case openSearch
   case findFavorite
-  
+
   /**
    Initializes the identifier
    
