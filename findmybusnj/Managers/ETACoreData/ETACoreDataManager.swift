@@ -11,7 +11,7 @@ import CoreData
 
 struct ETACoreDataManager: CoreDataManager {
   var managedObjectContext: NSManagedObjectContext
-  
+
   /**
    Checks if the fetch request already exists in the `managedObjectContext`
    
@@ -23,16 +23,16 @@ struct ETACoreDataManager: CoreDataManager {
   func isDuplicate(_ fetchRequest: NSFetchRequest<NSManagedObject>, predicate: NSPredicate) -> Bool {
     // Duplicate check
     fetchRequest.predicate = predicate
-    
+
     do {
       let result = try managedObjectContext.fetch(fetchRequest)
-      let duplicate = result 
+      let duplicate = result
       return duplicate.count > 0
     } catch {
       fatalError("Unable to check for duplicate stop: \(error)")
     }
   }
-  
+
   /**
    Attempts to save the managed object to Core Data
    
@@ -40,7 +40,7 @@ struct ETACoreDataManager: CoreDataManager {
    
    - returns: True if the save is successful, `fatalError` otherwise
    */
-  func attemptToSave(_ managedObject: NSManagedObject) -> Bool {    
+  func attemptToSave(_ managedObject: NSManagedObject) -> Bool {
     do {
       try managedObjectContext.save()
       return true

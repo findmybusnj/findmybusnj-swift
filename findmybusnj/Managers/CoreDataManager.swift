@@ -28,13 +28,13 @@ extension CoreDataManager {
     do {
       // Grab the favorites and order them based on frequency
       let results = try managedObjectContext.fetch(fetchRequest)
-      return results 
+      return results
     } catch let error as NSError {
       print("Could not fetch \(error), \(error.userInfo)")
       return [NSManagedObject]()
     }
   }
-  
+
   /**
    Takes an array of `Favorites` and sorts them descending based on the `frequency` of each item in the list
    
@@ -50,10 +50,10 @@ extension CoreDataManager {
       guard let freqTwo = (favoriteTwo as! Favorite).frequency else {
         return false
       }
-      
+
       return freqOne.int32Value > freqTwo.int32Value
     })
-    
+
     return sortedDescending
   }
 }
