@@ -59,21 +59,21 @@ class Circle: UIView {
    */
   func animateCircle(_ duration: TimeInterval, borderLength: CGFloat) {
     var length = borderLength
-    
+
     if borderLength > 1 {
       length = 1
     }
 
     // We want to animate the stokeEnd property of the circle layer
     let animation = CABasicAnimation(keyPath: "strokeEnd")
-    
+
     // Set the duration
     animation.duration = duration
-    
+
     // Animate circle from top of the circle to define length
     animation.fromValue = 0
     animation.toValue  = length
-    
+
     // Constant speed while drawing the circle
     animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
 
@@ -83,7 +83,7 @@ class Circle: UIView {
     // Do the actual animation
     circle.add(animation, forKey: "animateCircle")
   }
-  
+
   /**
    Adds a circle to the given view controller, will draw based on time passed in
    
