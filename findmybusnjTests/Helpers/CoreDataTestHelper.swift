@@ -24,18 +24,19 @@ enum TestFavorite: String {
  */
 func setUpInMemoryManagedObjectContext() -> NSManagedObjectContext {
   let managedObjectModel = NSManagedObjectModel.mergedModel(from: [Bundle.main])!
-  
+
   let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
-  
+
   do {
-    try persistentStoreCoordinator.addPersistentStore(ofType: NSInMemoryStoreType, configurationName: nil, at: nil, options: nil)
+    try persistentStoreCoordinator.addPersistentStore(ofType: NSInMemoryStoreType,
+                                                      configurationName: nil, at: nil, options: nil)
   } catch {
     print("Adding in-memory persistent store coordinator failed")
   }
-  
+
   let managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
   managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
-  
+
   return managedObjectContext
 }
 
@@ -47,10 +48,11 @@ func setUpInMemoryManagedObjectContext() -> NSManagedObjectContext {
  - returns: `Favorite` with only a `stop` value
  */
 func generateFavorite(_ managedObjectContext: NSManagedObjectContext) -> Favorite {
-  let favorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite", into: managedObjectContext) as! Favorite
+  let favorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite",
+                                                     into: managedObjectContext) as! Favorite
   favorite.stop = TestFavorite.STOP.rawValue
   favorite.route = TestFavorite.EMPTY_ROUTE.rawValue
-  
+
   return favorite
 }
 
@@ -62,10 +64,11 @@ func generateFavorite(_ managedObjectContext: NSManagedObjectContext) -> Favorit
  - returns: `Favorite` object with a `stop` and `route`.
  */
 func generateFavoriteWithRoute(_ managedObjectContext: NSManagedObjectContext) -> Favorite {
-  let favorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite", into: managedObjectContext) as! Favorite
+  let favorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite",
+                                                     into: managedObjectContext) as! Favorite
   favorite.stop = TestFavorite.STOP.rawValue
   favorite.route = TestFavorite.ROUTE.rawValue
-  
+
   return favorite
 }
 
@@ -80,11 +83,12 @@ func generateMultipleFavorites(_ managedObjectContext: NSManagedObjectContext) -
   let firstFavorite = generateFavorite(managedObjectContext)
   let secondFavorite = generateFavoriteWithRoute(managedObjectContext)
   secondFavorite.frequency = NSNumber(value: 2)
-  let thirdFavorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite", into: managedObjectContext) as! Favorite
+  let thirdFavorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite",
+                                                          into: managedObjectContext) as! Favorite
   thirdFavorite.stop = TestFavorite.ALTERNATE_STOP.rawValue
   thirdFavorite.route = ""
   thirdFavorite.frequency = NSNumber(value: 3)
-  
+
   let favorites = [firstFavorite, secondFavorite, thirdFavorite]
   return favorites
 }

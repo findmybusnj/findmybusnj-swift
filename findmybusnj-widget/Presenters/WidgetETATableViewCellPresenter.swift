@@ -15,17 +15,18 @@ import findmybusnj_common
 class WidgetTodayViewCellPresenter: ETAPresenter {
   var sanitizer = JSONSanitizer()
   let colorPallette = ColorPalette()
-  
+
   func formatCellForPresentation(_ cell: UITableViewCell, json: JSON) {
     assignArrivalTimeForJson(cell, json: json)
     assignBusAndRouteTextForJson(cell, json: json)
   }
-  
+
   /**
     Asssigns the arrival time to the given table view cell for the json provided.
     If the time is not a number, we assign it Arriving/Delayed/No Current Prediction
  
-    - TODO: Refactor this method to move similar logic to `ETAPresenter` so logic isn't duplicated from `ETACardPresenter`
+    - TODO: Refactor this method to move similar logic to `ETAPresenter` 
+   so logic isn't duplicated from `ETACardPresenter`
  
     - Parameters:
     - card:   table view cell being edited
@@ -37,9 +38,9 @@ class WidgetTodayViewCellPresenter: ETAPresenter {
     }
     currentCell.timeLabel.textColor = UIColor.white
     currentCell.timeLabel.adjustsFontSizeToFitWidth = true
-    
+
     let arrivalCase = determineArrivalCase(json: json)
-    
+
     switch arrivalCase {
     case "Arrived", "Arriving":
       currentCell.timeLabel.text = arrivalCase
@@ -56,7 +57,7 @@ class WidgetTodayViewCellPresenter: ETAPresenter {
       return
     }
   }
-  
+
   /**
    Exists as a legacy call to handle displaying data for iOS 9 since it requires different color schemes
    
@@ -67,16 +68,15 @@ class WidgetTodayViewCellPresenter: ETAPresenter {
     guard let currentCell = cell as? WidgetETATableViewCell else {
       return
     }
-    
+
     if #available(iOS 10.0, *) {
         // no-op
-    }
-    else {
+    } else {
         // for versions less than ios 10, we display white text
         currentCell.routeLabel.textColor = UIColor.white
         currentCell.routeDescriptionLabel.textColor = UIColor.white
     }
-    
+
     currentCell.routeLabel.text = sanitizer.getSanitizedRouteNumber(json)
     currentCell.routeDescriptionLabel.text = sanitizer.getSanitizedRouteDescription(json)
     currentCell.routeDescriptionLabel.adjustsFontSizeToFitWidth = true

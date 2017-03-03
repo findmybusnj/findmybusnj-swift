@@ -69,7 +69,7 @@ public extension ETAPresenter {
   */
   func backgroundColorForTime(_ time: Int) -> UIColor {
     let colorPalette = ColorPalette()
-    
+
     switch time {
     case 0:
       // Blue

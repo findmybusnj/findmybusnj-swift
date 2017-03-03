@@ -15,15 +15,14 @@ class WidgetETATableViewCell: UITableViewCell {
   @IBOutlet weak var routeDescriptionLabel: UILabel!
   @IBOutlet weak var etaView: UIView!
   @IBOutlet weak var timeLabel: UILabel!
-  
-  
+
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
-    
+
     etaView.layer.cornerRadius = 5
   }
-  
+
   func clearText() {
     routeLabel.text = ""
     routeDescriptionLabel.text = ""

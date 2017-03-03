@@ -17,14 +17,14 @@ import findmybusnj_common
  */
 class WidgetBannerPresenter: ETAPresenter {
   var sanitizer = JSONSanitizer()
-  
+
   /**
    Assigns the banner the proper string based on the current arrival information
   */
   func assignTextForArrivalBanner(label: UILabel, json: JSON) {
     label.text = "The next bus will be"
     let arrivalCase = determineArrivalCase(json: json)
-    
+
     switch arrivalCase {
     case "Arrived":
       label.text = "The next bus has \(arrivalCase.lowercased())"
@@ -41,7 +41,7 @@ class WidgetBannerPresenter: ETAPresenter {
       return
     }
   }
-  
+
   // no-ops since they aren't used by this presenter
   func formatCellForPresentation(_ cell: UITableViewCell, json: JSON) {}
   func assignArrivalTimeForJson(_ cell: UITableViewCell, json: JSON) {}
