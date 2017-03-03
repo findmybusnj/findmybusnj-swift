@@ -21,17 +21,22 @@ struct MapAlertPresenter: UIAlertPresenter {
       let alertController = UIAlertController.init(title: "Please enable location service",
                                                    message: "To see near by bus stops, location services needs to be enabled. Please enable it for this app.",
                                                    preferredStyle: .alert)
-      let done = UIAlertAction(title: "Settings",
+      let settings = UIAlertAction(title: "Settings",
                                style: .default) { (_) -> Void in
-                                guard let settingsURL = URL(string:"App-Prefs:root=General") else {
+                                guard let settingsURL = URL(string:"prefs:root=LOCATION_SERVICES") else {
                                   return
                                 }
                                 
-                                if UIApplication.shared.canOpenURL(settingsUrl) {
-                                  UIApplication.shared.open(settingsUrl)
+                                if UIApplication.shared.canOpenURL(settingsURL) {
+                                  if #available(iOS 10.0, *) {
+                                    UIApplication.shared.open(settingsURL)
+                                  } else {
+                                    // Fallback on earlier versions
+                                    UIApplication.sharedApplication().openURL(settingsURL)
+                                  }
                                 }
       }
-      alertController.addAction(done)
+      alertController.addAction(settings)
       return alertController
     default:
       return UIAlertController(title: "", message: "", preferredStyle: .alert)
