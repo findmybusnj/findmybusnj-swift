@@ -10,7 +10,7 @@ import UIKit
 
 // Base enumeration type that alerts should extend from
 protocol AlertEnum {
-  
+
 }
 
 protocol UIAlertPresenter {

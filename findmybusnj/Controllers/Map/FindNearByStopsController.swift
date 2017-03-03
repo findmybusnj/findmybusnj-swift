@@ -121,7 +121,7 @@ class FindNearByStopsController: UIViewController {
       }
     }
   }
-  
+
   /**
    Checks to see if the user has authorized use of location services
    */

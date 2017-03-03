@@ -183,7 +183,8 @@ class ETABusTimeTableController: CardTableViewController {
   /**
    Calls `performSearch` when app is backgrounded.
    
-   - parameter completionHandler: `UIBackgroundFetchResult` function to be called after data is successfully fetched or not
+   - parameter completionHandler: `UIBackgroundFetchResult` function to be called after 
+   data is successfully fetched or not
    */
   fileprivate func performSearchInBackground(_ completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
     performSearch(currentStop, route: filterRoute)
@@ -211,7 +212,8 @@ class ETABusTimeTableController: CardTableViewController {
     }
 
     // Save otherwise
-    let favorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite", into: managedObjectContext) as! Favorite
+    let favorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite",
+                                                       into: managedObjectContext) as! Favorite
     favorite.stop = currentStop
     favorite.route = filterRoute
 

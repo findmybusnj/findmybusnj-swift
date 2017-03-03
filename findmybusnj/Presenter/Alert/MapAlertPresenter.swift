@@ -18,23 +18,23 @@ struct MapAlertPresenter: UIAlertPresenter {
   func presentAlertWarning(_ type: AlertEnum) -> UIAlertController {
     switch type {
     case CLAuthorizationStatus.denied, CLAuthorizationStatus.restricted, CLAuthorizationStatus.notDetermined:
+      let message = "To see near by bus stops, location services needs to be enabled. Please enable it for this app."
       let alertController = UIAlertController.init(title: "Please enable location service",
-                                                   message: "To see near by bus stops, location services needs to be enabled. Please enable it for this app.",
+                                                   message: message,
                                                    preferredStyle: .alert)
       let settings = UIAlertAction(title: "Settings",
-                               style: .default) { (_) -> Void in
-                                guard let settingsURL = URL(string:"prefs:root=LOCATION_SERVICES") else {
-                                  return
-                                }
-                                
-                                if UIApplication.shared.canOpenURL(settingsURL) {
-                                  if #available(iOS 10.0, *) {
-                                    UIApplication.shared.open(settingsURL)
-                                  } else {
-                                    // Fallback on earlier versions
-                                    UIApplication.sharedApplication().openURL(settingsURL)
-                                  }
-                                }
+                                   style: .default) { (_) -> Void in
+                                    guard let settingsURL = URL(string:"prefs:root=LOCATION_SERVICES") else {
+                                      return
+                                    }
+
+                                    if UIApplication.shared.canOpenURL(settingsURL) {
+                                      if #available(iOS 10.0, *) {
+                                        UIApplication.shared.open(settingsURL)
+                                      } else {
+                                        // Fallback on earlier versions
+                                      }
+                                    }
       }
       alertController.addAction(settings)
       return alertController

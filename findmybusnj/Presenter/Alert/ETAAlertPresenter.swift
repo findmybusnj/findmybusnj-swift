@@ -12,9 +12,11 @@ import UIKit
 import PKHUD
 
 struct ETAAlertPresenter: UIAlertPresenter {
-  
+
   /**
-   Used to present a UIAlertController for a given alert type. If no alert type matches, a new `UIAlertController` will be returned with empty `title` and `message, along with style of `Alert`
+   Used to present a UIAlertController for a given alert type. 
+   If no alert type matches, a new `UIAlertController` will be returned with empty `title` and `message,
+   along with style of `Alert`
    
    - parameter type: An `ETAAlertEnum` type that will be matched to generate an alert
    
@@ -32,7 +34,7 @@ struct ETAAlertPresenter: UIAlertPresenter {
       return UIAlertController(title: "", message: "", preferredStyle: .alert)
     }
   }
-  
+
   /**
    Displays a checkmark in a box to show success of an action
    
@@ -42,7 +44,7 @@ struct ETAAlertPresenter: UIAlertPresenter {
   func presentCheckmarkInView(_ view: UIView, title: String) {
     HUD.flash(.success, delay: 1.0)
   }
-  
+
   /**
    Creates a `UIAlertController` that wanrs the user if they are trying to save a stop without having searched for one.
    
@@ -54,7 +56,7 @@ struct ETAAlertPresenter: UIAlertPresenter {
     warning.message = "Please search for a bus stop before saving"
     return warning
   }
-  
+
   /**
    Creates a `UIAlertController` for the search box being empty
    
@@ -66,7 +68,7 @@ struct ETAAlertPresenter: UIAlertPresenter {
     warning.message = "Please enter a stop before searching"
     return warning
   }
-  
+
   /**
    Creates a `UIAlertController` for the stop already existing in `Core Data`
    
@@ -80,10 +82,10 @@ struct ETAAlertPresenter: UIAlertPresenter {
   }
 }
 
-
 extension UIAlertPresenter {
   /**
-   Creates a `UIAlertController` with a `UIAlertAction` that says "Done". The controller has no `title` or `message`, and
+   Creates a `UIAlertController` with a `UIAlertAction` that says "Done".
+   The controller has no `title` or `message`, and
    the `UIAlertAction` has no handler. All must be set separately if needed.
    
    - returns: A basic `UIAlertController` with a done button attached to it to dismiss it

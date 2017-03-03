@@ -45,7 +45,8 @@ extension PlacesAnnotation: MKAnnotation {
    - returns: An MKMapItem containing the title and coordinates of the annotation
    */
   func mapItem() -> MKMapItem {
-    let addressDictionary = [String(CNPostalAddress().street): String(describing: title)]      // MKPlacemark only takes a String, not an optional string
+    // MKPlacemark only takes a String, not an optional string
+    let addressDictionary = [String(CNPostalAddress().street): String(describing: title)]
     let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDictionary)
 
     let mapItem = MKMapItem(placemark: placemark)

@@ -15,7 +15,7 @@ import findmybusnj_common
 // Handles laying out an `ETACard` for a `ETACardTableView`
 class ETACardPresenter: ETAPresenter {
   var sanitizer = JSONSanitizer()
-  
+
   /**
    Formats the given `ETACard` for the `json` at the provided row
    
@@ -26,7 +26,7 @@ class ETACardPresenter: ETAPresenter {
     assignArrivalTimeForJson(cell, json: json)
     assignBusAndRouteTextForJson(cell, json: json)
   }
-  
+
   /**
    Assigns the arrival time to the given card given the json at that index
    If the time is not a number, we assign it Arriving/Delayed/No Current Prediction
@@ -41,12 +41,12 @@ class ETACardPresenter: ETAPresenter {
     guard let currentCell = cell as? ETACard else {
       return
     }
-    
+
     // Reset to black everytime just in case
     currentCell.timeLabel.textColor = UIColor.black
-    
+
     let arrivalCase = determineArrivalCase(json: json)
-    
+
     switch arrivalCase {
     case "Arrived", "Arriving":
       currentCell.timeLabel.text = arrivalCase
@@ -65,7 +65,7 @@ class ETACardPresenter: ETAPresenter {
       return
     }
   }
-  
+
   /**
    Assigns the bus number (e.g. `165`) to `busNumberLabel`, and assigns the
    route (e.g. `165 via NJ Turnpike`) to `route`.
@@ -78,9 +78,9 @@ class ETACardPresenter: ETAPresenter {
     guard let currentCell = cell as? ETACard else {
       return
     }
-    
+
     let route = sanitizer.getSanitizedRouteDescription(json)
-    
+
     currentCell.busNumberLabel.text = sanitizer.getSanitizedRouteNumber(json)
     currentCell.routeLabel.text = route
     currentCell.routeLabel.adjustsFontSizeToFitWidth = true

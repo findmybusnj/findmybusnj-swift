@@ -12,7 +12,7 @@ import UIKit
 import SwiftyJSON
 
 open class JSONSanitizer: NSObject {
-  
+
   /**
    Returns the arrival time of the bus as a `String`
    
@@ -23,7 +23,7 @@ open class JSONSanitizer: NSObject {
   open func getSanatizedArrivalTimeAsString(_ json: JSON) -> String {
     return json["pu"].description
   }
-  
+
   /**
    Returns arrival time of a bus as an `Int`
    
@@ -34,12 +34,11 @@ open class JSONSanitizer: NSObject {
   open func getSanitizedArrivaleTimeAsInt(_ json: JSON) -> Int {
     if let time = Int(json["pt"].description) {
       return time
-    }
-    else {
+    } else {
       return -1
     }
   }
-  
+
   /**
    Returns the route number for the given json
    
@@ -50,7 +49,7 @@ open class JSONSanitizer: NSObject {
   open func getSanitizedRouteNumber(_ json: JSON) -> String {
     return json["rd"].description
   }
-  
+
   /**
    Sanitizes route data from JSON passed in
    

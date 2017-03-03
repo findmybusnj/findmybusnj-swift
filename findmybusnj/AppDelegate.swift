@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   var shortcutItemManager: ThreeDTouchCoreDataManager!
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     shortcutItemManager = ThreeDTouchCoreDataManager(managedObjectContext: self.managedObjectContext)
 
     // Set background refresh time
