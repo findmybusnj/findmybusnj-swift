@@ -51,12 +51,12 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     }
 
   }
-  
+
   override func tearDown() {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     super.tearDown()
   }
-  
+
   // MARK: Helper Functions
   /**
    Asserts the table is empty and calls numberOfSectionsInTableView
@@ -64,7 +64,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
   func assertTableIsEmpty() {
     XCTAssertTrue(cardTableViewControllerUnderTest.items.isEmpty, "items should be empty when running this test")
   }
-  
+
   // Mark: Properties
   /**
   Test property `noPrediction` is false on initialization.
@@ -92,12 +92,12 @@ class CardTimeTableControllerUnitTests: XCTestCase {
 
     XCTAssertNotNil(refreshController.attributedTitle, "Attributed title was nil")
     let attributedTitle = refreshController.attributedTitle!
-    
+
     // Xcode adds {\n} to the string
     XCTAssertTrue(attributedTitle.description == "Pull to refresh stops{\n}",
                   "Refresh controller attributed title set incorrectly. Value was \(attributedTitle.description)")
   }
-  
+
   /**
    Asserts the `tableView` property `separatorColor` is set as `UIColor.clearColor()`
    */
