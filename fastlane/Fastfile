@@ -23,6 +23,7 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
+    swiftlint(output_file: "swiftlint.result.json", config_file: ".swiftlint.yml")
     scan(scheme: "findmybusnj-build-and-test")
   end
 

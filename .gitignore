@@ -35,3 +35,6 @@ screenshots/
 
 ## Fastlane
 fastlane/test_output
+
+## Swiftlint
+swiftlint.result.json

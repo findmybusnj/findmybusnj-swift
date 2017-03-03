@@ -1,0 +1,4 @@
+excluded:
+  - Pods/
+  - SnapshotHelper.swift
+  - SnapshotHelper2-3.swift
