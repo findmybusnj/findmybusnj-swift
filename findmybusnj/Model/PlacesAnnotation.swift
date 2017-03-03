@@ -15,12 +15,12 @@ class PlacesAnnotation: NSObject {
   // MARK: Properties
   let title: String?
   let coordinate: CLLocationCoordinate2D
-  
+
   // inititalize the subtitle variable to nil so we don't have one
   var subtitle: String? {
     return nil
   }
-  
+
   /**
    Initializer method to create a new annotation with a name and coordinates
    
@@ -31,10 +31,10 @@ class PlacesAnnotation: NSObject {
   init(title: String, coordinate: CLLocationCoordinate2D) {
     self.title = title
     self.coordinate = coordinate
-    
+
     super.init()
   }
-  
+
 }
 
 // MARK: MKAnnotation
@@ -47,10 +47,10 @@ extension PlacesAnnotation: MKAnnotation {
   func mapItem() -> MKMapItem {
     let addressDictionary = [String(CNPostalAddress().street): String(describing: title)]      // MKPlacemark only takes a String, not an optional string
     let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDictionary)
-    
+
     let mapItem = MKMapItem(placemark: placemark)
     mapItem.name = title
-    
+
     return mapItem
   }
 }

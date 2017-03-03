@@ -10,16 +10,27 @@ import UIKit
 import MapKit
 
 extension CLAuthorizationStatus: AlertEnum {
-  
+
 }
 
 struct MapAlertPresenter: UIAlertPresenter {
-  
+
   func presentAlertWarning(_ type: AlertEnum) -> UIAlertController {
     switch type {
     case CLAuthorizationStatus.denied, CLAuthorizationStatus.restricted, CLAuthorizationStatus.notDetermined:
-      let alertController = UIAlertController.init(title: "Please enable location service", message: "To see near by bus stops, location services needs to be enabled. Please go to Settings -> Privacy -> Location Services and enable it for this app.", preferredStyle: .alert)
-      let done = UIAlertAction(title: "Done", style: .default, handler: nil)
+      let alertController = UIAlertController.init(title: "Please enable location service",
+                                                   message: "To see near by bus stops, location services needs to be enabled. Please enable it for this app.",
+                                                   preferredStyle: .alert)
+      let done = UIAlertAction(title: "Settings",
+                               style: .default) { (_) -> Void in
+                                guard let settingsURL = URL(string:"App-Prefs:root=General") else {
+                                  return
+                                }
+                                
+                                if UIApplication.shared.canOpenURL(settingsUrl) {
+                                  UIApplication.shared.open(settingsUrl)
+                                }
+      }
       alertController.addAction(done)
       return alertController
     default:

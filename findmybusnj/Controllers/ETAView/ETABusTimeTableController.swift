@@ -21,25 +21,25 @@ class ETABusTimeTableController: CardTableViewController {
   fileprivate var coreDataManager: ETACoreDataManager!
   fileprivate let networkManager = ServerManager()
   fileprivate var backgroundUpdateSuccess = false
-  
+
   // MARK: Properties
   var currentStop: String = ""
   var filterRoute: String = ""
   var selectedFavorite = (stop: "", route: "")
-  
+
   // MARK: Outlets
   @IBOutlet weak var navigationBar: UINavigationItem!
-  
+
   // MARK: View Controller Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     coreDataManager = ETACoreDataManager(managedObjectContext: appDelegate.managedObjectContext)
   }
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-  
+
   // MARK: Actions
   /**
    Saves the `currentStop` to Core Data. If `filterRoute` is not empty, it is also saved.
@@ -52,38 +52,37 @@ class ETABusTimeTableController: CardTableViewController {
   @IBAction func saveFavorite(_ sender: UIButton) {
     if !currentStop.isEmpty {
       saveToFavorite()
-    }
-    else {
+    } else {
       let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.empty_Stop)
       present(warning, animated: true, completion: nil)
     }
   }
-  
+
   /**
-   Takes the current search information and performs a search on it. Information is passed from `ETASearchPopOverController`
+   Takes the current search information and performs a search on it. 
+   Information is passed from `ETASearchPopOverController`
    
    - parameter segue: Segue being performed
    */
   @IBAction func searchForStop(_ segue: UIStoryboardSegue) {
     if segue.identifier == "search" {
       let sourceController = segue.source as! ETASearchPopOverController
-      
+
       guard let stop = sourceController.stopNumberTextField.text else {
         return
       }
       guard let route = sourceController.filterRouteNumberTextField.text else {
         return
       }
-      
+
       performSearch(stop, route: route)
-    }
-    else if segue.identifier == "loadSelectedFavorite" {
+    } else if segue.identifier == "loadSelectedFavorite" {
       performSearch(selectedFavorite.stop, route: selectedFavorite.route)
     }
-    
+
     updateAppGroupData()
   }
-  
+
   /**
    Dismisses a popover and unwinds back to this view controller
    
@@ -94,7 +93,7 @@ class ETABusTimeTableController: CardTableViewController {
      self.unwind(for: segue, towardsViewController: self)
     }
   }
-  
+
   /**
    Refreshes the table given the `currentStop`
    
@@ -104,10 +103,11 @@ class ETABusTimeTableController: CardTableViewController {
     performSearch(currentStop, route: filterRoute)
     self.refreshControl?.endRefreshing()
   }
-  
+
   // MARK: Public Methods
   /**
-   Handles when a `UIApplicationShortcutItem` is pressed via 3D Touch. This will perform a search for the favorite being selected.
+   Handles when a `UIApplicationShortcutItem` is pressed via 3D Touch. 
+   This will perform a search for the favorite being selected.
    
    - parameter shortcut: The shortcut being pressed
    */
@@ -116,10 +116,10 @@ class ETABusTimeTableController: CardTableViewController {
     if let route = shortcut.localizedSubtitle {
       filterRoute = route
     }
-    
+
     performSearch(currentStop, route: filterRoute)
   }
-  
+
   /**
    Handles background fetches by system. Updates the table with any new data
    
@@ -128,10 +128,11 @@ class ETABusTimeTableController: CardTableViewController {
   func updateInBackground(_ completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
     performSearchInBackground(completionHandler)
   }
-  
+
   // MARK: Private Methods
   /**
-   Does the network search based on the search and route pass in. Sets the `navigationBar.title` to the stop (including route if one is passed in).
+   Does the network search based on the search and route pass in. 
+   Sets the `navigationBar.title` to the stop (including route if one is passed in).
    
    - parameter stop:  Required, sent to endpoint to return next busses
    - parameter route: Optional, filters buses on the stop
@@ -140,30 +141,27 @@ class ETABusTimeTableController: CardTableViewController {
     currentStop = stop
     filterRoute = route
     navigationBar.title = stop
-    
+
     if currentStop.isEmpty {
       return
     }
-    
+
     HUD.show(.progress)
     if route.isEmpty {
-      networkManager.getJSONForStop(stop) {
-        [unowned self] items, error in
-        
+      networkManager.getJSONForStop(stop) {[unowned self] items, error in
+
+        self.updateResults(items: items, error: error)
+      }
+    } else {
+      navigationBar.title = "\(stop) via \(route)"
+
+      networkManager.getJSONForStopFilteredByRoute(stop, route: route) {[unowned self] items, error in
+
         self.updateResults(items: items, error: error)
       }
     }
-    else {
-      navigationBar.title = "\(stop) via \(route)"
-    
-      networkManager.getJSONForStopFilteredByRoute(stop, route: route) {
-        [unowned self] items, error in
-        
-        self.updateResults(items: items,error: error)
-      }
-    }
   }
-  
+
   /**
    Updates the table based on the result of `performSearch`
   
@@ -175,14 +173,13 @@ class ETABusTimeTableController: CardTableViewController {
         self.backgroundUpdateSuccess = false
         HUD.hide()
       }
-    }
-    else {
+    } else {
       self.updateTable(items)
       self.backgroundUpdateSuccess = true
       HUD.hide()
     }
   }
-  
+
   /**
    Calls `performSearch` when app is backgrounded.
    
@@ -192,38 +189,37 @@ class ETABusTimeTableController: CardTableViewController {
     performSearch(currentStop, route: filterRoute)
     if backgroundUpdateSuccess {
       completionHandler(.newData)
-    }
-    else {
+    } else {
       completionHandler(.failed)
     }
   }
-  
+
   /**
    Called when a user attempts to save a stop
    */
   fileprivate func saveToFavorite() {
     let managedObjectContext = appDelegate.managedObjectContext
-    
+
     // Check for duplicates
     let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorite")
     let predicate = NSPredicate(format: "stop == %@ AND route == %@", currentStop, filterRoute)
-    
+
     if coreDataManager.isDuplicate(fetchRequest, predicate: predicate) {
       let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.duplicate_Stop_Saved)
       present(warning, animated: true, completion: nil)
       return
     }
-    
+
     // Save otherwise
     let favorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite", into: managedObjectContext) as! Favorite
     favorite.stop = currentStop
     favorite.route = filterRoute
-    
+
     if coreDataManager.attemptToSave(favorite) {
       alertPresenter.presentCheckmarkInView(self.tableView, title: "Saved Favorite")
     }
   }
-  
+
   /**
    Called when a new stop is selected. Passes information to the `AppGroup` so the widget can perform updates
    independantly on load.
