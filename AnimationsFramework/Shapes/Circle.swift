@@ -32,7 +32,7 @@ class Circle: UIView {
     // The path should be the entire circle.
     let circlePath = UIBezierPath(arcCenter: CGPoint(x: (frame.size.width - 10) / 2.0,
                                                      y: (frame.size.height + 10) / 2.0),
-                                  radius: (frame.size.width)/2, startAngle: -1.57, endAngle: CGFloat(M_PI * 2.0),
+                                  radius: (frame.size.width)/2, startAngle: -1.57, endAngle: CGFloat(.pi * 2.0),
                                   clockwise: true)
 
     // Set the properties on the circle
