@@ -49,7 +49,10 @@ class ETASearchPopOverController: UIViewController {
 
   // Source of idea: http://jamesleist.com/ios-swift-tutorial-stop-segue-show-alert-text-box-empty/
   /**
-  Overrides the `shouldPerformSegueWithIdentifier` method. Called before a segue is performed. Checks that if the segue identifier is `search`, and then checks whether or not the `stopNumberInput` is empty or not.
+  Overrides the `shouldPerformSegueWithIdentifier` method. 
+   Called before a segue is performed. 
+   Checks that if the segue identifier is `search`, and then checks whether or not
+   the `stopNumberInput` is empty or not.
   
   - Parameters:
     - identifier: String identifier of the current segue trigger

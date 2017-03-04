@@ -1373,13 +1373,14 @@
 			files = (
 			);
 			inputPaths = (
+				.swiftlint.yml,
 			);
 			name = Swiftlint;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint lint --config \".swiftlint.yml\"\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		D491FBC21CB49B4E0099A8A4 /* Crashalytics Script */ = {
 			isa = PBXShellScriptBuildPhase;

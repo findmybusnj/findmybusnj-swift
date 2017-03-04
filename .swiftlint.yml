@@ -1,4 +1,8 @@
+disabled_rules:
+  - force_unwrapping
+  - force_cast
 excluded:
   - Pods/
   - SnapshotHelper.swift
   - SnapshotHelper2-3.swift
+  - fastlane/
