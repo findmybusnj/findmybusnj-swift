@@ -78,7 +78,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.saveContext()
   }
 
-  func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+  func application(_ application: UIApplication,
+                   performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
     guard let rootView = UIApplication.shared.keyWindow?.rootViewController else {
       completionHandler(.failed)
       return
@@ -91,7 +92,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   // MARK: - 3D Touch
-  func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+  func application(_ application: UIApplication,
+                   performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
     completionHandler(handleShortcut(shortcutItem))
   }
 
