@@ -18,6 +18,7 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    ensure_git_status_clean
     cocoapods(use_bundle_exec: false)
   end
 
@@ -30,9 +31,8 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
-    ensure_git_status_clean
     # match(type: "appstore") # more information: https://codesigning.guide
-    gym(scheme: "findmybusnj") # Build your app - more options available
+    gym(scheme: "findmybusnj-testflight") # Build your app - more options available
     pilot
 
     # sh "your_script.sh"
@@ -41,11 +41,11 @@ platform :ios do
 
   desc "Deploy a new version to the App Store"
   lane :release do
-    ensure_git_status_clean
     # match(type: "appstore")
     # snapshot
+    increment_build_number
     gym(scheme: "findmybusnj") # Build your app - more options available
-    deliver(force: true)
+    deliver(force: true, submit_for_review: true)
     # frameit
   end
 
