@@ -55,19 +55,9 @@ platform :ios do
 
   desc "Create IPA"
   lane :build do
-    gym(scheme: "findmybusnj")
+    gym(scheme: "findmybusnj-appstore")
   end
 
-  desc "Submit a new Beta Build to Apple TestFlight"
-  desc "This will also make sure the profile is up to date"
-  lane :beta do
-    # match(type: "appstore") # more information: https://codesigning.guide
-    gym(scheme: "findmybusnj-testflight") # Build your app - more options available
-    pilot
-
-    # sh "your_script.sh"
-    # You can also use other beta testing services here (run `fastlane actions`)
-  end
 
   desc "Takes screenshots and frames them"
   lane :screenshots do
@@ -75,12 +65,25 @@ platform :ios do
     frameit
   end
 
+  desc "Submit a new Beta Build to Apple TestFlight"
+  desc "This will also make sure the profile is up to date"
+  lane :beta do
+    # match(type: "appstore") # more information: https://codesigning.guide
+    test
+    gym(scheme: "findmybusnj-testflight") # Build your app - more options available
+    pilot
+
+    # sh "your_script.sh"
+    # You can also use other beta testing services here (run `fastlane actions`)
+  end
+
   desc "Deploy a new version to the App Store"
   lane :release do
     # match(type: "appstore")
-    # # snapshot
-    # increment_build_number
-    # gym(scheme: "findmybusnj") # Build your app - more options available
+    test
+    screenshots
+    provision
+    build
     deliver(force: true, submit_for_review: false)
     # frameit
   end
