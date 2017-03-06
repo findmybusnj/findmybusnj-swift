@@ -69,7 +69,7 @@ platform :ios do
   desc "This will also make sure the profile is up to date"
   lane :beta do
     # match(type: "appstore") # more information: https://codesigning.guide
-    test
+    # test
     increment_version_number(
       bump_type: "patch" # Automatically increment minor version number
     )
