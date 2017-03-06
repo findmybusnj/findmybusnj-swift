@@ -58,7 +58,7 @@ git=$(sh /etc/profile; which git)
 if [[ -n $1 ]] && [[ $1 == "--reflect-commits" ]]; then
     mainBundleVersion=$("${git}" rev-list --count HEAD)
     branchName=$("${git}" rev-parse --abbrev-ref HEAD)
-    if [[ ${branchName} != "master" ] || [ ${branchName} != "testflight"]]]; then
+    if [[ ${branchName} != "master" ] || [ ${branchName} != "testflight" ]]; then
         mainBundleVersion="${mainBundleVersion}-${branchName}"
     fi
 else
