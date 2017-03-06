@@ -30,7 +30,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>284-fastlane</string>
+	<string>290-fastlane</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>

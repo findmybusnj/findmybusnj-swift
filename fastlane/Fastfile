@@ -46,7 +46,7 @@ platform :ios do
   desc "Create IPA"
   lane :build do
     increment_build_number
-    gym
+    gym(scheme: "findmybusnj")
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
