@@ -19,6 +19,6 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>296-fastlane</string>
+	<string>311-testflight</string>
 </dict>
 </plist>

@@ -101,7 +101,7 @@ class ETABusTimeTableControllerUITests: XCTestCase {
 
     XCTAssertTrue(app.tables.cells.count == 0)
 
-    XCUIApplication().navigationBars["findmybusnj.ETABusTimeTable"].buttons["Search"].tap()
+    app.navigationBars["findmybusnj.ETABusTimeTable"].buttons["Search"].tap()
     let stopNumberTextField = XCUIApplication().textFields["Stop Number"]
     stopNumberTextField.tap()
     stopNumberTextField.typeText("26229")
@@ -111,7 +111,7 @@ class ETABusTimeTableControllerUITests: XCTestCase {
       "Expected: 4 \n" + "Actual: \(app.tables.cells.count)")
     sleep(2)
 
-    app.navigationBars["findmybusnj.ETABusTimeTable"].buttons["saveFavorite"].tap()
+    app.navigationBars["26229"].buttons["saveFavorite"].tap()
     snapshot("saveFavorite")
   }
 }
