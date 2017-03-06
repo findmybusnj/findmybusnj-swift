@@ -83,6 +83,7 @@
 		D4D6AB861BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB851BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift */; };
 		D4D955941E6DA51400A14215 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41F76561E6DA4CF00E02F60 /* OHHTTPStubs.framework */; };
 		D4D955951E6DA5C900A14215 /* singleStop.json in Resources */ = {isa = PBXBuildFile; fileRef = D44E33061C814BBE0036D478 /* singleStop.json */; };
+		D4D955971E6DA70400A14215 /* multipleStops.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D955961E6DA70400A14215 /* multipleStops.json */; };
 		D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */; };
 		D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */; };
 		D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */; };
@@ -270,6 +271,7 @@
 		D4D6AB811BBA2FE200CE241D /* findmybusnjUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = findmybusnjUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB851BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETABusTimeTableControllerUITests.swift; sourceTree = "<group>"; };
 		D4D6AB871BBA2FE200CE241D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D955961E6DA70400A14215 /* multipleStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = multipleStops.json; path = ModelData/multipleStops.json; sourceTree = SOURCE_ROOT; };
 		D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTableViewController.swift; path = Controllers/CardTableViewController.swift; sourceTree = "<group>"; };
 		D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesAnnotation.swift; path = Model/PlacesAnnotation.swift; sourceTree = "<group>"; };
 		D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACard.swift; path = Model/ETACard/ETACard.swift; sourceTree = "<group>"; };
@@ -477,6 +479,7 @@
 				D44E33061C814BBE0036D478 /* singleStop.json */,
 				D47203401CD13DB700621EC4 /* singleStopWithAmpersand.json */,
 				D429904A1C8E916300FCADFF /* noPrediction.json */,
+				D4D955961E6DA70400A14215 /* multipleStops.json */,
 			);
 			name = JSON;
 			path = findmybusnj;
@@ -1130,6 +1133,7 @@
 				D4D6AB701BBA2FE200CE241D /* LaunchScreen.storyboard in Resources */,
 				D4D6AB6D1BBA2FE200CE241D /* Assets.xcassets in Resources */,
 				D4D6AB6B1BBA2FE200CE241D /* Main.storyboard in Resources */,
+				D4D955971E6DA70400A14215 /* multipleStops.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

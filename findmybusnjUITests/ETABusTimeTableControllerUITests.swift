@@ -65,7 +65,7 @@ class ETABusTimeTableControllerUITests: XCTestCase {
   /**
    Checks that reload will not crash when there is no data
    */
-  func testEmptyListRefreshes() {
+  func test_EmptyListRefreshes() {
     app.tabBars.buttons["Times"].tap()
 
     let table = app.navigationBars["findmybusnj.ETABusTimeTable"]
@@ -76,5 +76,9 @@ class ETABusTimeTableControllerUITests: XCTestCase {
 
     start.press(forDuration: 0, thenDragTo: end)
     XCTAssertTrue(table.tableRows.count == 0)
+  }
+
+  func test_screenshot_CaptureMultipleStops() {
+
   }
 }

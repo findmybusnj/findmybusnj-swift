@@ -38,7 +38,7 @@ open class ServerManager: NSObject {
       // Mock responses for testing purposes
       stub(condition: isHost("findmybusnj.com"), response: { (_) -> OHHTTPStubsResponse in
         return OHHTTPStubsResponse(
-          fileAtPath: OHPathForFile("singleStop.json", type(of: self))!,
+          fileAtPath: OHPathForFile("multipleStops.json", type(of: self))!,
           statusCode: 200,
           headers: ["Content-Type": "application/json"]
         )
@@ -63,6 +63,17 @@ open class ServerManager: NSObject {
   open func getJSONForStopFilteredByRoute(_ stop: String,
                                           route: String,
                                           completion: @escaping (_ item: JSON, _ error: Error?) -> Void) {
+    #if DEBUG
+      // Mock responses for testing purposes
+      stub(condition: isHost("findmybusnj.com"), response: { (_) -> OHHTTPStubsResponse in
+        return OHHTTPStubsResponse(
+          fileAtPath: OHPathForFile("singleStop.json", type(of: self))!,
+          statusCode: 200,
+          headers: ["Content-Type": "application/json"]
+        )
+      })
+    #endif
+
     let parameters = [ "stop": stop, "route": route]
     let endpoint = "/stop/byRoute"
     makePOST(endpoint, parameters: parameters, completion: completion)
