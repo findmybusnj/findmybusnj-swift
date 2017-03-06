@@ -18,8 +18,8 @@ default_platform :ios
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
-    ensure_git_status_clean
     cocoapods(use_bundle_exec: false)
+    ensure_git_status_clean
   end
 
   desc "Runs all the tests"
