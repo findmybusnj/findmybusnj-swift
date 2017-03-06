@@ -16,6 +16,7 @@ class ETABusTimeTableControllerUITests: XCTestCase {
 
   override func setUp() {
     super.setUp()
+    setupSnapshot(app)
 
     continueAfterFailure = false
     app.launch()
@@ -69,16 +70,29 @@ class ETABusTimeTableControllerUITests: XCTestCase {
     app.tabBars.buttons["Times"].tap()
 
     let table = app.navigationBars["findmybusnj.ETABusTimeTable"]
-    XCTAssertTrue(table.tableRows.count == 0)
+    XCTAssertTrue(app.tables.cells.count == 0)
 
     let start = table.coordinate(withNormalizedOffset: CGVector(dx: 10, dy: 8))
     let end = table.coordinate(withNormalizedOffset: CGVector(dx: 10, dy: 16))
 
     start.press(forDuration: 0, thenDragTo: end)
-    XCTAssertTrue(table.tableRows.count == 0)
+    XCTAssertTrue(app.tables.cells.count == 0)
   }
 
   func test_screenshot_CaptureMultipleStops() {
+    app.tabBars.buttons["Times"].tap()
+    XCTAssertTrue(app.tables.cells.count == 0)
 
+    XCUIApplication().navigationBars["findmybusnj.ETABusTimeTable"].buttons["Search"].tap()
+    let stopNumberTextField = XCUIApplication().textFields["Stop Number"]
+    stopNumberTextField.tap()
+    stopNumberTextField.typeText("26229")
+    app.buttons["Search"].tap()
+
+    XCTAssertTrue(app.tables.cells.count == 4, "Table did not populate with proper number of rows. \n" +
+    "Expected: 4 \n" + "Actual: \(app.tables.cells.count)")
+    sleep(2)
+
+    snapshot("multipleStops")
   }
 }

@@ -33,6 +33,8 @@
 		D4598D2A1C4C729700A15B08 /* FilledCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4598D291C4C729700A15B08 /* FilledCircle.swift */; };
 		D45C93501C8FC32D002AC008 /* UIAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C934F1C8FC32D002AC008 /* UIAlertPresenter.swift */; };
 		D4640DD51C4DE50600D184E3 /* ETASearchPopOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */; };
+		D4649A9C1E6DA87800BFFE5B /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4649A9B1E6DA87800BFFE5B /* SnapshotHelper.swift */; };
+		D4649A9D1E6DA95900BFFE5B /* multipleStops.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D955961E6DA70400A14215 /* multipleStops.json */; };
 		D468CC891CADBE0F00C32556 /* ShortcutIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468CC881CADBE0F00C32556 /* ShortcutIdentifier.swift */; };
 		D468CC8D1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */; };
 		D46C40C51CCC22B4001373F8 /* ETAPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */; };
@@ -216,6 +218,7 @@
 		D4598D291C4C729700A15B08 /* FilledCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilledCircle.swift; path = Shapes/FilledCircle.swift; sourceTree = "<group>"; };
 		D45C934F1C8FC32D002AC008 /* UIAlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertPresenter.swift; path = Presenter/Alert/UIAlertPresenter.swift; sourceTree = "<group>"; };
 		D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETASearchPopOverController.swift; path = Controllers/ETAView/ETASearchPopOverController.swift; sourceTree = "<group>"; };
+		D4649A9B1E6DA87800BFFE5B /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		D468CC881CADBE0F00C32556 /* ShortcutIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShortcutIdentifier.swift; path = "3D-Touch/ShortcutIdentifier.swift"; sourceTree = "<group>"; };
 		D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreeDTouchCoreDataManager.swift; path = "3D-Touch/ThreeDTouchCoreDataManager.swift"; sourceTree = "<group>"; };
 		D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPresenterTests.swift; path = Presenter/ETAPresenterTests.swift; sourceTree = "<group>"; };
@@ -751,6 +754,7 @@
 		D4D6AB841BBA2FE200CE241D /* findmybusnj-UITests */ = {
 			isa = PBXGroup;
 			children = (
+				D4649A9B1E6DA87800BFFE5B /* SnapshotHelper.swift */,
 				D4D6AB851BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift */,
 				D4D6AB871BBA2FE200CE241D /* Info.plist */,
 			);
@@ -1098,6 +1102,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4649A9D1E6DA95900BFFE5B /* multipleStops.json in Resources */,
 				D4D955951E6DA5C900A14215 /* singleStop.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1542,6 +1547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D6AB861BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift in Sources */,
+				D4649A9C1E6DA87800BFFE5B /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
