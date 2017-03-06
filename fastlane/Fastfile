@@ -48,6 +48,10 @@ platform :ios do
     cert
     # 5
     sigh(force: true)
+    sigh(
+      force: true,
+      app_identifier: 'com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget'
+    )
   end
 
   desc "Create IPA"
