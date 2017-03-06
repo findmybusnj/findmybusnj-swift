@@ -34,6 +34,10 @@ end
 
 target 'findmybusnjUITests' do
 
+pod 'SwiftyJSON'
+pod 'OHHTTPStubs' # Default subspecs, including support for NSURLSession & JSON etc
+pod 'OHHTTPStubs/Swift' # Adds the Swiftier API wrapper too
+
 end
 
 target 'findmybusnj-commonTests' do
