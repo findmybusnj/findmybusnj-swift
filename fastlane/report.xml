@@ -5,42 +5,47 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.002657">
+      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.002483">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.00205">
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.001988">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: ensure_git_status_clean" time="0.019861">
+      <testcase classname="fastlane.lanes" name="2: ensure_git_status_clean" time="0.026068">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: cocoapods" time="3.579936">
+      <testcase classname="fastlane.lanes" name="3: cocoapods" time="4.249684">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: produce" time="11.015685">
+      <testcase classname="fastlane.lanes" name="4: produce" time="19.732989">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: produce" time="3.588212">
+      <testcase classname="fastlane.lanes" name="5: produce" time="5.034073">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="6: cert" time="5.011517">
+      <testcase classname="fastlane.lanes" name="6: cert" time="4.805432">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="7: sigh" time="13.72669">
+      <testcase classname="fastlane.lanes" name="7: sigh" time="20.501693">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="8: sigh" time="11.337751">
         
       </testcase>
     

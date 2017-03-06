@@ -1622,6 +1622,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
 				PRODUCT_NAME = "Find My Bus NJ";
+				PROVISIONING_PROFILE = "d24cc916-dbd0-4ace-b4f7-7d415b9d9ac3";
+				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget AppStore";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1643,6 +1645,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
 				PRODUCT_NAME = "Find My Bus NJ";
+				PROVISIONING_PROFILE = "d24cc916-dbd0-4ace-b4f7-7d415b9d9ac3";
+				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget AppStore";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
