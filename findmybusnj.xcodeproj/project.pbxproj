@@ -1027,6 +1027,7 @@
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 23254ZGZ6N;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -1912,7 +1913,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = findmybusnj/findmybusnj.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 23254ZGZ6N;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1921,7 +1922,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aghassi.findmybusnj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "84adbdeb-5293-498f-9da9-a8962a7b126d";
+				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj AppStore";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1934,7 +1936,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = findmybusnj/findmybusnj.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 23254ZGZ6N;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1943,7 +1945,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aghassi.findmybusnj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "84adbdeb-5293-498f-9da9-a8962a7b126d";
+				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj AppStore";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

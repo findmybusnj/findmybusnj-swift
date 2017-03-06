@@ -43,6 +43,12 @@ platform :ios do
     sigh(force: true)
   end
 
+  desc "Create IPA"
+  lane :build do
+    increment_build_number
+    gym
+  end
+
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
@@ -57,9 +63,9 @@ platform :ios do
   desc "Deploy a new version to the App Store"
   lane :release do
     # match(type: "appstore")
-    # snapshot
-    increment_build_number
-    gym(scheme: "findmybusnj") # Build your app - more options available
+    # # snapshot
+    # increment_build_number
+    # gym(scheme: "findmybusnj") # Build your app - more options available
     deliver(force: true, submit_for_review: true)
     # frameit
   end
