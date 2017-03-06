@@ -39,6 +39,8 @@ fastlane/test_output
 *.p12
 *.certSigningRequest
 *.mobileprovision
+*.app.dSYM.zip
+*.ipa
 
 ## Swiftlint
 swiftlint.result.json
