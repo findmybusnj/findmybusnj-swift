@@ -77,7 +77,7 @@ platform :ios do
     # # snapshot
     # increment_build_number
     # gym(scheme: "findmybusnj") # Build your app - more options available
-    deliver(force: true, submit_for_review: true)
+    deliver(force: true, submit_for_review: false)
     # frameit
   end
 
