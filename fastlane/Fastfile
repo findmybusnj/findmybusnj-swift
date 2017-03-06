@@ -28,6 +28,21 @@ platform :ios do
     scan(scheme: "findmybusnj-build-and-test")
   end
 
+  desc "Creating a code signing certificate and provisioning profile"
+  lane :provision do
+    # 3
+    produce(
+      app_name: 'Find My Bus NJ 2',
+      language: 'English',
+      app_version: '2.0',
+      sku: 'Find-My-Bus-NJ-2'
+    )
+    # 4
+    cert
+    # 5
+    sigh(force: true)
+  end
+
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do

@@ -34,6 +34,11 @@ xcode-select --install
 fastlane ios test
 ```
 Runs all the tests
+### ios provision
+```
+fastlane ios provision
+```
+Creating a code signing certificate and provisioning profile
 ### ios beta
 ```
 fastlane ios beta
