@@ -81,6 +81,8 @@
 		D4D6AB6D1BBA2FE200CE241D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6C1BBA2FE200CE241D /* Assets.xcassets */; };
 		D4D6AB701BBA2FE200CE241D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6E1BBA2FE200CE241D /* LaunchScreen.storyboard */; };
 		D4D6AB861BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB851BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift */; };
+		D4D955941E6DA51400A14215 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41F76561E6DA4CF00E02F60 /* OHHTTPStubs.framework */; };
+		D4D955951E6DA5C900A14215 /* singleStop.json in Resources */ = {isa = PBXBuildFile; fileRef = D44E33061C814BBE0036D478 /* singleStop.json */; };
 		D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */; };
 		D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */; };
 		D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */; };
@@ -200,6 +202,7 @@
 		D4138B451CB5FDD800D61C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4188F611CC7BCCC0048E9AA /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPalette.swift; path = Helpers/ColorPalette.swift; sourceTree = "<group>"; };
 		D4188F641CC7BFCF0048E9AA /* ColorPalletteTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPalletteTest.swift; path = Helpers/ColorPalletteTest.swift; sourceTree = "<group>"; };
+		D41F76561E6DA4CF00E02F60 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Debug-iphonesimulator/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
 		D42358561BBCE01800032949 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D429904A1C8E916300FCADFF /* noPrediction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = noPrediction.json; path = ModelData/noPrediction.json; sourceTree = SOURCE_ROOT; };
 		D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -208,6 +211,7 @@
 		D44E33061C814BBE0036D478 /* singleStop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = singleStop.json; path = ModelData/singleStop.json; sourceTree = SOURCE_ROOT; };
 		D44E330B1C8159220036D478 /* JsonTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonTestHelper.swift; path = findmybusnjTests/Helpers/JsonTestHelper.swift; sourceTree = SOURCE_ROOT; };
 		D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindNearByStopsController.swift; path = Controllers/Map/FindNearByStopsController.swift; sourceTree = "<group>"; };
+		D455894C1E6DA3A000DECB1C /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "Pods/../build/Debug-iphoneos/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
 		D4598D291C4C729700A15B08 /* FilledCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilledCircle.swift; path = Shapes/FilledCircle.swift; sourceTree = "<group>"; };
 		D45C934F1C8FC32D002AC008 /* UIAlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertPresenter.swift; path = Presenter/Alert/UIAlertPresenter.swift; sourceTree = "<group>"; };
 		D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETASearchPopOverController.swift; path = Controllers/ETAView/ETASearchPopOverController.swift; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D955941E6DA51400A14215 /* OHHTTPStubs.framework in Frameworks */,
 				D40545031D8C684E00A34B89 /* SwiftyJSON.framework in Frameworks */,
 				D4876CD11CC675E1004D92D5 /* Alamofire.framework in Frameworks */,
 				11C2E2110DF7160E9AAFE90B /* Pods_findmybusnj_common.framework in Frameworks */,
@@ -358,6 +363,8 @@
 		516CB71DBABA7F1FCD524014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D41F76561E6DA4CF00E02F60 /* OHHTTPStubs.framework */,
+				D455894C1E6DA3A000DECB1C /* OHHTTPStubs.framework */,
 				D46CA1061D8C6560008B2774 /* SwiftyJSON.framework */,
 				D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */,
 				D4876CD01CC675E1004D92D5 /* Alamofire.framework */,
@@ -1088,6 +1095,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D955951E6DA5C900A14215 /* singleStop.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1990,6 +1998,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AF9726769C4002D1117F5981 /* Pods-findmybusnjUITests.debug.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/OHHTTPStubs",
+				);
 				INFOPLIST_FILE = findmybusnjUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjUITests;
@@ -2004,6 +2016,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 823A56C01A03209999FBDC6B /* Pods-findmybusnjUITests.release.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/OHHTTPStubs",
+				);
 				INFOPLIST_FILE = findmybusnjUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjUITests;

@@ -12,6 +12,7 @@ import Foundation
 // MARK: Dependencies
 import Alamofire
 import SwiftyJSON
+import OHHTTPStubs
 
 /**
  Part of the `findmybusnj-common` framework. Used to make calls to findmybusnj.com server
@@ -33,6 +34,17 @@ open class ServerManager: NSObject {
      - completion: A function to be called back upon success that takes a JSON array and any errors
    */
   open func getJSONForStop(_ stop: String, completion: @escaping (_ item: JSON, _ error: Error?) -> Void) {
+    #if DEBUG
+      // Mock responses for testing purposes
+      stub(condition: isHost("findmybusnj.com"), response: { (_) -> OHHTTPStubsResponse in
+        return OHHTTPStubsResponse(
+          fileAtPath: OHPathForFile("singleStop.json", type(of: self))!,
+          statusCode: 200,
+          headers: ["Content-Type": "application/json"]
+        )
+      })
+    #endif
+
     let parameters = [ "stop": stop ]
     let endpoint = "/stop"
     makePOST(endpoint, parameters: parameters, completion: completion)

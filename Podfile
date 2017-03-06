@@ -5,44 +5,44 @@ use_frameworks!
 
 target 'findmybusnj' do
 
-pod 'SwiftyJSON'
-pod 'Alamofire', '~> 4.0'
-pod 'PKHUD', :git => 'https://github.com/toyship/PKHUD'
-pod 'Fabric'
-pod 'Crashlytics'
+  pod 'SwiftyJSON'
+  pod 'Alamofire', '~> 4.0'
+  pod 'PKHUD', :git => 'https://github.com/toyship/PKHUD'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
 end
 
 target 'findmybusnj-common' do
 
-pod 'SwiftyJSON'
-pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyJSON'
+  pod 'Alamofire', '~> 4.0'
+  pod 'OHHTTPStubs' # Default subspecs, including support for NSURLSession & JSON etc
+  pod 'OHHTTPStubs/Swift' # Adds the Swiftier API wrapper too
 
 end
 
 target 'findmybusnj-widget' do
 
-pod 'SwiftyJSON'
+  pod 'SwiftyJSON'
 
 end
 
 target 'findmybusnjTests' do
 
-pod 'SwiftyJSON'
+  pod 'SwiftyJSON'
 
 end
 
 target 'findmybusnjUITests' do
 
-pod 'SwiftyJSON'
-pod 'OHHTTPStubs' # Default subspecs, including support for NSURLSession & JSON etc
-pod 'OHHTTPStubs/Swift' # Adds the Swiftier API wrapper too
+  pod 'SwiftyJSON'
 
 end
 
 target 'findmybusnj-commonTests' do
 
-pod 'SwiftyJSON'
+  pod 'SwiftyJSON'
 
 end
 
