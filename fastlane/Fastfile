@@ -33,7 +33,6 @@ platform :ios do
     # 3
     produce(
       app_name: 'Find My Bus NJ 2',
-      app_group: 'group.aghassi.TodayExtensionSharingDefaults',
       language: 'English',
       app_version: '2.0',
       sku: 'Find-My-Bus-NJ-2'
@@ -41,7 +40,6 @@ platform :ios do
     # Widget provision
     produce(
       app_identifier: 'com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget',
-      app_group: 'group.aghassi.TodayExtensionSharingDefaults',
       language: 'English',
       skip_itc: 'true',
       app_version: '2.0'
