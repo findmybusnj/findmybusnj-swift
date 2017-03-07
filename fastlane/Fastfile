@@ -55,7 +55,7 @@ platform :ios do
 
   desc "Create IPA"
   lane :build do
-    gym(scheme: "findmybusnj-appstore")
+    gym(scheme: "findmybusnj-appstore", include_bitcode: true)
   end
 
 
@@ -74,7 +74,13 @@ platform :ios do
       bump_type: "patch" # Automatically increment minor version number
     )
     gym(scheme: "findmybusnj-testflight") # Build your app - more options available
-    pilot(changelog: "Support for iOS 10 and Swift 3", skip_waiting_for_build_processing: true)
+    testflight(
+      skip_waiting_for_build_processing: true
+    )
+    notification(
+      title: "TestFlight complete!",
+      message: "Application successfully uploaded to iTunes Connect"
+    )
 
     # sh "your_script.sh"
     # You can also use other beta testing services here (run `fastlane actions`)
@@ -87,7 +93,11 @@ platform :ios do
     screenshots
     provision
     build
-    deliver(force: true, submit_for_review: false)
+    appstore(force: true, submit_for_review: false)
+    notification(
+      title: "Release complete!",
+      message: "Application successfully uploaded to iTunes Connect"
+    )
     # frameit
   end
 
@@ -102,6 +112,11 @@ platform :ios do
   end
 
   error do |lane, exception|
+    notification(
+      title: "Fastlane Encountered an Error",
+      message: "Please see terminal for details",
+      activate: "com.googlecode.iterm2"
+    )
     # slack(
     #   message: exception.message,
     #   success: false
