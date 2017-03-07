@@ -1674,7 +1674,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F50856554864107243BCD2F /* Pods-findmybusnj-common.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1704,7 +1704,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6E63D87D5D7B348AD8090C6 /* Pods-findmybusnj-common.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
