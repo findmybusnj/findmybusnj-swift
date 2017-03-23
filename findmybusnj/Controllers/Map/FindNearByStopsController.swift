@@ -78,8 +78,8 @@ class FindNearByStopsController: UIViewController {
     let parameters = [
       "latitude": String(latitude),
       "longitude": String(longitude),
-      "radius": String(queryRegion),
-      "types": googleType
+      "radius": String(queryRegion)
+//      "types": googleType
     ]
     #if DEBUG
       print(parameters)
@@ -100,15 +100,14 @@ class FindNearByStopsController: UIViewController {
           print(json)
         #endif
 
-        let results = json["results"]
         var locName: String         // location name
         var latitude: Double
         var longitude: Double
 
-        for i in stride(from: 0, to: results.count, by: 1) {
-          locName = String(describing: results[i]["name"])
-          latitude = results[i]["geometry"]["location"]["lat"].double!
-          longitude = results[i]["geometry"]["location"]["lng"].double!
+        for i in stride(from: 0, to: json.count, by: 1) {
+          locName = String(describing: json[i]["stop_name"]).capitalized
+          latitude = json[i]["stop_lat"].double!
+          longitude = json[i]["stop_lon"].double!
 
           #if DEBUG
             print(i, "bus is:", locName, "with latitude", latitude, "and longitude", longitude)
