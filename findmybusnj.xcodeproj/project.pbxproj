@@ -17,6 +17,8 @@
 		D409DF5F1CC71E8200324C76 /* ETACardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */; };
 		D409DF611CC7203100324C76 /* WidgetETATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */; };
 		D409DF641CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF631CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift */; };
+		D41319D21E874A5300D25744 /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41319D11E874A5300D25744 /* BottomSheetViewController.swift */; };
+		D41319D41E874F6400D25744 /* BottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D41319D31E874F6400D25744 /* BottomSheetViewController.xib */; };
 		D4138B3E1CB5FDD800D61C9A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */; };
 		D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4138B401CB5FDD800D61C9A /* TodayViewController.swift */; };
 		D4138B441CB5FDD800D61C9A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */; };
@@ -198,6 +200,8 @@
 		D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACardPresenter.swift; path = Presenter/ETACardPresenter.swift; sourceTree = "<group>"; };
 		D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WidgetETATableViewCell.swift; path = Model/WidgetETATableViewCell.swift; sourceTree = "<group>"; };
 		D409DF631CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WidgetETATableViewCellPresenter.swift; path = Presenters/WidgetETATableViewCellPresenter.swift; sourceTree = "<group>"; };
+		D41319D11E874A5300D25744 /* BottomSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomSheetViewController.swift; path = Controllers/Map/BottomSheetViewController.swift; sourceTree = "<group>"; };
+		D41319D31E874F6400D25744 /* BottomSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BottomSheetViewController.xib; path = Controllers/Map/BottomSheetViewController.xib; sourceTree = "<group>"; };
 		D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Find My Bus NJ.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		D4138B401CB5FDD800D61C9A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -804,6 +808,8 @@
 			children = (
 				D4FD52211CB9F21200B1F948 /* MapPresenters */,
 				D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */,
+				D41319D11E874A5300D25744 /* BottomSheetViewController.swift */,
+				D41319D31E874F6400D25744 /* BottomSheetViewController.xib */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -1136,6 +1142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D6AB701BBA2FE200CE241D /* LaunchScreen.storyboard in Resources */,
+				D41319D41E874F6400D25744 /* BottomSheetViewController.xib in Resources */,
 				D4D6AB6D1BBA2FE200CE241D /* Assets.xcassets in Resources */,
 				D4D6AB6B1BBA2FE200CE241D /* Main.storyboard in Resources */,
 				D4D955971E6DA70400A14215 /* multipleStops.json in Resources */,
@@ -1509,6 +1516,7 @@
 				D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */,
 				D496BCE11C95AFA90024FCFB /* Favorite.swift in Sources */,
 				D4FD52231CB9F23A00B1F948 /* MapAlertPresenter.swift in Sources */,
+				D41319D21E874A5300D25744 /* BottomSheetViewController.swift in Sources */,
 				D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */,
 				D49411A71CACBD8A00DC66C3 /* CoreDataManager.swift in Sources */,
 				D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */,

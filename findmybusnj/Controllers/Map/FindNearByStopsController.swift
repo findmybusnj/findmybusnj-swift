@@ -34,6 +34,26 @@ class FindNearByStopsController: UIViewController {
     checkLocationAuthorizationStatus()
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    addBottomSheetView()
+  }
+
+  fileprivate func addBottomSheetView() {
+    // 1- Init bottomSheetVC
+    let bottomSheetVC = BottomSheetViewController()
+
+    // 2- Add bottomSheetVC as a child view
+    self.addChildViewController(bottomSheetVC)
+    self.view.addSubview(bottomSheetVC.view)
+    bottomSheetVC.didMove(toParentViewController: self)
+
+    // 3- Adjust bottomSheet frame and initial position.
+    let height = view.frame.height
+    let width  = view.frame.width
+    bottomSheetVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
+  }
+
   /**
    Sets the location of the user on the map
    */
@@ -74,7 +94,7 @@ class FindNearByStopsController: UIViewController {
     /**
      Pass data to server using headers, not through string
      */
-    let url: String = String("https://findmybusnj.com/rest/getPlaces")
+    let url: String = String("http://localhost:8000/rest/getPlaces")
     let parameters = [
       "latitude": String(latitude),
       "longitude": String(longitude),
