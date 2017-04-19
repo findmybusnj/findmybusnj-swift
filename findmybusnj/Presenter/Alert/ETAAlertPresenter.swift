@@ -24,11 +24,11 @@ struct ETAAlertPresenter: UIAlertPresenter {
    */
   func presentAlertWarning(_ type: AlertEnum) -> UIAlertController {
     switch type {
-    case ETAAlertEnum.empty_Search:
+    case ETAAlertEnum.emptySearch:
       return empty_search()
-    case ETAAlertEnum.empty_Stop:
+    case ETAAlertEnum.emptyStop:
       return empty_stop()
-    case ETAAlertEnum.duplicate_Stop_Saved:
+    case ETAAlertEnum.duplicateStopSaved:
       return duplicate_stop()
     default:
       return UIAlertController(title: "", message: "", preferredStyle: .alert)

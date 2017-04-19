@@ -116,7 +116,7 @@ open class ServerManager: NSObject {
           if error._code == NSURLErrorTimedOut {
             completion(JSON.null, error)
           } else {
-            print("Error: \(json.error)")
+            print("Error: \(String(describing: json.error))")
           }
         }
     }

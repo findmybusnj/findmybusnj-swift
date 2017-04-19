@@ -1174,7 +1174,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		18F976EC49E3E7D3D1D033DC /* [CP] Copy Pods Resources */ = {
@@ -1219,7 +1219,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		49CFB5C5A1E113A98B7C7D72 /* [CP] Embed Pods Frameworks */ = {
@@ -1264,7 +1264,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		6E11A4CFDE2CFDFFC9851B0B /* [CP] Check Pods Manifest.lock */ = {
@@ -1279,7 +1279,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		733F11305D6E671072E56AB3 /* [CP] Check Pods Manifest.lock */ = {
@@ -1294,7 +1294,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		812F3C93443768E9452D25C1 /* [CP] Embed Pods Frameworks */ = {
@@ -1427,7 +1427,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		EC50A2039CF99DAAE480A631 /* [CP] Copy Pods Resources */ = {
@@ -1640,8 +1640,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
 				PRODUCT_NAME = "Find My Bus NJ";
-				PROVISIONING_PROFILE = "d24cc916-dbd0-4ace-b4f7-7d415b9d9ac3";
-				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget AppStore";
+				PROVISIONING_PROFILE = "fe85e3e2-102e-42f2-8e63-f408d0210f0d";
+				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget AppStore 1492229432";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1663,8 +1663,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
 				PRODUCT_NAME = "Find My Bus NJ";
-				PROVISIONING_PROFILE = "d24cc916-dbd0-4ace-b4f7-7d415b9d9ac3";
-				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget AppStore";
+				PROVISIONING_PROFILE = "fe85e3e2-102e-42f2-8e63-f408d0210f0d";
+				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget AppStore 1492229432";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -1947,8 +1947,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aghassi.findmybusnj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "84adbdeb-5293-498f-9da9-a8962a7b126d";
-				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj AppStore";
+				PROVISIONING_PROFILE = "68ab767c-7b54-4039-8732-8f147d05fc2b";
+				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj AppStore 1492229423";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1970,8 +1970,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aghassi.findmybusnj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "84adbdeb-5293-498f-9da9-a8962a7b126d";
-				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj AppStore";
+				PROVISIONING_PROFILE = "68ab767c-7b54-4039-8732-8f147d05fc2b";
+				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj AppStore 1492229423";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -80,7 +80,7 @@ class ETASearchPopOverController: UIViewController {
    Creates a UIAlertController to notify the user they have not entered the proper stop information
    */
   fileprivate func showEmptyWarning() {
-    let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.empty_Search)
+    let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.emptySearch)
     present(warning, animated: true, completion: nil)
   }
 }

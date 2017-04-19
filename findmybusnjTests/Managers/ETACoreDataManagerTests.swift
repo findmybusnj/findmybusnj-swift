@@ -69,7 +69,7 @@ class ETACoreDataManagerTests: XCTestCase {
   func test_Assert_isDuplicate_Returns_False() {
     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorite")
     let predicate = NSPredicate(format: "stop == %@ AND route == %@",
-                                TestFavorite.STOP.rawValue, TestFavorite.EMPTY_ROUTE.rawValue)
+                                TestFavorite.stop.rawValue, TestFavorite.emptyRoute.rawValue)
 
     let duplicate = managerUnderTest.isDuplicate(fetchRequest as! NSFetchRequest<NSManagedObject>, predicate: predicate)
     XCTAssertFalse(duplicate, "Check should return false when a duplicate does not exist")

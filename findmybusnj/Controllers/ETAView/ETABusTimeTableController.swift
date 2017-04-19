@@ -53,7 +53,7 @@ class ETABusTimeTableController: CardTableViewController {
     if !currentStop.isEmpty {
       saveToFavorite()
     } else {
-      let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.empty_Stop)
+      let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.emptyStop)
       present(warning, animated: true, completion: nil)
     }
   }
@@ -206,7 +206,7 @@ class ETABusTimeTableController: CardTableViewController {
     let predicate = NSPredicate(format: "stop == %@ AND route == %@", currentStop, filterRoute)
 
     if coreDataManager.isDuplicate(fetchRequest, predicate: predicate) {
-      let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.duplicate_Stop_Saved)
+      let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.duplicateStopSaved)
       present(warning, animated: true, completion: nil)
       return
     }

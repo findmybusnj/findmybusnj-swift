@@ -11,12 +11,12 @@ import Foundation
 /**
  Handles the types of alerts that can be generated
  
- - Empty_Search: Should be shown if search box is empty
- - Empty_Stop:   Should be shown if there is no stop currently being searched for
- - Stop_Saved:   Should be shown if there is a stop already existing in Core Data
+ - emptySearch: Should be shown if search box is empty
+ - emptyStop:   Should be shown if there is no stop currently being searched for
+ - duplicateStopSaved:   Should be shown if there is a stop already existing in Core Data
  */
 enum ETAAlertEnum: AlertEnum {
-  case empty_Search
-  case empty_Stop
-  case duplicate_Stop_Saved
+  case emptySearch
+  case emptyStop
+  case duplicateStopSaved
 }

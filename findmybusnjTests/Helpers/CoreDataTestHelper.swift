@@ -10,10 +10,10 @@ import CoreData
 @testable import findmybusnj
 
 enum TestFavorite: String {
-  case STOP = "26229"
-  case ALTERNATE_STOP = "13577"
-  case ROUTE = "167"
-  case EMPTY_ROUTE = ""
+  case stop = "26229"
+  case alternateStop = "13577"
+  case route = "167"
+  case emptyRoute = ""
 }
 
 /**
@@ -50,8 +50,8 @@ func setUpInMemoryManagedObjectContext() -> NSManagedObjectContext {
 func generateFavorite(_ managedObjectContext: NSManagedObjectContext) -> Favorite {
   let favorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite",
                                                      into: managedObjectContext) as! Favorite
-  favorite.stop = TestFavorite.STOP.rawValue
-  favorite.route = TestFavorite.EMPTY_ROUTE.rawValue
+  favorite.stop = TestFavorite.stop.rawValue
+  favorite.route = TestFavorite.emptyRoute.rawValue
 
   return favorite
 }
@@ -66,8 +66,8 @@ func generateFavorite(_ managedObjectContext: NSManagedObjectContext) -> Favorit
 func generateFavoriteWithRoute(_ managedObjectContext: NSManagedObjectContext) -> Favorite {
   let favorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite",
                                                      into: managedObjectContext) as! Favorite
-  favorite.stop = TestFavorite.STOP.rawValue
-  favorite.route = TestFavorite.ROUTE.rawValue
+  favorite.stop = TestFavorite.stop.rawValue
+  favorite.route = TestFavorite.route.rawValue
 
   return favorite
 }
@@ -85,7 +85,7 @@ func generateMultipleFavorites(_ managedObjectContext: NSManagedObjectContext) -
   secondFavorite.frequency = NSNumber(value: 2)
   let thirdFavorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite",
                                                           into: managedObjectContext) as! Favorite
-  thirdFavorite.stop = TestFavorite.ALTERNATE_STOP.rawValue
+  thirdFavorite.stop = TestFavorite.alternateStop.rawValue
   thirdFavorite.route = ""
   thirdFavorite.frequency = NSNumber(value: 3)
 
