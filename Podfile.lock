@@ -1,23 +1,52 @@
 PODS:
-  - Alamofire (3.3.0)
-  - Crashlytics (3.7.0):
+  - Alamofire (4.3.0)
+  - Crashlytics (3.8.1):
     - Fabric (~> 1.6.3)
-  - Fabric (1.6.7)
-  - PKHUD (3.0.1)
-  - SwiftyJSON (2.3.2)
+  - Fabric (1.6.8)
+  - OHHTTPStubs (5.2.3):
+    - OHHTTPStubs/Default (= 5.2.3)
+  - OHHTTPStubs/Core (5.2.3)
+  - OHHTTPStubs/Default (5.2.3):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.2.3)
+  - OHHTTPStubs/Swift (5.2.3):
+    - OHHTTPStubs/Core
+  - PKHUD (3.2.1)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.3.0)
+  - Alamofire (~> 4.0)
   - Crashlytics
   - Fabric
-  - PKHUD (~> 3.0.0)
-  - SwiftyJSON (~> 2.3.1)
+  - OHHTTPStubs
+  - OHHTTPStubs/Swift
+  - PKHUD (from `https://github.com/toyship/PKHUD`)
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  PKHUD:
+    :git: https://github.com/toyship/PKHUD
+
+CHECKOUT OPTIONS:
+  PKHUD:
+    :commit: 28fb970b41d63134e962f9da766b96670c0f55f0
+    :git: https://github.com/toyship/PKHUD
 
 SPEC CHECKSUMS:
-  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
-  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
-  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
-  PKHUD: 473a97c2626847e5e2e7d6f535d65e0bb48da70c
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Crashlytics: 4391d8df0b125345e9f209c5db6e7f40a6a8435d
+  Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
+  OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
+  PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 22bb0ef1c6fec3620e9d814d05dad949f52a8ac7
+
+COCOAPODS: 1.2.1

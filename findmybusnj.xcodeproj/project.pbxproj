@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */; };
+		11C2E2110DF7160E9AAFE90B /* Pods_findmybusnj_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 781ABAAB8A2AEAE87EA1A77F /* Pods_findmybusnj_common.framework */; };
+		3C54AF4E8DF481D13A0C787D /* Pods_findmybusnj_commonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD158533D2B3DDE753E0D3CB /* Pods_findmybusnj_commonTests.framework */; };
+		42CC5A25F8073CD1651ED40A /* Pods_findmybusnjUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F65F3EB9D98422C653903624 /* Pods_findmybusnjUITests.framework */; };
+		A7DDD3A85EFD48F38ECEEDE9 /* Pods_findmybusnj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B39A272ED7D2734100F86BA /* Pods_findmybusnj.framework */; };
+		B14D095BEE0A081806A330A0 /* Pods_findmybusnj_widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6B9CE8255E948F055F2037 /* Pods_findmybusnj_widget.framework */; };
+		D40545031D8C684E00A34B89 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46CA1061D8C6560008B2774 /* SwiftyJSON.framework */; };
 		D407670E1CC6B26000B2D9FF /* ETAPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */; };
 		D409DF5F1CC71E8200324C76 /* ETACardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */; };
 		D409DF611CC7203100324C76 /* WidgetETATableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */; };
@@ -16,7 +21,7 @@
 		D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4138B401CB5FDD800D61C9A /* TodayViewController.swift */; };
 		D4138B441CB5FDD800D61C9A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4138B421CB5FDD800D61C9A /* MainInterface.storyboard */; };
 		D4138B481CB5FDD800D61C9A /* Find My Bus NJ.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D4138B3C1CB5FDD800D61C9A /* Find My Bus NJ.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		D4188F621CC7BCCC0048E9AA /* ColorPallette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4188F611CC7BCCC0048E9AA /* ColorPallette.swift */; };
+		D4188F621CC7BCCC0048E9AA /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4188F611CC7BCCC0048E9AA /* ColorPalette.swift */; };
 		D4188F651CC7BFCF0048E9AA /* ColorPalletteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4188F641CC7BFCF0048E9AA /* ColorPalletteTest.swift */; };
 		D429904B1C8E916300FCADFF /* noPrediction.json in Resources */ = {isa = PBXBuildFile; fileRef = D429904A1C8E916300FCADFF /* noPrediction.json */; };
 		D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */; };
@@ -28,6 +33,8 @@
 		D4598D2A1C4C729700A15B08 /* FilledCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4598D291C4C729700A15B08 /* FilledCircle.swift */; };
 		D45C93501C8FC32D002AC008 /* UIAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45C934F1C8FC32D002AC008 /* UIAlertPresenter.swift */; };
 		D4640DD51C4DE50600D184E3 /* ETASearchPopOverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */; };
+		D4649A9C1E6DA87800BFFE5B /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4649A9B1E6DA87800BFFE5B /* SnapshotHelper.swift */; };
+		D4649A9D1E6DA95900BFFE5B /* multipleStops.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D955961E6DA70400A14215 /* multipleStops.json */; };
 		D468CC891CADBE0F00C32556 /* ShortcutIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468CC881CADBE0F00C32556 /* ShortcutIdentifier.swift */; };
 		D468CC8D1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */; };
 		D46C40C51CCC22B4001373F8 /* ETAPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */; };
@@ -41,6 +48,7 @@
 		D475C2BA1CCE854800A952F5 /* CoreDataTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49411AB1CACC93F00DC66C3 /* CoreDataTestHelper.swift */; };
 		D475C2C01CCE876700A952F5 /* JSONSanitizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D475C2BB1CCE860A00A952F5 /* JSONSanitizerTests.swift */; };
 		D475C2C11CCE893F00A952F5 /* singleStop.json in Resources */ = {isa = PBXBuildFile; fileRef = D44E33061C814BBE0036D478 /* singleStop.json */; };
+		D47C14461E5CD4DB00A36592 /* WidgetBannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C14451E5CD4DB00A36592 /* WidgetBannerPresenter.swift */; };
 		D485AD6E1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */; };
 		D485AD701C7E585900B505CD /* CardTimeTableControllerUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */; };
 		D4876CC41CC67555004D92D5 /* findmybusnj-common.h in Headers */ = {isa = PBXBuildFile; fileRef = D4876CC31CC67555004D92D5 /* findmybusnj-common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,7 +56,6 @@
 		D4876CC91CC67555004D92D5 /* findmybusnj_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4876CCF1CC675C9004D92D5 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CCE1CC675C9004D92D5 /* ServerManager.swift */; };
 		D4876CD11CC675E1004D92D5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CD01CC675E1004D92D5 /* Alamofire.framework */; };
-		D4876CD31CC675E5004D92D5 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */; };
 		D4876CE41CC67678004D92D5 /* ServerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CE31CC67678004D92D5 /* ServerManagerTests.swift */; };
 		D4876CE71CC678D7004D92D5 /* JSONSanitizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4876CE61CC678D7004D92D5 /* JSONSanitizer.swift */; };
 		D48E4C621CBFC39C00700C70 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */; };
@@ -76,10 +83,14 @@
 		D4D6AB6D1BBA2FE200CE241D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6C1BBA2FE200CE241D /* Assets.xcassets */; };
 		D4D6AB701BBA2FE200CE241D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D6AB6E1BBA2FE200CE241D /* LaunchScreen.storyboard */; };
 		D4D6AB861BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6AB851BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift */; };
+		D4D955941E6DA51400A14215 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41F76561E6DA4CF00E02F60 /* OHHTTPStubs.framework */; };
+		D4D955951E6DA5C900A14215 /* singleStop.json in Resources */ = {isa = PBXBuildFile; fileRef = D44E33061C814BBE0036D478 /* singleStop.json */; };
+		D4D955971E6DA70400A14215 /* multipleStops.json in Resources */ = {isa = PBXBuildFile; fileRef = D4D955961E6DA70400A14215 /* multipleStops.json */; };
 		D4DE49F71BDA9D0C0037D211 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */; };
 		D4E4B1261BCBFA0A00D06419 /* PlacesAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */; };
 		D4EC73FF1BD69B9F00FF2E88 /* ETACard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */; };
 		D4FD52231CB9F23A00B1F948 /* MapAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD52221CB9F23A00B1F948 /* MapAlertPresenter.swift */; };
+		D6243B445B0DD80FA0624FEF /* Pods_findmybusnjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76154486FD3333F4492E125C /* Pods_findmybusnjTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,10 +179,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4CBCBE02954639DF7E50BFBA /* Pods-findmybusnj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.release.xcconfig"; sourceTree = "<group>"; };
-		86380F7789E2BF8B92C57B88 /* Pods-findmybusnj.testflight.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.testflight.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.testflight.xcconfig"; sourceTree = "<group>"; };
-		C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
+		3E6B9CE8255E948F055F2037 /* Pods_findmybusnj_widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj_widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F50856554864107243BCD2F /* Pods-findmybusnj-common.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj-common.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj-common/Pods-findmybusnj-common.debug.xcconfig"; sourceTree = "<group>"; };
+		494948168CA6953E3BE9C7F2 /* Pods-findmybusnj-widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj-widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj-widget/Pods-findmybusnj-widget.debug.xcconfig"; sourceTree = "<group>"; };
+		63EB5E4F1A4B3A1ECB829964 /* Pods-findmybusnj-commonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj-commonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj-commonTests/Pods-findmybusnj-commonTests.release.xcconfig"; sourceTree = "<group>"; };
+		76154486FD3333F4492E125C /* Pods_findmybusnjTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnjTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		781ABAAB8A2AEAE87EA1A77F /* Pods_findmybusnj_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		823A56C01A03209999FBDC6B /* Pods-findmybusnjUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnjUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnjUITests/Pods-findmybusnjUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8BF695EA6C5237B5A87B6ACE /* Pods-findmybusnj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.debug.xcconfig"; sourceTree = "<group>"; };
+		9B39A272ED7D2734100F86BA /* Pods_findmybusnj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4A36C3E0C2091EDFB02CEFB /* Pods-findmybusnjTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnjTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnjTests/Pods-findmybusnjTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6370C2941EE6EF91310B79D /* Pods-findmybusnj-widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj-widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj-widget/Pods-findmybusnj-widget.release.xcconfig"; sourceTree = "<group>"; };
+		A95A74ADAD34766035CC8D1F /* Pods-findmybusnj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj.release.xcconfig"; sourceTree = "<group>"; };
+		AF9726769C4002D1117F5981 /* Pods-findmybusnjUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnjUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnjUITests/Pods-findmybusnjUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BED850D1D164CBE8CF2A5838 /* Pods-findmybusnj-commonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj-commonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj-commonTests/Pods-findmybusnj-commonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C89CB2B5A5E95C0283FFE239 /* Pods-findmybusnjTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnjTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnjTests/Pods-findmybusnjTests.release.xcconfig"; sourceTree = "<group>"; };
 		D407670D1CC6B26000B2D9FF /* ETAPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPresenter.swift; path = Presenter/ETAPresenter.swift; sourceTree = "<group>"; };
 		D409DF5E1CC71E8200324C76 /* ETACardPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACardPresenter.swift; path = Presenter/ETACardPresenter.swift; sourceTree = "<group>"; };
 		D409DF601CC7203100324C76 /* WidgetETATableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WidgetETATableViewCell.swift; path = Model/WidgetETATableViewCell.swift; sourceTree = "<group>"; };
@@ -181,8 +203,9 @@
 		D4138B401CB5FDD800D61C9A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		D4138B431CB5FDD800D61C9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		D4138B451CB5FDD800D61C9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4188F611CC7BCCC0048E9AA /* ColorPallette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPallette.swift; path = Helpers/ColorPallette.swift; sourceTree = "<group>"; };
+		D4188F611CC7BCCC0048E9AA /* ColorPalette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPalette.swift; path = Helpers/ColorPalette.swift; sourceTree = "<group>"; };
 		D4188F641CC7BFCF0048E9AA /* ColorPalletteTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorPalletteTest.swift; path = Helpers/ColorPalletteTest.swift; sourceTree = "<group>"; };
+		D41F76561E6DA4CF00E02F60 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Debug-iphonesimulator/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
 		D42358561BBCE01800032949 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D429904A1C8E916300FCADFF /* noPrediction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = noPrediction.json; path = ModelData/noPrediction.json; sourceTree = SOURCE_ROOT; };
 		D43FCDDA1BC0D5220025F1D4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
@@ -191,16 +214,20 @@
 		D44E33061C814BBE0036D478 /* singleStop.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = singleStop.json; path = ModelData/singleStop.json; sourceTree = SOURCE_ROOT; };
 		D44E330B1C8159220036D478 /* JsonTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonTestHelper.swift; path = findmybusnjTests/Helpers/JsonTestHelper.swift; sourceTree = SOURCE_ROOT; };
 		D450208C1BBB87A400E76633 /* FindNearByStopsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindNearByStopsController.swift; path = Controllers/Map/FindNearByStopsController.swift; sourceTree = "<group>"; };
+		D455894C1E6DA3A000DECB1C /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "Pods/../build/Debug-iphoneos/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
 		D4598D291C4C729700A15B08 /* FilledCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilledCircle.swift; path = Shapes/FilledCircle.swift; sourceTree = "<group>"; };
 		D45C934F1C8FC32D002AC008 /* UIAlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertPresenter.swift; path = Presenter/Alert/UIAlertPresenter.swift; sourceTree = "<group>"; };
 		D4640DD41C4DE50600D184E3 /* ETASearchPopOverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETASearchPopOverController.swift; path = Controllers/ETAView/ETASearchPopOverController.swift; sourceTree = "<group>"; };
+		D4649A9B1E6DA87800BFFE5B /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		D468CC881CADBE0F00C32556 /* ShortcutIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShortcutIdentifier.swift; path = "3D-Touch/ShortcutIdentifier.swift"; sourceTree = "<group>"; };
 		D468CC8C1CAECA6F00C32556 /* ThreeDTouchCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreeDTouchCoreDataManager.swift; path = "3D-Touch/ThreeDTouchCoreDataManager.swift"; sourceTree = "<group>"; };
 		D46C40C41CCC22B4001373F8 /* ETAPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETAPresenterTests.swift; path = Presenter/ETAPresenterTests.swift; sourceTree = "<group>"; };
 		D46C40C61CCC2588001373F8 /* MockPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockPresenter.swift; path = Presenter/MockPresenter.swift; sourceTree = "<group>"; };
+		D46CA1061D8C6560008B2774 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/findmybusnj-dwoqiephagoytbffownarurhvqox/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D47203401CD13DB700621EC4 /* singleStopWithAmpersand.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = singleStopWithAmpersand.json; path = ModelData/singleStopWithAmpersand.json; sourceTree = SOURCE_ROOT; };
 		D475C2BB1CCE860A00A952F5 /* JSONSanitizerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONSanitizerTests.swift; path = Parsers/JSONSanitizerTests.swift; sourceTree = "<group>"; };
 		D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		D47C14451E5CD4DB00A36592 /* WidgetBannerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WidgetBannerPresenter.swift; path = Presenters/WidgetBannerPresenter.swift; sourceTree = "<group>"; };
 		D485AD6D1C7E57E800B505CD /* ETABusTimeTableUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETABusTimeTableUnitTests.swift; path = Controllers/ETABusTimeTableUnitTests.swift; sourceTree = "<group>"; };
 		D485AD6F1C7E585900B505CD /* CardTimeTableControllerUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTimeTableControllerUnitTests.swift; path = Controllers/CardTimeTableControllerUnitTests.swift; sourceTree = "<group>"; };
 		D4876CC11CC67555004D92D5 /* findmybusnj_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = findmybusnj_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,12 +274,16 @@
 		D4D6AB811BBA2FE200CE241D /* findmybusnjUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = findmybusnjUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D6AB851BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETABusTimeTableControllerUITests.swift; sourceTree = "<group>"; };
 		D4D6AB871BBA2FE200CE241D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D955961E6DA70400A14215 /* multipleStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = multipleStops.json; path = ModelData/multipleStops.json; sourceTree = SOURCE_ROOT; };
 		D4DE49F61BDA9D0C0037D211 /* CardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardTableViewController.swift; path = Controllers/CardTableViewController.swift; sourceTree = "<group>"; };
 		D4E4B1251BCBFA0A00D06419 /* PlacesAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesAnnotation.swift; path = Model/PlacesAnnotation.swift; sourceTree = "<group>"; };
 		D4EC73FE1BD69B9F00FF2E88 /* ETACard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ETACard.swift; path = Model/ETACard/ETACard.swift; sourceTree = "<group>"; };
 		D4F1527F1C39873F007D8EA7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		D4F152801C39873F007D8EA7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		D4FD52221CB9F23A00B1F948 /* MapAlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapAlertPresenter.swift; path = Presenter/Alert/MapAlertPresenter.swift; sourceTree = "<group>"; };
+		DD158533D2B3DDE753E0D3CB /* Pods_findmybusnj_commonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnj_commonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65F3EB9D98422C653903624 /* Pods_findmybusnjUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_findmybusnjUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E63D87D5D7B348AD8090C6 /* Pods-findmybusnj-common.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findmybusnj-common.release.xcconfig"; path = "Pods/Target Support Files/Pods-findmybusnj-common/Pods-findmybusnj-common.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +294,7 @@
 				D46C40CA1CCC2BC7001373F8 /* findmybusnj_common.framework in Frameworks */,
 				D48E4C621CBFC39C00700C70 /* SwiftyJSON.framework in Frameworks */,
 				D4138B3E1CB5FDD800D61C9A /* NotificationCenter.framework in Frameworks */,
+				B14D095BEE0A081806A330A0 /* Pods_findmybusnj_widget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,8 +302,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4876CD31CC675E5004D92D5 /* SwiftyJSON.framework in Frameworks */,
+				D4D955941E6DA51400A14215 /* OHHTTPStubs.framework in Frameworks */,
+				D40545031D8C684E00A34B89 /* SwiftyJSON.framework in Frameworks */,
 				D4876CD11CC675E1004D92D5 /* Alamofire.framework in Frameworks */,
+				11C2E2110DF7160E9AAFE90B /* Pods_findmybusnj_common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +313,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C54AF4E8DF481D13A0C787D /* Pods_findmybusnj_commonTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,8 +341,8 @@
 				D43FCDDC1BC0D5220025F1D4 /* Alamofire.framework in Frameworks */,
 				D43FCDDD1BC0D5220025F1D4 /* SwiftyJSON.framework in Frameworks */,
 				D4D1AF2C1C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */,
-				6832F12ACD899AF94B206CEA /* Pods_findmybusnj.framework in Frameworks */,
 				D4876CC81CC67555004D92D5 /* findmybusnj_common.framework in Frameworks */,
+				A7DDD3A85EFD48F38ECEEDE9 /* Pods_findmybusnj.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +350,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6243B445B0DD80FA0624FEF /* Pods_findmybusnjTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +358,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42CC5A25F8073CD1651ED40A /* Pods_findmybusnjUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +368,9 @@
 		516CB71DBABA7F1FCD524014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D41F76561E6DA4CF00E02F60 /* OHHTTPStubs.framework */,
+				D455894C1E6DA3A000DECB1C /* OHHTTPStubs.framework */,
+				D46CA1061D8C6560008B2774 /* SwiftyJSON.framework */,
 				D4876CD21CC675E5004D92D5 /* SwiftyJSON.framework */,
 				D4876CD01CC675E1004D92D5 /* Alamofire.framework */,
 				D48E4C611CBFC39C00700C70 /* SwiftyJSON.framework */,
@@ -341,18 +381,32 @@
 				D43FCDDB1BC0D5220025F1D4 /* SwiftyJSON.framework */,
 				D479FAAE1BBEAAA800ABB864 /* Alamofire.framework */,
 				D42358561BBCE01800032949 /* SwiftyJSON.framework */,
-				C945DFF53FCA0EF986D98D7A /* Pods_findmybusnj.framework */,
 				D4138B3D1CB5FDD800D61C9A /* NotificationCenter.framework */,
+				9B39A272ED7D2734100F86BA /* Pods_findmybusnj.framework */,
+				76154486FD3333F4492E125C /* Pods_findmybusnjTests.framework */,
+				F65F3EB9D98422C653903624 /* Pods_findmybusnjUITests.framework */,
+				781ABAAB8A2AEAE87EA1A77F /* Pods_findmybusnj_common.framework */,
+				3E6B9CE8255E948F055F2037 /* Pods_findmybusnj_widget.framework */,
+				DD158533D2B3DDE753E0D3CB /* Pods_findmybusnj_commonTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CF87078E50546E553E842561 /* Pods */ = {
+		CF54EC05E3FEF1CEA9EF0BFC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */,
-				4CBCBE02954639DF7E50BFBA /* Pods-findmybusnj.release.xcconfig */,
-				86380F7789E2BF8B92C57B88 /* Pods-findmybusnj.testflight.xcconfig */,
+				8BF695EA6C5237B5A87B6ACE /* Pods-findmybusnj.debug.xcconfig */,
+				A95A74ADAD34766035CC8D1F /* Pods-findmybusnj.release.xcconfig */,
+				A4A36C3E0C2091EDFB02CEFB /* Pods-findmybusnjTests.debug.xcconfig */,
+				C89CB2B5A5E95C0283FFE239 /* Pods-findmybusnjTests.release.xcconfig */,
+				AF9726769C4002D1117F5981 /* Pods-findmybusnjUITests.debug.xcconfig */,
+				823A56C01A03209999FBDC6B /* Pods-findmybusnjUITests.release.xcconfig */,
+				3F50856554864107243BCD2F /* Pods-findmybusnj-common.debug.xcconfig */,
+				F6E63D87D5D7B348AD8090C6 /* Pods-findmybusnj-common.release.xcconfig */,
+				494948168CA6953E3BE9C7F2 /* Pods-findmybusnj-widget.debug.xcconfig */,
+				A6370C2941EE6EF91310B79D /* Pods-findmybusnj-widget.release.xcconfig */,
+				BED850D1D164CBE8CF2A5838 /* Pods-findmybusnj-commonTests.debug.xcconfig */,
+				63EB5E4F1A4B3A1ECB829964 /* Pods-findmybusnj-commonTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -377,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				D409DF631CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift */,
+				D47C14451E5CD4DB00A36592 /* WidgetBannerPresenter.swift */,
 			);
 			name = Presenters;
 			sourceTree = "<group>";
@@ -397,7 +452,7 @@
 		D4188F601CC7BCAA0048E9AA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				D4188F611CC7BCCC0048E9AA /* ColorPallette.swift */,
+				D4188F611CC7BCCC0048E9AA /* ColorPalette.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -427,6 +482,7 @@
 				D44E33061C814BBE0036D478 /* singleStop.json */,
 				D47203401CD13DB700621EC4 /* singleStopWithAmpersand.json */,
 				D429904A1C8E916300FCADFF /* noPrediction.json */,
+				D4D955961E6DA70400A14215 /* multipleStops.json */,
 			);
 			name = JSON;
 			path = findmybusnj;
@@ -645,8 +701,8 @@
 				D4D1AF181C0BA99C00FA6C91 /* AnimationsFramework */,
 				D4D1AF261C0BA99C00FA6C91 /* AnimationsFrameworkTests */,
 				D4D6AB611BBA2FE200CE241D /* Products */,
-				CF87078E50546E553E842561 /* Pods */,
 				516CB71DBABA7F1FCD524014 /* Frameworks */,
+				CF54EC05E3FEF1CEA9EF0BFC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -698,6 +754,7 @@
 		D4D6AB841BBA2FE200CE241D /* findmybusnj-UITests */ = {
 			isa = PBXGroup;
 			children = (
+				D4649A9B1E6DA87800BFFE5B /* SnapshotHelper.swift */,
 				D4D6AB851BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift */,
 				D4D6AB871BBA2FE200CE241D /* Info.plist */,
 			);
@@ -777,9 +834,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4138B4B1CB5FDD800D61C9A /* Build configuration list for PBXNativeTarget "findmybusnj-widget" */;
 			buildPhases = (
+				733F11305D6E671072E56AB3 /* [CP] Check Pods Manifest.lock */,
 				D4138B381CB5FDD800D61C9A /* Sources */,
 				D4138B391CB5FDD800D61C9A /* Frameworks */,
 				D4138B3A1CB5FDD800D61C9A /* Resources */,
+				BDF670516DDFA328094941FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -794,10 +853,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4876CCC1CC67555004D92D5 /* Build configuration list for PBXNativeTarget "findmybusnj-common" */;
 			buildPhases = (
+				16556A3BD79ED7178473CD94 /* [CP] Check Pods Manifest.lock */,
 				D4876CBC1CC67555004D92D5 /* Sources */,
 				D4876CBD1CC67555004D92D5 /* Frameworks */,
 				D4876CBE1CC67555004D92D5 /* Headers */,
 				D4876CBF1CC67555004D92D5 /* Resources */,
+				EC50A2039CF99DAAE480A631 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -812,9 +873,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4876CDF1CC67644004D92D5 /* Build configuration list for PBXNativeTarget "findmybusnj-commonTests" */;
 			buildPhases = (
+				45F4726988F60DE6A68D13AF /* [CP] Check Pods Manifest.lock */,
 				D4876CD41CC67644004D92D5 /* Sources */,
 				D4876CD51CC67644004D92D5 /* Frameworks */,
 				D4876CD61CC67644004D92D5 /* Resources */,
+				49CFB5C5A1E113A98B7C7D72 /* [CP] Embed Pods Frameworks */,
+				442CB43930B61037D8EA5479 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -867,16 +931,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4D6AB8A1BBA2FE200CE241D /* Build configuration list for PBXNativeTarget "findmybusnj" */;
 			buildPhases = (
+				602EB0A58932FE5DAE4F1995 /* [CP] Check Pods Manifest.lock */,
+				D46973531E69311800E29291 /* Swiftlint */,
 				D41C70E51C8C70DE00495315 /* Increment Version and Build Number Script */,
-				D527E84A91904ED972A5A18D /* Check Pods Manifest.lock */,
 				D4D6AB5C1BBA2FE200CE241D /* Sources */,
 				D4D6AB5D1BBA2FE200CE241D /* Frameworks */,
 				D4D6AB5E1BBA2FE200CE241D /* Resources */,
-				74A9C29BC882D0903BFA50A2 /* Embed Pods Frameworks */,
-				65D337A5AA59A9C108C847BE /* Copy Pods Resources */,
 				D4D1AF351C0BA99C00FA6C91 /* Embed Frameworks */,
 				D491FBC21CB49B4E0099A8A4 /* Crashalytics Script */,
 				D4138B4C1CB5FDD800D61C9A /* Embed App Extensions */,
+				56DB93CD3C9C07D747842C0A /* [CP] Embed Pods Frameworks */,
+				18F976EC49E3E7D3D1D033DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -894,9 +959,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4D6AB8D1BBA2FE200CE241D /* Build configuration list for PBXNativeTarget "findmybusnjTests" */;
 			buildPhases = (
+				6E11A4CFDE2CFDFFC9851B0B /* [CP] Check Pods Manifest.lock */,
 				D4D6AB721BBA2FE200CE241D /* Sources */,
 				D4D6AB731BBA2FE200CE241D /* Frameworks */,
 				D4D6AB741BBA2FE200CE241D /* Resources */,
+				812F3C93443768E9452D25C1 /* [CP] Embed Pods Frameworks */,
+				99CA257B933D7AC0CF7AEA90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -912,9 +980,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4D6AB901BBA2FE200CE241D /* Build configuration list for PBXNativeTarget "findmybusnjUITests" */;
 			buildPhases = (
+				DE9254384640BD8FA8B67B79 /* [CP] Check Pods Manifest.lock */,
 				D4D6AB7D1BBA2FE200CE241D /* Sources */,
 				D4D6AB7E1BBA2FE200CE241D /* Frameworks */,
 				D4D6AB7F1BBA2FE200CE241D /* Resources */,
+				91C38EEB903159C777250434 /* [CP] Copy Pods Resources */,
+				9EDA6E0B21755B6BFA97AFA8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -933,12 +1004,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "David Aghassi";
 				TargetAttributes = {
 					D4138B3B1CB5FDD800D61C9A = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 23254ZGZ6N;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -948,22 +1021,28 @@
 					D4876CC01CC67555004D92D5 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 23254ZGZ6N;
+						LastSwiftMigration = 0800;
 					};
 					D4876CD71CC67644004D92D5 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 					D4D1AF161C0BA99C00FA6C91 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 23254ZGZ6N;
+						LastSwiftMigration = 0800;
 					};
 					D4D1AF1F1C0BA99C00FA6C91 = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 					D4D6AB5F1BBA2FE200CE241D = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 23254ZGZ6N;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -975,10 +1054,12 @@
 					};
 					D4D6AB751BBA2FE200CE241D = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 					D4D6AB801BBA2FE200CE241D = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 				};
@@ -1021,6 +1102,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4649A9D1E6DA95900BFFE5B /* multipleStops.json in Resources */,
+				D4D955951E6DA5C900A14215 /* singleStop.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1055,6 +1138,7 @@
 				D4D6AB701BBA2FE200CE241D /* LaunchScreen.storyboard in Resources */,
 				D4D6AB6D1BBA2FE200CE241D /* Assets.xcassets in Resources */,
 				D4D6AB6B1BBA2FE200CE241D /* Main.storyboard in Resources */,
+				D4D955971E6DA70400A14215 /* multipleStops.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1078,14 +1162,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		65D337A5AA59A9C108C847BE /* Copy Pods Resources */ = {
+		16556A3BD79ED7178473CD94 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		18F976EC49E3E7D3D1D033DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1093,14 +1192,59 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		74A9C29BC882D0903BFA50A2 /* Embed Pods Frameworks */ = {
+		442CB43930B61037D8EA5479 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnj-commonTests/Pods-findmybusnj-commonTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45F4726988F60DE6A68D13AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		49CFB5C5A1E113A98B7C7D72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnj-commonTests/Pods-findmybusnj-commonTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56DB93CD3C9C07D747842C0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1108,9 +1252,129 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnj/Pods-findmybusnj-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D41C70E51C8C70DE00495315 /* Increment Version and Build Number Script */ = {
+		602EB0A58932FE5DAE4F1995 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6E11A4CFDE2CFDFFC9851B0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		733F11305D6E671072E56AB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		812F3C93443768E9452D25C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnjTests/Pods-findmybusnjTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91C38EEB903159C777250434 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnjUITests/Pods-findmybusnjUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99CA257B933D7AC0CF7AEA90 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnjTests/Pods-findmybusnjTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EDA6E0B21755B6BFA97AFA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnjUITests/Pods-findmybusnjUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDF670516DDFA328094941FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnj-widget/Pods-findmybusnj-widget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D41C70E51C8C70DE00495315 /* Increment Version and Build Number Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -1118,9 +1382,24 @@
 			name = "Increment Version and Build Number Script";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "sh \"update-version-build.sh\" --reflect-commits";
+		};
+		D46973531E69311800E29291 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				.swiftlint.yml,
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint lint --config \".swiftlint.yml\"\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		D491FBC21CB49B4E0099A8A4 /* Crashalytics Script */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1136,19 +1415,34 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 28e3590167174a5c61030d0cd74248fc67110b7d 10812b444aa3ac88f20a4bde9aee3a9bf2f36b5664cc0e671e49b1cf111e974a";
 		};
-		D527E84A91904ED972A5A18D /* Check Pods Manifest.lock */ = {
+		DE9254384640BD8FA8B67B79 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC50A2039CF99DAAE480A631 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-findmybusnj-common/Pods-findmybusnj-common-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1158,6 +1452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47C14461E5CD4DB00A36592 /* WidgetBannerPresenter.swift in Sources */,
 				D409DF611CC7203100324C76 /* WidgetETATableViewCell.swift in Sources */,
 				D409DF641CC725BE00324C76 /* WidgetETATableViewCellPresenter.swift in Sources */,
 				D4138B411CB5FDD800D61C9A /* TodayViewController.swift in Sources */,
@@ -1169,7 +1464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D407670E1CC6B26000B2D9FF /* ETAPresenter.swift in Sources */,
-				D4188F621CC7BCCC0048E9AA /* ColorPallette.swift in Sources */,
+				D4188F621CC7BCCC0048E9AA /* ColorPalette.swift in Sources */,
 				D4876CCF1CC675C9004D92D5 /* ServerManager.swift in Sources */,
 				D4876CE71CC678D7004D92D5 /* JSONSanitizer.swift in Sources */,
 			);
@@ -1252,6 +1547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D6AB861BBA2FE200CE241D /* ETABusTimeTableControllerUITests.swift in Sources */,
+				D4649A9C1E6DA87800BFFE5B /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1330,50 +1626,64 @@
 /* Begin XCBuildConfiguration section */
 		D4138B491CB5FDD800D61C9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 494948168CA6953E3BE9C7F2 /* Pods-findmybusnj-widget.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = "findmybusnj-widget/Find My Bus NJ Today Widget.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Aghassi (23254ZGZ6N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Aghassi (23254ZGZ6N)";
+				DEVELOPMENT_TEAM = 23254ZGZ6N;
 				INFOPLIST_FILE = "findmybusnj-widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
 				PRODUCT_NAME = "Find My Bus NJ";
+				PROVISIONING_PROFILE = "fe85e3e2-102e-42f2-8e63-f408d0210f0d";
+				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget AppStore 1492229432";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		D4138B4A1CB5FDD800D61C9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6370C2941EE6EF91310B79D /* Pods-findmybusnj-widget.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_ENTITLEMENTS = "findmybusnj-widget/Find My Bus NJ Today Widget.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Aghassi (23254ZGZ6N)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Aghassi (23254ZGZ6N)";
+				DEVELOPMENT_TEAM = 23254ZGZ6N;
 				INFOPLIST_FILE = "findmybusnj-widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
 				PRODUCT_NAME = "Find My Bus NJ";
+				PROVISIONING_PROFILE = "fe85e3e2-102e-42f2-8e63-f408d0210f0d";
+				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget AppStore 1492229432";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		D4876CCA1CC67555004D92D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F50856554864107243BCD2F /* Pods-findmybusnj-common.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 3;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "findmybusnj-common/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1383,6 +1693,7 @@
 				PRODUCT_NAME = findmybusnj_common;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1391,16 +1702,18 @@
 		};
 		D4876CCB1CC67555004D92D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6E63D87D5D7B348AD8090C6 /* Pods-findmybusnj-common.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 3;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "findmybusnj-common/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1409,6 +1722,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-common";
 				PRODUCT_NAME = findmybusnj_common;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1417,6 +1731,7 @@
 		};
 		D4876CE01CC67644004D92D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BED850D1D164CBE8CF2A5838 /* Pods-findmybusnj-commonTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1425,12 +1740,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-commonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Debug;
 		};
 		D4876CE11CC67644004D92D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63EB5E4F1A4B3A1ECB829964 /* Pods-findmybusnj-commonTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1439,6 +1756,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-commonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Release;
@@ -1449,11 +1767,11 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 3;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AnimationsFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1463,6 +1781,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1475,11 +1794,11 @@
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 3;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AnimationsFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1488,6 +1807,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1502,6 +1822,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Debug;
@@ -1514,6 +1835,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Release;
@@ -1521,6 +1843,7 @@
 		D4D6AB881BBA2FE200CE241D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1531,14 +1854,15 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1567,6 +1891,7 @@
 		D4D6AB891BBA2FE200CE241D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1577,14 +1902,15 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1599,81 +1925,98 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_SWIFT_FLAGS = "-DRELEASE";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		D4D6AB8B1BBA2FE200CE241D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBA0C667D36BED98A58D48E9 /* Pods-findmybusnj.debug.xcconfig */;
+			baseConfigurationReference = 8BF695EA6C5237B5A87B6ACE /* Pods-findmybusnj.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = findmybusnj/findmybusnj.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = 23254ZGZ6N;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = findmybusnj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aghassi.findmybusnj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "68ab767c-7b54-4039-8732-8f147d05fc2b";
+				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj AppStore 1492229423";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		D4D6AB8C1BBA2FE200CE241D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CBCBE02954639DF7E50BFBA /* Pods-findmybusnj.release.xcconfig */;
+			baseConfigurationReference = A95A74ADAD34766035CC8D1F /* Pods-findmybusnj.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = findmybusnj/findmybusnj.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = 23254ZGZ6N;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = findmybusnj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aghassi.findmybusnj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "68ab767c-7b54-4039-8732-8f147d05fc2b";
+				PROVISIONING_PROFILE_SPECIFIER = "com.aghassi.findmybusnj AppStore 1492229423";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		D4D6AB8E1BBA2FE200CE241D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4A36C3E0C2091EDFB02CEFB /* Pods-findmybusnjTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = findmybusnjTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Debug;
 		};
 		D4D6AB8F1BBA2FE200CE241D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C89CB2B5A5E95C0283FFE239 /* Pods-findmybusnjTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = findmybusnjTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Release;
 		};
 		D4D6AB911BBA2FE200CE241D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF9726769C4002D1117F5981 /* Pods-findmybusnjUITests.debug.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/OHHTTPStubs",
+				);
 				INFOPLIST_FILE = findmybusnjUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = findmybusnj;
 				USES_XCTRUNNER = YES;
 			};
@@ -1681,11 +2024,17 @@
 		};
 		D4D6AB921BBA2FE200CE241D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 823A56C01A03209999FBDC6B /* Pods-findmybusnjUITests.release.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/OHHTTPStubs",
+				);
 				INFOPLIST_FILE = findmybusnjUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = findmybusnj;
 				USES_XCTRUNNER = YES;
 			};

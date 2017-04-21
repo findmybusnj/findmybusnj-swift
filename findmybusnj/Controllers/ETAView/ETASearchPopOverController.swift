@@ -11,114 +11,118 @@ import UIKit
 import CoreData
 
 class ETASearchPopOverController: UIViewController {
-  private let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-  private var managedObjectContext: NSManagedObjectContext!
-  private var coreDataManager: CoreDataManager!
-  private var selectedFavorite = (stop: "",route: "")
-  
+  fileprivate let appDelegate = UIApplication.shared.delegate as! AppDelegate
+  fileprivate var managedObjectContext: NSManagedObjectContext!
+  fileprivate var coreDataManager: CoreDataManager!
+  fileprivate var selectedFavorite = (stop: "", route: "")
+
   // MARK: Formatters
-  private let alertPresenter = ETAAlertPresenter()
+  fileprivate let alertPresenter = ETAAlertPresenter()
 
   // MARK: DataSource
-  private var favorites = [NSManagedObject]()
-  
+  fileprivate var favorites = [NSManagedObject]()
+
   // MARK: Outlets
   @IBOutlet weak var stopNumberTextField: UITextField!
   @IBOutlet weak var filterRouteNumberTextField: UITextField!
   @IBOutlet weak var favoritesTableView: UITableView!
-  
+
   // MARK: View Controller Life Cycle
-  override func viewWillAppear(animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
+
     managedObjectContext = appDelegate.managedObjectContext
     coreDataManager = ETACoreDataManager(managedObjectContext: managedObjectContext)
-    let fetchRequest = NSFetchRequest(entityName: "Favorite")
-    
+    let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorite")
+
     favorites = coreDataManager.attemptFetch(fetchRequest)
     favorites = coreDataManager.sortDescending(favorites)
   }
-  
+
   // MARK: Segues
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "loadSelectedFavorite" {
-      let destinationViewController = segue.destinationViewController as! ETABusTimeTableController
+      let destinationViewController = segue.destination as! ETABusTimeTableController
       destinationViewController.selectedFavorite = self.selectedFavorite
     }
   }
 
   // Source of idea: http://jamesleist.com/ios-swift-tutorial-stop-segue-show-alert-text-box-empty/
   /**
-  Overrides the `shouldPerformSegueWithIdentifier` method. Called before a segue is performed. Checks that if the segue identifier is `search`, and then checks whether or not the `stopNumberInput` is empty or not.
+  Overrides the `shouldPerformSegueWithIdentifier` method. 
+   Called before a segue is performed. 
+   Checks that if the segue identifier is `search`, and then checks whether or not
+   the `stopNumberInput` is empty or not.
   
   - Parameters:
     - identifier: String identifier of the current segue trigger
     - sender: The object initiating the segue
   - return: A boolean that defines whether or not the segue should transition
   */
-  override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-    if (identifier == "search") {
-      
+  override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    if identifier == "search" {
+
       // Check to see if user entered a stop number
       guard let stop = stopNumberTextField.text else {
         showEmptyWarning()
         return false
       }
-      if (stop.isEmpty) {
+      if stop.isEmpty {
         showEmptyWarning()
         return false
       }
     }
-    
+
     return true
   }
-  
+
   /**
    Creates a UIAlertController to notify the user they have not entered the proper stop information
    */
-  private func showEmptyWarning() {
-    let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.Empty_Search)
-    presentViewController(warning, animated: true, completion: nil)
+  fileprivate func showEmptyWarning() {
+    let warning = alertPresenter.presentAlertWarning(ETAAlertEnum.emptySearch)
+    present(warning, animated: true, completion: nil)
   }
 }
 
 // MARK: UITextFieldDelegate
 extension ETASearchPopOverController: UITextFieldDelegate {
-  
+
   // Source of idea: http://stackoverflow.com/questions/433337/set-the-maximum-character-length-of-a-uitextfield?rq=1
   /**
-  Regulates the `textField` to a certain range. `1` is the `filterBusNumberInput` field tag, and `0` is the `stopNumberInput` tag.
+  Regulates the `textField` to a certain range. `1` is the `filterBusNumberInput` field tag,
+   and `0` is the `stopNumberInput` tag.
   */
-  func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+  func textField(_ textField: UITextField,
+                 shouldChangeCharactersIn range: NSRange,
+                 replacementString string: String) -> Bool {
     // If the current character count is nil, we set it to zero using nil coelescing
     guard let textFieldText = textField.text else {
       return false
     }
-    
-    let currentCharCount = textFieldText.characters.count ?? 0;
-    if (range.length + range.location > currentCharCount) {
+
+    let currentCharCount = textFieldText.characters.count
+    if range.length + range.location > currentCharCount {
       return false
     }
     let newLength = currentCharCount + string.characters.count - range.length
-    
-    if (textField.tag == 0) { // Stop textField
+
+    if textField.tag == 0 { // Stop textField
       return newLength <= 5
-    }
-    else if (textField.tag == 1) { // Route textField
+    } else if textField.tag == 1 { // Route textField
       return newLength <= 3
-    }
-    else {
+    } else {
       return false
     }
   }
-  
+
   /**
    On hitting return, the current `textField` will resign the keyboard
    
    - parameter textField: The current `textField` that has triggered a return
    - return A boolean value if the `textField` should return or not.
    */
-  func textFieldShouldReturn(textField: UITextField) -> Bool {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     return true
   }
@@ -126,18 +130,17 @@ extension ETASearchPopOverController: UITextFieldDelegate {
 
 // MARK: UITableViewDelegate
 extension ETASearchPopOverController: UITableViewDelegate {
-  func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-    return true
-  }
-  
-  func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?  {
-    let index = indexPath.row
-    
-    let deleteAction = UITableViewRowAction(style: .Default, title: "Delete", handler: { (action , indexPath) -> Void in
+  func tableView(_ tableView: UITableView,
+                 editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    let index = (indexPath as NSIndexPath).row
+
+    let deleteAction = UITableViewRowAction(style: .default,
+                                            title: "Delete",
+                                            handler: { (_, _) -> Void in
       // Remove from table and core data
-      let favoriteToDelete = self.favorites.removeAtIndex(index)
-      self.managedObjectContext.deleteObject(favoriteToDelete)
-    
+      let favoriteToDelete = self.favorites.remove(at: index)
+      self.managedObjectContext.delete(favoriteToDelete)
+
       do {
         try self.managedObjectContext.save()
         self.favoritesTableView.reloadData()
@@ -145,68 +148,73 @@ extension ETASearchPopOverController: UITableViewDelegate {
         print("Could not save: \(error), \(error.userInfo)")
       }
     })
-    
-    deleteAction.backgroundColor = UIColor.redColor()
+
+    deleteAction.backgroundColor = UIColor.red
     return [deleteAction]
   }
 }
 
 // MARK: UITableViewDataSource
 extension ETASearchPopOverController: UITableViewDataSource {
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  @objc(tableView:canEditRowAtIndexPath:) func tableView(_ tableView: UITableView,
+                                                         canEditRowAt indexPath: IndexPath) -> Bool {
+    return true
+  }
+
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return favorites.count
   }
-  
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("FavCell")!
-    let index = indexPath.row
-    
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "FavCell")!
+    let index = (indexPath as NSIndexPath).row
+
     let favItem = favorites[index] as! Favorite
-    
+
     guard let stop = favItem.stop else {
       cell.textLabel?.text = " "
       return cell
     }
     cell.textLabel?.text = "Stop: \(stop)"
-    
+
     guard let route = favItem.route else {
       cell.detailTextLabel?.text = ""
       return cell
     }
     if !route.isEmpty {
       cell.detailTextLabel?.text = "Route: \(route)"
-    }
-    else {
+    } else {
       cell.detailTextLabel?.text = ""
     }
-    
+
     return cell
   }
-  
-  func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-    let index = indexPath.row
+
+  @objc(tableView:willSelectRowAtIndexPath:) func tableView(_ tableView: UITableView,
+                                                            willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    let index = (indexPath as NSIndexPath).row
     let selectedItem = favorites[index] as! Favorite
-    
+
     guard let stop = selectedItem.stop else {
       return indexPath
     }
-    
+
     guard let route = selectedItem.route else {
       return indexPath
     }
-    
+
     guard let frequency = selectedItem.frequency else {
       return indexPath
     }
-    
+
     // If nothing else, these should always be ""
     selectedFavorite.stop = stop
     selectedFavorite.route = route
-    
+
     // Attempt to save the new selection to Core Data
-    selectedItem.frequency! = NSNumber(int: frequency.integerValue + 1)
+    selectedItem.frequency! = NSNumber(value: frequency.intValue + 1 as Int32)
     coreDataManager.attemptToSave(selectedItem)
-    
+
     return indexPath
   }
 }

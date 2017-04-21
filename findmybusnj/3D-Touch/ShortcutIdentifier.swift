@@ -23,7 +23,7 @@ import Foundation
 enum ShortcutIdentifier: String {
   case openSearch
   case findFavorite
-  
+
   /**
    Initializes the identifier
    
@@ -32,7 +32,7 @@ enum ShortcutIdentifier: String {
    - returns: The identifier or `nil`
    */
   init?(fullIdentifier: String) {
-    guard let shortIdentifier = fullIdentifier.componentsSeparatedByString(".").last else {
+    guard let shortIdentifier = fullIdentifier.components(separatedBy: ".").last else {
       return nil
     }
     self.init(rawValue: shortIdentifier)

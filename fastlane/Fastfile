@@ -1,0 +1,132 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.18.3"
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    cocoapods(use_bundle_exec: false)
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    swiftlint(output_file: "swiftlint.result.json", config_file: ".swiftlint.yml")
+    scan(scheme: "findmybusnj-build-and-test")
+  end
+
+  desc "Creating a code signing certificate and provisioning profile"
+  lane :provision do
+    # 3
+    produce(
+      app_name: 'Find My Bus NJ 2',
+      language: 'English',
+      app_version: '2.0',
+      sku: 'Find-My-Bus-NJ-2'
+    )
+    # Widget provision
+    produce(
+      app_identifier: 'com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget',
+      language: 'English',
+      skip_itc: 'true',
+      app_version: '2.0'
+    )
+    # 4
+    cert
+    # 5
+    sigh(force: true)
+    sigh(
+      force: true,
+      app_identifier: 'com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget'
+    )
+  end
+
+  desc "Create IPA"
+  lane :build do
+    gym(scheme: "findmybusnj-appstore", include_bitcode: true)
+  end
+
+
+  desc "Takes screenshots and frames them"
+  lane :screenshots do
+    snapshot
+    frameit
+  end
+
+  desc "Submit a new Beta Build to Apple TestFlight"
+  desc "This will also make sure the profile is up to date"
+  lane :beta do
+    # match(type: "appstore") # more information: https://codesigning.guide
+    # test
+    increment_version_number(
+      bump_type: "patch" # Automatically increment minor version number
+    )
+    gym(scheme: "findmybusnj-testflight") # Build your app - more options available
+    testflight(
+      skip_waiting_for_build_processing: true
+    )
+    notification(
+      title: "TestFlight complete!",
+      message: "Application successfully uploaded to iTunes Connect"
+    )
+
+    # sh "your_script.sh"
+    # You can also use other beta testing services here (run `fastlane actions`)
+  end
+
+  desc "Deploy a new version to the App Store"
+  lane :release do
+    # match(type: "appstore")
+    test
+    screenshots
+    provision
+    build
+    appstore(force: true, submit_for_review: false)
+    notification(
+      title: "Release complete!",
+      message: "Application successfully uploaded to iTunes Connect"
+    )
+    # frameit
+  end
+
+  # You can define as many lanes as you want
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    notification(
+      title: "Fastlane Encountered an Error",
+      message: "Please see terminal for details",
+      activate: "com.googlecode.iterm2"
+    )
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end
+
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used
+# No personal data is recorded. Learn more at https://github.com/fastlane/enhancer

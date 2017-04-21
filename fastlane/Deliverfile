@@ -1,0 +1,35 @@
+###################### More Options ######################
+# If you want to have even more control, check out the documentation
+# https://github.com/fastlane/fastlane/blob/master/deliver/Deliverfile.md
+
+
+###################### Automatically generated ######################
+# Feel free to remove the following line if you use fastlane (which you should)
+
+# 1
+price_tier 1
+# 2
+app_review_information(
+  first_name: "David",
+  last_name: "Aghassi",
+  email_address: "david.aghassi@icloud.com",
+  demo_user: "N/A",
+  demo_password: "N/A",
+  notes: "No demo account needed"
+)
+# 3
+submission_information({
+    export_compliance_encryption_updated: false,
+    export_compliance_uses_encryption: false,
+    content_rights_contains_third_party_content: false,
+    add_id_info_uses_idfa: false
+})
+# 4
+automatic_release false
+# 5
+app_icon './fastlane/metadata/app_icon.png'
+# 6
+app_rating_config_path "./fastlane/metadata/itunes_rating_config.json"
+
+app_identifier "com.aghassi.findmybusnj" # The bundle identifier of your app
+username "david.aghassi@icloud.com" # your Apple ID user

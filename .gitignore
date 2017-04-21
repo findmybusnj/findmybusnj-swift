@@ -32,3 +32,15 @@ playground.xcworkspace
 
 ## Snapshots
 screenshots/
+
+## Fastlane
+fastlane/test_output
+*.cer
+*.p12
+*.certSigningRequest
+*.mobileprovision
+*.app.dSYM.zip
+*.ipa
+
+## Swiftlint
+swiftlint.result.json

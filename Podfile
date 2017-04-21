@@ -1,21 +1,55 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '8.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
 use_frameworks!
 
 target 'findmybusnj' do
 
-pod 'SwiftyJSON', '~> 2.3.1'
-pod 'Alamofire', '~> 3.3.0'
-pod 'PKHUD', '~> 3.0.0'
-pod 'Fabric'
-pod 'Crashlytics'
+  pod 'SwiftyJSON'
+  pod 'Alamofire', '~> 4.0'
+  pod 'PKHUD', :git => 'https://github.com/toyship/PKHUD'
+  pod 'Fabric'
+  pod 'Crashlytics'
+
+end
+
+target 'findmybusnj-common' do
+
+  pod 'SwiftyJSON'
+  pod 'Alamofire', '~> 4.0'
+  pod 'OHHTTPStubs' # Default subspecs, including support for NSURLSession & JSON etc
+  pod 'OHHTTPStubs/Swift' # Adds the Swiftier API wrapper too
+
+end
+
+target 'findmybusnj-widget' do
+
+  pod 'SwiftyJSON'
 
 end
 
 target 'findmybusnjTests' do
 
+  pod 'SwiftyJSON'
+
 end
 
 target 'findmybusnjUITests' do
 
+  pod 'SwiftyJSON'
+
+end
+
+target 'findmybusnj-commonTests' do
+
+  pod 'SwiftyJSON'
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
 end

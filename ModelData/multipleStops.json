@@ -1,0 +1,38 @@
+ [
+  {
+  "pt": "0",
+  "pu": "APPROACHING",
+  "fd": "165T TURNPIKE EXPRESS WESTWOOD",
+  "v": "8291",
+  "rn": "165",
+  "rd": "165",
+  "zone": {}
+  },
+  {
+  "pt": "7",
+  "pu": "MINUTES",
+  "fd": "165T TURNPIKE EXPRESS WESTWOOD",
+  "v": "8291",
+  "rn": "165",
+  "rd": "165",
+  "zone": {}
+  },
+  {
+  "pt": "14",
+  "pu": "MINUTES",
+  "fd": "165T TURNPIKE EXPRESS WESTWOOD",
+  "v": "8291",
+  "rn": "165",
+  "rd": "165",
+  "zone": {}
+  },
+  {
+  "pt": "21",
+  "pu": "MINUTES",
+  "fd": "165T TURNPIKE EXPRESS WESTWOOD",
+  "v": "8291",
+  "rn": "165",
+  "rd": "165",
+  "zone": {}
+  }
+  ]

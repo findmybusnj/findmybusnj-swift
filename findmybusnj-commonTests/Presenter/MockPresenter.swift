@@ -14,14 +14,14 @@ import SwiftyJSON
 
 class MockPresenter: ETAPresenter {
   var sanitizer = JSONSanitizer()
-  
-  func formatCellForPresentation(cell: UITableViewCell, json: JSON) {
-    
+
+  func formatCellForPresentation(_ cell: UITableViewCell, json: JSON) {
+
   }
-  func assignArrivalTimeForJson(cell: UITableViewCell, json: JSON) {
-    
+  func assignArrivalTimeForJson(_ cell: UITableViewCell, json: JSON) {
+
   }
-  func assignBusAndRouteTextForJson(cell: UITableViewCell, json: JSON) {
-    
+  func assignBusAndRouteTextForJson(_ cell: UITableViewCell, json: JSON) {
+
   }
 }

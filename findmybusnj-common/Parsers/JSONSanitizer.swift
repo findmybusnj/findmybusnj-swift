@@ -11,8 +11,8 @@ import UIKit
 // Dependancies
 import SwiftyJSON
 
-public class JSONSanitizer: NSObject {
-  
+open class JSONSanitizer: NSObject {
+
   /**
    Returns the arrival time of the bus as a `String`
    
@@ -20,10 +20,10 @@ public class JSONSanitizer: NSObject {
    
    - returns: Arrival time as a `String`
    */
-  public func getSanatizedArrivalTimeAsString(json: JSON) -> String {
+  open func getSanatizedArrivalTimeAsString(_ json: JSON) -> String {
     return json["pu"].description
   }
-  
+
   /**
    Returns arrival time of a bus as an `Int`
    
@@ -31,15 +31,14 @@ public class JSONSanitizer: NSObject {
    
    - returns: Arrival time as an `Int`, '-1' if there isn't one
    */
-  public func getSanitizedArrivaleTimeAsInt(json: JSON) -> Int {
+  open func getSanitizedArrivaleTimeAsInt(_ json: JSON) -> Int {
     if let time = Int(json["pt"].description) {
       return time
-    }
-    else {
+    } else {
       return -1
     }
   }
-  
+
   /**
    Returns the route number for the given json
    
@@ -47,10 +46,10 @@ public class JSONSanitizer: NSObject {
    
    - returns: String with the three digit number for the route (e.g. `165`)
    */
-  public func getSanitizedRouteNumber(json: JSON) -> String {
+  open func getSanitizedRouteNumber(_ json: JSON) -> String {
     return json["rd"].description
   }
-  
+
   /**
    Sanitizes route data from JSON passed in
    
@@ -58,10 +57,10 @@ public class JSONSanitizer: NSObject {
    
    - returns: The route sanitized to remove `&amp;`, as well as has each word capitalized at the start.
    */
-  public func getSanitizedRouteDescription(json: JSON) -> String {
+  open func getSanitizedRouteDescription(_ json: JSON) -> String {
     var route = json["fd"].description
-    route = route.stringByReplacingOccurrencesOfString("&amp;", withString: "&")
-    route = route.lowercaseString.capitalizedString
+    route = route.replacingOccurrences(of: "&amp;", with: "&")
+    route = route.lowercased().capitalized
     return route
   }
 }

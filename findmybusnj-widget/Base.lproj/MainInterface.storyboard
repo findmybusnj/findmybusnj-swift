@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -14,76 +18,68 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ7-fB-2ed">
-                                <rect key="frame" x="20" y="8" width="36" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-ff-ozY">
-                                <rect key="frame" x="20" y="41" width="280" height="238"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-ff-ozY">
+                                <rect key="frame" x="16" y="80" width="288" height="375"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="arrivalCell" rowHeight="50" id="YKO-BV-SJX" customClass="WidgetETATableViewCell" customModule="Find_My_Bus_NJ" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="280" height="50"/>
+                                        <rect key="frame" x="0.0" y="28" width="288" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YKO-BV-SJX" id="Qdq-IH-vCP">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEL-5T-P4G">
-                                                    <rect key="frame" x="0.0" y="0.0" width="272" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ode-Rr-Qmm">
-                                                            <rect key="frame" x="8" y="8" width="183" height="18"/>
+                                                            <rect key="frame" x="3" y="8" width="183" height="18"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="183" id="9tu-P8-l2x"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zay-9W-Dyk" userLabel="ETAView">
-                                                            <rect key="frame" x="199" y="0.0" width="73" height="49"/>
+                                                            <rect key="frame" x="210" y="5" width="70" height="37"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dp-ol-aUe">
-                                                                    <rect key="frame" x="0.0" y="2" width="73" height="46"/>
-                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <rect key="frame" x="20" y="9" width="31" height="20"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="9dp-ol-aUe" secondAttribute="trailing" id="45e-Tv-dDh"/>
-                                                                <constraint firstItem="9dp-ol-aUe" firstAttribute="centerY" secondItem="zay-9W-Dyk" secondAttribute="centerY" id="94r-Za-q0h"/>
-                                                                <constraint firstAttribute="bottom" secondItem="9dp-ol-aUe" secondAttribute="bottom" constant="1" id="Cdc-zz-EXY"/>
-                                                                <constraint firstItem="9dp-ol-aUe" firstAttribute="leading" secondItem="zay-9W-Dyk" secondAttribute="leading" id="Gs9-r3-lR5"/>
-                                                                <constraint firstItem="9dp-ol-aUe" firstAttribute="top" secondItem="zay-9W-Dyk" secondAttribute="top" constant="2" id="VHJ-ya-3gh"/>
+                                                                <constraint firstItem="9dp-ol-aUe" firstAttribute="centerY" secondItem="zay-9W-Dyk" secondAttribute="centerY" identifier="etaViewTimeLabelCenter" id="94r-Za-q0h"/>
+                                                                <constraint firstAttribute="width" constant="70" id="SBF-cr-qgm"/>
+                                                                <constraint firstItem="9dp-ol-aUe" firstAttribute="centerX" secondItem="zay-9W-Dyk" secondAttribute="centerX" id="pSv-CF-vjr"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.84999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="cD1-Iw-8fL">
-                                                            <rect key="frame" x="8" y="23" width="183" height="22"/>
+                                                            <rect key="frame" x="3" y="23" width="123" height="22"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="leading" secondItem="cD1-Iw-8fL" secondAttribute="trailing" constant="8" symbolic="YES" id="9cQ-me-PnZ"/>
+                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cD1-Iw-8fL" secondAttribute="trailing" constant="13" id="9cQ-me-PnZ"/>
                                                         <constraint firstItem="ode-Rr-Qmm" firstAttribute="leading" secondItem="cD1-Iw-8fL" secondAttribute="leading" id="LYk-7Q-XnV"/>
                                                         <constraint firstItem="ode-Rr-Qmm" firstAttribute="top" secondItem="DEL-5T-P4G" secondAttribute="top" constant="8" id="Zhm-Jr-GFQ"/>
                                                         <constraint firstAttribute="bottom" secondItem="cD1-Iw-8fL" secondAttribute="bottom" constant="-1" id="cg1-nI-cgT"/>
                                                         <constraint firstItem="cD1-Iw-8fL" firstAttribute="top" secondItem="DEL-5T-P4G" secondAttribute="top" constant="23" id="eMs-EO-KkH"/>
                                                         <constraint firstAttribute="trailing" secondItem="zay-9W-Dyk" secondAttribute="trailing" id="fVv-ra-fVe"/>
                                                         <constraint firstAttribute="bottom" secondItem="ode-Rr-Qmm" secondAttribute="bottom" constant="18" id="fYV-fU-GRk"/>
-                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="top" secondItem="DEL-5T-P4G" secondAttribute="top" id="kd7-JB-FLY"/>
-                                                        <constraint firstAttribute="bottom" secondItem="zay-9W-Dyk" secondAttribute="bottom" constant="-5" id="mnJ-HS-Pal"/>
-                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="leading" secondItem="ode-Rr-Qmm" secondAttribute="trailing" constant="8" symbolic="YES" id="phA-Th-YQG"/>
-                                                        <constraint firstItem="ode-Rr-Qmm" firstAttribute="leading" secondItem="DEL-5T-P4G" secondAttribute="leadingMargin" id="vEX-QX-XzP"/>
+                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="top" secondItem="DEL-5T-P4G" secondAttribute="top" constant="5" id="kd7-JB-FLY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="zay-9W-Dyk" secondAttribute="bottom" constant="2" id="mnJ-HS-Pal"/>
+                                                        <constraint firstItem="zay-9W-Dyk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ode-Rr-Qmm" secondAttribute="trailing" constant="13" id="phA-Th-YQG"/>
+                                                        <constraint firstItem="ode-Rr-Qmm" firstAttribute="leading" secondItem="DEL-5T-P4G" secondAttribute="leadingMargin" constant="-5" id="vEX-QX-XzP"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -107,23 +103,39 @@
                                     <outlet property="delegate" destination="M4Y-Lb-cyx" id="WUQ-Dn-B9R"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZ7-fB-2ed">
+                                <rect key="frame" x="16" y="473" width="32" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next bus status unknown." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRR-ti-6OT">
+                                <rect key="frame" x="16" y="5" width="288" height="40"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZe-Jm-nxb">
-                                <rect key="frame" x="255" y="8" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="264" y="473" width="40" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="GQh-ff-ozY" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="6KI-PF-lES"/>
-                            <constraint firstItem="GZ7-fB-2ed" firstAttribute="baseline" secondItem="pZe-Jm-nxb" secondAttribute="baseline" id="SjD-SJ-H7E"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GQh-ff-ozY" secondAttribute="bottom" constant="41" id="V16-0d-88p"/>
-                            <constraint firstItem="pZe-Jm-nxb" firstAttribute="trailing" secondItem="GQh-ff-ozY" secondAttribute="trailing" id="bls-yY-bCy"/>
-                            <constraint firstItem="GQh-ff-ozY" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="cUC-sG-NMX"/>
-                            <constraint firstItem="GQh-ff-ozY" firstAttribute="leading" secondItem="GZ7-fB-2ed" secondAttribute="leading" id="hU9-gQ-PMp"/>
-                            <constraint firstItem="GZ7-fB-2ed" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" symbolic="YES" id="o69-Sy-NwQ"/>
-                            <constraint firstItem="GQh-ff-ozY" firstAttribute="top" secondItem="GZ7-fB-2ed" secondAttribute="bottom" constant="12" id="tbq-dI-pYV"/>
-                            <constraint firstItem="GZ7-fB-2ed" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" constant="4" id="yws-jQ-I28"/>
+                            <constraint firstItem="GQh-ff-ozY" firstAttribute="top" secondItem="yRR-ti-6OT" secondAttribute="bottom" constant="35" id="9kg-yz-vA0"/>
+                            <constraint firstItem="GQh-ff-ozY" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="80" id="Bjz-JC-EHj"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="GQh-ff-ozY" secondAttribute="leading" identifier="etaTableViewLeadingEqualsLeading" id="EJE-ny-7bS"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yRR-ti-6OT" secondAttribute="leading" id="MCx-G4-MOA"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="pZe-Jm-nxb" secondAttribute="bottom" constant="9" id="PAb-2F-NEn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yRR-ti-6OT" secondAttribute="trailing" id="PzX-xd-t2t"/>
+                            <constraint firstItem="GZ7-fB-2ed" firstAttribute="baseline" secondItem="pZe-Jm-nxb" secondAttribute="baseline" identifier="stopBaselineEqualsRouteBaseline" id="SjD-SJ-H7E"/>
+                            <constraint firstItem="yRR-ti-6OT" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="5" identifier="nextArrivingLabelTopEqualsTop" id="UQn-9A-nET"/>
+                            <constraint firstItem="pZe-Jm-nxb" firstAttribute="trailing" secondItem="GQh-ff-ozY" secondAttribute="trailing" identifier="routeLabelTrailingEqualsEtaTableTrailing" id="bls-yY-bCy"/>
+                            <constraint firstItem="GQh-ff-ozY" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" identifier="etaTableCenterX" id="cUC-sG-NMX"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GQh-ff-ozY" secondAttribute="bottom" constant="45" id="ddb-mx-dIc"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GZ7-fB-2ed" secondAttribute="bottom" constant="9" id="x7B-LZ-IXp"/>
+                            <constraint firstItem="GZ7-fB-2ed" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="yws-jQ-I28"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -131,9 +143,10 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="320"/>
+                    <size key="freeformSize" width="320" height="500"/>
                     <connections>
                         <outlet property="etaTableView" destination="GQh-ff-ozY" id="gqj-vv-Shf"/>
+                        <outlet property="nextArrivingLabel" destination="yRR-ti-6OT" id="RxK-ND-gbR"/>
                         <outlet property="routeLabel" destination="pZe-Jm-nxb" id="QrS-9T-7Ko"/>
                         <outlet property="stopLabel" destination="GZ7-fB-2ed" id="j3d-wX-mjs"/>
                     </connections>
@@ -143,4 +156,9 @@
             <point key="canvasLocation" x="516" y="285"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>

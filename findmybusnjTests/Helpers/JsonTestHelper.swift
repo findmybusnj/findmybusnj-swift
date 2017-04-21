@@ -19,20 +19,19 @@ extension XCTestCase {
    
    - returns: `JSON` object if the file is found, `nil` otherwise.
    */
-  func loadJSONFromFile(fileName: String) -> JSON {
-    var jsonData: NSData = NSData()
-    
-    let path = NSBundle(forClass: self.dynamicType).pathForResource(fileName, ofType: "json")
+  func loadJSONFromFile(_ fileName: String) -> JSON {
+    var jsonData: Data = Data()
+
+    let path = Bundle(for: type(of: self)).path(forResource: fileName, ofType: "json")
     XCTAssertNotNil(path, "Failed to get path to json file. Double check that the file is added to the test bundle.")
-    
+
     do {
       // At this point we know it is safe to unwrap the path because we asserted prior
-      try jsonData = NSData(contentsOfFile: path!, options: .DataReadingMappedIfSafe)
-    }
-    catch let error as NSError {
+      try jsonData = NSData(contentsOfFile: path!, options: .mappedIfSafe) as Data
+    } catch let error as NSError {
       print(error.localizedDescription)
     }
-    
+
     let responseJSON = JSON(data: jsonData)
     return responseJSON
   }

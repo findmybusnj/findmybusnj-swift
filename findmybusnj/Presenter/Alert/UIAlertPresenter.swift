@@ -10,9 +10,9 @@ import UIKit
 
 // Base enumeration type that alerts should extend from
 protocol AlertEnum {
-  
+
 }
 
 protocol UIAlertPresenter {
-  func presentAlertWarning(type: AlertEnum) -> UIAlertController
+  func presentAlertWarning(_ type: AlertEnum) -> UIAlertController
 }

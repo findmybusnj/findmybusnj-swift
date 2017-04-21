@@ -10,20 +10,36 @@ import UIKit
 import MapKit
 
 extension CLAuthorizationStatus: AlertEnum {
-  
+
 }
 
 struct MapAlertPresenter: UIAlertPresenter {
-  
-  func presentAlertWarning(type: AlertEnum) -> UIAlertController {
+
+  func presentAlertWarning(_ type: AlertEnum) -> UIAlertController {
     switch type {
-    case CLAuthorizationStatus.Denied, CLAuthorizationStatus.Restricted, CLAuthorizationStatus.NotDetermined:
-      let alertController = UIAlertController.init(title: "Please enable location service", message: "To see near by bus stops, location services needs to be enabled. Please go to Settings -> Privacy -> Location Services and enable it for this app.", preferredStyle: .Alert)
-      let done = UIAlertAction(title: "Done", style: .Default, handler: nil)
-      alertController.addAction(done)
+    case CLAuthorizationStatus.denied, CLAuthorizationStatus.restricted, CLAuthorizationStatus.notDetermined:
+      let message = "To see near by bus stops, location services needs to be enabled. Please enable it for this app."
+      let alertController = UIAlertController.init(title: "Please enable location service",
+                                                   message: message,
+                                                   preferredStyle: .alert)
+      let settings = UIAlertAction(title: "Settings",
+                                   style: .default) { (_) -> Void in
+                                    guard let settingsURL = URL(string:"prefs:root=LOCATION_SERVICES") else {
+                                      return
+                                    }
+
+                                    if UIApplication.shared.canOpenURL(settingsURL) {
+                                      if #available(iOS 10.0, *) {
+                                        UIApplication.shared.open(settingsURL)
+                                      } else {
+                                        // Fallback on earlier versions
+                                      }
+                                    }
+      }
+      alertController.addAction(settings)
       return alertController
     default:
-      return UIAlertController(title: "", message: "", preferredStyle: .Alert)
+      return UIAlertController(title: "", message: "", preferredStyle: .alert)
     }
   }
 }

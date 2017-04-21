@@ -12,64 +12,71 @@ import UIKit
 import SwiftyJSON
 import findmybusnj_common
 
-class WidgetETATableViewCellPresenter: ETAPresenter {
+class WidgetTodayViewCellPresenter: ETAPresenter {
   var sanitizer = JSONSanitizer()
-  let colorPallette = ColorPallette()
-  
-  func formatCellForPresentation(cell: UITableViewCell, json: JSON) {
+  let colorPallette = ColorPalette()
+
+  func formatCellForPresentation(_ cell: UITableViewCell, json: JSON) {
     assignArrivalTimeForJson(cell, json: json)
     assignBusAndRouteTextForJson(cell, json: json)
   }
-  
-  func assignArrivalTimeForJson(cell: UITableViewCell, json: JSON) {
+
+  /**
+    Asssigns the arrival time to the given table view cell for the json provided.
+    If the time is not a number, we assign it Arriving/Delayed/No Current Prediction
+ 
+    - TODO: Refactor this method to move similar logic to `ETAPresenter` 
+   so logic isn't duplicated from `ETACardPresenter`
+ 
+    - Parameters:
+    - card:   table view cell being edited
+    - json:   The json at the current index
+  */
+  func assignArrivalTimeForJson(_ cell: UITableViewCell, json: JSON) {
     guard let currentCell = cell as? WidgetETATableViewCell else {
       return
     }
-    currentCell.timeLabel.textColor = UIColor.whiteColor()
+    currentCell.timeLabel.textColor = UIColor.white
     currentCell.timeLabel.adjustsFontSizeToFitWidth = true
-    
-    let arrivalString = sanitizer.getSanatizedArrivalTimeAsString(json)
-    let arrivalTime = sanitizer.getSanitizedArrivaleTimeAsInt(json)
-    
-    if arrivalTime != -1 {
-      if arrivalTime ==  NumericArrivals.ARRIVED.rawValue {
-        currentCell.timeLabel.text = "Arrive"
-        currentCell.etaView.backgroundColor = colorPallette.powderBlue()
-      }
-      else {
-        currentCell.timeLabel.text = arrivalTime.description + " min."
-        currentCell.etaView.backgroundColor = backgroundColorForTime(arrivalTime)
-      }
-    }
-    else {
-      #if DEBUG
-        print(arrivalString)
-        print(json)
-      #endif
-      
-      switch arrivalString {
-      case NonNumericaArrivals.APPROACHING.rawValue:
-        currentCell.timeLabel.text = "Arrive"
-        currentCell.etaView.backgroundColor = colorPallette.powderBlue()
-      case NonNumericaArrivals.DELAYED.rawValue:
-        currentCell.timeLabel.text = "Delay"
-        currentCell.etaView.backgroundColor = colorPallette.lollipopRed()
-      default:
-        currentCell.timeLabel.text = "0"
-        currentCell.timeLabel.textColor = UIColor.blueColor()
-        currentCell.etaView.backgroundColor = UIColor.clearColor()
-      }
+
+    let arrivalCase = determineArrivalCase(json: json)
+
+    switch arrivalCase {
+    case "Arrived", "Arriving":
+      currentCell.timeLabel.text = arrivalCase
+      currentCell.etaView.backgroundColor = backgroundColorForTime(0)
+      return
+    case "Delay":
+      currentCell.timeLabel.text = "Delay"
+      currentCell.etaView.backgroundColor = backgroundColorForTime(15)
+      return
+    default:
+      let arrivalTime = sanitizer.getSanitizedArrivaleTimeAsInt(json)
+      currentCell.timeLabel.text = arrivalTime.description + " min."
+      currentCell.etaView.backgroundColor = backgroundColorForTime(arrivalTime)
+      return
     }
   }
-  
-  func assignBusAndRouteTextForJson(cell: UITableViewCell, json: JSON) {
+
+  /**
+   Exists as a legacy call to handle displaying data for iOS 9 since it requires different color schemes
+   
+   -  parameter cell: `UITableViewCell` provided to be decorated
+   -  parameter json: The json data for the current index
+   */
+  func assignBusAndRouteTextForJson(_ cell: UITableViewCell, json: JSON) {
     guard let currentCell = cell as? WidgetETATableViewCell else {
       return
     }
-    
-    currentCell.routeLabel.textColor = UIColor.whiteColor()
-    currentCell.routeDescriptionLabel.textColor = UIColor.whiteColor()
-    
+
+    if #available(iOS 10.0, *) {
+        // no-op
+    } else {
+        // for versions less than ios 10, we display white text
+        currentCell.routeLabel.textColor = UIColor.white
+        currentCell.routeDescriptionLabel.textColor = UIColor.white
+    }
+
     currentCell.routeLabel.text = sanitizer.getSanitizedRouteNumber(json)
     currentCell.routeDescriptionLabel.text = sanitizer.getSanitizedRouteDescription(json)
     currentCell.routeDescriptionLabel.adjustsFontSizeToFitWidth = true
