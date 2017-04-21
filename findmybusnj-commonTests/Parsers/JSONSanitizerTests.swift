@@ -46,7 +46,7 @@ class JSONSanitizerTests: XCTestCase {
                   "Returned value was not an Int." +
                   "Please see line \(#line) \n Expected an Int \n Actual was \(type(of: actual))")
     XCTAssertTrue(expected == actual,
-                  "Actual json is not what was expected \n Expected is \(expected) \n Actual is \(actual)")
+                  "Actual json is not what was expected \n Expected is \(String(describing: expected)) \n Actual is \(actual)")
   }
 
   func test_getSanitizedArrivaleTimeAsInt_For_Null() {

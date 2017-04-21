@@ -39,7 +39,7 @@ class ETACoreDataManagerTests: XCTestCase {
     let favorite = generateFavorite(managedObjectContext)
     lastFavorite = favorite
     let result = managerUnderTest.attemptToSave(favorite)
-    XCTAssertTrue(result, "Core Data failed to save a new favorite with stop \(favorite.stop)")
+    XCTAssertTrue(result, "Core Data failed to save a new favorite with stop \(String(describing: favorite.stop))")
   }
 
   func test_Assert_attemptToSave_For_Stop_And_Route_Returns_True() {
@@ -48,7 +48,7 @@ class ETACoreDataManagerTests: XCTestCase {
     let result = managerUnderTest.attemptToSave(favorite)
     XCTAssertTrue(result,
                   "Core Data failed to save a new favorite with stop:" +
-                  " \(favorite.stop) and route: \(favorite.route)")
+                  " \(String(describing: favorite.stop)) and route: \(String(describing: favorite.route))")
   }
 
   func test_Assert_isDuplicate_Returns_True() {
@@ -57,7 +57,7 @@ class ETACoreDataManagerTests: XCTestCase {
     let result = managerUnderTest.attemptToSave(favorite)
     XCTAssertTrue(result,
                   "Core Data failed to save a new favorite with stop:" +
-                  " \(favorite.stop) and route: \(favorite.route)")
+                  " \(String(describing: favorite.stop)) and route: \(String(describing: favorite.route))")
 
     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorite")
     let predicate = NSPredicate(format: "stop == %@ AND route == %@", favorite.stop!, favorite.route!)

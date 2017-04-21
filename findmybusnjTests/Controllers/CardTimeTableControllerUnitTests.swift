@@ -103,7 +103,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
    */
   func test_SeparatorColor_IsClear() {
     let color =  cardTableViewControllerUnderTest.tableView.separatorColor
-    XCTAssert(color == UIColor.clear, "Color was not clear. Value was \(color)")
+    XCTAssert(color == UIColor.clear, "Color was not clear. Value was \(String(describing: color))")
   }
 
   /**
@@ -148,7 +148,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     XCTAssertNotNil(tableViewBackgroundView, "tableViewBackgroundView should not be nil")
     XCTAssertTrue(tableViewBackgroundView!.text == message,
                   "background.text didn't match intended message." +
-                  " The actual text was: \(tableViewBackgroundView!.text)")
+                  " The actual text was: \(String(describing: tableViewBackgroundView!.text))")
   }
 
   /**
@@ -252,7 +252,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
 
       XCTAssertNil(tableViewBackgroundView,
                    "Table view backgroundView should be nil when there are items backing the table." +
-                  " The actual value was \(tableViewBackgroundView)")
+                  " The actual value was \(String(describing: tableViewBackgroundView))")
     } else {
       XCTFail()
     }

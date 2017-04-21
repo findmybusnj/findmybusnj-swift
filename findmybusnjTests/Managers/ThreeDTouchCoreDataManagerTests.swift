@@ -25,7 +25,6 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
   override func tearDown() {
     super.tearDown()
 
-    managedObjectContext.deletedObjects
     do {
       try managedObjectContext.save()
     } catch {
@@ -60,7 +59,8 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
       let favorites = try managedObjectContext.fetch(fetch) as! [NSManagedObject]
       managerUnderTest.updateShortcutItemsWithFavorites(favorites)
       let shortcutItems = UIApplication.shared.shortcutItems
-      XCTAssertTrue(shortcutItems?.count == 0, "No shortcut items should exist. There were: \(shortcutItems?.count)")
+      XCTAssertTrue(shortcutItems?.count == 0,
+                    "No shortcut items should exist. There were: \(String(describing: shortcutItems?.count))")
     } catch {
       fatalError("Unable to fetch favorites: \(error)")
     }
@@ -82,7 +82,8 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
 
       managerUnderTest.updateShortcutItemsWithFavorites(favorites)
       let shortcutItems = UIApplication.shared.shortcutItems
-      XCTAssertTrue(shortcutItems?.count == 1, "There should be one shorcut items, there were: \(shortcutItems?.count)")
+      XCTAssertTrue(shortcutItems?.count == 1,
+                    "There should be one shorcut items, there were: \(String(describing: shortcutItems?.count))")
 
       let shortcut = shortcutItems?[0]
       let type = "\(Bundle.main.bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
@@ -128,7 +129,7 @@ class ThreeDTouchCoreDataManagerTests: XCTestCase {
       let type = "\(Bundle.main.bundleIdentifier!).\(ShortcutIdentifier.findFavorite.rawValue)"
       let shortcutItems = UIApplication.shared.shortcutItems
       XCTAssertTrue(shortcutItems?.count == 3,
-                    "There should be three shorcut items, there were: \(shortcutItems?.count)")
+                    "There should be three shorcut items, there were: \(String(describing: shortcutItems?.count))")
 
       for index in (0...2) {
         guard let title = shortcutItems?[index].localizedTitle else {

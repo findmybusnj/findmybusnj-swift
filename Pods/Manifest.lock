@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.3.0)
+  - Alamofire (4.4.0)
   - Crashlytics (3.8.1):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.8)
@@ -40,7 +40,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/toyship/PKHUD
 
 SPEC CHECKSUMS:
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Crashlytics: 4391d8df0b125345e9f209c5db6e7f40a6a8435d
   Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
   OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
