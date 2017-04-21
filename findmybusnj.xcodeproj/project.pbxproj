@@ -70,6 +70,8 @@
 		D4A9E84A1C94E1FB003841DF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A9E8491C94E1FB003841DF /* CoreData.framework */; };
 		D4A9E84D1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4A9E84B1C94E257003841DF /* FindMyBusCoreDataModel.xcdatamodeld */; };
 		D4C0C7BA1C57C97100D15450 /* PlacesAnnotationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */; };
+		D4CA954C1EA9ABF0003C34B3 /* keywords.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4CA954B1EA9ABF0003C34B3 /* keywords.strings */; };
+		D4CA954E1EA9AC06003C34B3 /* title.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4CA954D1EA9AC06003C34B3 /* title.strings */; };
 		D4D1AF1A1C0BA99C00FA6C91 /* AnimationsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4D1AF211C0BA99C00FA6C91 /* AnimationsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */; };
 		D4D1AF281C0BA99C00FA6C91 /* AnimationsFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D1AF271C0BA99C00FA6C91 /* AnimationsFrameworkTests.swift */; };
@@ -254,6 +256,8 @@
 		D4C0C7B91C57C97100D15450 /* PlacesAnnotationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlacesAnnotationTest.swift; path = Models/PlacesAnnotationTest.swift; sourceTree = "<group>"; };
 		D4C432891CC01374009E817B /* findmybusnj.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = findmybusnj.entitlements; sourceTree = "<group>"; };
 		D4C4328A1CC01539009E817B /* Find My Bus NJ Today Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Find My Bus NJ Today Widget.entitlements"; sourceTree = "<group>"; };
+		D4CA954B1EA9ABF0003C34B3 /* keywords.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = keywords.strings; path = "screenshots/en-US/keywords.strings"; sourceTree = "<group>"; };
+		D4CA954D1EA9AC06003C34B3 /* title.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = title.strings; path = "screenshots/en-US/title.strings"; sourceTree = "<group>"; };
 		D4D1AF171C0BA99C00FA6C91 /* AnimationsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AnimationsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D1AF191C0BA99C00FA6C91 /* AnimationsFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationsFramework.h; sourceTree = "<group>"; };
 		D4D1AF1B1C0BA99C00FA6C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -691,6 +695,8 @@
 		D4D6AB571BBA2FE200CE241D = {
 			isa = PBXGroup;
 			children = (
+				D4CA954B1EA9ABF0003C34B3 /* keywords.strings */,
+				D4CA954D1EA9AC06003C34B3 /* title.strings */,
 				D4D6AB621BBA2FE200CE241D /* findmybusnj */,
 				D4D6AB791BBA2FE200CE241D /* findmybusnj-UnitTests */,
 				D4D6AB841BBA2FE200CE241D /* findmybusnj-UITests */,
@@ -1135,10 +1141,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4CA954C1EA9ABF0003C34B3 /* keywords.strings in Resources */,
 				D4D6AB701BBA2FE200CE241D /* LaunchScreen.storyboard in Resources */,
 				D4D6AB6D1BBA2FE200CE241D /* Assets.xcassets in Resources */,
 				D4D6AB6B1BBA2FE200CE241D /* Main.storyboard in Resources */,
 				D4D955971E6DA70400A14215 /* multipleStops.json in Resources */,
+				D4CA954E1EA9AC06003C34B3 /* title.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

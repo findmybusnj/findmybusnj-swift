@@ -1,1 +1,6 @@
+iOS 10 Support is here! Some exciting changes with this release:
 
+-  App now supports iOS 10 and Swift 3
+-  The Today View Widget has been updated to work with iOS 10
+
+Hope you enjoy the release. If you ever have any issues remember to email me at dropmealine@findmybusnj.com

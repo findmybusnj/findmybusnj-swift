@@ -11,6 +11,9 @@ languages([
   "en-US"
 ])
 
+# Make sure we start fresh so we don't have lingering data saved
+reinstall_app true
+
 # The name of the scheme which contains the UI Tests
 scheme "findmybusnj"
 
@@ -19,7 +22,7 @@ output_directory "./screenshots"
 
 clear_previous_screenshots true # remove the '#' to clear all previously generated screenshots before creating new ones
 
-ios_version '10.2'
+ios_version '10.3'
 
 # Choose which project/workspace to use
 # project "./Project.xcodeproj"
