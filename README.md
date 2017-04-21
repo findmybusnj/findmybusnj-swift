@@ -11,6 +11,11 @@ An app for tracking NJ Transit bus times.
 * [PKHUD](https://github.com/pkluz/PKHUD)
 * [Fabric](https://get.fabric.io)
 
+## Getting started
+1. Install `fastlane` and `imagemagick`
+2. Install `cocoapods` and run `pod install` (unnecessary really since `Pods/` folder is checked into repo)
+3. Open `.xcworkspace` file in Xcode and get developing
+
 ## Version: 2.0 Roadmap
 TODO:
 - User should be able to look up stop given a bus if they don't know it
@@ -20,7 +25,7 @@ TODO:
 Completed:
 - ~~Migrate old version to a totally rewritten app in Swift~~ ✓
 - ~~Use cards that show bus and expected arrival~~ - ✓
-    * ~~tapping on them should callout to the Maps and show the transit mode that shows the user the way the bus will take, and how long it may take to get there.~~ 
+    * ~~tapping on them should callout to the Maps and show the transit mode that shows the user the way the bus will take, and how long it may take to get there.~~
 - ~~Use Google's map API to return all bus stops and overlay them ontop of mapkit based on User's location~~ ✓
 - ~~User should be able to get navigation to a stop via the maps application~~ ✓
 - ~~Look into releasing/using `unowned` on self when in a closure~~ ✓
@@ -36,6 +41,12 @@ To generate documentation, simply use [Jazzy](https://github.com/realm/jazzy)
 `sudo gem install jazzy`
 
 Then run `jazzy` in the base folder. Documentation will be put out to the `docs` folder.
+
+## Contributing
+1. Fork the repo
+2. Checkout a new branch using any of the following prefixes"
+  * `feature/name-of-feature`
+  * `fix/name-of-bug`
 
 
 ## Credits
