@@ -1,0 +1,24 @@
+{
+  "device_frame_version": "latest",
+  "default": {
+    "background": "./background.jpg",
+    "padding": 50,
+    "show_complete_frame": true,
+    "stack_title" : true
+  },
+
+  "data": [
+    {
+      "filter":"multipleStops",
+      "keyword":{
+        "color": "#d21559"
+      }
+    },
+    {
+      "filter":"saveFavorite",
+      "keyword":{
+        "color": "#feb909"
+      }
+    }
+  ]
+}
