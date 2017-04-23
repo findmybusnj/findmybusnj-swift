@@ -32,6 +32,9 @@ timeline.xctimeline
 playground.xcworkspace
 
 ## Snapshots
+!screenshots/Framefile.json
+!screenshots/background.jpg
+!screenshots/en-US/*
 screenshots/
 
 ## Fastlane
