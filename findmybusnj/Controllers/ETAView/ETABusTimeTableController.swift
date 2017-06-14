@@ -16,7 +16,7 @@ import SwiftyJSON
 import PKHUD
 
 class ETABusTimeTableController: CardTableViewController {
-  fileprivate let appDelegate = UIApplication.shared.delegate as! AppDelegate
+  fileprivate weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
   fileprivate let alertPresenter = ETAAlertPresenter()
   fileprivate var coreDataManager: ETACoreDataManager!
   fileprivate let networkManager = ServerManager()
@@ -33,7 +33,7 @@ class ETABusTimeTableController: CardTableViewController {
   // MARK: View Controller Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    coreDataManager = ETACoreDataManager(managedObjectContext: appDelegate.managedObjectContext)
+    coreDataManager = ETACoreDataManager(managedObjectContext: (appDelegate?.managedObjectContext)!)
   }
 
   override func didReceiveMemoryWarning() {
@@ -199,7 +199,7 @@ class ETABusTimeTableController: CardTableViewController {
    Called when a user attempts to save a stop
    */
   fileprivate func saveToFavorite() {
-    let managedObjectContext = appDelegate.managedObjectContext
+    let managedObjectContext = appDelegate?.managedObjectContext
 
     // Check for duplicates
     let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorite")
@@ -213,7 +213,7 @@ class ETABusTimeTableController: CardTableViewController {
 
     // Save otherwise
     let favorite = NSEntityDescription.insertNewObject(forEntityName: "Favorite",
-                                                       into: managedObjectContext) as! Favorite
+                                                       into: managedObjectContext!) as! Favorite
     favorite.stop = currentStop
     favorite.route = filterRoute
 

@@ -11,7 +11,7 @@ import UIKit
 import CoreData
 
 class ETASearchPopOverController: UIViewController {
-  fileprivate let appDelegate = UIApplication.shared.delegate as! AppDelegate
+  fileprivate weak var appDelegate = UIApplication.shared.delegate as? AppDelegate
   fileprivate var managedObjectContext: NSManagedObjectContext!
   fileprivate var coreDataManager: CoreDataManager!
   fileprivate var selectedFavorite = (stop: "", route: "")
@@ -31,7 +31,7 @@ class ETASearchPopOverController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 
-    managedObjectContext = appDelegate.managedObjectContext
+    managedObjectContext = appDelegate?.managedObjectContext
     coreDataManager = ETACoreDataManager(managedObjectContext: managedObjectContext)
     let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Favorite")
 
@@ -212,7 +212,7 @@ extension ETASearchPopOverController: UITableViewDataSource {
     selectedFavorite.route = route
 
     // Attempt to save the new selection to Core Data
-    selectedItem.frequency! = NSNumber(value: frequency.intValue + 1 as Int32)
+    selectedItem.frequency! = NSNumber(value: frequency.intValue.advanced(by: 1))
     coreDataManager.attemptToSave(selectedItem)
 
     return indexPath
