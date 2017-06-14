@@ -57,6 +57,9 @@ class FindNearByStopsController: UIViewController {
   fileprivate func queryPlaces(_ googleType: String) {
     #if RELEASE || TESTFLIGHT
       let coordinate = locationManager.location!.coordinate
+      // Prod code (variable based on GPS)
+      let latitude = coordinate.latitude
+      let longitude = coordinate.longitude
     #endif
 
     let queryRegion = regionRadius * 5
@@ -65,10 +68,6 @@ class FindNearByStopsController: UIViewController {
     #if DEBUG
       let latitude = 40.9445783
       let longitude = -74.1051304
-    #else
-      // Prod code (variable based on GPS)
-      let latitude = coordinate.latitude
-      let longitude = coordinate.longitude
     #endif
 
     /**

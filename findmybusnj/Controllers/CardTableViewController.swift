@@ -52,7 +52,7 @@ class CardTableViewController: UITableViewController {
    
    - Parameter sender: The object calling the refresh
    */
-  func refresh(_ sender: AnyObject) {
+  @objc func refresh(_ sender: AnyObject) {
     // Overridden in sub-classes
     // Taken from http://stackoverflow.com/questions/24475792/how-to-use-pull-to-refresh-in-swift/24476087#24476087
   }
