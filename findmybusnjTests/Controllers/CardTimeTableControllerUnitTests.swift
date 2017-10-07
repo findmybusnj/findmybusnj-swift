@@ -65,7 +65,7 @@ class CardTimeTableControllerUnitTests: XCTestCase {
     XCTAssertTrue(cardTableViewControllerUnderTest.items.isEmpty, "items should be empty when running this test")
   }
 
-  // Mark: Properties
+  // MARK: Properties
   /**
   Test property `noPrediction` is false on initialization.
   */
