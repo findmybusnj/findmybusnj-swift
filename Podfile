@@ -7,7 +7,7 @@ target 'findmybusnj' do
 
   pod 'SwiftyJSON'
   pod 'Alamofire', '~> 4.0'
-  pod 'PKHUD', :git => 'https://github.com/toyship/PKHUD'
+  pod 'PKHUD'
   pod 'Fabric'
   pod 'Crashlytics'
 
