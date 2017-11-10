@@ -1016,7 +1016,7 @@
 					D4138B3B1CB5FDD800D61C9A = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 23254ZGZ6N;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -1027,27 +1027,27 @@
 					D4876CC01CC67555004D92D5 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 23254ZGZ6N;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 					};
 					D4876CD71CC67644004D92D5 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 					D4D1AF161C0BA99C00FA6C91 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 23254ZGZ6N;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 					};
 					D4D1AF1F1C0BA99C00FA6C91 = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 					D4D6AB5F1BBA2FE200CE241D = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 23254ZGZ6N;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -1060,12 +1060,12 @@
 					};
 					D4D6AB751BBA2FE200CE241D = {
 						CreatedOnToolsVersion = 7.0.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 					D4D6AB801BBA2FE200CE241D = {
 						CreatedOnToolsVersion = 7.0.1;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 						TestTargetID = D4D6AB5F1BBA2FE200CE241D;
 					};
 				};
@@ -1687,7 +1687,8 @@
 				PROVISIONING_PROFILE = "339866f1-2c9d-42ee-acc8-5efff705a3b2";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1710,7 +1711,8 @@
 				PROVISIONING_PROFILE = "339866f1-2c9d-42ee-acc8-5efff705a3b2";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.aghassi.findmybusnj.Find-My-Bus-NJ-Today-Widget";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1737,7 +1739,8 @@
 				PRODUCT_NAME = findmybusnj_common;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1766,7 +1769,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-common";
 				PRODUCT_NAME = findmybusnj_common;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1784,7 +1788,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-commonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Debug;
@@ -1800,7 +1805,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aghassi.findmybusnj-commonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Release;
@@ -1825,7 +1831,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1851,7 +1858,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1866,7 +1874,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Debug;
@@ -1879,7 +1888,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.AnimationsFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Release;
@@ -2005,7 +2015,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "855404f1-b448-4611-b0bd-d59d6c6e3dfb";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.aghassi.findmybusnj";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -2028,7 +2039,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "855404f1-b448-4611-b0bd-d59d6c6e3dfb";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.aghassi.findmybusnj";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -2041,7 +2053,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Debug;
@@ -2055,7 +2068,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/findmybusnj.app/findmybusnj";
 			};
 			name = Release;
@@ -2072,7 +2086,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = findmybusnj;
 				USES_XCTRUNNER = YES;
 			};
@@ -2090,7 +2105,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aghassi.findmybusnjUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = findmybusnj;
 				USES_XCTRUNNER = YES;
 			};

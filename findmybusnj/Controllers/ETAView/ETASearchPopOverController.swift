@@ -101,11 +101,11 @@ extension ETASearchPopOverController: UITextFieldDelegate {
       return false
     }
 
-    let currentCharCount = textFieldText.characters.count
+    let currentCharCount = textFieldText.count
     if range.length + range.location > currentCharCount {
       return false
     }
-    let newLength = currentCharCount + string.characters.count - range.length
+    let newLength = currentCharCount + string.count - range.length
 
     if textField.tag == 0 { // Stop textField
       return newLength <= 5
@@ -212,7 +212,8 @@ extension ETASearchPopOverController: UITableViewDataSource {
     selectedFavorite.route = route
 
     // Attempt to save the new selection to Core Data
-    selectedItem.frequency! = NSNumber(value: frequency.intValue + 1 as Int32)
+    let incrementedFreq = frequency.int32Value + 1
+    selectedItem.frequency! = NSNumber(value: incrementedFreq)
     coreDataManager.attemptToSave(selectedItem)
 
     return indexPath
