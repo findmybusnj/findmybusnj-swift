@@ -5,87 +5,27 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: Verifying required fastlane version" time="0.002733">
+      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.003915">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.002546">
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.003623">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: cocoapods" time="5.577115">
+      <testcase classname="fastlane.lanes" name="2: cocoapods" time="5.135256">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: match" time="6.328687">
+      <testcase classname="fastlane.lanes" name="3: swiftlint" time="0.233728">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: Switch to ios screenshots lane" time="0.002096">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="05: snapshot" time="524.408368">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="06: frameit" time="16.38757">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="07: Switch to ios provision lane" time="0.002172">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="08: produce" time="5.15088">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="09: produce" time="1.386721">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="10: cert" time="2.967081">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="11: sigh" time="4.906762">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="12: sigh" time="4.597363">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="13: Switch to ios build lane" time="0.00204">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="14: gym" time="74.99796">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="15: appstore" time="295.965522">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="16: notification" time="0.216305">
+      <testcase classname="fastlane.lanes" name="4: scan" time="127.017969">
         
       </testcase>
     
